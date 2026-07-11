@@ -48,6 +48,24 @@ backend = OpenAICompatBackend(base_url="http://localhost:11434/v1", model="llama
 | `fieldguard/metrics.py` | Corruption rate, flag precision/recall, cost accounting |
 | `fieldguard/data.py` | Synthetic gold dataset (offline development) |
 | `fieldguard/pipeline.py` | End-to-end orchestration |
+| `fieldguard/calibrate.py` | Threshold sweep: accuracy vs verification-cost curve |
+| `fieldguard/adapter.py` | JSONL loader for external datasets, schema inference |
+
+## First real-model results (local Ollama, 8 prose invoices / 40 fields)
+
+| | qwen2.5:3b | tinyllama-1.1B |
+|---|---|---|
+| constrained accuracy | 1.000 | 0.000 |
+| final accuracy | 1.000 | 0.400 |
+| flag precision / recall | 0.875 / 1.0 | 0.938 / 1.0 |
+| low-confidence self-report | 0/40 | 37/40 |
+| LLM calls vs verify-everything | **-70%** | 0% (all flagged) |
+
+Verification spend adapts to model quality: near-zero overhead on a capable
+model, full spend plus loud self-reporting on a broken one. Known limitation
+(documented in `docs/BUILDLOG.md`): identical correlated errors across both
+paths are invisible to disagreement by construction; the empty-field case is
+auto-flagged.
 
 See `docs/ARCHITECTURE.md` for the full design and `docs/BUILDLOG.md` for the
 build-test-fix-document history.

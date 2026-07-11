@@ -69,3 +69,13 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   Honest limitation stated: identical non-empty correlated errors remain invisible
   to dual-path disagreement by construction.
 - Tests: 19/19.
+
+## Iteration 5 — external dataset adapter
+- Built: `adapter.py` — JSONL loader (`{"document": ..., "gold": {...}}`) with flat
+  schema inference (ISO date / numeric / string). Real benchmark files get converted
+  to this shape once, upstream.
+- README updated with the two-model results table.
+- Tests: **21/21.**
+- Next for the team: convert an ExtractBench slice to the JSONL shape, run both
+  local models plus one API model, sweep thresholds (`calibrate.sweep`) for the
+  accuracy/cost tradeoff figure — that's the core experiment of the paper.
