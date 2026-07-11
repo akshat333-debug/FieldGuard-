@@ -40,3 +40,32 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
 - Caveat for the paper: these are mock-world numbers (perfect extractor + controlled
   corruption). Real-model numbers come from pointing `OpenAICompatBackend` at real
   documents; flag P/R < 1.0 expected there — that's the research measurement.
+
+## Iteration 4 — calibration sweep + FIRST REAL-MODEL RUNS (Ollama)
+- Built: `calibrate.py` (threshold sweep, accuracy/cost curve), `data.render_realistic`
+  (prose invoices: dates as "14 March 2026", totals as "USD 9,478.23"),
+  `examples/experiment.py` (CLI runner, JSON results dump).
+- **Real run #1 (qwen2.5:3b) exposed two bugs the mock world couldn't:**
+  1. Prompt said "as 'name: value'" — model emitted literal `name:`/`value:`
+     alternating lines → parser got nothing → all 40 fields flagged → arbiter
+     everywhere → one cruft answer ("USD 600.45") DEGRADED accuracy 1.000→0.975.
+     Fix: unambiguous prompt (exact field names) + parser matches schema names
+     case-insensitively, strips markdown cruft.
+  2. `_LINE_CRUFT` regex stripped `_` (markdown italics) — ate the underscore inside
+     `invoice_id` → lookup miss. Fix: keep underscores; regression test added.
+  3. `_clean_answer` strip-order bug (`"INV-9".` → `INV-9"`). Fix: combined strip set.
+- **Post-fix qwen2.5:3b (8 docs / 40 fields):** constrained 1.000 → final 1.000,
+  flag P 0.875 / R 1.0 (1 false flag), 17 vs 56 calls (**70% saved**), 0 low-confidence.
+- **tinyllama-1.1B run exposed detector blind spot:** model too weak for either path
+  → both paths EMPTY → ""=="" → no disagreement → confidently-wrong passthrough
+  (only 5/40 low-confidence at 0.10 accuracy). This is the correlated-failure
+  limitation of any dual-path signal — now documented, partially mitigated:
+  empty required field always flags (score 1.0).
+- **Post-fix tinyllama:** final 0.000→0.400, **37/40 fields self-reported
+  low-confidence**, 0% calls saved (everything flagged — correct behavior for a
+  broken extractor).
+- Paper-ready two-model finding: **verification cost adapts to model quality**
+  (70% saved on capable model, full spend + loud self-report on broken one).
+  Honest limitation stated: identical non-empty correlated errors remain invisible
+  to dual-path disagreement by construction.
+- Tests: 19/19.

@@ -74,6 +74,30 @@ def corruption_plan(examples: list[Example], rate: float = 0.15,
     return plans
 
 
+_MONTHS = ("January", "February", "March", "April", "May", "June", "July",
+           "August", "September", "October", "November", "December")
+
+
+def render_realistic(ex: Example) -> str:
+    """Prose invoice rendering for real-model runs: same gold, harder surface form.
+
+    Dates appear as '14 March 2026', totals as 'USD 1,234.50' — the model must
+    extract and the comparator must normalize. Mock backends can't parse these
+    (no 'field: value' lines); use only with real backends.
+    """
+    g = ex.gold
+    y, m, d = g["date"].split("-")
+    date_words = f"{int(d)} {_MONTHS[int(m) - 1]} {y}"
+    total = f"{float(g['total']):,.2f}"
+    return (
+        f"INVOICE\n"
+        f"Number: {g['invoice_id']}\n"
+        f"Issued by {g['vendor']} on {date_words}.\n"
+        f"Amount due: {g['currency']} {total}\n"
+        f"Please remit payment within 30 days of the issue date.\n"
+    )
+
+
 class PlannedMockBackend(MockBackend):
     """MockBackend that applies a per-document corruption plan (keyed by invoice_id)."""
 

@@ -27,6 +27,7 @@ def run(backend: Backend, documents: list[str], schema: Schema,
         resolutions = resolve(backend, doc, schema, dual.constrained, flags)
         record = final_record(resolutions)
         finals.append(record)
+        report.low_confidence += sum(not r.confident for r in resolutions.values())
 
         if gold is not None:
             g = gold[i]

@@ -38,6 +38,7 @@ class Report:
     flag_recall: float = 0.0
     llm_calls: int = 0
     full_verify_calls: int = 0       # what verify-everything would have cost
+    low_confidence: int = 0          # fields the system itself marked unreliable
     notes: list[str] = field(default_factory=list)
 
     def summary(self) -> str:
@@ -51,7 +52,8 @@ class Report:
             f"flag precision/recall: {self.flag_precision:.3f} / {self.flag_recall:.3f}\n"
             f"LLM calls used       : {self.llm_calls} "
             f"(verify-everything baseline: {self.full_verify_calls}, "
-            f"saved {saved:.0%})"
+            f"saved {saved:.0%})\n"
+            f"low-confidence fields: {self.low_confidence}/{self.fields_total}"
         )
 
 

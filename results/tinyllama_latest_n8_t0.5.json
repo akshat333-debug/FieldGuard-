@@ -1,0 +1,135 @@
+{
+  "model": "tinyllama:latest",
+  "n": 8,
+  "threshold": 0.5,
+  "elapsed_sec": 45.5,
+  "report": {
+    "docs": 8,
+    "fields_total": 40,
+    "constrained_acc": 0.0,
+    "final_acc": 0.39999999999999997,
+    "corruption_rate": 0.15,
+    "flag_precision": 0.15000000000000002,
+    "flag_recall": 1.0,
+    "llm_calls": 56,
+    "full_verify_calls": 56,
+    "low_confidence": 37,
+    "notes": []
+  },
+  "finals": [
+    {
+      "invoice_id": "The value of this field is \"USD 9,478.23",
+      "vendor": "The value of this field is \"USD 9,478.23",
+      "total": "9,478.23",
+      "date": "The value of this field is \"USD 9,478.23",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "The value of this field is INR 8,213.71 (in Indian Rupees). It does not contain any other information or fields",
+      "vendor": "The value of this field is INR 8,213.71 (in Indian Rupees). It does not contain any other information or fields",
+      "total": "8,213.71",
+      "date": "The value of this field is INR 8,213.71 (Indian Rupees) as per the document",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "The value of this field is \"USD 9,097.03",
+      "vendor": "The value of this field is \"USD 9,097.03",
+      "total": "9,097.03",
+      "date": "The value of this field is \"USD 9,097.03",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "The value of this field is \"INV-1003",
+      "vendor": "The value of this field is INR 4,187.12 (Indian Rupees). It does not contain any other information or fields",
+      "total": "4,187.12",
+      "date": "The value of this field is INR 4,187.12 (Indian Rupees). It does not contain any other information or fields",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "The value of this field is \"USD 600.45",
+      "vendor": "The value of this field is \"USD 600.45",
+      "total": "600.45",
+      "date": "The value of this field is \"USD 600.45",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "The value of this field is INR 6,277.43 (in Indian Rupees). It does not contain any other information or fields",
+      "vendor": "The value of this field is INR 6,277.43 (Indian Rupees) as per the given document",
+      "total": "6,277.43",
+      "date": "The value of this field is INR 6,277.43 (Indian Rupees) as it represents the amount due for the invoice issued on January 19, 2026. The rest of the document has been omitted for brevity",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "The value of this field is INR 505.35 (Indian Rupees). It does not contain any other information, such as the invoice number or date",
+      "vendor": "The value of this field is INR 505.35, which is the amount due as per the invoice dated 2 April 2026 issued by Umbrella Supplies on behalf of Isued by them. The document only contains this information and nothing else",
+      "total": "505.35",
+      "date": "The value of this field is INR 505.35, which represents the total amount due for the invoice issued on 2 April 2026. The rest of the document (INVOICE) has no further information or fields to display",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "The value of this field is \"USD 2,902.91",
+      "vendor": "The value of this field is \"USD 2,902.91",
+      "total": "2,902.91",
+      "date": "The value of this field is \"USD 2,902.91",
+      "currency": "USD"
+    }
+  ],
+  "gold": [
+    {
+      "invoice_id": "INV-1000",
+      "vendor": "Initech",
+      "total": "9478.23",
+      "date": "2026-07-21",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1001",
+      "vendor": "Acme Corp",
+      "total": "8213.71",
+      "date": "2026-02-12",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1002",
+      "vendor": "Acme Corp",
+      "total": "9097.03",
+      "date": "2026-04-02",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1003",
+      "vendor": "Umbrella Supplies",
+      "total": "4187.12",
+      "date": "2026-04-03",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1004",
+      "vendor": "Umbrella Supplies",
+      "total": "600.45",
+      "date": "2026-10-04",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1005",
+      "vendor": "Wayne Enterprises",
+      "total": "6277.43",
+      "date": "2026-01-19",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1006",
+      "vendor": "Umbrella Supplies",
+      "total": "505.35",
+      "date": "2026-04-02",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1007",
+      "vendor": "Globex Ltd",
+      "total": "2902.91",
+      "date": "2026-03-18",
+      "currency": "USD"
+    }
+  ]
+}

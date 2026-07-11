@@ -69,6 +69,11 @@ def flag_fields(schema: Schema, constrained: dict[str, str],
     flags = []
     for f in schema.fields:
         a, b = constrained.get(f.name, ""), unconstrained.get(f.name, "")
+        # empty required field is always suspicious — catches the correlated
+        # both-paths-empty failure that plain disagreement can't see
+        if not a.strip() or not b.strip():
+            flags.append(Flag(f.name, a, b, 1.0))
+            continue
         score = field_disagreement(f, a, b)
         if score >= threshold:
             flags.append(Flag(f.name, a, b, score))

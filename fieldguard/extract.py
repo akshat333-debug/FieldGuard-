@@ -36,19 +36,28 @@ def extract_constrained(backend: Backend, document: str, schema: Schema) -> dict
     return {f.name: str(obj.get(f.name, "")) for f in schema.fields}
 
 
+# strip leading bullets/quotes and bold/backtick markers; keep '_' (legit in names)
+_LINE_CRUFT = re.compile(r"^[\s\-*•>]+|[*`]")
+
+
 def extract_unconstrained(backend: Backend, document: str, schema: Schema) -> dict[str, str]:
+    example = schema.fields[0].name
     prompt = (
-        "Read the document and answer each field on its own line as 'name: value'. "
-        "Plain text only.\n"
+        "Read the document and report every field listed below, one per line, "
+        f"using the exact field name, e.g. '{example}: <value>'. Plain text only.\n"
         f"FIELDS:\n{_field_lines(schema)}\n"
         f"DOCUMENT:\n{document}\n"
     )
     raw = backend.generate(prompt, force_json=False)
+    canonical = {f.name.casefold(): f.name for f in schema.fields}
     values: dict[str, str] = {}
     for line in raw.splitlines():
-        if ":" in line:
-            k, _, v = line.partition(":")
-            values[k.strip()] = v.strip()
+        if ":" not in line:
+            continue
+        k, _, v = line.partition(":")
+        key = canonical.get(_LINE_CRUFT.sub("", k).strip().casefold())
+        if key:
+            values[key] = v.strip()
     return {f.name: values.get(f.name, "") for f in schema.fields}
 
 

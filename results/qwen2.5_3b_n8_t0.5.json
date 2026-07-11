@@ -1,0 +1,135 @@
+{
+  "model": "qwen2.5:3b",
+  "n": 8,
+  "threshold": 0.5,
+  "elapsed_sec": 24.8,
+  "report": {
+    "docs": 8,
+    "fields_total": 40,
+    "constrained_acc": 1.0,
+    "final_acc": 1.0,
+    "corruption_rate": 0.0,
+    "flag_precision": 0.875,
+    "flag_recall": 1.0,
+    "llm_calls": 17,
+    "full_verify_calls": 56,
+    "low_confidence": 0,
+    "notes": []
+  },
+  "finals": [
+    {
+      "invoice_id": "INV-1000",
+      "vendor": "Initech",
+      "total": "9478.23",
+      "date": "2026-07-21",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1001",
+      "vendor": "Acme Corp",
+      "total": "8213.71",
+      "date": "2026-02-12",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1002",
+      "vendor": "Acme Corp",
+      "total": "9097.03",
+      "date": "2026-04-02",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1003",
+      "vendor": "Umbrella Supplies",
+      "total": "4187.12",
+      "date": "2026-04-03",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1004",
+      "vendor": "Umbrella Supplies",
+      "total": "600.45",
+      "date": "2026-10-04",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1005",
+      "vendor": "Wayne Enterprises",
+      "total": "6277.43",
+      "date": "2026-01-19",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1006",
+      "vendor": "Umbrella Supplies",
+      "total": "505.35",
+      "date": "2026-04-02",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1007",
+      "vendor": "Globex Ltd",
+      "total": "2902.91",
+      "date": "2026-03-18",
+      "currency": "USD"
+    }
+  ],
+  "gold": [
+    {
+      "invoice_id": "INV-1000",
+      "vendor": "Initech",
+      "total": "9478.23",
+      "date": "2026-07-21",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1001",
+      "vendor": "Acme Corp",
+      "total": "8213.71",
+      "date": "2026-02-12",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1002",
+      "vendor": "Acme Corp",
+      "total": "9097.03",
+      "date": "2026-04-02",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1003",
+      "vendor": "Umbrella Supplies",
+      "total": "4187.12",
+      "date": "2026-04-03",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1004",
+      "vendor": "Umbrella Supplies",
+      "total": "600.45",
+      "date": "2026-10-04",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1005",
+      "vendor": "Wayne Enterprises",
+      "total": "6277.43",
+      "date": "2026-01-19",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1006",
+      "vendor": "Umbrella Supplies",
+      "total": "505.35",
+      "date": "2026-04-02",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-1007",
+      "vendor": "Globex Ltd",
+      "total": "2902.91",
+      "date": "2026-03-18",
+      "currency": "USD"
+    }
+  ]
+}
