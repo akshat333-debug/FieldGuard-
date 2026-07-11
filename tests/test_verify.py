@@ -1,0 +1,66 @@
+"""Tests: selective re-verification resolves corrupted fields at minimal cost."""
+from fieldguard.backends import MockBackend
+from fieldguard.compare import flag_fields
+from fieldguard.extract import dual_extract
+from fieldguard.schemas import FieldSpec, Schema
+from fieldguard.verify import final_record, resolve
+
+SCHEMA = Schema("invoice", (
+    FieldSpec("invoice_id", "string"),
+    FieldSpec("vendor", "string"),
+    FieldSpec("total", "number"),
+    FieldSpec("date", "date"),
+))
+
+DOC = """invoice_id: INV-0042
+vendor: Acme Corp
+total: 54.20
+date: 2026-03-14"""
+
+
+def test_resolve_repairs_corrupted_fields():
+    backend = MockBackend(corruptions={"total": "45", "date": "2026-03-04"})
+    dual = dual_extract(backend, DOC, SCHEMA)
+    flags = flag_fields(SCHEMA, dual.constrained, dual.unconstrained)
+    assert {f.field for f in flags} == {"total", "date"}
+
+    calls_before = backend.calls
+    res = resolve(backend, DOC, SCHEMA, dual.constrained, flags)
+    record = final_record(res)
+
+    assert record["total"] == "54.20"        # repaired
+    assert record["date"] == "2026-03-14"    # repaired
+    assert record["invoice_id"] == "INV-0042"
+    # arbiter agreed with unconstrained -> confident majority
+    assert res["total"].source == "majority" and res["total"].confident
+    # unflagged fields cost nothing
+    assert res["vendor"].source == "agreement"
+    # selective cost: only 2 arbiter calls, not one per field
+    assert backend.calls - calls_before == 2
+
+
+def test_resolve_clean_document_costs_zero():
+    backend = MockBackend()
+    dual = dual_extract(backend, DOC, SCHEMA)
+    flags = flag_fields(SCHEMA, dual.constrained, dual.unconstrained)
+    calls_before = backend.calls
+    res = resolve(backend, DOC, SCHEMA, dual.constrained, flags)
+    assert backend.calls == calls_before          # no arbiter calls
+    assert final_record(res)["total"] == "54.20"
+    assert all(r.confident for r in res.values())
+
+
+def test_three_way_split_falls_to_arbiter_low_confidence():
+    class SplitArbiter(MockBackend):
+        def generate(self, prompt, *, force_json=False):
+            if "FIELD: total" in prompt:
+                self.calls += 1
+                return "99.99"  # disagrees with both paths
+            return super().generate(prompt, force_json=force_json)
+
+    backend = SplitArbiter(corruptions={"total": "45"})
+    dual = dual_extract(backend, DOC, SCHEMA)
+    flags = flag_fields(SCHEMA, dual.constrained, dual.unconstrained)
+    res = resolve(backend, DOC, SCHEMA, dual.constrained, flags)
+    assert res["total"].source == "arbiter"
+    assert not res["total"].confident
