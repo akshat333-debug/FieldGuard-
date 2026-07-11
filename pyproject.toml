@@ -1,0 +1,9 @@
+[project]
+name = "fieldguard"
+version = "0.1.0"
+description = "Black-box field-level corruption detection for selective re-verification in structured LLM extraction"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
