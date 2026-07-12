@@ -61,14 +61,14 @@ Convert once with `python3 -m examples.convert_sroie`, run with
 | | qwen2.5:3b | tinyllama-1.1B |
 |---|---|---|
 | constrained accuracy | 0.820 | 0.005 |
-| final accuracy | 0.860 | 0.075 |
-| flag precision / recall | 0.780 / 0.950 | 0.070 / 1.0 |
-| low-confidence self-report | 5/200 | 199/200 |
+| final accuracy | 0.860 | 0.035 |
+| flag precision / recall | 0.780 / 0.950 | 0.075 / 1.0 |
+| low-confidence self-report | 5/200 | 200/200 |
 | LLM calls vs verify-everything | **-61%** | 0% (all flagged) |
 
-qwen column uses `datasets/sroie.schema.json` field descriptions — one sentence
-per field buys +3 points final accuracy at identical cost (company errors 13→8;
-BUILDLOG iteration 11). tinyllama column is schema-inferred (no descriptions).
+Both columns use `datasets/sroie.schema.json` field descriptions — one sentence
+per field buys the capable model +3 points final accuracy at identical cost
+(company errors 13→8; BUILDLOG iteration 11); the broken model is unmoved.
 
 Gold-noise ceiling ≈ 0.92 (SROIE gold sometimes disagrees with its own OCR text;
 see BUILDLOG iteration 7). The adaptive-cost finding replicates on real data.
