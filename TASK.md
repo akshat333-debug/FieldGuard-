@@ -17,7 +17,7 @@
 7. [x] BUILDLOG iteration 8 done. Committing.
 
 ## Figure
-8. [ ] Accuracy vs verification-cost figure from sweep results (read dataviz skill first). Done when: figure in results/, referenced in README.
+8. [x] Figure done: docs/tradeoff_sroie.svg via examples/figure.py, in README.
 
 ## Notes / surprises
 - SROIE gold vs OCR text mismatch exists IN THE BENCHMARK: doc0 OCR says "SDN BND",

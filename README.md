@@ -68,6 +68,11 @@ Convert once with `python3 -m examples.convert_sroie`, run with
 Gold-noise ceiling ≈ 0.92 (SROIE gold sometimes disagrees with its own OCR text;
 see BUILDLOG iteration 7). The adaptive-cost finding replicates on real data.
 
+![Accuracy vs verification cost on SROIE](docs/tradeoff_sroie.svg)
+
+Regenerate: `python3 -m examples.sweep --data datasets/sroie_15.jsonl --model <m> --n 15
+--thresholds 0.3,0.5,0.6,0.75,0.9` then `python3 -m examples.figure`.
+
 ## First real-model results (local Ollama, 8 prose invoices / 40 fields)
 
 | | qwen2.5:3b | tinyllama-1.1B |

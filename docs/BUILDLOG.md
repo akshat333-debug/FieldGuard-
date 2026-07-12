@@ -160,3 +160,12 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   corruption (rounding drift, off-by-one dates); neither model produces it here.
   Claim for the paper: threshold tuning buys little on flat 4-field receipt
   extraction; the default 0.5 + empty auto-flag captures the useful signal.
+
+## Iteration 9 — tradeoff figure
+- Built: `examples/figure.py` (stdlib SVG, no plotting deps) — accuracy vs LLM
+  calls from the SROIE sweep JSONs, both models, verify-everything reference
+  line. Rendered to `docs/tradeoff_sroie.svg`, embedded in README. Palette
+  CVD-validated (2 categorical slots, direct labels for the sub-3:1 aqua).
+- The figure IS the two-model finding: qwen cluster top-left (high accuracy,
+  ~60% below full verification cost), tinyllama pinned to the full-cost line at
+  floor accuracy — spend adapts to model quality with no configuration.
