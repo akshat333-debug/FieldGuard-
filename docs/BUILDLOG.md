@@ -219,3 +219,19 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   dominated by gold noise and specification ambiguity — NOT by undetected
   constraint corruption. True constraint damage slipping the detector is ~1.5%
   of fields, all near-miss string edits, recoverable by lowering the threshold.
+
+## Iteration 13 — third model: cost curve is monotone; first verification regression
+- Added qwen2.5:1.5b (same family, between tinyllama-1.1B and qwen2.5:3b).
+- **SROIE-50 described, t=0.5:** constrained 0.715 -> final 0.695, flag P/R
+  0.550/0.970, 139 vs 300 calls (54% saved), 18/200 low-confidence.
+- **Cost curve, three models:** 61% saved (3b) -> 54% (1.5b) -> 0% (1.1B broken).
+  Verification spend tracks model quality monotonically — the adaptive-cost
+  claim now has a middle point.
+- **Honest regression: final < constrained (-2 points).** Trace decomposition of
+  the 11 verification-damaged fields: 6 are semantically-correct dates the
+  normalizer can't credit — the free-form paths answer "14 MAR 2018 18:40"
+  (date + TIME); date parsing fails on the time suffix, so the field flags, and
+  unc+arbiter (who agree) outvote the correct constrained ISO date. 3 are
+  majority votes for a recurring person name over the business name; 2 are
+  arbiter cruft ('address', 'RM'). Fix queued: strip time-of-day before date
+  parsing — removes the flag AND the damage for the 6.
