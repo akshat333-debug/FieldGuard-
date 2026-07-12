@@ -298,3 +298,16 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
 - README: SROIE table refreshed + Kleister-NDA second-domain table added;
   figure regenerated from the split-kept runs. All published numbers now come
   from one code state.
+
+## Iteration 19 — candidate-aware arbiter: NEGATIVE RESULT, reverted
+- Hypothesis: showing the arbiter the two disagreeing values (unlabeled "judge"
+  mode) would fix refusal/cruft answers and the person-name majority votes.
+- Measured: 1.5b SROIE-50 final UNCHANGED (0.730); 3b Kleister final DAMAGED
+  0.885 -> 0.833. Trace: the judge parrots the unconstrained refusal candidate
+  ("not provided") — arb==unc now forms a majority, which BYPASSES the
+  split-kept protection that blind arbitration + split-kept had established.
+- Reverted to the blind arbiter; regression test pins candidates OUT of the
+  arbiter prompt. Judge-mode results JSONs discarded (working tree restored to
+  the blind-run numbers). Design rule recorded: verification signals must stay
+  independent — feeding path outputs into the arbiter correlates the votes.
+- Tests: **33/33.**

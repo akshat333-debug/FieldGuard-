@@ -38,6 +38,11 @@ class Resolution:
 
 
 def _arbiter_query(backend: Backend, document: str, spec: FieldSpec) -> str:
+    # The arbiter stays BLIND to the disagreeing values. Candidate-aware "judge"
+    # prompting was measured (BUILDLOG iteration 19) and it parrots refusal
+    # candidates ("not provided"), manufacturing a false majority with the
+    # unconstrained path — Kleister 3b final dropped 0.885 -> 0.833. Blind +
+    # split-kept is the accuracy-safe combination.
     desc = f"DESCRIPTION: {spec.description}\n" if spec.description else ""
     prompt = (
         f"From the document, what is the value of this field? "

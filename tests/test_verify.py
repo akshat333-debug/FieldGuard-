@@ -66,3 +66,22 @@ def test_three_way_split_keeps_constrained_low_confidence():
     assert res["total"].source == "split-kept"
     assert res["total"].value == "45"
     assert not res["total"].confident
+
+
+def test_arbiter_stays_blind_to_candidates():
+    # regression for BUILDLOG iteration 19: a candidate-aware arbiter parrots
+    # refusal candidates and manufactures false majorities — keep it blind
+    seen = {}
+
+    class Spy(MockBackend):
+        def generate(self, prompt, *, force_json=False):
+            if "FIELD: total" in prompt:
+                seen["prompt"] = prompt
+            return super().generate(prompt, force_json=force_json)
+
+    backend = Spy(corruptions={"total": "45"})
+    dual = dual_extract(backend, DOC, SCHEMA)
+    flags = flag_fields(SCHEMA, dual.constrained, dual.unconstrained)
+    resolve(backend, DOC, SCHEMA, dual.constrained, flags)
+    assert "45" not in seen["prompt"].split("DOCUMENT:")[0]  # no candidate leak
+    assert "CANDIDATES" not in seen["prompt"]
