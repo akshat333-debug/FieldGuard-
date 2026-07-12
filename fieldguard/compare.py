@@ -48,12 +48,31 @@ def _token_jaccard_distance(a: str, b: str) -> float:
 
 
 def field_disagreement(spec: FieldSpec, a: str, b: str) -> float:
-    """0.0 = agree, 1.0 = disagree; strings score in between on partial overlap."""
+    """0.0 = agree, 1.0 = max disagree; mismatches grade by severity.
+
+    Typed mismatches map to 0.5 + 0.5*severity so every mismatch clears the 0.5
+    default threshold (back-compat) while thresholds in (0.5, 1.0] become a real
+    knob: skip near-agreements (rounding, off-by-a-day), keep gross corruption.
+    """
     na, nb = normalize(spec, a), normalize(spec, b)
     if na == nb:
         return 0.0
     if spec.type == "string":
         return _token_jaccard_distance(na, nb)
+    if spec.type in ("number", "integer"):
+        try:
+            fa, fb = float(na), float(nb)
+        except ValueError:
+            return 1.0
+        rel = abs(fa - fb) / max(abs(fa), abs(fb))  # na != nb, so not both 0
+        return 0.5 + 0.5 * min(1.0, rel)
+    if spec.type == "date":
+        try:
+            da, db = datetime.fromisoformat(na), datetime.fromisoformat(nb)
+        except ValueError:
+            return 1.0
+        days = abs((da - db).days)
+        return 0.5 + 0.5 * min(1.0, days / 365.0)
     return 1.0
 
 

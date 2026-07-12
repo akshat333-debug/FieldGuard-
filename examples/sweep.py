@@ -20,10 +20,19 @@ def main() -> None:
     ap.add_argument("--model", default="tinyllama:latest")
     ap.add_argument("--n", type=int, default=6)
     ap.add_argument("--thresholds", default="0.1,0.5,0.9")
+    ap.add_argument("--data", default=None,
+                    help="external JSONL dataset (adapter shape); overrides synthetic")
     args = ap.parse_args()
 
-    examples = make_dataset(n=args.n)
-    docs = [render_realistic(ex) for ex in examples]
+    if args.data:
+        from fieldguard.adapter import load_jsonl
+        examples, schema = load_jsonl(args.data)
+        examples = examples[:args.n]
+        docs = [ex.document for ex in examples]
+    else:
+        schema = INVOICE_SCHEMA
+        examples = make_dataset(n=args.n)
+        docs = [render_realistic(ex) for ex in examples]
     gold = [ex.gold for ex in examples]
     thresholds = tuple(float(t) for t in args.thresholds.split(","))
 
@@ -32,12 +41,13 @@ def main() -> None:
                                    api_key="ollama")
 
     print(f"Sweeping {thresholds} on {args.model}, {args.n} docs ...")
-    points = sweep(factory, docs, INVOICE_SCHEMA, gold, thresholds=thresholds)
+    points = sweep(factory, docs, schema, gold, thresholds=thresholds)
     print(render_table(points))
 
     results = pathlib.Path(__file__).resolve().parent.parent / "results"
     results.mkdir(exist_ok=True)
-    path = results / f"sweep_{args.model.replace(':', '_')}_n{args.n}.json"
+    tag = f"{pathlib.Path(args.data).stem}_" if args.data else ""
+    path = results / f"sweep_{tag}{args.model.replace(':', '_')}_n{len(docs)}.json"
     path.write_text(json.dumps([asdict(p) for p in points], indent=2))
     print(f"results -> {path}")
 

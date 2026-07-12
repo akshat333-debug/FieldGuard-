@@ -47,10 +47,24 @@ def test_normalize_numbers_dates_strings():
 def test_disagreement_scores():
     num = FieldSpec("n", "number")
     assert field_disagreement(num, "$54.20", "54.2") == 0.0
-    assert field_disagreement(num, "45", "54.2") == 1.0
+    # graded: every mismatch >= 0.5, severity scales with relative error
+    near = field_disagreement(num, "54.21", "54.2")
+    far = field_disagreement(num, "45", "54.2")
+    huge = field_disagreement(num, "5", "-5000")  # rel error > 1 -> capped
+    assert 0.5 < near < far < huge == 1.0
     s = FieldSpec("s", "string")
     assert field_disagreement(s, "Acme Corp", "acme corp") == 0.0
     assert 0.0 < field_disagreement(s, "Acme Corp", "Acme Corporation") < 1.0
+
+
+def test_disagreement_dates_graded():
+    d = FieldSpec("d", "date")
+    off_day = field_disagreement(d, "2026-03-14", "2026-03-15")
+    off_month = field_disagreement(d, "2026-03-14", "2026-04-14")
+    off_years = field_disagreement(d, "2026-03-14", "2020-03-14")
+    assert 0.5 < off_day < off_month < off_years == 1.0
+    # unparseable garbage still max-disagrees
+    assert field_disagreement(d, "2026-03-14", "not a date") == 1.0
 
 
 def test_mock_backend_corrupts_only_constrained():

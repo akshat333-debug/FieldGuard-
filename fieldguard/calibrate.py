@@ -47,6 +47,6 @@ def sweep(backend_factory, documents: list[str], schema: Schema,
 def render_table(points: list[CalibrationPoint]) -> str:
     header = f"{'thr':>4} | {'final_acc':>9} | {'flag_P':>6} | {'flag_R':>6} | {'calls':>5}"
     rows = [header, "-" * len(header)]
-    rows += [f"{p.threshold:>4.1f} | {p.final_acc:>9.3f} | {p.flag_precision:>6.3f} "
+    rows += [f"{p.threshold:>4.2f} | {p.final_acc:>9.3f} | {p.flag_precision:>6.3f} "
              f"| {p.flag_recall:>6.3f} | {p.llm_calls:>5}" for p in points]
     return "\n".join(rows)

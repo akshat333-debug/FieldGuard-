@@ -9,9 +9,12 @@
 4. [x] BUILDLOG iteration 7 + README SROIE table done. Tests 26/26. Committing.
 
 ## Iteration 8 — graded disagreement scoring
-5. [ ] Read compare.py; add graded scores (relative numeric error, date distance, keep string Jaccard). Empty-required stays 1.0. Done when: unit tests for graded scores pass.
-6. [ ] Re-sweep thresholds on weak model + real data. Done when: curve non-flat (or documented why still flat).
-7. [ ] BUILDLOG entry, commit.
+5. [x] Graded scores in: numbers 0.5+0.5*rel_error, dates 0.5+0.5*days/365 (capped),
+   unparseable -> 1.0, strings keep Jaccard, empty-required stays 1.0. Tests 27/27.
+6. [x] Sweeps done. qwen: moves at 0.3 (38 calls, P .667), flat 0.5-0.9 (35, P .800).
+   tinyllama: flat 90 calls everywhere — empty auto-flag saturates. Documented:
+   knob mechanically live (unit-proven), severity distribution bimodal on SROIE.
+7. [x] BUILDLOG iteration 8 done. Committing.
 
 ## Figure
 8. [ ] Accuracy vs verification-cost figure from sweep results (read dataviz skill first). Done when: figure in results/, referenced in README.

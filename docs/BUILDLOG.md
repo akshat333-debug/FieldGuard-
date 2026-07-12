@@ -137,3 +137,26 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   companies (doc7, doc8), one total mis-pick (100.0 vs 26.60), one address
   interpolation. Company disambiguation is the real headroom.
 - Tests: **26/26.**
+
+## Iteration 8 — graded disagreement scores: knob live, band empty on SROIE
+- Built: `field_disagreement` now grades typed mismatches instead of flat 1.0 —
+  numbers: 0.5 + 0.5*min(1, relative error); dates: 0.5 + 0.5*min(1, days/365);
+  unparseable values stay 1.0; strings keep token-Jaccard; empty-required keeps
+  the 1.0 auto-flag. Mapping floor of 0.5 preserves default-threshold behavior
+  exactly (every mismatch still flags at t=0.5). Unit tests pin the ordering
+  (rounding < transposition < order-of-magnitude; off-by-day < off-by-month <
+  off-by-years). Tests 27/27. Sweep runner gained `--data`.
+- **SROIE sweep, qwen2.5:3b (t=0.3/0.5/0.6/0.75/0.9):** knob moves BELOW default
+  (t=0.3: 38 calls, flag P 0.667 — partial string overlaps get flagged) and is
+  flat above (35 calls, P 0.800, acc 0.850 at 0.5-0.9): every real qwen
+  disagreement is gross (score ~1.0), none land in the graded (0.5, 0.9] band.
+- **SROIE sweep, tinyllama: flat at every threshold** (90 calls, all 60 fields,
+  acc 0.067) — a broken extractor's fields are empty/unparseable on some path,
+  so the 1.0 auto-flag saturates regardless of threshold. That is the designed
+  safety behavior, and it makes the threshold irrelevant for broken models.
+- Honest reading: the knob is now mechanically real (proven at unit level) but
+  on this benchmark the error-severity distribution is bimodal — models are
+  either right or grossly wrong. The graded band would matter for near-miss
+  corruption (rounding drift, off-by-one dates); neither model produces it here.
+  Claim for the paper: threshold tuning buys little on flat 4-field receipt
+  extraction; the default 0.5 + empty auto-flag captures the useful signal.
