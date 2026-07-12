@@ -106,6 +106,11 @@ is an artifact. `examples/analyze.py` prints a `[!] N/N answers absent`
 tripwire for this; on all-optional schemas keep at least one required field
 or watch that tripwire — the empty-field auto-flag no longer guards you.
 
+![Accuracy vs verification cost on Kleister-NDA](docs/tradeoff_kleister.svg)
+
+(tinyllama's point is the all-absent artifact described above — high "savings"
+because agreement-on-absence never flags.)
+
 Two absence lessons (BUILDLOG iteration 21): (1) an "answer NONE if absent"
 instruction in the shared prompt made both paths lazily deny values that ARE
 in the document — instructions that correlate the paths break the

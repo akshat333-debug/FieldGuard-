@@ -1,24 +1,27 @@
 # Active plan
 
-## Done (iterations 7-11) — see docs/BUILDLOG.md
-- 7: SROIE real benchmark (15 docs), punct-insensitive strings, backend token cap.
-- 8: graded disagreement scores; knob unit-proven, severity bimodal on SROIE.
-- 9: tradeoff figure (docs/tradeoff_sroie.svg, stdlib SVG).
-- 10: scaled to 50 receipts; findings stable.
-- 11: field descriptions -> +3 points final acc at same cost (company 13->8 wrong).
+## Done (iterations 7-21) — full history in docs/BUILDLOG.md
+- 7-10: SROIE benchmark (n=50), normalization + backend fixes, figure, scale-up.
+- 11-12: field descriptions (+3pt free), trace capture, blind-spot decomposition.
+- 13-15: qwen2.5:1.5b third model, monotone cost curve, date-time fix, figure v2.
+- 16-18: Kleister-NDA contracts, clause-window truncation, crash robustness,
+  split-kept resolution rule (arbiter-wins damaged accuracy).
+- 19: judge arbiter — measured NEGATIVE, reverted (parrots refusals).
+- 20: doc-bootstrap CIs (examples/analyze.py).
+- 21: optional fields / structural absence (n=83); lazy-NONE prompt failure
+  found + fixed; all-absent artifact tripwire.
 
-## Done (iterations 12-14)
-- 12: trace capture; blind spot = 1.5% near-miss strings + gold noise/ambiguity.
-- 13: qwen2.5:1.5b third point; cost curve monotone 61/56/0% saved; found
-  verification regression (final < constrained).
-- 14: date-time normalization fix; regression gone (0.695 -> 0.720), verified.
-- Also: tinyllama described run (README symmetric), ARCHITECTURE.md catch-up.
+## Iteration 22 (current)
+- [ ] Kleister tradeoff figure (mirror of SROIE one) -> docs/tradeoff_kleister.svg,
+  README embed. Done when: rendered, eyeballed, committed, pushed.
 
-## Backlog (pick next)
-- Sweep n=50 described (3 models) + regenerate figure with n=50 numbers.
-- Person-name majority-vote failure on 1.5b: arbiter prompt hardening?
-- [x] Second benchmark done: Kleister-NDA (iterations 16-18).
+## Backlog
+- Multi-valued fields (Kleister `party`) — needs eval semantics for value sets.
+- Threshold sweep on Kleister (knob likely more alive: string-heavy fields).
+- Paper draft skeleton from BUILDLOG findings.
 
-## Notes / surprises
-- SROIE gold noisy: ~0.92 ceiling; address field concentrates the noise.
-- Descriptions help entity fields (company/total), not noise-dominated ones (address).
+## Design rules (settled, don't re-litigate)
+- Split-kept: three-way split keeps constrained value.
+- Blind arbiter: no candidates in arbiter prompt (judge parrots).
+- Structural absence: no "answer NONE" in shared prompts; arbiter only.
+- Zero runtime deps; figures are hand-emitted SVG.

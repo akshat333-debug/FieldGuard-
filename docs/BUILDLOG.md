@@ -356,3 +356,9 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   `analyze.py` prints an absent-answer-rate tripwire ([!] N/N answers absent);
   README documents "keep >= 1 required field" guidance. README Kleister table
   now reports n=83.
+
+## Iteration 22 — Kleister tradeoff figure; figure generator parameterized
+- `examples/figure.py` renders one SVG per benchmark from a spec table
+  (prefix, n, title, x-scale, outfile) — SROIE + Kleister-NDA now both have
+  the three-model tradeoff figure. Kleister figure embedded in README with the
+  all-absent artifact caveat on the tinyllama point.
