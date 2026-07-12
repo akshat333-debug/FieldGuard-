@@ -2,18 +2,18 @@
   "model": "qwen2.5:1.5b",
   "n": 50,
   "threshold": 0.5,
-  "elapsed_sec": 385.8,
+  "elapsed_sec": 490.6,
   "report": {
     "docs": 50,
     "fields_total": 200,
     "constrained_acc": 0.715,
-    "final_acc": 0.695,
+    "final_acc": 0.72,
     "corruption_rate": 0.055,
-    "flag_precision": 0.55,
+    "flag_precision": 0.69,
     "flag_recall": 0.97,
-    "llm_calls": 139,
+    "llm_calls": 131,
     "full_verify_calls": 300,
-    "low_confidence": 18,
+    "low_confidence": 17,
     "notes": []
   },
   "finals": [
@@ -164,7 +164,7 @@
     {
       "company": "TEO HENG STATIONERY & BOOKS",
       "date": "2018-01-15",
-      "address": "55.10",
+      "address": "SELANGOR DARUL EHSAN",
       "total": "55.1"
     },
     {
@@ -199,7 +199,7 @@
     },
     {
       "company": "UNIHAKKA INTERNATIONAL SDN BHD",
-      "date": "MAR 2018 18:24",
+      "date": "2018-03-05",
       "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPON, JOHOR BAHRU, JOHOR",
       "total": "8.2"
     },
@@ -211,7 +211,7 @@
     },
     {
       "company": "UNIHAKKA INTERNATIONAL SDN BHD",
-      "date": "03 MAR 2018 18:22",
+      "date": "2018-03-03",
       "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPON, JOHOR BAHRU, JOHOR",
       "total": "8.2"
     },
@@ -235,7 +235,7 @@
     },
     {
       "company": "UNIHAKKA INTERNATIONAL SDN BHD",
-      "date": "14 MAR 2018 18:40",
+      "date": "2018-03-14",
       "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPON, JOHOR BAHRU, JOHOR",
       "total": "8.2"
     },
@@ -283,13 +283,13 @@
     },
     {
       "company": "UNIHAKKA INTERNATIONAL SDN BHD",
-      "date": "18 MAR 2018 18:25",
+      "date": "2018-03-18",
       "address": "12,JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN, TAMPON, 81200 JOHOR BAHRU, JOHOR",
       "total": "8.6"
     },
     {
       "company": "UNIHAKKA INTERNATIONAL SDN BHD",
-      "date": "27 MAR 2018 18:46",
+      "date": "2018-03-27",
       "address": "12,JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN, TAMPOL,81200 JOHOR BAHRU,JOHOR",
       "total": "6.9"
     },
@@ -1118,9 +1118,7 @@
         "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN, TAMPON,81200 JOHOR BAHRU,JOHOR",
         "total": "$8.20"
       },
-      "flagged": [
-        "date"
-      ]
+      "flagged": []
     },
     {
       "constrained": {
@@ -1150,9 +1148,7 @@
         "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPON, JOHOR BAHRU, JOHOR",
         "total": "8.20"
       },
-      "flagged": [
-        "date"
-      ]
+      "flagged": []
     },
     {
       "constrained": {
@@ -1167,9 +1163,7 @@
         "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN, TAMPON,81200 JOHOR BAHRU,JOHOR",
         "total": "$8.20"
       },
-      "flagged": [
-        "date"
-      ]
+      "flagged": []
     },
     {
       "constrained": {
@@ -1199,9 +1193,7 @@
         "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPON, JOHOR BAHRU, JOHOR",
         "total": "$8.20"
       },
-      "flagged": [
-        "date"
-      ]
+      "flagged": []
     },
     {
       "constrained": {
@@ -1216,9 +1208,7 @@
         "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPONI, JOHOR BAHRU, JOHOR",
         "total": "$8.20"
       },
-      "flagged": [
-        "date"
-      ]
+      "flagged": []
     },
     {
       "constrained": {
@@ -1262,7 +1252,7 @@
       "unconstrained": {
         "company": "Brewery Tap",
         "date": "2018-03-30",
-        "address": "Avtivo Plaza, Lot B-F-11, Block B, No1. Jalan PJU 9/1, D'Sara Avenue, Bandar Sri D'Sara, 52000 XL, Malaysia",
+        "address": "Avtivo Plaza, Lot B-F-11, Block B, No1. Jalan PJU 9/1, D'Sara Avenue, Bandar Sri D'Sara, 52000 XL, Tel: +603-62629219",
         "total": "189.75"
       },
       "flagged": [
@@ -1334,8 +1324,7 @@
         "total": "190.00"
       },
       "flagged": [
-        "company",
-        "date"
+        "company"
       ]
     },
     {
@@ -1351,9 +1340,7 @@
         "address": "12,JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN, TAMPON,81200 JOHOR BAHRU,JOHOR",
         "total": "$8.60"
       },
-      "flagged": [
-        "date"
-      ]
+      "flagged": []
     },
     {
       "constrained": {
@@ -1368,9 +1355,7 @@
         "address": "12,JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN, TAMPOL,81200 JOHOR BAHRU,JOHOR",
         "total": "$6.90"
       },
-      "flagged": [
-        "date"
-      ]
+      "flagged": []
     },
     {
       "constrained": {

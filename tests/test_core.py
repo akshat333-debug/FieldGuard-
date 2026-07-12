@@ -109,3 +109,12 @@ def test_string_normalize_punctuation_insensitive():
     # letter-level differences still distinct (real OCR misses stay visible)
     assert (normalize(spec, "MR D.T.Y. (JOHOR) SDN BHD")
             != normalize(spec, "MR D.I.Y. (JOHOR) SDN BHD"))
+
+
+def test_date_normalize_strips_time_suffix():
+    d = FieldSpec("d", "date")
+    assert normalize(d, "05 MAR 2018 18:24") == "2018-03-05"
+    assert normalize(d, "2018-03-05 18:24:59") == "2018-03-05"
+    assert normalize(d, "14 March 2026, 9:05 AM") == "2026-03-14"
+    # plain dates unaffected
+    assert normalize(d, "05 Mar 2018") == "2018-03-05"

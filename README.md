@@ -58,17 +58,19 @@ Convert once with `python3 -m examples.convert_sroie`, run with
 `python3 -m examples.experiment --data datasets/sroie_50.jsonl
 --schema datasets/sroie.schema.json --model <m> --n 50`.
 
-| | qwen2.5:3b | tinyllama-1.1B |
-|---|---|---|
-| constrained accuracy | 0.820 | 0.005 |
-| final accuracy | 0.860 | 0.035 |
-| flag precision / recall | 0.780 / 0.950 | 0.075 / 1.0 |
-| low-confidence self-report | 5/200 | 200/200 |
-| LLM calls vs verify-everything | **-61%** | 0% (all flagged) |
+| | qwen2.5:3b | qwen2.5:1.5b | tinyllama-1.1B |
+|---|---|---|---|
+| constrained accuracy | 0.820 | 0.715 | 0.005 |
+| final accuracy | 0.860 | 0.720 | 0.035 |
+| flag precision / recall | 0.780 / 0.950 | 0.690 / 0.970 | 0.075 / 1.0 |
+| low-confidence self-report | 5/200 | 17/200 | 200/200 |
+| LLM calls vs verify-everything | **-61%** | **-56%** | 0% (all flagged) |
 
-Both columns use `datasets/sroie.schema.json` field descriptions — one sentence
+All columns use `datasets/sroie.schema.json` field descriptions — one sentence
 per field buys the capable model +3 points final accuracy at identical cost
 (company errors 13→8; BUILDLOG iteration 11); the broken model is unmoved.
+**Verification spend tracks model quality monotonically** — the knob nobody
+has to tune: 61% → 56% → 0% saved as the extractor degrades.
 
 Gold-noise ceiling ≈ 0.92 (SROIE gold sometimes disagrees with its own OCR text;
 see BUILDLOG iteration 7). The adaptive-cost finding replicates on real data.

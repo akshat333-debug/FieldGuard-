@@ -28,9 +28,12 @@ def normalize(spec: FieldSpec, value: str) -> str:
             return v.casefold()
         return str(int(f)) if f == int(f) else repr(f)
     if spec.type == "date":
+        # free-form answers often append time-of-day ("14 MAR 2018 18:40")
+        v_date = re.sub(r"[,\s]*\d{1,2}:\d{2}(:\d{2})?\s*(AM|PM)?\s*$", "", v,
+                        flags=re.I).strip()
         for fmt in _DATE_FORMATS:
             try:
-                return datetime.strptime(v, fmt).date().isoformat()
+                return datetime.strptime(v_date, fmt).date().isoformat()
             except ValueError:
                 continue
         return v.casefold()

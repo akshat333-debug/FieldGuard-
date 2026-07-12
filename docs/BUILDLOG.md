@@ -235,3 +235,18 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   majority votes for a recurring person name over the business name; 2 are
   arbiter cruft ('address', 'RM'). Fix queued: strip time-of-day before date
   parsing — removes the flag AND the damage for the 6.
+
+## Iteration 14 — date-time normalization: regression fixed, verified
+- Fix: `normalize` strips a trailing time-of-day ("14 MAR 2018 18:40",
+  "2018-03-05 18:24:59", "9:05 AM") before date-format parsing. Regression
+  tests added; suite 30/30.
+- **1.5b rerun, SROIE-50 described:** final 0.695 -> **0.720** (now >= its
+  0.715 constrained — verification helps again), flag precision 0.550 -> 0.690
+  (the six false date flags are gone), 131 calls (56% saved), 17/200
+  low-confidence.
+- Three-model README table updated. Curve: 61% / 56% / 0% saved for
+  3b / 1.5b / broken-1.1B.
+- Remaining 1.5b verification damage is the recurring-person-name majority vote
+  (unc + arbiter agree on the buyer name) — a genuine correlated failure of the
+  weaker model, in scope for the documented dual-path limitation, not a
+  measurement bug.
