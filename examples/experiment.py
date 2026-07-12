@@ -14,7 +14,8 @@ import time
 from dataclasses import asdict
 
 from fieldguard.backends import OpenAICompatBackend
-from fieldguard.data import INVOICE_SCHEMA, make_dataset, render_realistic
+from fieldguard.data import (INVOICE_SCHEMA, add_ocr_noise, make_dataset,
+                             make_hard_dataset, render_realistic)
 from fieldguard.pipeline import run
 
 
@@ -24,10 +25,21 @@ def main() -> None:
     ap.add_argument("--model", default="qwen2.5:3b")
     ap.add_argument("--n", type=int, default=8)
     ap.add_argument("--threshold", type=float, default=0.5)
+    ap.add_argument("--hard", action="store_true",
+                    help="distractor-salted documents (subtotal/due-date/customer)")
+    ap.add_argument("--noise", type=float, default=0.0,
+                    help="OCR character-noise rate, e.g. 0.06")
     args = ap.parse_args()
 
-    examples = make_dataset(n=args.n)
-    docs = [render_realistic(ex) for ex in examples]
+    if args.hard:
+        examples = make_hard_dataset(n=args.n)
+        docs = [ex.document for ex in examples]
+    else:
+        examples = make_dataset(n=args.n)
+        docs = [render_realistic(ex) for ex in examples]
+    if args.noise:
+        docs = [add_ocr_noise(d, rate=args.noise, seed=i)
+                for i, d in enumerate(docs)]
     gold = [ex.gold for ex in examples]
 
     backend = OpenAICompatBackend(base_url=args.base_url, model=args.model,
@@ -48,7 +60,8 @@ def main() -> None:
     }
     results = pathlib.Path(__file__).resolve().parent.parent / "results"
     results.mkdir(exist_ok=True)
-    path = results / f"{args.model.replace(':', '_')}_n{args.n}_t{args.threshold}.json"
+    tag = ("hard_" if args.hard else "") + (f"noise{args.noise}_" if args.noise else "")
+    path = results / f"{tag}{args.model.replace(':', '_')}_n{args.n}_t{args.threshold}.json"
     path.write_text(json.dumps(out, indent=2))
     print(f"results -> {path}")
 

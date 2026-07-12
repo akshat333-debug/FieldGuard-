@@ -67,5 +67,10 @@ model, full spend plus loud self-reporting on a broken one. Known limitation
 paths are invisible to disagreement by construction; the empty-field case is
 auto-flagged.
 
+**Scope delineation (OCR-noise experiment):** with smudged source text the model
+misreads both paths identically — accuracy drops, zero flags fire. The dual-path
+signal detects *constraint-induced* corruption specifically; *source-induced*
+corruption needs a different signal. Full findings: `docs/BUILDLOG.md` iteration 6.
+
 See `docs/ARCHITECTURE.md` for the full design and `docs/BUILDLOG.md` for the
 build-test-fix-document history.

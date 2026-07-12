@@ -98,6 +98,67 @@ def render_realistic(ex: Example) -> str:
     )
 
 
+def make_hard_dataset(n: int = 10, seed: int = 21) -> list[Example]:
+    """Prose invoices salted with distractors that induce real extraction errors:
+
+    - money: subtotal + tax + shipping compete with the gold total
+    - dates: issue date (gold) vs a due date 30 days out
+    - names: vendor (gold) vs a bill-to customer
+    - ids: invoice number (gold) vs a PO number lookalike
+    """
+    rng = random.Random(seed)
+    out = []
+    for i in range(n):
+        vendor, customer = rng.sample(_VENDORS, 2)
+        subtotal = rng.uniform(100, 8000)
+        tax = subtotal * rng.choice((0.05, 0.18, 0.20))
+        shipping = rng.uniform(5, 80)
+        total = subtotal + tax + shipping
+        m, d = rng.randint(1, 12), rng.randint(1, 27)
+        due_m, due_d = (m % 12) + 1, d + 1
+        currency = rng.choice(("USD", "EUR", "INR"))
+        gold = {
+            "invoice_id": f"INV-{2000 + i}",
+            "vendor": vendor,
+            "total": f"{total:.2f}",
+            "date": f"2026-{m:02d}-{d:02d}",
+            "currency": currency,
+        }
+        y, mo, dd = gold["date"].split("-")
+        doc = (
+            f"TAX INVOICE\n"
+            f"Invoice No: {gold['invoice_id']}    PO Number: PO-{rng.randint(70000, 99999)}\n"
+            f"Seller: {vendor}\n"
+            f"Bill To: {customer}\n"
+            f"Issue date: {int(dd)} {_MONTHS[int(mo) - 1]} {y}. "
+            f"Payment due {due_d} {_MONTHS[due_m - 1]} {y}.\n"
+            f"Subtotal: {currency} {subtotal:,.2f}\n"
+            f"Tax: {currency} {tax:,.2f}\n"
+            f"Shipping: {currency} {shipping:,.2f}\n"
+            f"TOTAL DUE: {currency} {total:,.2f}\n"
+        )
+        out.append(Example(document=doc, gold=gold))
+    return out
+
+
+_OCR_SWAPS = {"0": "O", "O": "0", "1": "l", "l": "1", "5": "S", "S": "5",
+              "8": "B", "B": "8", "e": "c", "a": "o"}
+
+
+def add_ocr_noise(document: str, rate: float = 0.06, seed: int = 5) -> str:
+    """Simulate scan/OCR damage: character swaps at ``rate``, gold unchanged.
+
+    The model now reads smudged surface forms — the condition under which
+    schema-forced decoding silently guesses plausible-but-wrong values.
+    """
+    rng = random.Random(seed)
+    chars = list(document)
+    for i, ch in enumerate(chars):
+        if ch in _OCR_SWAPS and rng.random() < rate:
+            chars[i] = _OCR_SWAPS[ch]
+    return "".join(chars)
+
+
 class PlannedMockBackend(MockBackend):
     """MockBackend that applies a per-document corruption plan (keyed by invoice_id)."""
 

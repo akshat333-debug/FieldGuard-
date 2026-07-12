@@ -79,3 +79,26 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
 - Next for the team: convert an ExtractBench slice to the JSONL shape, run both
   local models plus one API model, sweep thresholds (`calibrate.sweep`) for the
   accuracy/cost tradeoff figure — that's the core experiment of the paper.
+
+## Iteration 6 — hard docs, OCR noise, real-model sweep: three findings
+- Built: `make_hard_dataset` (distractors: PO number vs invoice id, Bill-To customer
+  vs vendor, subtotal/tax/shipping vs total, due date vs issue date),
+  `add_ocr_noise` (character smudges: 0↔O, 1↔l, 5↔S...), `examples/sweep.py`,
+  `--hard` / `--noise` flags on the experiment runner. Tests 23/23.
+- **Finding 1 — saturation:** qwen2.5:3b stays at 1.000 constrained accuracy even
+  with distractors (10 docs / 50 fields, 70% calls saved, 1 false flag). A capable
+  3B model does not exhibit measurable format-tax on flat 5-field extraction.
+  Paper implication: value corruption concentrates in weaker models and harder
+  schemas — the measurement target must be chosen there.
+- **Finding 2 — delineation (negative result, important):** with 8% OCR noise,
+  constrained accuracy drops to 0.920 but ZERO flags fire — the model misreads the
+  same smudged source the same way on both paths. Dual-path disagreement detects
+  CONSTRAINT-induced corruption specifically; SOURCE-induced corruption is
+  invisible to it by construction. Clean scope statement for the method.
+- **Finding 3 — inert knob:** threshold sweep (0.1/0.5/0.9) on tinyllama is flat:
+  identical accuracy/cost at every threshold. Current disagreement is effectively
+  binary (typed mismatches score exactly 1.0; empties auto-flag at 1.0). Future
+  work: graded scores (e.g. relative numeric error) to make the tradeoff tunable.
+- Experiment matrix now: capable-model clean (near-zero overhead), capable-model
+  noisy (delineation), broken-model (detection + self-report). Results JSONs in
+  `results/`.

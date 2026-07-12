@@ -1,0 +1,163 @@
+{
+  "model": "qwen2.5:3b",
+  "n": 10,
+  "threshold": 0.5,
+  "elapsed_sec": 36.8,
+  "report": {
+    "docs": 10,
+    "fields_total": 50,
+    "constrained_acc": 1.0,
+    "final_acc": 1.0,
+    "corruption_rate": 0.0,
+    "flag_precision": 0.9,
+    "flag_recall": 1.0,
+    "llm_calls": 21,
+    "full_verify_calls": 70,
+    "low_confidence": 0,
+    "notes": []
+  },
+  "finals": [
+    {
+      "invoice_id": "INV-2000",
+      "vendor": "Globex Ltd",
+      "total": "6685.08",
+      "date": "2026-04-26",
+      "currency": "EUR"
+    },
+    {
+      "invoice_id": "INV-2001",
+      "vendor": "Stark Industries",
+      "total": "4358.8",
+      "date": "2026-01-12",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-2002",
+      "vendor": "Acme Corp",
+      "total": "6763.28",
+      "date": "2026-12-02",
+      "currency": "EUR"
+    },
+    {
+      "invoice_id": "INV-2003",
+      "vendor": "Umbrella Supplies",
+      "total": "4282.35",
+      "date": "2026-12-04",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-2004",
+      "vendor": "Acme Corp",
+      "total": "6266.14",
+      "date": "2026-01-15",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-2005",
+      "vendor": "Wayne Enterprises",
+      "total": "3453.16",
+      "date": "2026-01-16",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-2006",
+      "vendor": "Globex Ltd",
+      "total": "6569.18",
+      "date": "2026-10-24",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-2007",
+      "vendor": "Stark Industries",
+      "total": "5348.54",
+      "date": "2026-03-18",
+      "currency": "EUR"
+    },
+    {
+      "invoice_id": "INV-2008",
+      "vendor": "Initech",
+      "total": "4872.03",
+      "date": "2026-07-09",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-2009",
+      "vendor": "Acme Corp",
+      "total": "6817.27",
+      "date": "2026-02-18",
+      "currency": "INR"
+    }
+  ],
+  "gold": [
+    {
+      "invoice_id": "INV-2000",
+      "vendor": "Globex Ltd",
+      "total": "6685.08",
+      "date": "2026-04-26",
+      "currency": "EUR"
+    },
+    {
+      "invoice_id": "INV-2001",
+      "vendor": "Stark Industries",
+      "total": "4358.80",
+      "date": "2026-01-12",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-2002",
+      "vendor": "Acme Corp",
+      "total": "6763.28",
+      "date": "2026-12-02",
+      "currency": "EUR"
+    },
+    {
+      "invoice_id": "INV-2003",
+      "vendor": "Umbrella Supplies",
+      "total": "4282.35",
+      "date": "2026-12-04",
+      "currency": "INR"
+    },
+    {
+      "invoice_id": "INV-2004",
+      "vendor": "Acme Corp",
+      "total": "6266.14",
+      "date": "2026-01-15",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-2005",
+      "vendor": "Wayne Enterprises",
+      "total": "3453.16",
+      "date": "2026-01-16",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-2006",
+      "vendor": "Globex Ltd",
+      "total": "6569.18",
+      "date": "2026-10-24",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-2007",
+      "vendor": "Stark Industries",
+      "total": "5348.54",
+      "date": "2026-03-18",
+      "currency": "EUR"
+    },
+    {
+      "invoice_id": "INV-2008",
+      "vendor": "Initech",
+      "total": "4872.03",
+      "date": "2026-07-09",
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-2009",
+      "vendor": "Acme Corp",
+      "total": "6817.27",
+      "date": "2026-02-18",
+      "currency": "INR"
+    }
+  ]
+}
