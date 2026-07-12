@@ -28,3 +28,26 @@ def test_empty_file_raises(tmp_path):
     p.write_text("")
     with pytest.raises(ValueError):
         load_jsonl(p)
+
+
+def test_dmy_date_inferred_and_currency_rm_stripped(tmp_path):
+    # SROIE-shaped record: dd/mm/yyyy gold date, ringgit amounts in text
+    rows = [{"document": "TOTAL RM 9.00 DATE 25/12/2018",
+             "gold": {"date": "25/12/2018", "total": "9.00"}}]
+    p = tmp_path / "sroie.jsonl"
+    p.write_text("\n".join(json.dumps(r) for r in rows))
+    _, schema = load_jsonl(p)
+    assert schema.field("date").type == "date"
+    from fieldguard.compare import normalize
+    assert normalize(schema.field("total"), "RM 9.00") == "9"
+    assert normalize(schema.field("date"), "25/12/2018") == "2018-12-25"
+
+
+def test_sroie_box_text_keeps_commas():
+    from examples.convert_sroie import box_to_text
+    import pathlib, tempfile
+    with tempfile.TemporaryDirectory() as d:
+        p = pathlib.Path(d) / "b.csv"
+        p.write_text("1,2,3,4,5,6,7,8,NO.53 55,57 & 59, JALAN SAGU 18,\n"
+                     "1,2,3,4,5,6,7,8,TOTAL RM 9.00")
+        assert box_to_text(p) == "NO.53 55,57 & 59, JALAN SAGU 18,\nTOTAL RM 9.00"

@@ -12,7 +12,7 @@ from .schemas import FieldSpec, Schema
 _DATE_FORMATS = ("%Y-%m-%d", "%d %B %Y", "%B %d, %Y", "%d/%m/%Y", "%m/%d/%Y",
                  "%d-%m-%Y", "%b %d, %Y", "%d %b %Y")
 
-_NUM_JUNK = re.compile(r"[$€£₹,\s]|(?:USD|EUR|GBP|INR)", re.I)
+_NUM_JUNK = re.compile(r"[$€£₹,\s]|(?:USD|EUR|GBP|INR|MYR|RM)", re.I)
 
 
 def normalize(spec: FieldSpec, value: str) -> str:
@@ -34,8 +34,10 @@ def normalize(spec: FieldSpec, value: str) -> str:
             except ValueError:
                 continue
         return v.casefold()
-    # string / enum
-    return re.sub(r"\s+", " ", v).casefold()
+    # string / enum — punctuation-insensitive: real OCR benchmarks (SROIE) differ
+    # from gold in trailing periods/commas/spacing, which is not an extraction error
+    v = re.sub(r"[^\w\s&/@-]", " ", v)
+    return re.sub(r"\s+", " ", v).strip().casefold()
 
 
 def _token_jaccard_distance(a: str, b: str) -> float:

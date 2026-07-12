@@ -86,3 +86,12 @@ def test_flag_fields_finds_exactly_corrupted():
 def test_no_flags_when_clean():
     dual = dual_extract(MockBackend(), DOC, SCHEMA)
     assert flag_fields(SCHEMA, dual.constrained, dual.unconstrained) == []
+
+
+def test_string_normalize_punctuation_insensitive():
+    spec = FieldSpec("address", "string")
+    assert (normalize(spec, "NO.53, JALAN SAGU 18, JOHOR.")
+            == normalize(spec, "NO.53 JALAN SAGU 18 JOHOR"))
+    # letter-level differences still distinct (real OCR misses stay visible)
+    assert (normalize(spec, "MR D.T.Y. (JOHOR) SDN BHD")
+            != normalize(spec, "MR D.I.Y. (JOHOR) SDN BHD"))

@@ -29,9 +29,16 @@ def main() -> None:
                     help="distractor-salted documents (subtotal/due-date/customer)")
     ap.add_argument("--noise", type=float, default=0.0,
                     help="OCR character-noise rate, e.g. 0.06")
+    ap.add_argument("--data", default=None,
+                    help="external JSONL dataset (adapter shape); overrides synthetic")
     args = ap.parse_args()
 
-    if args.hard:
+    if args.data:
+        from fieldguard.adapter import load_jsonl
+        examples, schema = load_jsonl(args.data)
+        examples = examples[:args.n]
+        docs = [ex.document for ex in examples]
+    elif args.hard:
         examples = make_hard_dataset(n=args.n)
         docs = [ex.document for ex in examples]
     else:
@@ -41,13 +48,15 @@ def main() -> None:
         docs = [add_ocr_noise(d, rate=args.noise, seed=i)
                 for i, d in enumerate(docs)]
     gold = [ex.gold for ex in examples]
+    if not args.data:
+        schema = INVOICE_SCHEMA
 
     backend = OpenAICompatBackend(base_url=args.base_url, model=args.model,
                                   api_key="ollama")
-    print(f"Running {args.n} realistic invoices against {args.model} "
+    print(f"Running {len(docs)} docs against {args.model} "
           f"(threshold {args.threshold}) ...")
     t0 = time.time()
-    finals, report = run(backend, docs, INVOICE_SCHEMA, gold=gold,
+    finals, report = run(backend, docs, schema, gold=gold,
                          threshold=args.threshold)
     elapsed = time.time() - t0
 
@@ -60,8 +69,9 @@ def main() -> None:
     }
     results = pathlib.Path(__file__).resolve().parent.parent / "results"
     results.mkdir(exist_ok=True)
-    tag = ("hard_" if args.hard else "") + (f"noise{args.noise}_" if args.noise else "")
-    path = results / f"{tag}{args.model.replace(':', '_')}_n{args.n}_t{args.threshold}.json"
+    tag = (f"{pathlib.Path(args.data).stem}_" if args.data else "") + \
+          ("hard_" if args.hard else "") + (f"noise{args.noise}_" if args.noise else "")
+    path = results / f"{tag}{args.model.replace(':', '_')}_n{len(docs)}_t{args.threshold}.json"
     path.write_text(json.dumps(out, indent=2))
     print(f"results -> {path}")
 

@@ -102,3 +102,38 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
 - Experiment matrix now: capable-model clean (near-zero overhead), capable-model
   noisy (delineation), broken-model (detection + self-report). Results JSONs in
   `results/`.
+
+## Iteration 7 — FIRST REAL EXTERNAL BENCHMARK: SROIE receipts
+- Dataset: SROIE (ICDAR 2019 KIE task) — real scanned Malaysian receipts, gold
+  fields company/date/address/total. 15 receipts pulled from the zzzDavid mirror
+  (box OCR lines + key JSON), converted by new `examples/convert_sroie.py` to
+  `datasets/sroie_15.jsonl` (adapter shape). Box CSV text can contain commas —
+  converter splits on the first 8 only; regression test added.
+- Adapter gaps real data exposed, fixed:
+  1. `25/12/2018` inferred as string → added d/m/Y-ish pattern to `_infer_type`.
+  2. Ringgit amounts (`RM 9.00`) not stripped by `_NUM_JUNK` → added RM|MYR.
+- **Measurement-fairness fix:** first qwen2.5:3b run scored 0.700 constrained /
+  0.717 final, but 12 of 17 wrong fields were punctuation/whitespace-only diffs
+  ("JOHOR" vs "JOHOR.", missing comma spacing) — normalization gap, not extraction
+  error. String normalize is now punctuation-insensitive (keeps letters/digits/
+  &/@/-); letter-level OCR differences (D.T.Y vs D.I.Y) stay distinct. Test added.
+- **Backend fix real data forced:** tinyllama free-form generation on receipt text
+  ran past the 120s socket timeout (no output cap at all). `OpenAICompatBackend`
+  now sends `max_tokens` (default 512) and retries once on timeout. qwen run got
+  36% faster wall-clock from the cap alone (115.8s → 78.8s).
+- **Results (15 receipts / 60 fields, t=0.5):**
+  - qwen2.5:3b — constrained 0.833 → final 0.850, corruption 3.3%, flag P/R
+    0.800/1.000, 35 vs 90 calls (**61% saved**), 0 low-confidence.
+  - tinyllama-1.1B — constrained 0.000 → final 0.067, ALL 60 fields flagged,
+    60/60 self-reported low-confidence, 0% saved (correct behavior: broken
+    extractor gets full verification + loud alarm).
+  - The synthetic-world "verification cost adapts to model quality" finding
+    REPLICATES on real data.
+- Residual qwen errors decompose: ~4-5 fields are benchmark gold noise (doc0 OCR
+  itself reads "SDN BND" vs gold "BHD"; doc13 gold contains typos "SEITA"/"SHAN"
+  where the model's answer looks MORE correct; doc2 gold address includes text
+  absent from the document) → effective gold ceiling ≈ 0.92-0.93. ~4-5 are genuine
+  misses: company-entity confusion on receipts with person names / multiple
+  companies (doc7, doc8), one total mis-pick (100.0 vs 26.60), one address
+  interpolation. Company disambiguation is the real headroom.
+- Tests: **26/26.**

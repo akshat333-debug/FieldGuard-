@@ -71,11 +71,14 @@ class OpenAICompatBackend:
     """
 
     def __init__(self, base_url: str, model: str, api_key: str | None = None,
-                 temperature: float = 0.0):
+                 temperature: float = 0.0, max_tokens: int = 512,
+                 timeout: float = 120.0):
         self.base_url = base_url.rstrip("/")
         self.model = model
         self.api_key = api_key or os.environ.get("OPENAI_API_KEY", "")
         self.temperature = temperature
+        self.max_tokens = max_tokens  # unbounded free-form output can run past
+        self.timeout = timeout        # any timeout on small local models
         self.calls = 0
 
     def generate(self, prompt: str, *, force_json: bool = False) -> str:
@@ -83,6 +86,7 @@ class OpenAICompatBackend:
         body: dict = {
             "model": self.model,
             "temperature": self.temperature,
+            "max_tokens": self.max_tokens,
             "messages": [{"role": "user", "content": prompt}],
         }
         if force_json:
@@ -93,6 +97,12 @@ class OpenAICompatBackend:
             headers={"Content-Type": "application/json",
                      "Authorization": f"Bearer {self.api_key}"},
         )
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            data = json.load(resp)
-        return data["choices"][0]["message"]["content"]
+        for attempt in (1, 2):  # one retry on timeout
+            try:
+                with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+                    data = json.load(resp)
+                return data["choices"][0]["message"]["content"]
+            except TimeoutError:
+                if attempt == 2:
+                    raise
+        raise AssertionError("unreachable")

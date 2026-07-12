@@ -19,12 +19,13 @@ from .data import Example
 from .schemas import FieldSpec, Schema
 
 _ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+_DMY_DATE = re.compile(r"^\d{1,2}[/-]\d{1,2}[/-]\d{4}$")
 _NUMBERISH = re.compile(r"^[-+]?[\d,]*\.?\d+$")
 
 
 def _infer_type(value: str) -> str:
     v = value.strip()
-    if _ISO_DATE.match(v):
+    if _ISO_DATE.match(v) or _DMY_DATE.match(v):
         return "date"
     if _NUMBERISH.match(v):
         return "number"
