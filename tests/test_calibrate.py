@@ -21,3 +21,13 @@ def test_sweep_cost_monotone_and_accuracy_tradeoff():
     assert points[0].final_acc == 1.0
     table = render_table(points)
     assert "thr" in table and len(table.splitlines()) == 5
+
+
+def test_bootstrap_ci_brackets_mean_and_is_deterministic():
+    from examples.analyze import bootstrap_ci
+    per_doc = [1.0, 0.75, 0.5, 1.0, 0.25, 0.75, 1.0, 0.5]
+    m1, lo1, hi1 = bootstrap_ci(per_doc, n_boot=2000, seed=7)
+    m2, lo2, hi2 = bootstrap_ci(per_doc, n_boot=2000, seed=7)
+    assert (m1, lo1, hi1) == (m2, lo2, hi2)          # seeded -> reproducible
+    assert lo1 <= m1 <= hi1
+    assert lo1 < hi1                                  # nondegenerate interval

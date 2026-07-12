@@ -311,3 +311,12 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   the blind-run numbers). Design rule recorded: verification signals must stay
   independent — feeding path outputs into the arbiter correlates the votes.
 - Tests: **33/33.**
+
+## Iteration 20 — bootstrap CIs on the headline numbers
+- Built: `examples/analyze.py` — doc-level bootstrap (docs are the exchangeable
+  unit; fields within a doc are correlated), 10k resamples, seeded. Test pins
+  determinism + bracketing. Tests 34/34.
+- SROIE-50: 3b [0.810, 0.900] vs 1.5b [0.680, 0.780] — DISJOINT, the model
+  separation is statistically real at n=50. tinyllama [0.000, 0.015].
+- Kleister-26: 3b [0.821, 0.949] vs 1.5b [0.705, 0.872] — overlap; the
+  contracts gap is suggestive only at n=26. Stated as such in README.

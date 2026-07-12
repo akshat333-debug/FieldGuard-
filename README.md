@@ -66,6 +66,10 @@ Convert once with `python3 -m examples.convert_sroie`, run with
 | low-confidence self-report | 5/200 | 17/200 | 200/200 |
 | LLM calls vs verify-everything | **-61%** | **-56%** | 0% (all flagged) |
 
+95% doc-bootstrap CIs (`python3 -m examples.analyze`): 3b [0.810, 0.900],
+1.5b [0.680, 0.780] (disjoint — the model separation is real), tinyllama
+[0.000, 0.015].
+
 All columns use `datasets/sroie.schema.json` field descriptions — one sentence
 per field buys the capable model +3 points final accuracy at identical cost
 (company errors 13→8; BUILDLOG iteration 11); the broken model is unmoved.
@@ -89,6 +93,9 @@ Fields: effective_date, jurisdiction, term.
 | final accuracy | 0.885 | 0.795 | 0.000 |
 | flag precision / recall | 0.596 / 1.0 | 0.654 / 1.0 | 0.0 / 1.0 |
 | LLM calls vs verify-everything | **-50%** | **-52%** | 0% (all flagged) |
+
+95% CIs at n=26 are wide — 3b [0.821, 0.949] and 1.5b [0.705, 0.872] overlap,
+so treat the 3b-vs-1.5b gap on contracts as suggestive, not established.
 
 Same adaptive-cost shape in a second domain. Contracts pushed three fixes into
 the method: clause-window truncation, number-word/legalese-date normalization,
