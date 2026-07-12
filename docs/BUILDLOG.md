@@ -362,3 +362,9 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   (prefix, n, title, x-scale, outfile) — SROIE + Kleister-NDA now both have
   the three-model tradeoff figure. Kleister figure embedded in README with the
   all-absent artifact caveat on the tinyllama point.
+
+## Iteration 23 — paper outline
+- docs/PAPER_OUTLINE.md: full paper skeleton distilled from iterations 0-22 —
+  problem, method (with the three measured resolution rules), setup, headline
+  results with CIs, the three negative results unified as "don't correlate
+  the paths", limitations, reproduction map.
