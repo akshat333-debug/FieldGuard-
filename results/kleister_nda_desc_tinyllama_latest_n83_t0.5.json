@@ -1,0 +1,1940 @@
+{
+  "model": "tinyllama:latest",
+  "n": 83,
+  "threshold": 0.5,
+  "elapsed_sec": 820.7,
+  "report": {
+    "docs": 83,
+    "fields_total": 249,
+    "constrained_acc": 0.3012048192771082,
+    "final_acc": 0.3012048192771082,
+    "corruption_rate": 0.0,
+    "flag_precision": 0.9759036144578314,
+    "flag_recall": 1.0,
+    "llm_calls": 170,
+    "full_verify_calls": 415,
+    "low_confidence": 4,
+    "notes": []
+  },
+  "finals": [
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    }
+  ],
+  "gold": [
+    {
+      "effective_date": "2014-05-20",
+      "jurisdiction": "New York",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New York",
+      "term": ""
+    },
+    {
+      "effective_date": "2012-09-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2009-02-23",
+      "jurisdiction": "Massachusetts",
+      "term": ""
+    },
+    {
+      "effective_date": "2015-03-01",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2012-01-11",
+      "jurisdiction": "Washington",
+      "term": ""
+    },
+    {
+      "effective_date": "2009-04-30",
+      "jurisdiction": "Delaware",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2016-06-22",
+      "jurisdiction": "New Jersey",
+      "term": ""
+    },
+    {
+      "effective_date": "2008-03-31",
+      "jurisdiction": "New York",
+      "term": ""
+    },
+    {
+      "effective_date": "2015-12-11",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "2018-11-15",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2000-05-23",
+      "jurisdiction": "Delaware",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New York",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2012-01-25",
+      "jurisdiction": "Massachusetts",
+      "term": "5 years"
+    },
+    {
+      "effective_date": "2008-07-31",
+      "jurisdiction": "Minnesota",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "California",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2014-11-25",
+      "jurisdiction": "New York",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2018-10-01",
+      "jurisdiction": "California",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2018-12-28",
+      "jurisdiction": "Iowa",
+      "term": ""
+    },
+    {
+      "effective_date": "2012-03-31",
+      "jurisdiction": "California",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Virginia",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2004-10-11",
+      "jurisdiction": "North Carolina",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Arizona",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Indiana",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New Jersey",
+      "term": ""
+    },
+    {
+      "effective_date": "2005-05-17",
+      "jurisdiction": "California",
+      "term": ""
+    },
+    {
+      "effective_date": "2018-03-30",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2013-05-01",
+      "jurisdiction": "Georgia",
+      "term": ""
+    },
+    {
+      "effective_date": "2005-07-03",
+      "jurisdiction": "New York",
+      "term": "5 years"
+    },
+    {
+      "effective_date": "2015-06-23",
+      "jurisdiction": "New York",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "2008-01-01",
+      "jurisdiction": "California",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Minnesota",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "California",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2018-08-16",
+      "jurisdiction": "Kentucky",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2016-01-27",
+      "jurisdiction": "Minnesota",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Ohio",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Michigan",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "California",
+      "term": ""
+    },
+    {
+      "effective_date": "2000-02-10",
+      "jurisdiction": "Minnesota",
+      "term": ""
+    },
+    {
+      "effective_date": "2008-11-06",
+      "jurisdiction": "California",
+      "term": ""
+    },
+    {
+      "effective_date": "2007-05-09",
+      "jurisdiction": "Delaware",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Illinois",
+      "term": ""
+    },
+    {
+      "effective_date": "2003-05-14",
+      "jurisdiction": "Minnesota",
+      "term": ""
+    },
+    {
+      "effective_date": "2010-06-23",
+      "jurisdiction": "Texas",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New Jersey",
+      "term": "10 years"
+    },
+    {
+      "effective_date": "2009-11-06",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Washington",
+      "term": ""
+    },
+    {
+      "effective_date": "2005-02-16",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "2014-11-26",
+      "jurisdiction": "Delaware",
+      "term": ""
+    },
+    {
+      "effective_date": "1999-03-16",
+      "jurisdiction": "Oregon",
+      "term": ""
+    },
+    {
+      "effective_date": "2008-07-02",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2012-06-11",
+      "jurisdiction": "Delaware",
+      "term": ""
+    },
+    {
+      "effective_date": "2007-03-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2007-04-30",
+      "jurisdiction": "Massachusetts",
+      "term": ""
+    },
+    {
+      "effective_date": "2011-11-01",
+      "jurisdiction": "California",
+      "term": ""
+    },
+    {
+      "effective_date": "2012-09-20",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "2016-03-15",
+      "jurisdiction": "Delaware",
+      "term": "9 months"
+    },
+    {
+      "effective_date": "2005-09-29",
+      "jurisdiction": "Illinois",
+      "term": ""
+    },
+    {
+      "effective_date": "2005-05-04",
+      "jurisdiction": "Idaho",
+      "term": ""
+    },
+    {
+      "effective_date": "2007-08-14",
+      "jurisdiction": "Washington",
+      "term": ""
+    },
+    {
+      "effective_date": "2016-05-03",
+      "jurisdiction": "New York",
+      "term": ""
+    },
+    {
+      "effective_date": "2008-08-01",
+      "jurisdiction": "New York",
+      "term": ""
+    },
+    {
+      "effective_date": "2006-01-01",
+      "jurisdiction": "California",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "2015-03-16",
+      "jurisdiction": "Utah",
+      "term": ""
+    },
+    {
+      "effective_date": "2012-07-05",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2015-12-08",
+      "jurisdiction": "Washington",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2005-02-24",
+      "jurisdiction": "Virginia",
+      "term": ""
+    },
+    {
+      "effective_date": "2006-12-19",
+      "jurisdiction": "New York",
+      "term": ""
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New York",
+      "term": "24 months"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Illinois",
+      "term": ""
+    },
+    {
+      "effective_date": "2008-01-01",
+      "jurisdiction": "California",
+      "term": ""
+    },
+    {
+      "effective_date": "2017-10-02",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": ""
+    },
+    {
+      "effective_date": "2011-03-29",
+      "jurisdiction": "Texas",
+      "term": ""
+    },
+    {
+      "effective_date": "2011-05-26",
+      "jurisdiction": "California",
+      "term": ""
+    },
+    {
+      "effective_date": "2006-09-01",
+      "jurisdiction": "Washington",
+      "term": ""
+    },
+    {
+      "effective_date": "2015-04-02",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2017-07-21",
+      "jurisdiction": "Washington",
+      "term": ""
+    },
+    {
+      "effective_date": "2011-01-18",
+      "jurisdiction": "New York",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Washington",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2015-07-21",
+      "jurisdiction": "Illinois",
+      "term": ""
+    }
+  ],
+  "trace": [
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "US state whose law governs the agreement, from the governance-law clause - \"New York\"",
+        "term": "duration of the agreement as stated, e.g. \"2 years\" - length only, not start/end dates"
+      },
+      "flagged": [
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "Delaware",
+        "term": "10th July 2016"
+      },
+      "flagged": [
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": []
+    }
+  ]
+}

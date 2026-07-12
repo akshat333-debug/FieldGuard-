@@ -48,7 +48,14 @@ def main() -> None:
         per_doc = [field_accuracy(schema, f, g)
                    for f, g in zip(res["finals"], res["gold"])]
         mean, lo, hi = bootstrap_ci(per_doc)
-        print(f"{label:28} {mean:>9.3f}   [{lo:.3f}, {hi:.3f}]")
+        # tripwire for the all-absent artifact: a model that answers absent
+        # everywhere scores the gold-absence share on optional schemas
+        from fieldguard.compare import normalize
+        n_fields = sum(len(schema.fields) for _ in res["finals"])
+        absent = sum(1 for fin in res["finals"] for f in schema.fields
+                     if not normalize(f, fin.get(f.name, "")))
+        warn = f"   [!] {absent}/{n_fields} answers absent" if absent > n_fields // 2 else ""
+        print(f"{label:28} {mean:>9.3f}   [{lo:.3f}, {hi:.3f}]{warn}")
 
 
 if __name__ == "__main__":

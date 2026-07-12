@@ -81,21 +81,39 @@ see BUILDLOG iteration 7). The adaptive-cost finding replicates on real data.
 
 ![Accuracy vs verification cost on SROIE](docs/tradeoff_sroie.svg)
 
-## Second domain: Kleister-NDA contracts (26 docs / 78 fields)
+## Second domain: Kleister-NDA contracts (83 docs / 249 fields, 30% absent)
 
 Real NDA contracts (long documents — the converter keeps head + tail + keyword
 windows around the governing-law/term clauses to fit a 4k local context).
-Fields: effective_date, jurisdiction, term.
+Fields: effective_date, jurisdiction, term — all marked **optional** in the
+schema (75/249 gold fields are legitimately absent; the extractor must answer
+"not stated", which only the arbiter is allowed to phrase as NONE).
 
 | | qwen2.5:3b | qwen2.5:1.5b | tinyllama-1.1B |
 |---|---|---|---|
-| constrained accuracy | 0.885 | 0.808 | 0.000 |
-| final accuracy | 0.885 | 0.795 | 0.000 |
-| flag precision / recall | 0.596 / 1.0 | 0.654 / 1.0 | 0.0 / 1.0 |
-| LLM calls vs verify-everything | **-50%** | **-52%** | 0% (all flagged) |
+| constrained accuracy | 0.771 | 0.550 | 0.301* |
+| final accuracy | 0.767 | 0.562 | 0.301* |
+| flag precision / recall | 0.506 / 0.988 | 0.558 / 0.964 | 0.976 / 1.0 |
+| absent fields answered absent | 54/75 | 6/75 | 75/75* |
+| LLM calls vs verify-everything | **-45%** | **-47%** | -59%* |
 
-95% CIs at n=26 are wide — 3b [0.821, 0.949] and 1.5b [0.705, 0.872] overlap,
-so treat the 3b-vs-1.5b gap on contracts as suggestive, not established.
+95% CIs (doc bootstrap): 3b [0.715, 0.819] vs 1.5b [0.494, 0.627] — disjoint;
+the model separation is established in this domain too.
+
+*tinyllama answers absent for **all 249 fields** — its 0.301 is exactly the
+gold-absence share, and both-paths-absent counts as agreement, so the score
+is an artifact. `examples/analyze.py` prints a `[!] N/N answers absent`
+tripwire for this; on all-optional schemas keep at least one required field
+or watch that tripwire — the empty-field auto-flag no longer guards you.
+
+Two absence lessons (BUILDLOG iteration 21): (1) an "answer NONE if absent"
+instruction in the shared prompt made both paths lazily deny values that ARE
+in the document — instructions that correlate the paths break the
+disagreement signal (same failure family as the reverted judge arbiter);
+absence must be expressed structurally. (2) Absence detection is a
+capability: 3b answers 54/75 absent fields correctly, 1.5b hallucinates a
+value for 69/75 — identically on both paths, the documented correlated
+blind spot.
 
 Same adaptive-cost shape in a second domain. Contracts pushed three fixes into
 the method: clause-window truncation, number-word/legalese-date normalization,

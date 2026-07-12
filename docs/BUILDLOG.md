@@ -349,3 +349,10 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   detection is a model capability, not a prompting trick; FieldGuard surfaces
   the disagreement-visible share and the rest is the documented correlated
   blind spot.
+- Addendum (tinyllama n=83): answers absent for ALL 249 fields -> scores 0.301
+  = exactly the gold-absence share, with only 4/249 low-confidence. On
+  all-optional schemas the empty-field auto-flag no longer trips for a fully
+  broken extractor — agreement-on-absence masks it. Mitigation shipped:
+  `analyze.py` prints an absent-answer-rate tripwire ([!] N/N answers absent);
+  README documents "keep >= 1 required field" guidance. README Kleister table
+  now reports n=83.
