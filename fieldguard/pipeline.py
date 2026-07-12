@@ -11,8 +11,12 @@ from .verify import final_record, resolve
 
 def run(backend: Backend, documents: list[str], schema: Schema,
         gold: list[dict[str, str]] | None = None,
-        threshold: float = 0.5) -> tuple[list[dict[str, str]], Report]:
-    """Process documents; when gold labels are given, fill the evaluation report."""
+        threshold: float = 0.5,
+        trace: list[dict] | None = None) -> tuple[list[dict[str, str]], Report]:
+    """Process documents; when gold labels are given, fill the evaluation report.
+
+    Pass ``trace=[]`` to collect per-doc dual outputs + flags for error analysis.
+    """
     n_fields = len(schema.fields)
     report = Report(docs=len(documents), fields_total=len(documents) * n_fields)
     finals: list[dict[str, str]] = []
@@ -28,6 +32,10 @@ def run(backend: Backend, documents: list[str], schema: Schema,
         record = final_record(resolutions)
         finals.append(record)
         report.low_confidence += sum(not r.confident for r in resolutions.values())
+        if trace is not None:
+            trace.append({"constrained": dual.constrained,
+                          "unconstrained": dual.unconstrained,
+                          "flagged": sorted(f.field for f in flags)})
 
         if gold is not None:
             g = gold[i]

@@ -49,3 +49,16 @@ def test_report_summary_renders():
     _, report = run(backend, docs, INVOICE_SCHEMA, gold=gold)
     text = report.summary()
     assert "final accuracy" in text and "saved" in text
+
+
+def test_trace_collects_duals_and_flags():
+    from fieldguard.backends import MockBackend
+    from fieldguard.data import make_dataset
+    from fieldguard.data import INVOICE_SCHEMA
+    from fieldguard.pipeline import run
+    ex = make_dataset(n=2)
+    trace = []
+    run(MockBackend(), [e.document for e in ex], INVOICE_SCHEMA,
+        gold=[e.gold for e in ex], trace=trace)
+    assert len(trace) == 2
+    assert set(trace[0]) == {"constrained", "unconstrained", "flagged"}

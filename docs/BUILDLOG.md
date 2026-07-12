@@ -200,3 +200,22 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   FieldGuard is orthogonal to prompt quality — descriptions raise both paths
   together, the detector keeps working on what remains.
 - Tests: **28/28.**
+
+## Iteration 12 — blind-spot decomposition on SROIE-50 (trace analysis)
+- Built: `pipeline.run(trace=[])` collects per-doc dual outputs + flag sets;
+  experiment runner stores `trace` in results JSON. Tests 29/29.
+- Analysis of qwen described run (200 fields, flag recall 0.950):
+  - **Missed true corruption: 3/200 (1.5%)** — all address fields where the
+    constrained path dropped a "NO." prefix or appended TEL/GST cruft; the
+    unconstrained path was right, but token-Jaccard distance fell below the 0.5
+    threshold. These live exactly in the graded string band: t=0.3 flags them
+    (the sweep's 38-call point) at a precision cost.
+  - **Correlated both-paths-wrong: 11/200** — decomposes to ~7 benchmark gold
+    noise (gold typos "BEJUNTAL"/"PARINDUSTRIAN"/"TED", one postcode digit, one
+    gold-EMPTY total the model correctly read as 8.20) and ~4 company-boundary
+    ambiguity (display name vs registered owner "OWNER BY CASTLE BLUE S/B";
+    "THREE STOOGES" with/without "BISTRO & CAFE"; venture-prefix inclusion).
+- Paper claim this licenses: on a real benchmark, FieldGuard's residual error is
+  dominated by gold noise and specification ambiguity — NOT by undetected
+  constraint corruption. True constraint damage slipping the detector is ~1.5%
+  of fields, all near-miss string edits, recoverable by lowering the threshold.

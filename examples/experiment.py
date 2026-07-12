@@ -59,8 +59,9 @@ def main() -> None:
     print(f"Running {len(docs)} docs against {args.model} "
           f"(threshold {args.threshold}) ...")
     t0 = time.time()
+    trace: list[dict] = []
     finals, report = run(backend, docs, schema, gold=gold,
-                         threshold=args.threshold)
+                         threshold=args.threshold, trace=trace)
     elapsed = time.time() - t0
 
     print(f"\n{report.summary()}\nelapsed: {elapsed:.1f}s")
@@ -68,7 +69,7 @@ def main() -> None:
     out = {
         "model": args.model, "n": args.n, "threshold": args.threshold,
         "elapsed_sec": round(elapsed, 1), "report": asdict(report),
-        "finals": finals, "gold": gold,
+        "finals": finals, "gold": gold, "trace": trace,
     }
     results = pathlib.Path(__file__).resolve().parent.parent / "results"
     results.mkdir(exist_ok=True)

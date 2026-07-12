@@ -1,28 +1,24 @@
-# Active plan (iterations 7+)
+# Active plan
 
-## Iteration 7 — real external benchmark
-1. [x] Dataset: SROIE (ICDAR 2019, real Malaysian receipts, company/date/address/total). 15 receipts from zzzDavid mirror (key JSON + box OCR CSVs).
-2. [x] Converted via examples/convert_sroie.py -> datasets/sroie_15.jsonl. Adapter fixes needed: dd/mm/yyyy date inference, RM/MYR currency junk. Tests 25/25.
-3. [x] Runs done. qwen: 0.833->0.850, P/R 0.800/1.0, 61% saved. tinyllama: 0.000->0.067,
-   all flagged, 60/60 low-conf, 0% saved. Fixes forced by real data: punct-insensitive
-   string normalize, backend max_tokens=512 + timeout retry.
-4. [x] BUILDLOG iteration 7 + README SROIE table done. Tests 26/26. Committing.
+## Done (iterations 7-11) — see docs/BUILDLOG.md
+- 7: SROIE real benchmark (15 docs), punct-insensitive strings, backend token cap.
+- 8: graded disagreement scores; knob unit-proven, severity bimodal on SROIE.
+- 9: tradeoff figure (docs/tradeoff_sroie.svg, stdlib SVG).
+- 10: scaled to 50 receipts; findings stable.
+- 11: field descriptions -> +3 points final acc at same cost (company 13->8 wrong).
 
-## Iteration 8 — graded disagreement scoring
-5. [x] Graded scores in: numbers 0.5+0.5*rel_error, dates 0.5+0.5*days/365 (capped),
-   unparseable -> 1.0, strings keep Jaccard, empty-required stays 1.0. Tests 27/27.
-6. [x] Sweeps done. qwen: moves at 0.3 (38 calls, P .667), flat 0.5-0.9 (35, P .800).
-   tinyllama: flat 90 calls everywhere — empty auto-flag saturates. Documented:
-   knob mechanically live (unit-proven), severity distribution bimodal on SROIE.
-7. [x] BUILDLOG iteration 8 done. Committing.
+## Iteration 12 — detector blind-spot analysis (IN PROGRESS)
+1. [x] pipeline `trace=` collects dual outputs + flags; experiment dumps to results JSON.
+2. [ ] qwen SROIE-50 described rerun with trace (RUNNING).
+3. [ ] Analyze corrupted-but-unflagged fields (recall 0.95 -> what slips): correlated
+   errors by field/type. Done when: quantified in BUILDLOG, committed.
 
-## Figure
-8. [x] Figure done: docs/tradeoff_sroie.svg via examples/figure.py, in README.
+## Backlog (pick next)
+- Sweep n=50 described + regenerate figure with n=50 numbers.
+- Third model (mid-tier) for a 3-point adaptive-cost curve.
+- tinyllama described run (README table symmetry).
+- ARCHITECTURE.md staleness pass (adapter, schema files, graded scores).
 
 ## Notes / surprises
-- SROIE gold vs OCR text mismatch exists IN THE BENCHMARK: doc0 OCR says "SDN BND",
-  gold says "SDN BHD" — gold ceiling < 1.0 even for perfect extraction. Report as such.
-- Iteration 8 graded-score design: non-equal typed values map to 0.5 + 0.5*severity
-  (numbers: relative error; dates: days-apart/365, capped). Keeps default t=0.5
-  behavior identical (every typed mismatch still >= 0.5), makes t in (0.5, 1.0]
-  a real knob. Empty-required stays 1.0.
+- SROIE gold noisy: ~0.92 ceiling; address field concentrates the noise.
+- Descriptions help entity fields (company/total), not noise-dominated ones (address).
