@@ -55,15 +55,20 @@ backend = OpenAICompatBackend(base_url="http://localhost:11434/v1", model="llama
 
 Real scanned-receipt OCR text, gold company/date/address/total.
 Convert once with `python3 -m examples.convert_sroie`, run with
-`python3 -m examples.experiment --data datasets/sroie_50.jsonl --model <m> --n 50`.
+`python3 -m examples.experiment --data datasets/sroie_50.jsonl
+--schema datasets/sroie.schema.json --model <m> --n 50`.
 
 | | qwen2.5:3b | tinyllama-1.1B |
 |---|---|---|
-| constrained accuracy | 0.815 | 0.005 |
-| final accuracy | 0.830 | 0.075 |
-| flag precision / recall | 0.800 / 0.953 | 0.070 / 1.0 |
+| constrained accuracy | 0.820 | 0.005 |
+| final accuracy | 0.860 | 0.075 |
+| flag precision / recall | 0.780 / 0.950 | 0.070 / 1.0 |
 | low-confidence self-report | 5/200 | 199/200 |
 | LLM calls vs verify-everything | **-61%** | 0% (all flagged) |
+
+qwen column uses `datasets/sroie.schema.json` field descriptions — one sentence
+per field buys +3 points final accuracy at identical cost (company errors 13→8;
+BUILDLOG iteration 11). tinyllama column is schema-inferred (no descriptions).
 
 Gold-noise ceiling ≈ 0.92 (SROIE gold sometimes disagrees with its own OCR text;
 see BUILDLOG iteration 7). The adaptive-cost finding replicates on real data.

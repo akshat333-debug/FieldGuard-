@@ -32,6 +32,16 @@ def _infer_type(value: str) -> str:
     return "string"
 
 
+def schema_from_json(path: str | pathlib.Path) -> Schema:
+    """Explicit schema file: {"name": ..., "fields": [{"name","type","description"?,"enum"?}]}."""
+    spec = json.loads(pathlib.Path(path).read_text())
+    return Schema(spec["name"], tuple(
+        FieldSpec(f["name"], f["type"],
+                  enum=tuple(f["enum"]) if f.get("enum") else None,
+                  description=f.get("description", ""))
+        for f in spec["fields"]))
+
+
 def load_jsonl(path: str | pathlib.Path, schema: Schema | None = None,
                name: str = "external") -> tuple[list[Example], Schema]:
     examples: list[Example] = []

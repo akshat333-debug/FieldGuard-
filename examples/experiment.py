@@ -31,11 +31,14 @@ def main() -> None:
                     help="OCR character-noise rate, e.g. 0.06")
     ap.add_argument("--data", default=None,
                     help="external JSONL dataset (adapter shape); overrides synthetic")
+    ap.add_argument("--schema", default=None,
+                    help="explicit schema JSON (field descriptions); else inferred")
     args = ap.parse_args()
 
     if args.data:
-        from fieldguard.adapter import load_jsonl
-        examples, schema = load_jsonl(args.data)
+        from fieldguard.adapter import load_jsonl, schema_from_json
+        explicit = schema_from_json(args.schema) if args.schema else None
+        examples, schema = load_jsonl(args.data, schema=explicit)
         examples = examples[:args.n]
         docs = [ex.document for ex in examples]
     elif args.hard:
@@ -70,6 +73,7 @@ def main() -> None:
     results = pathlib.Path(__file__).resolve().parent.parent / "results"
     results.mkdir(exist_ok=True)
     tag = (f"{pathlib.Path(args.data).stem}_" if args.data else "") + \
+          ("desc_" if args.schema else "") + \
           ("hard_" if args.hard else "") + (f"noise{args.noise}_" if args.noise else "")
     path = results / f"{tag}{args.model.replace(':', '_')}_n{len(docs)}_t{args.threshold}.json"
     path.write_text(json.dumps(out, indent=2))

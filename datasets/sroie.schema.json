@@ -1,0 +1,13 @@
+{
+  "name": "sroie_receipt",
+  "fields": [
+    {"name": "company", "type": "string",
+     "description": "name of the issuing business printed near the top of the receipt — not a person, cashier, member, or customer name"},
+    {"name": "date", "type": "date",
+     "description": "date the receipt was issued"},
+    {"name": "address", "type": "string",
+     "description": "full street address of the issuing business"},
+    {"name": "total", "type": "number",
+     "description": "final amount payable on this receipt, including tax — not subtotal, cash tendered, or change"}
+  ]
+}

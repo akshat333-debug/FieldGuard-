@@ -37,13 +37,14 @@ class Resolution:
     confident: bool
 
 
-def _arbiter_query(backend: Backend, document: str, field_name: str,
-                   field_type: str) -> str:
+def _arbiter_query(backend: Backend, document: str, spec: FieldSpec) -> str:
+    desc = f"DESCRIPTION: {spec.description}\n" if spec.description else ""
     prompt = (
         f"From the document, what is the value of this field? "
         f"Answer with the value only, nothing else.\n"
-        f"FIELD: {field_name}\n"
-        f"TYPE: {field_type}\n"
+        f"FIELD: {spec.name}\n"
+        f"TYPE: {spec.type}\n"
+        f"{desc}"
         f"DOCUMENT:\n{document}\n"
     )
     return backend.generate(prompt, force_json=False).strip()
@@ -64,7 +65,7 @@ def resolve(backend: Backend, document: str, schema: Schema,
             out[name] = Resolution(name, constrained[name], "agreement", True)
             continue
         fl = flagged[name]
-        arb = _clean_answer(spec, _arbiter_query(backend, document, name, spec.type))
+        arb = _clean_answer(spec, _arbiter_query(backend, document, spec))
         n_con, n_unc, n_arb = (normalize(spec, v) for v in
                                (fl.constrained, fl.unconstrained, arb))
         if n_arb == n_unc or n_arb == n_con:

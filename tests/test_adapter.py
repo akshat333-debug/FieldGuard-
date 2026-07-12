@@ -51,3 +51,16 @@ def test_sroie_box_text_keeps_commas():
         p.write_text("1,2,3,4,5,6,7,8,NO.53 55,57 & 59, JALAN SAGU 18,\n"
                      "1,2,3,4,5,6,7,8,TOTAL RM 9.00")
         assert box_to_text(p) == "NO.53 55,57 & 59, JALAN SAGU 18,\nTOTAL RM 9.00"
+
+
+def test_schema_from_json_descriptions_flow_to_prompts(tmp_path):
+    from fieldguard.adapter import schema_from_json
+    from fieldguard.extract import _field_lines
+    p = tmp_path / "s.json"
+    p.write_text(json.dumps({"name": "r", "fields": [
+        {"name": "company", "type": "string",
+         "description": "issuing business, not a person"}]}))
+    schema = schema_from_json(p)
+    assert schema.field("company").description == "issuing business, not a person"
+    assert "issuing business, not a person" in _field_lines(schema)
+    assert "description" in json.dumps(schema.to_json_schema())

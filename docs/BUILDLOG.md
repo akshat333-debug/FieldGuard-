@@ -182,3 +182,21 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   results were not a small-sample artifact. README table now reports n=50.
   (Tradeoff figure still renders the n=15 sweeps; sweep at n=50 not re-run —
   30 pipeline runs of local inference for an expected no-change.)
+
+## Iteration 11 — field descriptions: cheap, targeted accuracy
+- Built: `FieldSpec.description` (already in the JSON schema for the constrained
+  path) now flows into the unconstrained FIELDS block and the arbiter query;
+  `schema_from_json` loads an explicit schema file; `--schema` flag on the
+  experiment runner (results tagged `desc_`). `datasets/sroie.schema.json`
+  carries the four SROIE descriptions ("issuing business, not a person/cashier/
+  customer", "final amount, not subtotal/cash/change", ...).
+- **qwen2.5:3b, SROIE-50, t=0.5:** final 0.830 -> **0.860** at identical cost
+  (117 vs 118 calls, still 61% saved). Per-field wrong counts: company 13 -> 8,
+  total 4 -> 2, date 1 -> 0, address 16 -> 18 (address is where SROIE gold noise
+  concentrates — trailing unit names, gold typos — so it doesn't respond).
+- Reading: the iteration-7 company-entity confusion is largely a schema-
+  specification problem, not a model-capability problem. One sentence of field
+  description buys +3 points final accuracy for free. Method note for the paper:
+  FieldGuard is orthogonal to prompt quality — descriptions raise both paths
+  together, the detector keeps working on what remains.
+- Tests: **28/28.**

@@ -12,6 +12,7 @@ from .schemas import Schema
 def _field_lines(schema: Schema) -> str:
     return "\n".join(f"- {f.name} ({f.type})"
                      + (f" one of {list(f.enum)}" if f.enum else "")
+                     + (f" — {f.description}" if f.description else "")
                      for f in schema.fields)
 
 
