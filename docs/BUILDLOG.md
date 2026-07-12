@@ -250,3 +250,11 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   (unc + arbiter agree on the buyer name) — a genuine correlated failure of the
   weaker model, in scope for the documented dual-path limitation, not a
   measurement bug.
+
+## Iteration 15 — figure refresh: three models, n=50
+- `examples/figure.py` now reads the three described t=0.5 results
+  (`sroie_50_desc_*`), one point per model, verify-everything reference line.
+  Figure and README tell the same story from the same runs: 0.860/61% saved ->
+  0.720/56% -> 0.035/0%. Palette re-validated for 3 categorical slots (direct
+  labels cover the sub-3:1 aqua/yellow). Full threshold sweep at n=50 skipped
+  deliberately — the n=15 sweeps showed the knob flat above default.
