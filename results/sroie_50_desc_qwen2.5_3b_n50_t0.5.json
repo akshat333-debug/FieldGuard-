@@ -2,12 +2,12 @@
   "model": "qwen2.5:3b",
   "n": 50,
   "threshold": 0.5,
-  "elapsed_sec": 401.6,
+  "elapsed_sec": 389.9,
   "report": {
     "docs": 50,
     "fields_total": 200,
     "constrained_acc": 0.82,
-    "final_acc": 0.86,
+    "final_acc": 0.855,
     "corruption_rate": 0.055,
     "flag_precision": 0.78,
     "flag_recall": 0.95,
@@ -26,7 +26,7 @@
     {
       "company": "INDAH GIFT & HOME DECO",
       "date": "2018-10-19",
-      "address": "27,JALAN DEDAP 13,\nTAMAN JOHOR JAYA,\n81100 JOHOR BAHRU,JOHOR",
+      "address": "27,JALAN DEDAP 13, TAN WOON YANN, TAMAN JOHOR JAYA, 81100 JOHOR BAHRU,JOHOR.",
       "total": "60.3"
     },
     {
@@ -60,7 +60,7 @@
       "total": "327"
     },
     {
-      "company": "S.H.H. MOTOR (SUNGAI RENGIT) SDN. BHD",
+      "company": "TAN CHAY YEE",
       "date": "2019-01-23",
       "address": "NO. 343, JALAN KURAU, SUNGAI RENGIT, 81620 PENGERANG, JOHOR",
       "total": "20.0"
@@ -98,7 +98,7 @@
     {
       "company": "RESTORAN HASSANBISTRO",
       "date": "2017-12-28",
-      "address": "U 13/Q SETIA ALAM 40170 SHAM ALAM SELANGOR",
+      "address": "NO.2-1-1 JALAN SETIA PRIMA Q U 13/Q SETIA ALAM 40170 SHAM ALAM SELANGOR",
       "total": "15"
     },
     {
@@ -206,7 +206,7 @@
     {
       "company": "AEON CO. (M) BHD",
       "date": "2018-03-06",
-      "address": "JLN JEJAKA, TAMAN MALURI, CHERAS, 55100 KUALA LUMPUR",
+      "address": "3RD FLR, AEON TAMAN MALURI SC, JLN JEJAKA, TAMAN MALURI, CHERAS, 55100 KUALA LUMPUR",
       "total": "75.0"
     },
     {
@@ -242,7 +242,7 @@
     {
       "company": "WARAKUYA PERMAS CITY SDN BHD",
       "date": "2018-03-10",
-      "address": "PERMAS JAYA 81750 MASAI JOHON",
+      "address": "JALAN PERMAS UTARA 1., PERMAS JAYA 81750 MASAI JOHOR",
       "total": "57.8"
     },
     {

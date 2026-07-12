@@ -61,8 +61,8 @@ Convert once with `python3 -m examples.convert_sroie`, run with
 | | qwen2.5:3b | qwen2.5:1.5b | tinyllama-1.1B |
 |---|---|---|---|
 | constrained accuracy | 0.820 | 0.715 | 0.005 |
-| final accuracy | 0.860 | 0.720 | 0.035 |
-| flag precision / recall | 0.780 / 0.950 | 0.690 / 0.970 | 0.075 / 1.0 |
+| final accuracy | 0.855 | 0.730 | 0.005 |
+| flag precision / recall | 0.780 / 0.950 | 0.690 / 0.970 | 0.085 / 1.0 |
 | low-confidence self-report | 5/200 | 17/200 | 200/200 |
 | LLM calls vs verify-everything | **-61%** | **-56%** | 0% (all flagged) |
 
@@ -76,6 +76,25 @@ Gold-noise ceiling ≈ 0.92 (SROIE gold sometimes disagrees with its own OCR tex
 see BUILDLOG iteration 7). The adaptive-cost finding replicates on real data.
 
 ![Accuracy vs verification cost on SROIE](docs/tradeoff_sroie.svg)
+
+## Second domain: Kleister-NDA contracts (26 docs / 78 fields)
+
+Real NDA contracts (long documents — the converter keeps head + tail + keyword
+windows around the governing-law/term clauses to fit a 4k local context).
+Fields: effective_date, jurisdiction, term.
+
+| | qwen2.5:3b | qwen2.5:1.5b | tinyllama-1.1B |
+|---|---|---|---|
+| constrained accuracy | 0.885 | 0.808 | 0.000 |
+| final accuracy | 0.885 | 0.795 | 0.000 |
+| flag precision / recall | 0.596 / 1.0 | 0.654 / 1.0 | 0.0 / 1.0 |
+| LLM calls vs verify-everything | **-50%** | **-52%** | 0% (all flagged) |
+
+Same adaptive-cost shape in a second domain. Contracts pushed three fixes into
+the method: clause-window truncation, number-word/legalese-date normalization,
+and the split-kept resolution rule (an uncorroborated flag keeps the
+constrained value instead of trusting a lone arbiter answer — arbiter-wins was
+measurably damaging accuracy; BUILDLOG iteration 17).
 
 Regenerate: `python3 -m examples.sweep --data datasets/sroie_15.jsonl --model <m> --n 15
 --thresholds 0.3,0.5,0.6,0.75,0.9` then `python3 -m examples.figure`.

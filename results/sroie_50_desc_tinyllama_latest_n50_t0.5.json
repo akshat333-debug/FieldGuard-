@@ -2,14 +2,14 @@
   "model": "tinyllama:latest",
   "n": 50,
   "threshold": 0.5,
-  "elapsed_sec": 516.7,
+  "elapsed_sec": 518.7,
   "report": {
     "docs": 50,
     "fields_total": 200,
     "constrained_acc": 0.005,
-    "final_acc": 0.035,
-    "corruption_rate": 0.075,
-    "flag_precision": 0.075,
+    "final_acc": 0.005,
+    "corruption_rate": 0.085,
+    "flag_precision": 0.085,
     "flag_recall": 1.0,
     "llm_calls": 300,
     "full_verify_calls": 300,
@@ -18,304 +18,304 @@
   },
   "finals": [
     {
-      "company": "The value of this field is \"Round D to total (RM)\" with no additional information",
-      "date": "The value of this field is \"Round D To Total (RM)\" with a type of decimal and description of \"ROUND D TOTAL (RM): 9.00",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is \"total\", which means the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"10.00",
-      "date": "The value of this field is \"19/10/2018 20:49:59 #01",
-      "address": "The value of this field is \"10.00",
-      "total": "The value of this field is \"total\" (without any other information). It represents the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"19.00\" (decimal) with no additional information provided",
-      "date": "The value of this field is the total amount rounded off to two decimal places, including any rounding adjustments made by the cashier. The description is \"RM 33.92\" and the document states that the receipt was issued on January 12th, 2019 at 6:13 PM",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "933109"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total sales (excluding GST) for the item \"ELegant SCHTR BAG 15\" sold by the issuing business, JM0517726. The description is the name of the issuing business printed near the top of the receipt - not a person, casheir, member, or customer name",
-      "date": "The value of this field is the total sales (excluding GST) for the item \"ELegant SCHTR BAG 15\" with a total quantity of one. The discount amount is zero, and the total GST amount is zero. The rounding is -0.01, which means that the total sales (including GST) are rounded down to the nearest cent. The change amount is 19.10, which represents the difference between the total sales (excluding GST) and the total sales (inclusive of GST)",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"18-11-18 13:58 SH01 ZI53",
-      "date": "The value of this field is \"RM 30.91\" with a decimal point and two decimal places",
-      "address": "The value of this field is \"18-11-18 13:58 SH01 ZI53",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal or cash tendered or change. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"31.00\" only, nothing else",
-      "date": "The value of this field is \"31.00\" only, nothing else",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is \"total\" with a type of number, meaning the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total sales amount, including discounts and rounding off to zero. The description is a summary of the issuing business printed near the top of the receipt - not a person's name or any other casheir or member name",
-      "date": "The value of this field is the total sales amount for the given receipt, including discounts and taxes. The description is a summary of the contents of the receipt, including the date it was issued, the name of the seller, the item(s) purchased, their quantity, the unit price, the service charge (if applicable), and the total amount due",
-      "address": "The value of this field is the full street address of the issuing business, which is \"SOONHUAT MACHINERY ENTERPRISE (JM0352019-K)\" in the given document",
-      "total": "0352019"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"20.00\" only, nothing else",
-      "date": "The value of this field is \"20.00",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is \"total\", which means the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"SR: PVC WIRE TAPE 1PC X 7YD\" with a total GST of RM6.37. The remaining fields are as follows:\n\nFIELD: company\nTYPE: string\nDESCRIPTION: name of the issuing business printed near the top of the receipt \u2014 not a person, cashier, member, or customer name\nDOCUMENT:\nPERNIAGAAN ZHENG HUI\nJM0325955-V\nNO.59 JALAN PERMAS 9/5\nBANDAR BARU PERMAS JAYA\n81760 JOHOR BAHRU\nTEL : 07-386 7524 FAX : 07-386 3793\nGSSTNO: 000800589824\nSIMPLIFIED TAX INVOICE\nGOGIANT ENGINEERING (M) SDN BHD\nRECEIPT#: CS00082662\nSALESPERSON:\nDATE: 12/02/2018\nCASHIER: USER\nTIME:08:30:00\n(RM)\n(RM)\nITEM\nQTY\nRSP\nAMOUNT\n8239\n1\n15.00\n15.00\nSR: 11\" PROWESS H/DUTY SILICONE GUN G-D2\n9555075109147\n3\n7.00\n21.00\nSR: XTRASEAL RTV ACETIC SILICONE SA-107\n9744\n1\n18.00\n18.00\nSR: CENTRAL PUNCH SET 3PCS - 1/4\",5/32\".1/4\"\n12525\n1\n50.00\n50.00\nSR. 24\" MARKSMAN PIPE WRENCH\n2016\n3\n0.70\n2.10\nSR:",
-      "date": "The value of this field is \"SR: PVC WIRE TAPE 1PC X 7YD",
-      "address": "The value of this field is \"SR: PVC WIRE TAPE 1PC X 7YD",
-      "total": "0325955"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"11.00\" (decimal) in the document",
-      "date": "The value of this field is \"1950\", which represents the year in which the receipt was issued",
-      "address": "The value of this field is \"1950\", which represents the year in which the issuing business was established",
-      "total": "The value of this field is \"total\", which means the final amount payable on this receipt, including tax - not the subtotal or cash tendered"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"HE EOG UNICORN TWIN SUPER GLUE USG-99-9557368063013\" which represents the name of the issuing business printed near the top of the receipt",
-      "date": "The value of this field is \"RM 14.10\". It represents the total amount of tax (6% + 0%) and GST (0%), as well as the change, thank you for shopping, and goodbye for returning goods. The field is not further described or explained in the given document",
-      "address": "The value of this field is \"SAM SAM TRADING CO\" (full street address of the issuing business)",
-      "total": "The value of this field is \"total\", which means the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"15.00",
-      "date": "The value of this field is the total amount due for the receipt, including tax and amortization. The description is a summary of the goods sold and not refundable within one week from transaction. The field is only used to indicate the exchange of goods in original condition",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "Field: total\nType: number\nDescription: Final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"15.90\" (decimal) in the given document",
-      "date": "The value of this field is the total amount due, rounded to two decimal places. The description is \"TOTAL ITEM(S) : 1\" and indicates that there are one items in the total amount due. The tax amount is also rounded to two decimal places, with a total amount due of RM34.10",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"toke\" (pronounced \"taka\"), which means \"tape\" in Malayalam, the language spoken in Kerala, India",
-      "date": "The value of this field is the total amount due, including taxes and discounts, as calculated based on the receipt issued on the specified date. The description of this field is \"date the receipt was issued",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "Field: total\nType: number\nDescription: Final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total sales (excluding GST) for all items listed in the document. The description is a summary of the issuing business printed near the top of the receipt - not a person, casheir, member, or customer name",
-      "date": "The value of this field is the total sales (excluding GST) for the receipt issued on December 22, 2017, which includes the discount of 0.00 and the rounding fee of 0.02. The tax code is \"ZRL\", with a percentage of 6%, and the amount to be returned (in RM) is 31.03",
-      "address": "The value of this field is the full street address of the issuing business, which is:\n\nFIELD: address\nTYPE: string\nDESCRIPTION: full street address of the issuing business\nDOCUMENT:\nASIA MART (SA0264195-T)\nNO.23 BATU 10, TAMAN SENTOSA, JALAN KAPAR, 42200 KLANG, SELANGOR. GST ID : 001609584640\nTAX INVOICE\nDOC NO: CS02070163\nDATE: 22/12/2017\nCASHIER (EIRA)\nTIME: 00:06:00\nSALESPERSON : EIRA\nS LIME 50G\nREF.:\nITEM\nQTY: S/PRICE\n(GST)\n(GST)\nS/PRICE:\nAMOUANT:\nTAX:\n9556641320027\n17\n0.85\n0.90\n15.25\nSR:\nDELICIA CHOCOLATE [50G]\n9556231110045\n1\n3.55\n3.55\n3.55\nZRL:\nGARODIA ORIGINAL CLASIC JUMBO [600G]\n9556127101331\n1\n1.41\n1.50\n1.50\nSR:\nHU:\n8850199320722\n1\n1.42\n1.51\n1.51\nSR:\nDOREMON CATCAT JOY 15G\n8850199320722\n1\n2.30\n2.44\n2.44\nSR:\nMINUTE MAID PULPY [OREN] [350ML]\n8888002188511\n1\n2.30\n2.44\n2.44\nSR:",
-      "total": "0264195"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "VALUE: company\nTYPE: string\nDESCRIPTION: name of the issuing business printed near the top of the receipt \u2014 not a person, cashier, member, or customer name",
-      "date": "The value of this field is the total amount due, rounded to two decimal places, for the item with code \"24MMX7Y M.ONE TAPE\" and subtotal of $15.90, total excluding GST of $15.90, and total including GST of $15.90",
-      "address": "The value of this field is the full street address of the issuing business, as described in the document",
-      "total": "The value of this field is the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total amount due, including tax and service charge, as stated in the document. The description is a summary of the issuing business printed near the top of the receipt - not a person's name or any other casheir, member, or customer name",
-      "date": "The value of this field is the total amount due for the receipt, including tax and service charge. The description is \"date the receipt was issued",
-      "address": "The value of this field is the full street address of the issuing business, which is \"LIGHTROOM GALLERY SDN BHD\" in the document",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not subtotal, cash tendered, or change. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"RM 18.77 UNI ( 2.25)=RM 37.55",
-      "date": "The value of this field is the total amount due, including tax and service charge, as stated in the document. The value only contains the text \"RM\" (which stands for \"Ringgit Malaysia\") and no other information",
-      "address": "The value of this field is the full street address of the issuing business, which is \"LIGHTROOM GALLERY SDN BHD\" in the document",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not subtotal, cash tendered, or change. The description is the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total amount due, including tax and service charge, as stated in the document. The description is a summary of the issuing business printed near the top of the receipt - not a person's name or any other casheir, member, or customer name",
-      "date": "The value of this field is the total amount due for the receipt, including tax and service charge. The description is \"date the receipt was issued",
-      "address": "The value of this field is the full street address of the issuing business, which is \"LIGHTROOM GALLERY SDN BHD\" in the given document",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not subtotal, cash tendered, or change. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"60000053668\" which represents the company name printed near the top of the receipt",
-      "date": "The value of this field is RM, which represents the total amount due for the receipt issued on 18/03/18 at 15:17. The date is also given as 18/03/18 and the time is specified as 15:17",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "86.00"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total sales (excluding GST) for all items listed on the receipt, including the discount and rounding. The description field provides a brief summary of each item, such as \"QTY: 7 Pcs. BRAISED POROK\" or \"AMOUANT: T PORK - 14.00\". The price, price amount, and price per unit are also listed in the table. The description, quantity, price, price per unit, and total sales (excluding GST) are rounded to two decimal places",
-      "date": "The value of this field is the total sales (excluding GST) for the specified date, including all items listed in the receipt. The description is a brief summary of the contents of the receipt, and the document is a standardized format used by many businesses to record their transactions",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal or cash tendered or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total tax amount, which includes Goods and Services Tax (GST) as indicated by (*) in the document",
-      "date": "The value of this field is the total tax amount, which includes Goods and Services Tax (GST) as indicated by (*) in the document",
-      "address": "The value of this field is the full street address of the issuing business, which is \"TEO HENG STATIONERY & BOOKS\" (001451637-M) in Jalan Besar, 45600 Bataang Berjuntai, Selangor Darul Ehsan",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal, cash tendered, or change. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"SR\" (string), which means it contains a string value",
-      "date": "The value of this field is the total amount due for the tax included in the invoice, including GST (Goods and Services Tax) at 6% as per the document",
-      "address": "The value of this field is \"FUYI MINI MARKET\" (full street address of the issuing business)",
-      "total": "The value of this field is \"total\" (without any other information). It represents the final amount payable on this receipt, including tax - not the subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total tax amount rounded to two decimal places, including the GST (Goods & Services Tax) and any other applicable taxes. The description is a summary of the item sold with the indicated item soled, indicating that goods sold are not returnable",
-      "date": "The value of this field is the total tax amount rounded to two decimal places, including the GST (Goods & Services Tax) and any indicated item has been relatable to GST. The document also includes a summary of the total amount, including the GST, the tax code, the amount, tax, sr, and notes",
-      "address": "The value of this field is \"1.56",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal or cash tendered. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total tax amount, rounded to two decimal places (RM). The description is \"GOODS SOLD ARRESTABLE, THANK YOU",
-      "date": "The value of this field is the total tax amount, rounded to two decimal places (RM). The description is \"TAX(RM)\" and indicates that the tax code is RM. The document states that the item sold has been relatable to GST (Goods & Services Tax), so the tax amount is not returnable",
-      "address": "The value of this field is \"RM\". It represents the total amount of tax that will be deducted from the invoice. The percentage (%) and amount (SR) are also included, indicating that the tax has been calculated based on the item sold. The \"GOODS SOLD ARREST\" indicates that the goods sold are not returnable, while the \"THANK YOU.\" is a thank-you message to the customer",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal or cash tendered. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the percentage of tax that will be deducted from the total amount. The description states that the tax code and percentage are indicated, but no other information is provided",
-      "date": "The value of this field is the total tax amount rounded to two decimal places. The description is a summary of the item sold, indicating that the item has been relatable to GST (Goods & Services Tax). The GOODS SOLD ARRESTE are not returnable and the FAX : 03-3271 9481 is the fax number for inquiries",
-      "address": "The value of this field is the full street address of the issuing business, which is \"TEO HENG STATIONERY & BOOKS\" (001451637-M) in Bataang Berjuntai, Selangor Daraul Ehsan",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal or cash tendered. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total quantity, subtotal (excluding tax), rounding, and change. The tax code and percentage are also included in this field",
-      "date": "The value of this field is the total quantity, subtotal (excluding tax), rounding, and change. The tax code and percentage are also included in this field",
-      "address": "The value of this field is the full street address of the issuing business, which is \"FIELD: address; TYPE: string; DESCRIPTION: full street address of the issuing business\". The value only contains the value of the field, without any additional information",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal or cash tendered. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total amount due, including tax and GST at 6% (RM 37.10), as stated in the document",
-      "date": "The value of this field is the total amount due for the receipt, including tax and GST at 6% (RM 37.10). The document states that the receipt was issued on March 21st, 2018 at 2:49 PM, with a tax invoice of RM 14.00",
-      "address": "The value of this field is the full street address of the issuing business, which is MR. D.I.Y. (M) SDN BHD, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR (GST ID NO : 000306020352), with the Tax Invoice Source Code (TSC) of WA03 - 24/240",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal or cash tendered. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"company\" printed near the top of the receipt - not a person, cashiper, member, or customer name",
-      "date": "The value of this field is \"date\" only, nothing else",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is \"total\" (without any other information). It represents the final amount payable on this receipt, including tax - not the subtotal or cashew tendered or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"21.20",
-      "date": "The value of this field is the total amount due for all items listed on the invoice, rounded to two decimal places. The description field provides a brief summary of each item's details, including the name, quantity, unit price, and amount. The document field specifies the location where the invoice was issued, while the GST registration number, tax invoice number, cashier's report number, and total amount rounded to two decimal places are also included",
-      "address": "The value of this field is \"21.20",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal or cash tendered or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"8.20",
-      "date": "The value of this field is \"8.20",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is \"total\". It contains the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"75.00SR\" in the document",
-      "date": "The value of this field is \"75.00SR\", which represents the total sales including GST for the receipt issued on March 6, 2018 at Aeon Co. (M) Bhd's shop in Taman Maluri, Cheras, Kuala Lumpur",
-      "address": "The value of this field is \"75.00SR\", which represents the total sales inclusive of GST for the given item count, change amount, and invoice number. The value can be omitted entirely or with no description",
-      "total": "75.00"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
-      "date": "The value of this field is \"8.20",
-      "address": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
-      "total": "The value of this field is \"total\". It contains the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
-      "date": "The value of this field is \"8.20",
-      "address": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U) with a length of 19 characters",
-      "total": "8.20"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "Field: company\nType: string\nDescription: Name of the issuing business printed near the top of the receipt - not a person, cashiper, member, or customer name",
-      "date": "From the document, the value of the \"date\" field is \"29/04/2021",
-      "address": "Field: address\nType: string\nDescription: Full street address of the issuing business\nDocument:\nPERNIAGAAN ZHENG HUI\nJM0325955-V\nNO.59 JALAN PERMAS 9/5\nBANDAR BARU PERMAS JAYA\n81750 JOHOR BAHRU\nTEL : 07-386 7524\nFAX : 07-386 3793\nGSF #: 000800589824\nSIMPLIFIED TAX INVOICE\nGOGIANT ENGINEERING (M) SDN BHD\nRECEIPT #: CS00084670\nSALESPERSON:\nDATE: 09/03/2018\nCASHIER: USER\nTIME: 08:49:00\n(RM)\n(RM)\nITEM\nQTY\nRSP\nAMOUNT\n10273\n1\n170.00\n170.00\nSR: 14\" TRU-CUT CUTTIING DISC (1 PC)\n2547\n1\n35.00\n35.00\nSR: KOBELCO G-12#(2.6MM) WELDING\n12133\n2\n7.50\n15.00\nSR: CS 3\" (750) PAINT BRUSH\n10157\n2\n5.50\n11.00\nSR: CS 2\" (750) PAINT BRUSH\n12131\n1\n3.50\n3.50\nSR: CS 1-1/2\" (750) PAINT BRUSH\n9555752615725\n1\n25.00\n25.00\nSR:2\" LAMBWOOL YANDA ROLLER REFIL - 20 PCS\n2226\n1\n6.00\n6.00\nSR",
-      "total": "0325955"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
-      "date": "The value of this field is \"8.20",
-      "address": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
-      "total": "8.20"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"8.20",
-      "date": "The value of this field is \"8.20",
-      "address": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
-      "total": "8.20"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"57.80",
-      "date": "The value of this field is the total amount due, including tax and service charge (at 6%) rounded to two decimal places",
-      "address": "The value of this field is \"RM 57.80",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"12.36",
-      "date": "The value of this field is \"12.36",
-      "address": "The value of this field is \"1, JALAN DESA TEBRAU, Taman DESA TEBRAU, 81100 JOHOR BAHRU, JOHOR",
-      "total": "The value of this field is \"total\". It contains the final amount payable on this receipt, including tax - not the subtotal or cash tendered or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"189.75",
-      "date": "The value of this field is the total amount due for the receipt, including tax and shipping charges. The description is a summary of the order placed by the customer, including the quantity ordered, item name, price, and discount applied. The document is a Brewery Tap, located in Jalan PJU 9/1, D'Sara Ave., Bt. Bendera, 52000 XL. The order number is 11649, the date is 30/03/2018 at 8:13 PM, and the cashier's name is Harry Paing. The total amount due includes shipping charges of RM179.00, tax of RM10.74, and a discount of RM50.00",
-      "address": "The value of this field is \"full street address of the issuing business\" in the document",
-      "total": "The value of this field is the final amount payable on this receipt, including tax - not the subtotal or cash tendered, or change. The description is \"total\" and it does not mention anything else"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"BIZDATE: 12/03/2018\" only, without any additional information or description",
-      "date": "The value of this field is the total amount due, including taxes and service charges, as stated in the document. The description of the field is \"date\" and it refers to the date the receipt was issued. The type of field is \"date\", which means that it represents a date in the format \"YYYY-MM-DD",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is \"total\", which means the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"company\", which represents the name of the issuing business printed near the top of the receipt, not a person, casheir, member, or customer name",
-      "date": "The value of this field is the total amount due for the invoice, including taxes and service charges. The description is \"TAX SUMMARY\" and it contains the following information:\n- Amount: 174.90\n- Tax: 25.10\n- Service Charge (10%): 15.00\n- GST (6%): 9.90\n- Total amount due: 165.00\n\nThe value of this field is the total amount due for the invoice, including taxes and service charges. The description is \"TAX SUMMARY\" and it contains the following information:\n- Amount: 174.90\n- Tax: 25.10\n- Service Charge (10%): 15.00\n- GST (6%): 9.90\n- Total amount due: 165.00\n\nThe value of this field is the total amount due for the invoice, including taxes and service charges. The description is \"TAX SUMMARY\" and it contains the following information:\n- Amount: 174.90\n- Tax: 25.10\n- Service Charge (10%): 15.00\n- GST (6%): 9.90\n- Total amount due: 165.00\n\nThe value of this field is the total amount due for the invoice, including taxes and service charges. The description is \"TAX SUMMARY\" and it contains the following information:\n- Amount: 174.90\n- Tax: 25.10\n- Service Charge (10%): 15.00\n- GST (6%): 9.90\n- Total amount due: 165.00\n\nThe value of this field is the total amount due for the invoice, including taxes and service charges. The description is \"TAX SUMMARY\" and it contains the following information:\n- Amount: 174.90\n- Tax: 25.10\n- Service Charge (10%): 15.00\n- GST (6%): 9.90\n-",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is \"total\", which means the final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total discount amount, which is calculated as 6% (60.50) + 0.00 (0.00), rounded to 3.63",
-      "date": "The value of this field is the total discount amount, which is calculated as 6% (60.50) + 0.00 (0.00), rounded to 3.63",
-      "address": "The value of this field is the full street address of the issuing business, which is specified in the GEOVENTURE document",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal or cash tendered or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total tax amount, including GST, for the receipt printed near the top of the document. The description is \"HEINEKEN (5 BTL)\" and the tax description is \"SR\". The total amount due, excluding GST, is \"190.00\", while the total amount due with GST is \"190.00",
-      "date": "The value of this field is the total tax amount due for the receipt issued on 10th March 2018, including GST. The description is \"TAX (RM)",
-      "address": "The value of this field is the full street address of the issuing business, as described in the document",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is $8.60, which represents the total amount due for the invoice, including amountof tax ($0.49) and GST (which is included in the SR=GST @6% column). The document also includes a summary of the taxes paid, with the GST Registration Number (BAWANG RICE@PERMAS JAYA) listed as the tax amount",
-      "date": "The value of this field is $8.60, which represents the total amount due for the receipt issued on MAR 18, 2018, including taxes and GST (Goods and Services Tax). The document states that the invoice # is OR18031802170364, indicating that it was issued on March 18, 2018. The total amount due for the receipt is $8.60, which includes the taxes and GST (which are shown separately in the document)",
-      "address": "The value of this field is \"8.11",
-      "total": "8.60"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"12,JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
-      "date": "The value of this field is $6.90, which represents the total amount due for the receipt issued on MAR 27, 2018 at JALAN TAMPOI 7/4, KAWASAN PERINDUSTRIAN in Johor Bharu, Johor",
-      "address": "The value of this field is \"SR I00100000056-FRIED NOODLE(S)",
-      "total": "6.90"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"18/03/18",
-      "date": "The value of this field is the date the receipt was issued, which is specified as \"379,JALAN PERMAS SASTU,BANOAR BARU PERMAS JAYA 81750 PLENTONG,JOHOR",
-      "address": "The value of this field is \"full street address of the issuing business\" in the document",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not subtotal, cash tendered, or change. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is \"company\" printed near the top of the receipt, not a person, casheir, member, or customer name",
-      "date": "The value of this field is: RM 170.00",
-      "address": "The value of this field is: full street address of the issuing business, as described in the document",
-      "total": "170.00"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the total sales (excluding GST) including tax, rounded to two decimal places. The description is a summary of the tax code and percentage applied for tax purposes. The amount shown in the document is the total sales (excluding GST) with a discount of 0.02%, rounded to two decimal places",
-      "date": "The value of this field is the total sales (excluding GST) for the invoice, including taxes and discounts. The description is a summary of the total amount of taxes included in the invoice, with a percentage sign and the total amount of taxes (RM)",
-      "address": "The value of this field is the full street address of the issuing business, including the house number and any additional information such as apartment or suite number if applicable. The value should be in the format \"full street address of the issuing business\", without any additional spaces or punctuation marks",
-      "total": "The value of this field is the total amount payable on this receipt, including tax - not the subtotal or cash tendered, or change. The description is \"final amount payable on this receipt, including tax - not subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     },
     {
-      "company": "The value of this field is the name of the issuing business printed near the top of the receipt - not a person, cashiers, member, or customer name",
-      "date": "The value of this field is the total amount due for the receipt, including tax and GST (percentage). The description is \"CASH\" which stands for \"Cashier's Check\", indicating that this document is a cashier's check",
-      "address": "The value of this field is \"full street address of the issuing business",
-      "total": "The value of this field is the final amount payable on this receipt, including tax - not the subtotal, cash tendered, or change"
+      "company": "",
+      "date": "",
+      "address": "",
+      "total": ""
     }
   ],
   "gold": [

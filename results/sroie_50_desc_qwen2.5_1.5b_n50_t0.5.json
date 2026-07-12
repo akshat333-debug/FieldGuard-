@@ -2,12 +2,12 @@
   "model": "qwen2.5:1.5b",
   "n": 50,
   "threshold": 0.5,
-  "elapsed_sec": 490.6,
+  "elapsed_sec": 228.3,
   "report": {
     "docs": 50,
     "fields_total": 200,
     "constrained_acc": 0.715,
-    "final_acc": 0.72,
+    "final_acc": 0.73,
     "corruption_rate": 0.055,
     "flag_precision": 0.69,
     "flag_recall": 0.97,
@@ -20,7 +20,7 @@
     {
       "company": "TAN WOON YANN",
       "date": "25/12/2018",
-      "address": "JALAN SAGU 18, TAMAN DAYA, JOHOR BAHRU, JAMARAH",
+      "address": "JALAN SAGU 18, TAMAN DAYA, JOHOR BAHRU, 81100, JAKARTA SELATAN, INDONESIA",
       "total": "9.0"
     },
     {
@@ -31,7 +31,7 @@
     },
     {
       "company": "MR D.T.Y. (JOHOR) SDN BHD",
-      "date": "19.00",
+      "date": "2019-12-01",
       "address": "LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",
       "total": "33.9"
     },
@@ -42,15 +42,15 @@
       "total": "80.9"
     },
     {
-      "company": "TEK WONG YANN",
-      "date": "18-11-18",
+      "company": "MR D.I.Y. (M) SDN BHD",
+      "date": "2018-11-18",
       "address": "LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",
       "total": "30.9"
     },
     {
       "company": "ABC HO TRADING",
       "date": "2019-01-09",
-      "address": "NO.2&4,JALAN HARMONI 3/2, TAMAN DESA HARMONI.81100 JOHOR BAHRU JOHOR",
+      "address": "NO.2&4,JALAN HARMONI 3/2, TAMAN DESA HARMONI.",
       "total": "31.0"
     },
     {
@@ -72,7 +72,7 @@
       "total": "112.45"
     },
     {
-      "company": "GERBANG ALAF RESTAURANTS SDN BHD",
+      "company": "(65351-M) GERBANG ALAF RESTAURANTS SDN BHD",
       "date": "2018-01-18",
       "address": "LEVEL 6, BANGUNAN TH, DAMANSARA UPTOWN3 NO.3, JALAN SS21/39,47400 PETALING JAYA SELANGOR",
       "total": "11.0"
@@ -133,7 +133,7 @@
     },
     {
       "company": "SHELL ISNI PETRO TRADING",
-      "date": "18/03/18 15:17",
+      "date": "2018-03-18",
       "address": "LOT 2685 JLN GENTING KLANG, 53300 KL, SITE 1066",
       "total": "86.0"
     },
@@ -164,7 +164,7 @@
     {
       "company": "TEO HENG STATIONERY & BOOKS",
       "date": "2018-01-15",
-      "address": "SELANGOR DARUL EHSAN",
+      "address": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI, SELANGOR DARUL EHSAN",
       "total": "55.1"
     },
     {
@@ -182,7 +182,7 @@
     {
       "company": "MR. D.I.Y. (M) SDN BHD",
       "date": "2022-03-14",
-      "address": "address",
+      "address": "LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",
       "total": "37.1"
     },
     {
@@ -247,26 +247,26 @@
     },
     {
       "company": "YHM AEON TEBRAU CITY",
-      "date": "06:20 PM",
+      "date": "2018-11-03",
       "address": "S117, SECOND FLOOR, AEON TEBRAU CITY, 1, JALAN DESA TEBRAU, TAMAN DESA TEBRAU, JOHOR BAHRU, JOHOR.",
       "total": "13.1"
     },
     {
       "company": "DWNER BY CASTLE BLUE S/B",
       "date": "2018-03-30",
-      "address": "address",
+      "address": "Avvveu D'Sara Aevue No.1 Jalan Pju 9/1, Bandar Sri D'Sara, 52000 XL, Malaysia",
       "total": "189.75"
     },
     {
       "company": "THREE STOOGES",
       "date": "12/03/2018",
-      "address": "address",
+      "address": "BISTRO & CAFE, 109, SS21/1A, DAMANSARA UTAMA, GST ID : 001661886464",
       "total": "343.95"
     },
     {
       "company": "THREE STOOGES",
       "date": "2018-03-03",
-      "address": "street address of the issuing business",
+      "address": "BISTRO & CAFE, 109, SS21/1A, DAMANSARA UTAMA, GST ID : 001661886464",
       "total": "174.9"
     },
     {
@@ -276,7 +276,7 @@
       "total": "64.15"
     },
     {
-      "company": "PUB & BISTRO OWN BY CNU TRADING",
+      "company": "32 PUB & BISTRO OWN BY CNU TRADING",
       "date": "2018-03-10",
       "address": "78G, JALAN SS21/62, DAMANSARA UTAMA, 47400 PETALING JAYA.",
       "total": "190.0"
@@ -297,11 +297,11 @@
       "company": "PASAR MINI JIN SENG",
       "date": "18/03/18",
       "address": "379,JALAN PERMAS SATU, BANOAR BARU PERMAS JAYA, 81750 PLENTONG, JOHOR.",
-      "total": "71.40"
+      "total": "100.0"
     },
     {
       "company": "RESTAURANT SIN DU",
-      "date": "03/09/2018",
+      "date": "2018-03-09",
       "address": "K3-113,JL IBRAHIM SULTAN,80300 JOHOR BAHRU,JOHOR",
       "total": "149.0"
     },
@@ -312,7 +312,7 @@
       "total": "100.9"
     },
     {
-      "company": "RM",
+      "company": "Perniagaan Zheng Hui",
       "date": "2018-03-15",
       "address": "Jalan Permas 9/5, Bandar Baru Permas Jaya, 81760 Johor Bahru, Malaysia",
       "total": "8.0"
@@ -1252,7 +1252,7 @@
       "unconstrained": {
         "company": "Brewery Tap",
         "date": "2018-03-30",
-        "address": "Avtivo Plaza, Lot B-F-11, Block B, No1. Jalan PJU 9/1, D'Sara Avenue, Bandar Sri D'Sara, 52000 XL, Tel: +603-62629219",
+        "address": "Avtivo Plaza, Lot B-F-11, Block B, No1. Jalan PJU 9/1, D'Sara Avenue, Bandar Sri D'Sara, 52000 XL, Malaysia",
         "total": "189.75"
       },
       "flagged": [

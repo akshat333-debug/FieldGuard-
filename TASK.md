@@ -17,7 +17,7 @@
 ## Backlog (pick next)
 - Sweep n=50 described (3 models) + regenerate figure with n=50 numbers.
 - Person-name majority-vote failure on 1.5b: arbiter prompt hardening?
-- Second real benchmark (different domain) for generality claim.
+- [x] Second benchmark done: Kleister-NDA (iterations 16-18).
 
 ## Notes / surprises
 - SROIE gold noisy: ~0.92 ceiling; address field concentrates the noise.

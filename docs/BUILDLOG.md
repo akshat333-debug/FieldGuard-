@@ -290,3 +290,11 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   1.5b 0.769 -> 0.795 (residual is majority-vote agreement on wrong values —
   the documented correlated-failure limitation).
 - Tests: **32/32.**
+
+## Iteration 18 — split-kept measured everywhere; docs consistent
+- SROIE-50 rerun under split-kept: 3b 0.855 (±1 field), 1.5b 0.730 (+1pt),
+  tinyllama 0.005 final (the old arbiter occasionally lucked into a fix; the
+  rule now honestly keeps the broken output and reports 200/200 low-confidence).
+- README: SROIE table refreshed + Kleister-NDA second-domain table added;
+  figure regenerated from the split-kept runs. All published numbers now come
+  from one code state.
