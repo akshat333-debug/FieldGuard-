@@ -51,18 +51,18 @@ backend = OpenAICompatBackend(base_url="http://localhost:11434/v1", model="llama
 | `fieldguard/calibrate.py` | Threshold sweep: accuracy vs verification-cost curve |
 | `fieldguard/adapter.py` | JSONL loader for external datasets, schema inference |
 
-## Real benchmark: SROIE receipts (ICDAR 2019, 15 docs / 60 fields)
+## Real benchmark: SROIE receipts (ICDAR 2019, 50 docs / 200 fields)
 
 Real scanned-receipt OCR text, gold company/date/address/total.
 Convert once with `python3 -m examples.convert_sroie`, run with
-`python3 -m examples.experiment --data datasets/sroie_15.jsonl --model <m> --n 15`.
+`python3 -m examples.experiment --data datasets/sroie_50.jsonl --model <m> --n 50`.
 
 | | qwen2.5:3b | tinyllama-1.1B |
 |---|---|---|
-| constrained accuracy | 0.833 | 0.000 |
-| final accuracy | 0.850 | 0.067 |
-| flag precision / recall | 0.800 / 1.0 | 0.067 / 1.0 |
-| low-confidence self-report | 0/60 | 60/60 |
+| constrained accuracy | 0.815 | 0.005 |
+| final accuracy | 0.830 | 0.075 |
+| flag precision / recall | 0.800 / 0.953 | 0.070 / 1.0 |
+| low-confidence self-report | 5/200 | 199/200 |
 | LLM calls vs verify-everything | **-61%** | 0% (all flagged) |
 
 Gold-noise ceiling ≈ 0.92 (SROIE gold sometimes disagrees with its own OCR text;

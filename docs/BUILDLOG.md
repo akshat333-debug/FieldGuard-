@@ -169,3 +169,16 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
 - The figure IS the two-model finding: qwen cluster top-left (high accuracy,
   ~60% below full verification cost), tinyllama pinned to the full-cost line at
   floor accuracy — spend adapts to model quality with no configuration.
+
+## Iteration 10 — scale to 50 receipts: findings stable
+- Extended the SROIE slice 15 -> 50 receipts (`datasets/sroie_50.jsonl`, 200 fields).
+- **qwen2.5:3b:** constrained 0.815 -> final 0.830, corruption 6.5%, flag P/R
+  0.800/0.953, 118 vs 300 calls (**61% saved** — identical to n=15), 5/200
+  low-confidence. First recall < 1.0 sighting: a few corrupted fields slip past
+  the detector at scale, consistent with correlated-error blind spot.
+- **tinyllama:** constrained 0.005 -> final 0.075, all flagged, 199/200
+  low-confidence, 0% saved. Unchanged.
+- Every headline number moves < 2 points from the 15-doc slice: the n=15
+  results were not a small-sample artifact. README table now reports n=50.
+  (Tradeoff figure still renders the n=15 sweeps; sweep at n=50 not re-run —
+  30 pipeline runs of local inference for an expected no-change.)

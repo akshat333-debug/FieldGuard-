@@ -1,0 +1,623 @@
+{
+  "model": "tinyllama:latest",
+  "n": 50,
+  "threshold": 0.5,
+  "elapsed_sec": 575.1,
+  "report": {
+    "docs": 50,
+    "fields_total": 200,
+    "constrained_acc": 0.005,
+    "final_acc": 0.075,
+    "corruption_rate": 0.07,
+    "flag_precision": 0.07,
+    "flag_recall": 1.0,
+    "llm_calls": 300,
+    "full_verify_calls": 300,
+    "low_confidence": 199,
+    "notes": []
+  },
+  "finals": [
+    {
+      "company": "The value of this field is \"9556939040116\" only, nothing else",
+      "date": "The value of this field is \"Round D To Total (RM)\" with a value of \"9.00",
+      "address": "The value of this field is \"9556939040116\" only, nothing else",
+      "total": "95,569.39"
+    },
+    {
+      "company": "The value of this field is \"10.00",
+      "date": "The value of this field is \"10.00",
+      "address": "The value of this field is \"10.00",
+      "total": "10.00"
+    },
+    {
+      "company": "The value of this field is \"RM 33.92\" (excluding any rounding adjustment)",
+      "date": "The value of this field is \"RM 33.92\" (excluding any rounding adjustment)",
+      "address": "The value of this field is \"RM 33.92\" (excluding any rounding adjustment)",
+      "total": "The value of this field is the total amount, rounded to two decimal places, including any rounding adjustments and without cash refunds"
+    },
+    {
+      "company": "The value of this field is \"CASH",
+      "date": "The value of this field is \"25/12/2018\". It contains the date in the format \"MM/DD/YYYY\", which is used to calculate taxes and other charges",
+      "address": "The value of this field is \"GOODS SOLED ARRESTABLE ONLY\". It does not contain any other information",
+      "total": "0517726"
+    },
+    {
+      "company": "The value of this field is \"18-11-18 13:58 SH01 ZI53",
+      "date": "The value of this field is \"18-11-18 13:58 SH01 ZI53",
+      "address": "The value of this field is \"18-11-18 13:58 SH01 ZI53",
+      "total": "The value of this field is \"total\", which means the total amount of invoices, including their respective amounts, taxes, and fees. The value is not further specified or explained in the given document"
+    },
+    {
+      "company": "The value of this field is \"31.00\" only, nothing else",
+      "date": "The value of this field is \"31.00\" only, nothing else",
+      "address": "The value of this field is \"31.00\" only, nothing else",
+      "total": "31.00"
+    },
+    {
+      "company": "The value of this field is the total sales amount for all items in the document, including discounts and taxes. The value is not specified in the given text",
+      "date": "The value of this field is the total sales amount for all items in the document, including discounts and taxes. The value is rounded to zero decimal places",
+      "address": "The value of this field is the total sales amount for all items in the document, including tax and discounts. The value is not specified in the given text",
+      "total": "0352019"
+    },
+    {
+      "company": "The value of this field is \"20.00",
+      "date": "The value of this field is \"20.00",
+      "address": "The value of this field is \"20.00",
+      "total": "The value of this field is \"total\", nothing else"
+    },
+    {
+      "company": "The value of this field is \"SR: PVC WIRE TAPE 1PC X 7YD",
+      "date": "The value of this field is \"SR: PVC WIRE TAPE 1PC X 7YD",
+      "address": "The value of this field is \"SR: PVC WIRE TAPE 1PC X 7YD",
+      "total": "6"
+    },
+    {
+      "company": "The value of this field is \"1950\", which represents the year in which GERBANG ALAF RESTAURANTS SDN BHD was established",
+      "date": "The value of this field is \"1950\", which represents the year in which GERBANG ALAF RESTAURANTS SDN BHD was established",
+      "address": "The value of this field is \"1950\", which represents the date and time when the document was created",
+      "total": "1950"
+    },
+    {
+      "company": "The value of this field is \"SAM SAM TRADING CO\" (type: string)",
+      "date": "The value of this field is \"SAM SAM TRADING CO\" (type: date)",
+      "address": "The value of this field is \"SAM SAM TRADING CO\" (type: string)",
+      "total": "The value of this field is \"total\", which means the total amount of goods sold and taxes paid in this transaction. It does not include any discounts or promotions offered by the seller"
+    },
+    {
+      "company": "The value of this field is \"15.00",
+      "date": "The value of this field is the total amount due for the invoice, including tax and amortization (if applicable). The document states that the invoice has a gross sum of 15,000.00 RM, which includes the tax amount of 6% included in the total. The tax/amt column shows the tax rate as 6%, while the amortization (if applicable) is not mentioned",
+      "address": "The value of this field is \"15.00",
+      "total": "15"
+    },
+    {
+      "company": "VALUE: Home Master Hardware & Electrical No.113G & 115G, U13/BG BANDAR SETIA GEMBILANG, U13/BG BANDAR SETIA ALAM, SELANGOR",
+      "date": "VALUE: 15.90\nTYPE: date\nDOCUMENT:\nHOME MASTER HARDWARE & ELECTRICAL\nNO.113G & 115G, JALAN SETIA GEMBILANG\nU13/BG BANDAR SETIA ALAM,\n40170 BANDAR SETIA ALAM, SELANGOR.\nCOMPANY REG NO.: SA03711551-P\nGST REG NO.: 001637511168\nTAX INVOICE\nINVOLCED NO.:\nDATE: 22/12/2017 14:03\nCASHLER #: CASHIER\nRM: 24MMX7Y M.ONE TAPE\n1.00\nX: \n15.90\n15.90\nSR: SUBTOTAIL :\n15.90\nTOTAAL EXCL. OF GST: 15.00\nTOTAAL INCL. OF GST: 15.90\nSR: TOTAL EXCL. OF GST ROUNDED: 15.90\nPAYMENT : 50.00\nCHANGE DUE : 34.10\nTOTAAL ITEM(S): 1\nG: AMOUANT(RM)\nTAX: 6%\nSR: @ 6%\n15.00\n0.90\nTHANK YOU\nANY GOODS RETURN PLEASE DO WITHIN 7 DAYS WITH ORIGINAL RECEIPT TQ^^\nCS 67832\nUMMARY",
+      "address": "VALUE:\nHOME MASTER HARDWARE & ELECTRICAL\nNO.113G & 115G, JALAN SETIA GEMBILANG\nU13/BG BANDAR SETIA ALAM,\n40170 BANDAR SETIA ALAM,\nSELANGOR.\nCOMPANY REG NO.: SA03711551-P\nGSR NO.: 001637511168\nTAX INVOICE:\nINVOLCED NO.:\nDATE: 22/12/2017 14:03\nCASHLER #:\nCASHIER\nRM\nCODE: 24MMX7Y M.ONE TAPE\n1.00\nX\n15.90\n15.90\nSR:\nSUBTOTAIL:\n15.90\nTOTAAL EXCL. OF GST:\n15.00\nTOTAAL INCL. OF GST:\n15.90\nTOTAAL AMT ROUNDED:\n15.90\nPAYMENT:\n50.00\nCHANGE DUE:\n34.10\nTOTAAL ITEM(S): 1\nG:\nAMOUANT(RM):\nTAX:\nSR:\n@ 6%\n15.00\n0.90\nTHANK YOU:\nANY GOODS RETURN PLEASE DO WITHIN 7 DAYS WITH ORIGINAL RECEIPT TQ^^\nCS: 67832\nUMMARY",
+      "total": "15.90"
+    },
+    {
+      "company": "The value of this field is \"15.00",
+      "date": "The value of this field is the total amount due, including taxes and discounts, as stated in the document. The value only contains the text \"TOKEN\" and does not include any other information or fields",
+      "address": "The value of this field is \"15.00",
+      "total": "15.00"
+    },
+    {
+      "company": "The value of this field is the total sales (excluding GST) for all items listed in the document. The value only includes the tax code and percentage amount, without any other information such as tax rate or discounts",
+      "date": "The value of this field is the total sales (excluding GST) for all items listed in the document. The value is rounded to two decimal places and includes taxes (RM)",
+      "address": "The value of this field is the total sales (excluding GST) for all items listed in the document. The value only includes the tax code and percentage amount, without any other information such as tax rate or discounts",
+      "total": "6"
+    },
+    {
+      "company": "VALUE:\nHOME MASTER HARDWARE & ELECTRICAL\nNO.113G & 115G, JALAN SETIA GEMBILANG\nU13/BG BANDAR SETIA ALAM,\n40170 BANDAR SETIA ALAM,\nSELANGOR.\nCOMPANY REG NO.:SA03711551-P\nGST REG NO.:001637511168\nTAX INVOICE\nINVOICE NO.:\nCS 67832\nDATE :\n22/12/2017 14:03\nCASHIER#:\nCASHIER\nRM\nCODE\n24MMX7Y M.ONE TAPE\n1.00\nX\n15.90\n15.90\nSR\nSUBTOTAL :\n15.90\nTOTAAL EXCL. OF GST\n15.00\nTOTAAL INCL. OF GST\n15.90\nTOTAAL AMT ROUNDED\n15.90\nPAYMENT :\n50.00\nCHANGE DUE :\n34.10\nTOTAL ITEM(S) : 1\nG\nUMMARY\nAMOUANT(RM)\nTAX (RM)\nSR\n@ 6%\n15.00\n0.90\n=",
+      "date": "The value of this field is the total amount rounded up to 2 decimal places, which is 15.90 in this case",
+      "address": "The value of this field is: 15.90",
+      "total": "15.90"
+    },
+    {
+      "company": "The value of this field is \"RM\" (Ringgit Malaysia), which represents the total amount due for the invoice, including tax and service charge. The value of the \"SR @ 6%\", \"ZR/OS/EZ\", and \"0.00\" fields are also included in the value",
+      "date": "VALUE: 28, JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D.E, MALAYSIA\nLIGHTROOM GALLERY SDN BHD\nNO: 28, JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D.E, MALAYSIA\nROC NO.: (1072825-A)\nGS TN: 000584089600\nTEL: 03-3362 4395 FAX: 03-3362 4395\nTAX INVOICE\nSTATION: CASHIER\nBILL NO.: LCS03908\nCAST\nCOVER\nBILL DATE : 20/12/2017\nBILL START: 20/12/2017 07:10:35 PM\nCODE: 300-C0001\nNAME: CASH\nADDRESS: GST NO.\nCH50514\nSR: T5 JOINT 2PIN 2PCS\n1\n* RM\n0.17)=RM\n2.83 UNI (\n2.83\nYT51874\nSR: YE30 BK 7W WW LED TRACK LIGHT\n2\n* RM\n66.04\nSUB TOTAL: RM\nSERVICE CHARGE: RM\nGS TN: 6%\nTO: RM\nCA: RM\nCHANGE: RM\nITEM COUNT: 2\nQTY COUNT : 3.0\nCLOSED BILL: 20/12/2017 07:10:51 PM\nTHANK YOU, PLEASE COMME AGAI NON REFUNDABLE, RETURNABLE\nBANK ACCT MBB 5128 4851 2118\nBANK ACCT MBB 5626 47",
+      "address": "The value of this field is \"RM\" (Ringgit Malaysia), which represents the total amount due for the invoice, including tax and service charge. The value of the \"SR @ 6%\", \"ZR/OS/EZ\", and \"0.00\" fields are also included in the value",
+      "total": "28,"
+    },
+    {
+      "company": "The value of this field is \"RM 18.77 UNI ( 2.25)=RM 37.55",
+      "date": "The value of this field is the total amount due, including tax and service charge, as stated in the document. The value only contains the text \"AMOUNT (RM)\" and does not include any other information or fields",
+      "address": "The value of this field is \"RM 18.77 UNI ( 2.25)=RM 37.55",
+      "total": "39.80"
+    },
+    {
+      "company": "The value of this field is \"ZR/OS/EZ\" (zero, zero, and zero respectively). It represents the zero-rated tax rate for this item",
+      "date": "The value of this field is \"RM 2.83 UNI ( 0.17)=RM 2.83",
+      "address": "The value of this field is \"ZR/OS/EZ\", which stands for \"Zero Rate/Other Service Charge/Exempted Zones\". It indicates that the document does not include any other service charges or taxes, and only the zero-rated rate (68.87) is included in the total amount",
+      "total": "2.83"
+    },
+    {
+      "company": "The value of this field is RM, which represents the total amount due for the invoice. The rest of the information is not relevant to the value of this field",
+      "date": "The value of this field is RM /LITRE, which represents the total amount due for the invoice. The value is not further explained or elaborated on in the given document",
+      "address": "The value of this field is RM/LITRE, which stands for \"RM\" (in Roman numerals) and \"LITRE\" (in Arabic script). The value is not further explained or specified in the given document",
+      "total": "86.00"
+    },
+    {
+      "company": "The value of this field is \"QTY\" with a type of string, meaning it represents the quantity of the item being sold. The value only contains the text \"QTY\", without any additional information or formatting",
+      "date": "The value of this field is the total sales (excluding GST) for the specified period, rounded to two decimal places. The document does not provide any additional information about this field",
+      "address": "The value of this field is \"54.50",
+      "total": "75,"
+    },
+    {
+      "company": "The value of this field is the total tax amount, which includes Goods and Services Tax (GST) as indicated by (*) in the document",
+      "date": "The value of this field is the total tax amount, which includes Goods and Services Tax (GST) as indicated by (*) in the document",
+      "address": "The value of this field is the total tax amount, which includes Goods and Services Tax (GST) as indicated by (*) in the document",
+      "total": "The value of this field is the total amount, including tax and subtotal. The value does not include any discounts or promotions"
+    },
+    {
+      "company": "VALUE:\nFUYI MINI MARKET\nBR NO.: 0195932-X\nNO 43-45-47G,\nTAMAN SEJATI,\nIJOK, 45600 BESTARI JAYA,\nKUALA SELANGOR.\n03-3279 1851,\nGST NO.:001601310720\n25/01/2018 1:22:56PM\nTAX INVOICE\nTRN: 1CR0576494\nCOUNTER 1\nCASHIER: HOCK\nQTY UOM U.PRICE AMT AMT INC. TAX CODE\n013 SUMMER CUP 48X230ML\n1\nGSST 6% + 0.51\n*TOTAL QTY: 1.00\nTOTAL INCLUDING GST 6%\nCUSTOMER'S PAYMENT\nCASH\nCHANGE\nGSST SUMMARY\n9.00\n9.00\n50.00\n41.00\nGSST SUMMARY\nSR\n*GOODS SOLD ARREST NOT RETURNABLE\nTHANK YOU FOR SHOPPING AT FUYI MINI MARKET\nKOTA\n8.49\n8.49\n9.00\nSR\nAMOUANT\nTAX\n8.49\n0.51",
+      "date": "The value of this field is: SR\nThis field contains the total sum of goods sold, including GST (Goods and Services Tax) at 6% and customer's payment, cash summary, and tax summary. The amount of 9.00 is for the total sum of goods sold, while the amount of 8.49 is for the total sum of goods sold excluding GST. The amount of 50.00 is for the total amount of change paid by the customer, and the amount of 41.00 is for the total amount of goods not returned",
+      "address": "The value of this field is: SR\nThis field contains the sales return amount, which is 9.00 for a total of 9.00 in GST (Goods and Services Tax) plus 0.51 in tax. The total amount paid by the customer is 41.00",
+      "total": "25"
+    },
+    {
+      "company": "The value of this field is \"1.56",
+      "date": "The value of this field is the total tax amount (excluding GST), rounded to two decimal places. The remaining fields are the subtotal (excluding tax), total tax, rounding, and change. The tax code and percentage amount are also included in the summary",
+      "address": "The value of this field is \"1.56",
+      "total": "220"
+    },
+    {
+      "company": "The value of this field is the total tax amount, rounded to two decimal places (RM). The document does not contain any additional information",
+      "date": "The value of this field is the total tax amount, rounded to two decimal places (RM). The document does not contain any additional information",
+      "address": "The value of this field is the total tax amount, rounded to two decimal places (RM). The document does not contain any other information",
+      "total": "The value of this field is the total amount of taxes due, including GST (Goods & Services Tax), as indicated in the document. The value is a number only, without any additional information or explanations"
+    },
+    {
+      "company": "The value of this field is \"5\". It represents the total quantity, which includes double-sided tisuue tape and a soft 6ML correction pen. The subtotal (excluding tax) is rounded to 18.00, while the change amount is 1.02. The GST code is indicated as \"6.00\", and the total amount is 16.98 with a tax of 16.98%. The note indicates that the item sold has not been returnable, and thank you",
+      "date": "The value of this field is the total tax amount rounded to two decimal places, including GST (Goods & Services Tax). The document also includes a summary of the total amount, including the item sold and the related taxes. The note indicates that the item sold has been marked as \"not returnable\" and that the taxes are not refundable",
+      "address": "The value of this field is \"5\". It represents the total quantity, which includes 6.60 * (1.32 + 0.00), or 10.38. The discount percentage is also included in this value, with a value of 0.00. The item's subtotal (excluding tax) is rounded to 18.00, and the change is 1.02. The total tax code is \"6.00\", and the total amount due is 18.00 + 1.02 = 19.02. The note indicates that the item has been relatable to GST (Goods & Services Tax), and goods sold are not returnable, thank you",
+      "total": "The value of this field is the total amount, including tax and discount percentage. The document does not provide any other information"
+    },
+    {
+      "company": "The value of this field is the total quantity, subtotal (excluding tax), rounding, and change. The document does not provide any other information about this field",
+      "date": "The value of this field is the total quantity, subtotal (excluding tax), rounding, and change. The document does not provide any other information",
+      "address": "The value of this field is the total quantity, subtotal (excluding tax), rounding, and change. The document does not provide any other information",
+      "total": "The value of this field is the total amount, including tax, as indicated in the table. The value is not further described or explained in the given document"
+    },
+    {
+      "company": "The value of this field is the total amount due, including GST (Goods and Services Tax) at 6% as shown in the document",
+      "date": "The value of this field is the total amount due for the invoice, including tax and GST at a rate of 6%. The document states that MR. D.I.Y. (M) SDN BHD, LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR (GST ID NO : 000306020352), is sourcing the product PADEX 1018-4 4S with exchange allowance within 2.80 and 11.20 SGD/USD, respectively. The invoice has a total amount due of RM 37.10 (including tax at 6%), with a gross sum of RM 35.00 (excluding tax)",
+      "address": "The value of this field is the total amount due, including GST (Goods and Services Tax) at 6% as shown in the document",
+      "total": "The value of this field is the total amount due, including tax and GST. The value is represented as a number only, without any additional information or text"
+    },
+    {
+      "company": "The value of this field is \"RM\" (Roman numeral). It represents the total sales (including GST) for the invoice, with a sum of RM 2.50. The tax amount (RM 6%) and change amount (RM .14) are also included",
+      "date": "The value of this field is \"RM\" (Roman numeral). It represents the total sales (including GST) for the invoice, which is RM2.50. The tax amount (RM6%) and change amount (RM.14) are also included in this field",
+      "address": "The value of this field is \"RM\" (Roman numeral). It represents the total sales (including GST) for the invoice, which is RM2.50. The tax amount (RM6%) and change amount (RM.14) are also included in this field",
+      "total": "The value of this field is \"total\" only, nothing else"
+    },
+    {
+      "company": "The value of this field is the total amount due, including taxes and adjustments, rounded to two decimal places. The document states that the company is C W KHOO HARDWARE SDN BHD with a GST registration number (481500-M) and a Tel: 03-89410243 Fax: 03-89410243 GST Registration No. 000549584896 Tax Invoice No. CR 1803/0064 Date: 01-03-18 5:23:26 PM Cashier's No.: KHOO Countener No.: C1 Printed Date: 01-03-18 5:23:30 PM Item Name: QTY Unit Price Amount Amt Total (MYR) : 20.00 4.00 20.00 5 ITM(S) TOTAL (MYR) : 20.00 GST @ 6% : 1.20 NET TOTAL (MYR) : 21.20 ROUNDING ADJUSTMENT : 0.00 NET TOTAL ROUNDED (MYR) : 21.20 CASS SUMMARY : ITEM : GST (MYR) SR @ 6% : 1\n20.00 THANK YOU. PLEASE COMENG AGAIN ! AMOUANT (MYR) :",
+      "date": "The value of this field is the total amount due, including taxes and adjustments, rounded to two decimal places. The document states that the invoice number is CR 1803/0064, and the date is 01-03-18 5:23:26 PM. The cashier's note (INVOICE NO.) is KHOO, and the tax invoice (TAX INVOICE) has a printed date of 01-03-18 5:23:30 PM. The total amount due includes air adapter @ 1 MYR per item, 5 items totaling 4.00 MYR each, and an adjustment of 0.00 MYR for rounding to two decimal places. The net total is 21.20 MYR, rounded to two decimal places. The cashier's note (CHANGE) has a zero amount due, and the gross total (GS T @ 6%: 1.20 MYR) rounded to two decimal places is 21.20 MYR",
+      "address": "The value of this field is the total amount due, including taxes and adjustments, rounded to two decimal places. The document states that the value is:\n\nFIELD: address\nTYPE: string\nDOCUMENT:\n3-1707067\n(481500-M)\nC W KHOO HARDWARE SDN BHD\nNO.50 , JALAN PBS 14/11 ,\nKAWASAN PERINDUSTRIAN BUKIT SERDANG,\nTEL : 03-89410243\nFAX : 03-89410243\nGST REG NO. : 000549584896\nTAX INVOICE\nINVOICE NO.\n: CR 1803/0064\nDATE\n: 01-03-18 5:23:26 PM\nCASHIER NO.\n: KHOO\nCOUNTER NO.\n: C1\nPRINTED DATE\n: 01-03-18 5:23:30 PM\nITEM NAME\nQTY\nUNIT PRICE\nAMOUANT\nAIRLINE ADAPTOR @ 1\n5\n4.00\n20.00 SR\n5 ITEM(S)\nTOTAAL (MYR) :\n20.00\nGSST @ 6% :\n1.20\nNET TOTACAL :\n21.20\nROUNDING ADJUSTMENT :\n0.00\nNET TOTACHANGED (MYR) :\n21.20\nCASH\n:\n21.20\nCHANGE\n:\n0.00\nGSST SUMMARY\nITEM\nGSST (MYR)\nSR @ 6%\n1\n20.00\n1.20\nTHANK YOU. PLEASE COMENGA AGAIN !",
+      "total": "3"
+    },
+    {
+      "company": "The value of this field is \"UNIHAKKA INTERNATIONAL SDN BHD",
+      "date": "The value of this field is \"05 MAR 2018 18:24",
+      "address": "The value of this field is \"UNIHAKKA INTERNATIONAL SDN BHD",
+      "total": "8.20"
+    },
+    {
+      "company": "The value of this field is \"75.00SR\", which represents the sales tax amount for the given item count and change amount",
+      "date": "The value of this field is 75.00, which represents the total sales including GST for the given period",
+      "address": "The value of this field is \"75.00SR\", which represents the sales tax amount for the given item count and change amount",
+      "total": "75.00"
+    },
+    {
+      "company": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
+      "date": "The value of this field is \"8.20",
+      "address": "The value of this field is \"8.20",
+      "total": "8.20"
+    },
+    {
+      "company": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
+      "date": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
+      "address": "The value of this field is \"8.20",
+      "total": "8.20"
+    },
+    {
+      "company": "From the document, the value of this field is \"SR: AEC BROOM NO.5110# C/W IRON HANDLE\" (excluding GST). The total amount due for the goods sold is RM332.30, rounded off to RM332.3, with a change of RM0.01",
+      "date": "From the document, the value of this field is \"SR: KOBELCO G-12#(2.6MM) WELDING\" (RM), which is a value in RM",
+      "address": "The value of this field is \"SR: KOBELCO G-12#(2.6MM) WELDING\" (RM), which means the value of the \"KOBELCO G-12#(2.6MM) WELDING\" item in the document",
+      "total": "313.50"
+    },
+    {
+      "company": "The value of this field is \"12 MAR 2018 18:19\" (without any additional information)",
+      "date": "The value of this field is \"8.20",
+      "address": "The value of this field is \"8.20",
+      "total": "8.20"
+    },
+    {
+      "company": "The value of this field is \"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN\" (867388-U)",
+      "date": "The value of this field is \"8.20",
+      "address": "The value of this field is \"8.20",
+      "total": "8.20"
+    },
+    {
+      "company": "VALUE:\nFIELD: company\nTYPE: string\nDOCUMENT:\nWARAKUYA PERMAS CIty SDN BHD\nREG NO: 1203194-W\nJALAN PERMAS UTARA 1.\nPERMAS JAYA 81750 MASAI JOHOR\nTEL : 0111-558 0000\nGST ID: 0016 6993 5104\nTAX INVOICE NO\n58244\n42\nDATE: 10/03/2018 5:41:06\nPAX NO:4\nCASHIER: CASHIER3\nWAITER: HANYIN\nQTY CODE/DESC\nTHANK YOU ! PLEASE COME AGAIN ! TOTAAL RM\nSABA SHIO YAKI SEY\n53.70\n1\nSAMLON SHIO SET\n21.90\n4\nICED GRREE TEA\n4.00\nSUBTOTAL\n79.60\nDISCOUNT\n-30.00\nTOTAAL AMOUANT :\n49.60\nSERV CHARGE 10%\n4.96\nGSST @ 6%\n3.27\nROUNDING ADJ :\n-0.03\nTOTAAL AMOUANT:\n57.80\nTOTAAL:\nRM 57.80\nTYPE 3\nGST SUMMARY\nAMOUANT RM\nTAX RM\nSR 6%\n54.56\n3.27",
+      "date": "VALUE: 57.80\nDOCUMENT:\nWARAKUYA PERMAS CIty SDN BHD\nREG NO: 1203194-W\nJALAN PERMAS UTARA 1.\nPERMAS JAYA 81750 MASAI JOHOR\nTEL : 0111-558 0000\nGST ID: 0016 6993 5104\nTAX INVOICE NO\n58244\n42\nDATE: 10/03/2018 5:41:06\nPAX NO:4\nCASHIER: CASHIER3\nWAITER: HANYIN\nQTY CODE/DESC\nTHANK YOU ! PLEASE COME AGAIN ! TOTAAL RM\nSABA SHIO YAKI SEY\n53.70\n1\nSAMLON SHIO SET\n21.90\n4\nICED GRREE TEA\n4.00\nSUBTOTAL\n79.60\nDISCOUNT\n-30.00\nTOTAAL AMOUANT :\n49.60\nSERV CHARGE 10%\n4.96\nGSST @ 6%\n3.27\nROUNDING ADJ :\n-0.03\nTOTAAL AMOUANT:\n57.80\nTOTAAL:\nRM 57.80\nTYPE 3\nGST SUMMARY\nAMOUANT RM\nTAX RM\nSR 6%\n54.56\n3.27",
+      "address": "VALUE:\n- Amount of total amount due (RM 57,800)\n- Total tax amount (RM 5,424.40)\n- Subtotal (RM 49,600)\n- Discount (RM -30.00)\n- Total amount (RM 57,800)\n- Tax rate (6%)\n- Rounding adjustment (RM 0.03)\n- Total amount rounded to 2 decimal places (RM 57,800.00)",
+      "total": "1203194"
+    },
+    {
+      "company": "The value of this field is \"12.36",
+      "date": "The value of this field is \"12.36",
+      "address": "The value of this field is \"13.10",
+      "total": "117,"
+    },
+    {
+      "company": "The value of this field is \"GST @6%",
+      "date": "The value of this field is the total amount due for the order, including tax and shipping charges. The value is not further described or explained in the given document",
+      "address": "The value of this field is \"RM\" (Reais). It represents the currency in which the order was placed",
+      "total": "The value of this field is the total amount of goods sold and refundable cashier's check (RM) in the document. The value is a number only, without any additional information or text"
+    },
+    {
+      "company": "The value of this field is \"THREE STOOGES\" (without quotes)",
+      "date": "The value of this field is the total amount due, including taxes and service charges, as stated in the document. The value only contains the information necessary to calculate the total amount due, without any additional details or explanations",
+      "address": "The value of this field is \"THREE STOOGES\" (without quotes)",
+      "total": "001661886464"
+    },
+    {
+      "company": "The value of this field is \"TAX SUMMARY",
+      "date": "The value of this field is the total amount due, including taxes and service charges, as stated in the document. The rest of the information is irrelevant to the value of this field",
+      "address": "The value of this field is \"TAX SUMMARY",
+      "total": "10"
+    },
+    {
+      "company": "The value of this field is the total discount amount, which is 6% in this case",
+      "date": "The value of this field is the total discount amount, which is calculated as 6% (60.50) + 0.00 (0.00), rounded to 3.63",
+      "address": "The value of this field is the total discount amount, which is 6% in this case",
+      "total": "The value of this field is the total amount due, including tax and service charges, rounded to two decimal places. The value does not include any discounts or adjustments made for rounding"
+    },
+    {
+      "company": "The value of this field is the total tax amount due for the invoice, including GST",
+      "date": "The value of this field is the total tax amount due for the invoice, including GST. The document states that the value only contains the tax amount, without any additional information such as the date or description of the item",
+      "address": "The value of this field is the total tax amount due for the invoice, including GST",
+      "total": "32"
+    },
+    {
+      "company": "The value of this field is $8.60, nothing else",
+      "date": "The value of this field is $8.60, nothing else",
+      "address": "The value of this field is $8.60, nothing else",
+      "total": "8.60"
+    },
+    {
+      "company": "The value of this field is $6.90, nothing else",
+      "date": "The value of this field is $6.90, nothing else",
+      "address": "The value of this field is $6.90, nothing else",
+      "total": "6.90"
+    },
+    {
+      "company": "The value of this field is \"18/03/18\". It contains the date and time when the document was generated, in the format MM/DD/YYYY",
+      "date": "The value of this field is \"18/03/18\". It contains the date and time in the format MM/DD/YYYY",
+      "address": "The value of this field is \"18/03/18\". It contains the date and time when the document was generated, in the format MM/DD/YYYY",
+      "total": "The value of this field is the total amount, which includes all taxes and GST. The document does not provide any additional information about the value or details of the goods sold"
+    },
+    {
+      "company": "The value of this field is \"H/P: 019-7521215\" (without quotes)",
+      "date": "The value of this field is: RM 170.00",
+      "address": "The value of this field is: RM 170.00",
+      "total": "170.00"
+    },
+    {
+      "company": "The value of this field is the total sales (excluding GST) for all items listed in the document, including taxes and discounts. The percentage code indicates that the tax rate is 6%, while the amount represents the total tax (RM) charged on the sale",
+      "date": "The value of this field is the total sales (excluding GST) for all items included in the document, including taxes and discounts. The percentage code indicates that the tax rate is 6%, while the amount represents the total tax (RM) charged on the document",
+      "address": "The value of this field is the total sales (excluding GST) for all items listed in the document, including taxes and discounts. The percentage code indicates that the tax rate is 6%, while the amount represents the total tax (RM) charged on the sale",
+      "total": "6"
+    },
+    {
+      "company": "The value of this field is \"CASH",
+      "date": "The value of this field is \"RM\". It represents the total amount of goods sold and not returnable, as stated in the document",
+      "address": "The value of this field is \"CASH",
+      "total": "The value of this field is the total amount due for all items listed in the document. It does not contain any additional information or details about the salesperson, date, cashier, or other relevant data"
+    }
+  ],
+  "gold": [
+    {
+      "company": "BOOK TA .K (TAMAN DAYA) SDN BHD",
+      "date": "25/12/2018",
+      "address": "NO.53 55,57 & 59, JALAN SAGU 18, TAMAN DAYA, 81100 JOHOR BAHRU, JOHOR.",
+      "total": "9.00"
+    },
+    {
+      "company": "INDAH GIFT & HOME DECO",
+      "date": "19/10/2018",
+      "address": "27, JALAN DEDAP 13, TAMAN JOHOR JAYA, 81100 JOHOR BAHRU, JOHOR.",
+      "total": "60.30"
+    },
+    {
+      "company": "MR D.I.Y. (JOHOR) SDN BHD",
+      "date": "12-01-19",
+      "address": "LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR (MR DIY TESCO TERBAU)",
+      "total": "33.90"
+    },
+    {
+      "company": "YONGFATT ENTERPRISE",
+      "date": "25/12/2018",
+      "address": "NO 122.124. JALAN DEDAP 13 81100 JOHOR BAHRU",
+      "total": "80.90"
+    },
+    {
+      "company": "MR D.I.Y. (M) SDN BHD",
+      "date": "18-11-18",
+      "address": "LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR (TESCO PUTRA NILAI)",
+      "total": "30.90"
+    },
+    {
+      "company": "ABC HO TRADING",
+      "date": "09/01/2019",
+      "address": "NO.2&4, JALAN HARMONI 3/2, TAMAN DESA HARMONI. 81100 JOHOR BAHRU JOHOR",
+      "total": "31.00"
+    },
+    {
+      "company": "SOON HUAT MACHINERY ENTERPRISE",
+      "date": "11/01/2019",
+      "address": "NO.53 JALAN PUTRA 1, TAMAN SRI PUTRA, 81200 JOHOR BAHRU JOHOR",
+      "total": "327.00"
+    },
+    {
+      "company": "S.H.H. MOTOR (SUNGAI RENGIT) SDN. BHD.",
+      "date": "23-01-2019",
+      "address": "NO. 343, JALAN KURAU, SUNGAI RENGIT, 81620 PENGERANG, JOHOR.",
+      "total": "20.00"
+    },
+    {
+      "company": "PERNIAGAAN ZHENG HUI",
+      "date": "12/02/2018",
+      "address": "NO.59 JALAN PERMAS 9/5 BANDAR BARU PERMAS JAYA 81760 JOHOR BAHRU",
+      "total": "112.45"
+    },
+    {
+      "company": "GERBANG ALAF RESTAURANTS SDN BHD",
+      "date": "18/01/2018",
+      "address": "LEVEL 6, BANGUNAN TH, DAMANSARA UPTOWN3 NO.3, JALAN SS21/39,47400 PETALING JAYA SELANGOR",
+      "total": "26.60"
+    },
+    {
+      "company": "SAM SAM TRADING CO",
+      "date": "29-12-2017",
+      "address": "67,JLN MEWAH 25/63 TMN SRI MUDA, 40400 SHAH ALAM.",
+      "total": "14.10"
+    },
+    {
+      "company": "AIK HUAT HARDWARE ENTERPRISE (SETIA ALAM) SDN BHD",
+      "date": "15/06/2017",
+      "address": "NO. 17-G, JALAN SETIA INDAH (X) U13/X, SETIA ALAM, SEKSYEN U13, 40170 SHAH ALAM,",
+      "total": "15.00"
+    },
+    {
+      "company": "HOME MASTER HARDWARE & ELECTRICAL",
+      "date": "22/12/2017",
+      "address": "NO.113G & 115G, JALAN SETIA GEMBILANG U13/BG BANDAR SETIA ALAM, 40170 BANDAR SETIA ALAM, SELANGOR.",
+      "total": "15.90"
+    },
+    {
+      "company": "RESTORAN HASSANBISTRO",
+      "date": "12/28/2017",
+      "address": "NO.2-1-1 JALAN SEITA PRIMA Q U 13/Q SEITA ALAM 40170 SHAN ALAM SELANGOR",
+      "total": "15.00"
+    },
+    {
+      "company": "ASIA MART",
+      "date": "22/12/2017",
+      "address": "NO.23 BATU 10, TAMAN SENTOSA, JALAN KAPAR, 42200 KLANG, SELANGOR.",
+      "total": "32.70"
+    },
+    {
+      "company": "HOME MASTER HARDWARE & ELECTRICAL",
+      "date": "22/12/2017",
+      "address": "NO.113G & 115G, JALAN SETIA GEMBILANG U13/BG BANDAR SETIA ALAM, 40170 BANDAR SETIA ALAM, SELANGOR.",
+      "total": "15.90"
+    },
+    {
+      "company": "LIGHTROOM GALLERY SDN BHD",
+      "date": "20/12/2017",
+      "address": "NO: 28, JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D.E, MALAYSIA",
+      "total": "73.00"
+    },
+    {
+      "company": "LIGHTROOM GALLERY SDN BHD",
+      "date": "20/11/2017",
+      "address": "NO: 28, JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D.E, MALAYSIA",
+      "total": "39.80"
+    },
+    {
+      "company": "LIGHTROOM GALLERY SDN BHD",
+      "date": "20/12/2017",
+      "address": "NO: 28,JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D.E, MALAYSIA",
+      "total": "73.00"
+    },
+    {
+      "company": "SHELL ISNI PETRO TRADING",
+      "date": "18/03/18",
+      "address": "LOT 2685 JLN GENTING KLANG 53300 KL SITE 1066",
+      "total": "86.00"
+    },
+    {
+      "company": "SYL ROASTED DELIGHTS SDN. BHD.",
+      "date": "06/03/2018",
+      "address": "75. JALAN SS 22/19, DAMANSARA JAYA, 47400 PJ",
+      "total": "54.50"
+    },
+    {
+      "company": "TEO HENG STATIONERY & BOOKS",
+      "date": "18/01/2018",
+      "address": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",
+      "total": "4.90"
+    },
+    {
+      "company": "FUYI MINI MARKET",
+      "date": "25/01/2018",
+      "address": "NO 43-45-47G, TAMAN SEJATI, IJOK, 45600 BESTARI JAYA, KUALA SELANGOR.",
+      "total": "9.00"
+    },
+    {
+      "company": "TEO HENG STATIONERY & BOOKS",
+      "date": "17/01/2018",
+      "address": "NO.53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",
+      "total": "27.55"
+    },
+    {
+      "company": "TEO HENG STATIONERY & BOOKS",
+      "date": "15/01/2018",
+      "address": "NO.53, JALAN BESAR, 45600 BATANG BEJUNTAL SELANGOR DARUL EHSAN",
+      "total": "55.10"
+    },
+    {
+      "company": "TEO HENG STATIONERY & BOOKS",
+      "date": "23/01/2018",
+      "address": "NO.53,JALAN BESAR,45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",
+      "total": "18.00"
+    },
+    {
+      "company": "TED HENG STATIONERY & BOOKS",
+      "date": "12/02/2018",
+      "address": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",
+      "total": "153.35"
+    },
+    {
+      "company": "MR. D.I.Y. (M) SDN BHD",
+      "date": "14-03-18",
+      "address": "LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",
+      "total": "37.10"
+    },
+    {
+      "company": "99 SPEED MART S/B",
+      "date": "24-01-18",
+      "address": "LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1076-IJOK",
+      "total": "2.50"
+    },
+    {
+      "company": "C W KHOO HARDWARE SDN BHD",
+      "date": "01-03-18",
+      "address": "NO.50,JALAN PBS 14/11, KAWASAN PERINDUSTRIAN BUKIT SERDANG,",
+      "total": "21.20"
+    },
+    {
+      "company": "UNIHAKKA INTERNATIONAL SDN BHD",
+      "date": "05 MAR 2018",
+      "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",
+      "total": "$8.20"
+    },
+    {
+      "company": "AEON CO. (M) BHD",
+      "date": "06/03/2018",
+      "address": "3RD FLR, AEON TAMAN MALURI SD JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",
+      "total": "75.00"
+    },
+    {
+      "company": "UNIHAKKA INTERNATIONAL SDN BHD",
+      "date": "03 MAR 2018",
+      "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI 81200 JOHOR BAHRU,JOHOR",
+      "total": "$8.20"
+    },
+    {
+      "company": "UNIHAKKA INTERNATIONAL SDN BHD",
+      "date": "10 MAR 2018",
+      "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",
+      "total": ""
+    },
+    {
+      "company": "PERNIAGAAN ZHENG HUI",
+      "date": "09/03/2018",
+      "address": "NO.59 JALAN PERMAS 9/5 BANDAR BARU PERMAS JAYA 81750 JOHOR BAHRU",
+      "total": "332.30"
+    },
+    {
+      "company": "UNIHAKKA INTERNATIONAL SDN BHD",
+      "date": "12 MAR 2018",
+      "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",
+      "total": "$8.20"
+    },
+    {
+      "company": "UNIHAKKA INTERNATIONAL SDN BHD",
+      "date": "14 MAR 2018",
+      "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",
+      "total": "$8.20"
+    },
+    {
+      "company": "WARAKUYA PERMAS CITY SDN BHD",
+      "date": "10/03/2018",
+      "address": "JALAN PERMAS UTARA 1 PERMAS JAYA 81750 MASAI JOHOR",
+      "total": "57.80"
+    },
+    {
+      "company": "YHM AEON TEBRAU CITY",
+      "date": "11/03/2018",
+      "address": "S117, SECOND FLOOR, AEON TEBRAU CITY, 1, JALAN DESA TEBRAU, TAMAN DESA TEBRAU, 81100 JOHOR BAHRU, JOHOR.",
+      "total": "13.10"
+    },
+    {
+      "company": "OWNER BY CASTLE BLUE S/B",
+      "date": "30/03/2018",
+      "address": "AVTIVO PLAZA,LOT B-F-11, BLOCK B NO1.JALAN PJU 9/1,D'SARA AVEVUE BANDAR SRI D'SARA, 52000 KL",
+      "total": "189.75"
+    },
+    {
+      "company": "THREE STOOGES",
+      "date": "12/03/2018",
+      "address": "109, SS21/1A, DAMANSARA UTAMA",
+      "total": "343.95"
+    },
+    {
+      "company": "THREE STOOGES",
+      "date": "03/03/2018",
+      "address": "109, SS21/1A, DAMANSARA UTAMA",
+      "total": "174.90"
+    },
+    {
+      "company": "TASTE OF THE WORLD SDN BHD",
+      "date": "5/3/2018",
+      "address": "LOT 38, 39 101 BOULEVARD, JALAN KENARI 5, BANDAR PUCHONG JAYA, 47170 PUCHONG, SELANGOR",
+      "total": "64.15"
+    },
+    {
+      "company": "32 PUB & BISTRO OWN BY CNU TRADING",
+      "date": "10-03-2018",
+      "address": "78G, JALAN SS21/62, DAMANSARA UTAMA, 47400 PETALING JAYA.",
+      "total": "190.00"
+    },
+    {
+      "company": "UNIHAKKA INTERNATIONAL SDN BHD",
+      "date": "18 MAR 2018",
+      "address": "12, JALAN TAMPOI 7/4,KAWASAN PARINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",
+      "total": "$8.60"
+    },
+    {
+      "company": "UNIHAKKA INTERNATIONAL SDN BHD",
+      "date": "27 MAR 2018",
+      "address": "12, JALAN TAMPOI 7/4,KAWASAN PARINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",
+      "total": "$6.90"
+    },
+    {
+      "company": "PASAR MINI JIN SENG",
+      "date": "18/03/18",
+      "address": "379, JALAN PERMAS SATU, BANDAR BARU PERMAS JAYA 81750 PLENTONG, JOHOR.",
+      "total": "28.60"
+    },
+    {
+      "company": "RESTAURANT SIN DU",
+      "date": "09/03/2018",
+      "address": "K3-113, JL IBRAHIM SULTAN 80300 JOHOR BAHRU JOHOR",
+      "total": "170.00"
+    },
+    {
+      "company": "YONG TAT HARDWARE TRADING",
+      "date": "13/03/2018",
+      "address": "NO 4,JALAN PERJIRANAN 10, TAMAN AIR BIRU, 81700 PASIR GUDANG, JOHOR.",
+      "total": "100.90"
+    },
+    {
+      "company": "PERNIAGAAN ZHENG HUI",
+      "date": "15/03/2018",
+      "address": "NO.59 JALAN PERMAS 9/5 BANDAR BARU PERMAS JAYA 81750 JOHOR BAHRU",
+      "total": "8.00"
+    }
+  ]
+}
