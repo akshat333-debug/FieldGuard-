@@ -139,3 +139,29 @@ def test_normalize_number_words_and_legalese_dates():
     assert normalize(d, "30th day of April, 2009") == "2009-04-30"
     assert normalize(d, "April 30, 2009") == "2009-04-30"
     assert normalize(d, "1st day of July 2026") == "2026-07-01"
+
+
+def test_optional_fields_absence_semantics():
+    opt = FieldSpec("term", "string", required=False)
+    req = FieldSpec("total", "number")
+    sch = Schema("s", (opt, req))
+    # absence phrases normalize to empty for optional fields only
+    assert normalize(opt, "not provided") == ""
+    assert normalize(opt, "NONE") == ""
+    assert normalize(req, "none") == "none"
+    # both-paths-absent on an optional field = agreement, no flag
+    assert flag_fields(sch, {"term": "NONE", "total": "5"},
+                       {"term": "", "total": "5"}) == []
+    # one-sided absence still flags
+    flags = flag_fields(sch, {"term": "2 years", "total": "5"},
+                        {"term": "NONE", "total": "5"})
+    assert {f.field for f in flags} == {"term"}
+    # required field: both-empty still auto-flags (broken-extractor guard)
+    flags = flag_fields(sch, {"term": "2 years", "total": ""},
+                        {"term": "2 years", "total": ""})
+    assert {f.field for f in flags} == {"total"}
+    # extraction prompts carry NO absence marker (it induced lazy false
+    # NONEs — BUILDLOG 21); absence is structural: JSON required list only
+    from fieldguard.extract import _field_lines
+    assert "NONE" not in _field_lines(sch)
+    assert sch.to_json_schema()["required"] == ["total"]

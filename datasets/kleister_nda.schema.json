@@ -1,11 +1,11 @@
 {
   "name": "kleister_nda",
   "fields": [
-    {"name": "effective_date", "type": "date",
+    {"name": "effective_date", "type": "date", "required": false,
      "description": "date the agreement becomes effective, usually stated in the opening paragraph"},
-    {"name": "jurisdiction", "type": "string",
+    {"name": "jurisdiction", "type": "string", "required": false,
      "description": "US state whose law governs the agreement, from the governing-law clause — the state name only, e.g. 'New York'"},
-    {"name": "term", "type": "string",
+    {"name": "term", "type": "string", "required": false,
      "description": "duration of the agreement as stated, e.g. '2 years' — the length only, not start/end dates"}
   ]
 }

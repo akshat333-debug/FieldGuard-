@@ -44,12 +44,14 @@ def _arbiter_query(backend: Backend, document: str, spec: FieldSpec) -> str:
     # unconstrained path — Kleister 3b final dropped 0.885 -> 0.833. Blind +
     # split-kept is the accuracy-safe combination.
     desc = f"DESCRIPTION: {spec.description}\n" if spec.description else ""
+    opt = ("" if spec.required
+           else "If the document does not state it, answer NONE.\n")
     prompt = (
         f"From the document, what is the value of this field? "
         f"Answer with the value only, nothing else.\n"
         f"FIELD: {spec.name}\n"
         f"TYPE: {spec.type}\n"
-        f"{desc}"
+        f"{desc}{opt}"
         f"DOCUMENT:\n{document}\n"
     )
     return backend.generate(prompt, force_json=False).strip()

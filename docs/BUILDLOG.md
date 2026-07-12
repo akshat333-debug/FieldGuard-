@@ -320,3 +320,32 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   separation is statistically real at n=50. tinyllama [0.000, 0.015].
 - Kleister-26: 3b [0.821, 0.949] vs 1.5b [0.705, 0.872] — overlap; the
   contracts gap is suggestive only at n=26. Stated as such in README.
+
+## Iteration 21 — optional fields: absence is structural, and a capability
+- Built: `FieldSpec.required` (default True). Optional fields: absence phrases
+  ("none", "not provided", ...) normalize to empty; both-paths-absent counts as
+  AGREEMENT (no auto-flag); one-sided absence flags normally; the required
+  both-empty broken-extractor guard is unchanged. JSON schema required list
+  honors the flag. Kleister converter now keeps all 83 dev contracts (75 of 249
+  gold fields legitimately absent). Tests 35/35.
+- **Prompt-marker failure found and measured:** the first version put
+  "[optional: answer NONE if not stated]" in the FIELDS block both extraction
+  paths share. The free-form path (and the arbiter, sharing the bias) started
+  lazily answering NONE for effective_dates that ARE in the document —
+  NONE+NONE majorities overwrote correct constrained values. 3b n=83: final
+  0.639 vs constrained 0.699; the rule fixed 13 hallucinations and destroyed
+  28 correct values. Same failure family as iteration 19's judge parroting:
+  instructions that correlate the paths break the disagreement signal.
+- Fix: NO absence instruction in extraction prompts. Absence stays structural —
+  constrained path may omit optional keys (JSON required list), free-form
+  parser yields "" for missing lines; only the single-field ARBITER is told it
+  may answer NONE. Regression test pins the marker out.
+- **Post-fix, n=83:** 3b constrained 0.771 -> final 0.767 (damage 28 -> 12,
+  near-parity), 45% calls saved, flag recall 0.988. 1.5b 0.550 -> 0.562
+  (verification net-positive again), 47% saved.
+- **Capability finding:** absent-gold fields answered correctly-absent: 3b
+  54/75, 1.5b 6/75 — the smaller model hallucinates a value for almost every
+  absent field on both paths (correlated, invisible to disagreement). Absence
+  detection is a model capability, not a prompting trick; FieldGuard surfaces
+  the disagreement-visible share and the rest is the documented correlated
+  blind spot.

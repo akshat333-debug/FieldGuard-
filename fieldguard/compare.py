@@ -21,11 +21,20 @@ _NUM_WORDS = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5",
 # legalese date form: "30th day of April, 2009" -> "30 April, 2009"
 _ORDINAL_DAY = re.compile(r"\b(\d{1,2})(?:st|nd|rd|th)?\s+day\s+of\s+", re.I)
 
+# phrases models use for "the document doesn't state this" — for OPTIONAL
+# fields these mean absence and normalize to the empty string
+_ABSENCE = {"none", "n/a", "na", "null", "not provided", "not specified",
+            "not stated", "not applicable", "not mentioned", "unknown", "-"}
+
+
+def is_absent(spec: FieldSpec, value: str) -> bool:
+    return not spec.required and value.strip().casefold() in _ABSENCE
+
 
 def normalize(spec: FieldSpec, value: str) -> str:
     """Canonical string form for equality comparison. Empty string if unparseable."""
     v = value.strip()
-    if not v:
+    if not v or is_absent(spec, v):
         return ""
     if spec.type in ("number", "integer"):
         cleaned = _NUM_JUNK.sub("", v)
@@ -103,10 +112,14 @@ def flag_fields(schema: Schema, constrained: dict[str, str],
     flags = []
     for f in schema.fields:
         a, b = constrained.get(f.name, ""), unconstrained.get(f.name, "")
-        # empty required field is always suspicious — catches the correlated
-        # both-paths-empty failure that plain disagreement can't see
-        if not a.strip() or not b.strip():
-            flags.append(Flag(f.name, a, b, 1.0))
+        na, nb = normalize(f, a), normalize(f, b)
+        # empty REQUIRED field is always suspicious — catches the correlated
+        # both-paths-empty failure that plain disagreement can't see. For
+        # optional fields, both-paths-absent is agreement (the document may
+        # simply not state it); one-sided absence is an ordinary disagreement.
+        if not na or not nb:
+            if f.required or (bool(na) != bool(nb)):
+                flags.append(Flag(f.name, a, b, 1.0))
             continue
         score = field_disagreement(f, a, b)
         if score >= threshold:

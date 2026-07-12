@@ -64,8 +64,9 @@ def main() -> None:
                     for kv in exp.split() if "=" in kv
                     for k, v in [kv.split("=", 1)]
                     if k in FIELDS}
-            if set(gold) != set(FIELDS):
-                continue
+            # absent fields are legitimate (schema marks them optional):
+            # gold "" means "the document does not state it"
+            gold = {k: gold.get(k, "") for k in FIELDS}
             text = row[5]
             if len(text) > HEAD + TAIL:
                 mid = clause_windows(text[HEAD:len(text) - TAIL])

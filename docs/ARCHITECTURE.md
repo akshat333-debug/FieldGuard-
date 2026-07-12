@@ -30,8 +30,11 @@ final record (+ metrics.report() when gold labels exist)
 
 - **schemas.FieldSpec** — `name`, `type` ∈ {string, number, integer, date, enum}, optional `enum`
   values, optional `description` (flows into BOTH extraction prompts and the arbiter query —
-  worth +3 points final accuracy on SROIE via entity disambiguation, see BUILDLOG 11).
-  `Schema.to_json_schema()` renders the prompt-side JSON Schema.
+  worth +3 points final accuracy on SROIE via entity disambiguation, see BUILDLOG 11), and
+  `required` (default True). Optional fields may be legitimately absent: prompts say "answer
+  NONE if not stated", absence phrases ("none", "not provided", …) normalize to empty, and
+  both-paths-absent counts as agreement instead of tripping the empty auto-flag.
+  `Schema.to_json_schema()` renders the prompt-side JSON Schema (required list honors it).
 - **backends.Backend** — single method `generate(prompt, force_json=False) -> str`, plus `.calls`
   counter (cost accounting). Implementations:
   - `MockBackend` — offline. Reads `field: value` lines from the DOCUMENT block of the prompt

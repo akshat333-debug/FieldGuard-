@@ -12,6 +12,7 @@ class FieldSpec:
     type: str  # one of FIELD_TYPES
     enum: tuple[str, ...] | None = None
     description: str = ""
+    required: bool = True  # optional fields may be legitimately absent
 
     def __post_init__(self) -> None:
         if self.type not in FIELD_TYPES:
@@ -48,6 +49,6 @@ class Schema:
         return {
             "type": "object",
             "properties": props,
-            "required": [f.name for f in self.fields],
+            "required": [f.name for f in self.fields if f.required],
             "additionalProperties": False,
         }

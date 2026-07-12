@@ -20,9 +20,9 @@ CELLS = (  # (results file, schema file, label)
     ("sroie_50_desc_qwen2.5_3b_n50_t0.5", "sroie.schema", "SROIE qwen2.5:3b"),
     ("sroie_50_desc_qwen2.5_1.5b_n50_t0.5", "sroie.schema", "SROIE qwen2.5:1.5b"),
     ("sroie_50_desc_tinyllama_latest_n50_t0.5", "sroie.schema", "SROIE tinyllama"),
-    ("kleister_nda_desc_qwen2.5_3b_n26_t0.5", "kleister_nda.schema", "Kleister qwen2.5:3b"),
-    ("kleister_nda_desc_qwen2.5_1.5b_n26_t0.5", "kleister_nda.schema", "Kleister qwen2.5:1.5b"),
-    ("kleister_nda_desc_tinyllama_latest_n26_t0.5", "kleister_nda.schema", "Kleister tinyllama"),
+    ("kleister_nda_desc_qwen2.5_3b_n83_t0.5", "kleister_nda.schema", "Kleister qwen2.5:3b"),
+    ("kleister_nda_desc_qwen2.5_1.5b_n83_t0.5", "kleister_nda.schema", "Kleister qwen2.5:1.5b"),
+    ("kleister_nda_desc_tinyllama_latest_n83_t0.5", "kleister_nda.schema", "Kleister tinyllama"),
 )
 
 

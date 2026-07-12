@@ -10,6 +10,14 @@ from .schemas import Schema
 
 
 def _field_lines(schema: Schema) -> str:
+    # NOTE: optional fields carry no "answer NONE if absent" marker here — that
+    # instruction made the free-form path lazily claim NONE for values that ARE
+    # in the document, and the arbiter (sharing the bias) rubber-stamped it into
+    # a false absence-majority (BUILDLOG 21: fixed 13 hallucinations, destroyed
+    # 28 correct values). Absence is expressed structurally: the constrained
+    # path may omit optional keys (JSON schema required list), the free-form
+    # parser yields "" for missing lines, and only the ARBITER is told it may
+    # answer NONE.
     return "\n".join(f"- {f.name} ({f.type})"
                      + (f" one of {list(f.enum)}" if f.enum else "")
                      + (f" — {f.description}" if f.description else "")

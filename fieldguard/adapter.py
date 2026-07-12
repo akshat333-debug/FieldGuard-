@@ -38,7 +38,8 @@ def schema_from_json(path: str | pathlib.Path) -> Schema:
     return Schema(spec["name"], tuple(
         FieldSpec(f["name"], f["type"],
                   enum=tuple(f["enum"]) if f.get("enum") else None,
-                  description=f.get("description", ""))
+                  description=f.get("description", ""),
+                  required=f.get("required", True))
         for f in spec["fields"]))
 
 
