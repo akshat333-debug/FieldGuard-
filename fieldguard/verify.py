@@ -55,7 +55,11 @@ def resolve(backend: Backend, document: str, schema: Schema,
     """Re-verify only flagged fields; unflagged fields pass through as agreed.
 
     Final value per flagged field: majority under normalized equality among
-    {constrained, unconstrained, arbiter}; three-way split -> arbiter, low confidence.
+    {constrained, unconstrained, arbiter}; three-way split -> keep constrained,
+    low confidence. (Arbiter-wins was the first design: real arbiters answer
+    refusals/cruft often enough that it damaged accuracy on both real
+    benchmarks. Constraint corruption is rare, so an uncorroborated flag keeps
+    production output and only lowers confidence — BUILDLOG iteration 17.)
     """
     flagged = {f.field: f for f in flags}
     out: dict[str, Resolution] = {}
@@ -72,7 +76,7 @@ def resolve(backend: Backend, document: str, schema: Schema,
             winner = arb if n_arb == n_unc else fl.constrained
             out[name] = Resolution(name, winner, "majority", True)
         else:
-            out[name] = Resolution(name, arb, "arbiter", False)
+            out[name] = Resolution(name, fl.constrained, "split-kept", False)
     return out
 
 

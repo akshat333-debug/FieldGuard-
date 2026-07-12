@@ -258,3 +258,35 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   0.720/56% -> 0.035/0%. Palette re-validated for 3 categorical slots (direct
   labels cover the sub-3:1 aqua/yellow). Full threshold sweep at n=50 skipped
   deliberately — the n=15 sweeps showed the knob flat above default.
+
+## Iteration 16 — second real benchmark: Kleister-NDA (contracts)
+- Dataset: Kleister-NDA dev set (applicaai) — real NDA contracts, OCR text_best,
+  gold key=value. Kept single-valued fields (effective_date, jurisdiction, term);
+  multi-valued `party` out of scope for a flat schema. 26/83 docs carry all three.
+  `examples/convert_kleister.py` + `datasets/kleister_nda.schema.json`.
+- Long docs (median ~16k chars) vs 4096-token local context: converter keeps
+  head + tail + keyword windows around governing-law/term clauses (WINDOW=700,
+  merged). Naive head+tail alone CUT the governing-law clause from most docs —
+  first run scored jurisdiction 13/26 wrong with 'None'/'US' answers; clause
+  windows fixed coverage to 26/26 docs and lifted qwen2.5:3b constrained
+  0.615 -> 0.885.
+- Robustness fix real data forced: tinyllama emitted unparseable constrained
+  JSON on a contract and CRASHED the run — `extract_constrained` now degrades
+  to all-empty fields (-> auto-flag -> verify) instead of raising. Test added.
+- Normalization gaps contracts exposed: spelled-out numbers ("two years" ==
+  "2 years" via word map) and legalese dates ("30th day of April, 2009" —
+  ordinal-day strip + comma-free format list). Tests added.
+
+## Iteration 17 — split resolution flip: arbiter-wins was damaging accuracy
+- Evidence (both real benchmarks): on a three-way split the arbiter answer won
+  by design, but real arbiter answers are refusals ("None", "not provided",
+  "US state") or cruft often enough that verification DAMAGED accuracy —
+  Kleister 3b final 0.846 < constrained 0.885; SROIE 1.5b regression in
+  iteration 13 (partially) the same mechanism.
+- Change: three-way split now KEEPS the constrained value (source "split-kept",
+  confidence low). Rationale: constraint corruption is rare (~5%); an
+  uncorroborated flag shouldn't overwrite production output, only mark it.
+- Kleister rerun: 3b final 0.846 -> 0.885 (verification damage zero),
+  1.5b 0.769 -> 0.795 (residual is majority-vote agreement on wrong values —
+  the documented correlated-failure limitation).
+- Tests: **32/32.**

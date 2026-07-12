@@ -50,7 +50,7 @@ def test_resolve_clean_document_costs_zero():
     assert all(r.confident for r in res.values())
 
 
-def test_three_way_split_falls_to_arbiter_low_confidence():
+def test_three_way_split_keeps_constrained_low_confidence():
     class SplitArbiter(MockBackend):
         def generate(self, prompt, *, force_json=False):
             if "FIELD: total" in prompt:
@@ -62,5 +62,7 @@ def test_three_way_split_falls_to_arbiter_low_confidence():
     dual = dual_extract(backend, DOC, SCHEMA)
     flags = flag_fields(SCHEMA, dual.constrained, dual.unconstrained)
     res = resolve(backend, DOC, SCHEMA, dual.constrained, flags)
-    assert res["total"].source == "arbiter"
+    # uncorroborated flag: keep production (constrained) output, mark unreliable
+    assert res["total"].source == "split-kept"
+    assert res["total"].value == "45"
     assert not res["total"].confident

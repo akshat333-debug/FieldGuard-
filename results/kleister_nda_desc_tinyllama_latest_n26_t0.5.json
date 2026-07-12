@@ -1,0 +1,727 @@
+{
+  "model": "tinyllama:latest",
+  "n": 26,
+  "threshold": 0.5,
+  "elapsed_sec": 696.5,
+  "report": {
+    "docs": 26,
+    "fields_total": 78,
+    "constrained_acc": 0.0,
+    "final_acc": 0.0,
+    "corruption_rate": 0.0,
+    "flag_precision": 0.0,
+    "flag_recall": 1.0,
+    "llm_calls": 130,
+    "full_verify_calls": 130,
+    "low_confidence": 78,
+    "notes": []
+  },
+  "finals": [
+    {
+      "effective_date": "The value of this field is: effective_date\n\nThis field only contains the value \"May 20, 2014\" and nothing else. It does not contain any other information or data",
+      "jurisdiction": "The value of this field is:\nFIELD: jurisdiction\nTYPE: string\nDESCRIPTION: US state whose law govern the agreement, from the governing-law clause - the state name only, e.g. 'New York'\nDOCUMENT:\nEX-10 5 ex10-4 .htm EXHIBIT 10.4\\nExhibit 10.4\\nAMENDED AND RESTATED MUTUAL NONDISCLOSURE AGREEMENT dated as of May 20, 2014 (this \"Agreement\"), by and among Liquid Technology, Inc., a Delaware corporation (\"Liquid\"), and Visser Precision Cast, LLC, a Delaware limited liability company (\"Visser\"). WHEREAS, Liquid and Visser have entered into that certain Agreement dated as of May 13, 2014 (the \"Agreement\"), pursuant to which Liquid has agreed to acquire from Visser all of the issued and outstanding shares of capital stock of Visser (the \"Acquisition\"). WHEREAS, in connection with the Acquisition, Liquid and Visser have entered into this Agreement. NOW, THEREFORE, in consideration of the mutual promises contained herein, the parties hereto agree as follows: SECTION 1. GENERAL PROVISIONS. (a) This Agreement shall be effective as of the date first above written and shall thereafter remain in full force and effect until terminated by either party upon sixty (60) days' prior written notice to the other party. (b) This Agreement may be executed in counterparts, each of which shall be deemed an original, but all of which together shall constitute one and the same instrument. SECTION 2. ACQUISITION. (a) Subject to the terms and conditions set forth herein, Liquid agrees to acquire from Visser all of the issued and outstanding shares of capital stock of Visser (the \"Acquisition\"). (b) The Acquisition shall be effected by way of merger pursuant to a merger agreement executed by and between Liquid and Visser, which shall contain such terms and conditions as are mutually agreed upon by the parties hereto. SECTION 3",
+      "term": "The value of this field is \"term and termination\" only, nothing else. The following fields are also excluded from the value:\n\n1. Confidential Information - any and all nonpublic information concerning or arising from Discloser's business;\n2. Affiliates - any other entities that controls, is controlled by, or is under common control with Discloser in connection with its business;\n3. Trade secret - any trade secret used, developed or acquired by Discloser in connection with its business; and\n4. Termination or expiration"
+    },
+    {
+      "effective_date": "In summary, the terms and conditions of employment for a contractor hired by JDA Software Group, Inc. (the \"Recruiter\") to provide consulting services to the Provender are set forth in this Agreement (\"Agreement\"). The Recruiter agrees to provide the services as outlined in this Agreement and is bound by its terms and conditions.\n\n1. Employment. The Recruiter shall be employed by the Recruiter for a period of one year from the date of this Agreement, subject to renewal upon mutual agreement. The Recruiter agrees to provide services as outlined in this Agreement and is bound by its terms and conditions.\n\n2. Compensation. The Recruiter shall be compensated for all services provided under this Agreement. The Recruiter shall be entitled to a lump sum payment upon the expiration of the one-year term of employment, which shall be paid in accordance with the terms and conditions set forth in Section 10.\n\n3. Evaluation Material. The Recruiter agrees that it will not solicit or employ any officers or employees of the Provender within one year from the date of this Agreement. If a court of competent jurisdiction, pursuant to Section 9, determines that the Recruiter has breached this Agreement, the Recruiter shall pay the reasonable costs (including legal fees and expenses) incurred by the Provender in enforcing this Agreement.\n\n4. Non-Solicitation. The Recruiter agrees not to solicit or employ any officers or employees of the Provender within one year from the date of this Agreement, except for the purpose of providing consulting services to the Provender.\n\n5. Confidentiality. The Recruiter agrees that it will maintain the confidentiality of all information provided by the Provender in connection with the provision of consulting services.\n\n6. Non-Disclosure. The Recruiter agrees not to disclose any confidential or proprietary information provided by the Provender, including but not limited to trade secrets, financial information, and customer lists.\n\n7. Termination. This Agreement may be terminated by either party upon written notice to the other party at any time for any reason, with or without cause. In",
+      "jurisdiction": "In summary, the terms and conditions of employment for a contractor hired by JDA Software Group, Inc. (the \"Recruiter\") to provide consulting services to the Provender are set forth in this Agreement (\"Agreement\"). The Recruiter agrees to provide the services as outlined in this Agreement and is bound by its terms and conditions.\n\n1. Employment. The Recruiter shall be employed by the Recruiter for a period of one year from the date of this Agreement, subject to renewal upon mutual agreement. The Recruiter agrees to provide services as outlined in this Agreement and is bound by its terms and conditions.\n\n2. Compensation. The Recruiter shall be compensated for all services provided under this Agreement. The Recruiter shall be entitled to a lump sum payment upon the expiration of the one-year term of employment, which shall be paid in accordance with the terms and conditions set forth in Section 10.\n\n3. Evaluation Material. The Recruiter agrees that it will not solicit or employ any officers or employees of the Provender within one year from the date of this Agreement. If a court of competent jurisdiction, pursuant to Section 9, determines that the Recruiter has breached this Agreement, the Recruiter shall pay the reasonable costs (including legal fees and expenses) incurred by the Provender in enforcing this Agreement.\n\n4. Non-Solicitation. The Recruiter agrees not to solicit or employ any officers or employees of the Provender within one year from the date of this Agreement, except for the purpose of providing consulting services to the Provender.\n\n5. Confidentiality. The Recruiter agrees that it will maintain the confidentiality of all information provided by the Provender in connection with the provision of consulting services.\n\n6. Non-Disclosure. The Recruiter agrees not to disclose any confidential or proprietary information provided by the Provender, including but not limited to trade secrets, financial information, and customer lists.\n\n7. Termination. This Agreement may be terminated by either party upon written notice to the other party at any time for any reason, with or without cause. In",
+      "term": "In summary, the terms and conditions of employment for a contractor hired by JDA Software Group, Inc. (the \"Recruiter\") to provide consulting services to the Provender are set forth in this Agreement (\"Agreement\"). The Recruiter agrees to provide the services as outlined in this Agreement and is bound by its terms and conditions.\n\n1. Employment. The Recruiter shall be employed by the Recruiter for a period of one year from the date of this Agreement, subject to renewal upon mutual agreement. The Recruiter agrees to provide services as outlined in this Agreement and is bound by its terms and conditions.\n\n2. Compensation. The Recruiter shall be compensated for all services provided under this Agreement. The Recruiter shall be entitled to a lump sum payment upon the expiration of the one-year term of employment, which shall be paid in accordance with the terms and conditions set forth in Section 10.\n\n3. Evaluation Material. The Recruiter agrees that it will not solicit or employ any officers or employees of the Provender within one year from the date of this Agreement. If a court of competent jurisdiction, pursuant to Section 9, determines that the Recruiter has breached this Agreement, the Recruiter shall pay the reasonable costs (including legal fees and expenses) incurred by the Provender in enforcing this Agreement.\n\n4. Non-Solicitation. The Recruiter agrees not to solicit or employ any officers or employees of the Provender within one year from the date of this Agreement, except for the purpose of providing consulting services to the Provender.\n\n5. Confidentiality. The Recruiter agrees that it will maintain the confidentiality of all information provided by the Provender in connection with the provision of consulting services.\n\n6. Non-Disclosure. The Recruiter agrees not to disclose any confidential or proprietary information provided by the Provender, including but not limited to trade secrets, financial information, and customer lists.\n\n7. Termination. This Agreement may be terminated by either party upon written notice to the other party at any time for any reason, with or without cause. In"
+    },
+    {
+      "effective_date": "Explanation:\n\nThis Agreement is entered into as of March 1, 2015 between AUSPEX and TEVA Pharmaceutical Industries, Ltd. (\u201cCompany\u201d) for the purpose of establishing a global collaboration to develop and commercialize innovative therapies for the treatment of respiratory diseases. The parties have agreed to this Agreement by executing a memorandum of understanding (\u201cMOU\u201d) on February 25, 2015.\n\nThe scope of this collaboration includes the following activities:\n\n1. Research and Development: The parties will collaborate in research and development efforts for the discovery, development, and commercialization of new therapies for respiratory diseases. This includes identifying targets, developing drug candidates, conducting preclinical studies, and clinical trials.\n\n2. Commercialization: The parties will work together to develop and commercialize these therapies globally. This includes establishing sales and marketing strategies, negotiating distribution agreements, and managing the supply chain.\n\n3. Intellectual Property: The parties will cooperate in protecting and enforcing their intellectual property rights related to the collaboration. This includes sharing information on patents, trademarks, and copyrights.\n\n4. Financial Obligations: The parties have agreed to a financial obligation for the development of these therapies. This includes funding research and development activities, payments for clinical trials, and milestone payments upon the achievement of certain milestones.\n\n5. Intellectual Property: The parties will cooperate in protecting and enforcing their intellectual property rights related to the collaboration. This includes sharing information on patents, trademarks, and copyrights.\n\n6. Confidentiality: Both parties agree not to disclose any confidential information or proprietary data related to the collaboration. This includes non-public information about the collaborating parties, their products, and their businesses.\n\n7. Termination: Either party may terminate this Agreement upon written notice if a material breach occurs. In such cases, the other party will have the right to terminate this Agreement immediately.\n\n8. Headquarters: The parties agree that the headquarters for this collaboration will be located in La Jolla, California",
+      "jurisdiction": "To confirm the use and disclose of confidential information as per Section 4 of the Agreement between AUSPEX and TEVA Pharmaceuticals, both parties have agreed to:\n\n1. Confidentiality: Both parties agree that all information disclosed under this Agreement will be kept confidential by each party. This includes any and all information related to the other party's business, products, services, research, development, manufacturing, distribution, marketing, and financial information.\n\n2. Non-Disclosure: Each party agrees not to disclose any confidential information to any third party without the prior written consent of the other party. This includes any and all information related to the other party's business, products, services, research, development, manufacturing, distribution, marketing, and financial information.\n\n3. Non-Compete: Each party agrees not to compete with the other party in any way related to their business or products. This includes any and all activities related to the other party's business, products, services, research, development, manufacturing, distribution, marketing, and financial information.\n\n4. Non-Solicitation: Each party agrees not to solicit or attempt to hire the other party's employees, consultants, or contractors during the term of this Agreement. This includes any and all activities related to the other party's business, products, services, research, development, manufacturing, distribution, marketing, and financial information.\n\n5. Non-Disparagement: Each party agrees not to make any statements or representations that are false, misleading, or damaging to the other party's reputation. This includes any and all activities related to the other party's business, products, services, research, development, manufacturing, distribution, marketing, and financial information.\n\n6. Confidentiality: Each party agrees that any confidential information disclosed under this Agreement will be kept confidential by each party. This includes any and all information related to the other party's business, products, services, research, development, manufacturing, distribution, marketing, and financial information.\n\n7. Term: The Agreement shall commence on the date of execution and continue for a period of five (5) years from the date of execution.\n\n8. Amendment: This Agre",
+      "term": "To confirm the use and disclose of confidential information as stated in Section 4 below, both the Provider and the Recpient agree that:\n\n1. Confidentiality: The parties agree to keep all confidential information confidential and not to disclose it to any third party without prior written consent from the other party. This includes any information related to the business, products, services, or customers of either party.\n\n2. Non-Disclosure: The parties agree that they will not disclose any confidential information to any third party without the prior written consent of the other party. This includes any information related to the other party's business, products, services, or customers.\n\n3. Ownership: Both parties acknowledge and agree that all confidential information is owned by the other party. The parties agree not to use or disclose such information for their own benefit or the benefit of any third party without the prior written consent of the other party.\n\n4. Applicable Law: This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, USA.\n\n5. Amendment: This Agreement may only be amended or modified in writing signed by both parties.\n\n6. Entire Agreement: This Agreement constitutes the entire agreement between the parties and supersedes all prior agreements, understandings, and representations between them relating to the subject matter of this Agreement.\n\n7. Governing Law: This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, USA.\n\n8. Export Compliance: Both parties acknowledge that any export or re-export of any confidential information is subject to the United States Export Administration Act (EAA) and regulations thereunder. The parties agree to comply with all applicable EAA requirements in connection with any export or re-export of such information.\n\n9. Termination: Either party may terminate this Agreement upon written notice if the other party breaches any material term of this Agreement, including but not limited to Section 4(a) above.\n\n10. Amendment: This Agreement may only be amended or modified in writing signed by both parties"
+    },
+    {
+      "effective_date": "Explanation:\n\n1. Introduction: This is the first page of the document, which includes a brief overview of the purpose of the document, the parties involved in the transaction, and the terms and conditions of this agreement. The document also includes the date of signing, the name of the author (the CEO), and the title of the document.\n\n2. Introduction: This is the second page of the document, which provides a brief overview of the purpose of the document, the parties involved in the transaction, and the terms and conditions of this agreement. The document also includes the date of signing, the name of the author (the CEO), and the title of the document.\n\n3. Introduction: This is the third page of the document, which provides a brief overview of the purpose of the document, the parties involved in the transaction, and the terms and conditions of this agreement. The document also includes the date of signing, the name of the author (the CEO), and the title of the document.\n\n4. Introduction: This is the fourth page of the document, which provides a brief overview of the purpose of the document, the parties involved in the transaction, and the terms and conditions of this agreement. The document also includes the date of signing, the name of the author (the CEO), and the title of the document.\n\n5. Introduction: This is the fifth page of the document, which provides a brief overview of the purpose of the document, the parties involved in the transaction, and the terms and conditions of this agreement. The document also includes the date of signing, the name of the author (the CEO), and the title of the document.\n\n6. Introduction: This is the sixth page of the document, which provides a brief overview of the purpose of the document, the parties involved in the transaction, and the terms and conditions of this agreement. The document also includes the date of signing, the name of the author (the CEO), and the title of the document.\n\n7. Introduction: This is the seventh page of the document, which provides a brief overview of the purpose of the document, the parties involved in the transaction, and the terms and conditions of this agreement. The document also includes the date of signing, the name of the author (the CEO), and the title of the document.\n\n8. Introduction: This is the eighth page of the document, which",
+      "jurisdiction": "The document contains a confidentiality agreement between California Micro Device Corporation, a Delaware corporation having its principal place of business at 490 N. McCarthy Blvd., #10, and Keith Jackson, the CEO and President of the Company. The document outlines the terms and conditions for evaluating the Transaction, including confidentiality, non-disclosure, and attorney-client privilege. The document also provides that any material or information protected under these privileges shall remain so until the Transaction is closed. The parties agree to negotiate in good faith and waive or diminish any applicable privilege",
+      "term": "Explanation:\n\n1. Introduction: This Memorandum of Understanding (MOU) is between California Micro Device Corporation, a Delaware corporation having its principal place of business at 490 N. Main Street, San Jose, CA 95113 (\"Disc\") and XYZ Company, a Delaware corporation having its principal place of business at 123 Main Street, New York, NY 10001 (\"Recipient\").\n\n2. Purpose: The purpose of this MOU is to establish a framework for the development and commercialization of a new product line by Disc and Recipient.\n\n3. Terms: The following terms have been defined in this MOU:\n\n- \"Disc\" means California Micro Device Corporation, a Delaware corporation having its principal place of business at 490 N. Main Street, San Jose, CA 95113.\n- \"Recipient\" means XYZ Company, a Delaware corporation having its principal place of business at 123 Main Street, New York, NY 10001.\n- \"Product Line\" means the new product line to be developed by Disc and Recipient.\n\n4. Confidentiality: Both parties agree that all information disclosed in this MOU is confidential and shall not be disclosed to any third party without the prior written consent of the other party.\n\n5. Intellectual Property: Both parties acknowledge that all intellectual property rights, including patents, trademarks, copyrights, and trade secrets, related to the Product Line shall remain with Disc or Recipient, as applicable.\n\n6. Financial Assurances: Both parties agree to provide financial assurances in favor of the other party in an amount equal to 10% of the total projected revenue for the Product Line. The financial assurance shall be delivered within thirty (30) days after the signing of this MOU.\n\n7. Commercialization: Disc and Recipient agree to jointly commercialize the Product Line, subject to the terms and conditions set forth in this MOU.\n\n8. Termination: Either party may terminate this MOU upon written notice to the other party if the other party breaches any material term of this MOU. In such event, Disc shall have"
+    },
+    {
+      "effective_date": "To summarize the value of this field in the Exhibit (d)(5) of the 3-Way Non-Disclosure Agreement between TESARO, Inc., GlaxoSmithKline LLC, and Ajinomo To Althea, Inc. DBA Ajinomo To Bio-Pharma Services, dated November 15, 2018 (the \"Agreement\"), the value of this field is:\n\nEXECUTION VERSION\nCONFIDENTIAL\nIN WITNESS WHEREOF, the Parties have executed this Agreement as of the date and year written above.\n\nTESARO, INC.\nGLAXOSMITHKLINE LLC\nBy: /s/ William Aitchison\nBy: /s/ Walter CP Plunkett\nName: William Aitchison\nName: Walter CP Plunkett\nTitle: SVP, Tech BPS\nTitle: Director Scientific Licensing\nAJINOMOTO ALTHEA, INC. DBA\nAjinomo To Althea, Inc. DBA Ajinomo To Bio-Pharma Services\nBy: Digitally signed by Craig W. Logan\nDate: 2018.11.15 10:54:22-08\u201900\u2019",
+      "jurisdiction": "The value of this field is \"Exhibit (d)(5)\\nEXECUTION VERSION\\nCONFIDENTIAL\\n3-WAY NO-DISCLOSURE AGREEMENT\\nThis 3-WAY NON-DISCLOSURE AGREEMENT is made and entered into as of this 15th day of November, 2018 (the \u201cEffective Date\u201d), among TESARO, Inc. (\u201cTESARO\u201d), located at 1000 Winter Street, Walthaum, MA 02451, GlaxoSmithKline LLC (\u201cGSK\u201d), and AjinomoTo Althea, Inc.DBA AjinomoTo Bio-Pharma Services (\u201cABPS\u201d).\n\n1. Purpose: This Agr\u00e9ement shall be governed by the laws of the State of Delaware without reference to conflict of laws principles. Each Party agrees that it shall bring any action or proceeding in respect thereof exclusively in the courts of the State of Delaware and irrevocably submit to the exclusive jurisdiction of such courts.\n\n2. Term: This Agr\u00e9ement shall commence on the Effective Date and continue until the second anniversary of the Effective Date, subject to the terms and conditions set forth herein.\n\n3. Non-Disclosure Agreements: Each Party agrees that it shall have, in addition to any remediable breach of this Agr\u00e9ement, a right to seek equitable relief without the need for a bond or to prove harm.\n\n4. Confidentiality: Each Party agrees that it shall not disclose any Confidential Information disclosed herein (\u201cConfidential Information\u201d) to any third party without the prior written consent of the other Party, except as required by law or in connection with a claim for damages arising out of or related to this Agr\u00e9ement.\n\n5. Non-Disclosure: Each Party agrees that it shall not disclose any Confidential Information disclosed herein (\u201cNon-Disclosing Party\u2019s Confidential Information\u201d) to any third party without the prior written consent of the Disclosing Party, except as required by law or in connection with a claim for damages arising out of or related to this Agr\u00e9ement.\n\n6. Non-Compete: Each",
+      "term": "The value of this field is \"2 years\" - the length only, not start/end dates. The document is EX-99.(D)(5) 11 d651999dex99d5.htm Exhibit (d)(5) 11040 Roselle Street, San Diego, CA 92121 AGREEMENT\nThis 3-WAY NON-DISCLOSURE AGREEMENT is made and entered into as of this 15th day of November, 2018 (the \u201cEffective Date\u201d), among TESARO, INC. (\u201cTESARO\u201d), located at 1000 Winter Street, Walthaum, MA 02451, GlaxoSmithKline LLC (\u201cGSK\u201d), located at 1250 South Collegeville Road, Coll\u00e8geville, PA 19426 (\u201cAPBS\u201d). TESARO, GSK and AjinomoTo Bio-Pharma Services (\u201cAjinomoto\u201d) are parties to this Agreement. AGREEMENT\nThis AGREEMENT is made on the date of [insert date] by and between TESARO, INC., a Delaware corporation having its principal place of business at 1000 Winter Street, Walthaum, MA 02451 (\u201cTESARO\u201d), and GSK, a company incorporated in England and Wales with its registered office at 185 Fleet Street, London, United Kingdom, EC4Y 2AX (\u201cGSK\u201d). AGREEMENT\nWHEREAS, TESARO is engaged in the business of developing, manufacturing, marketing, selling, distributing, importing, exporting and/or licensing pharmaceutical products;\nWHEREAS, GSK is a company incorporated in England and Wales with its registered office at 185 Fleet Street, London, United Kingdom, EC4Y 2AX (\u201cGSK\u201d);\nWHEREAS, Ajinomoto is a company incorporated in Japan with its registered office at 3-7-1, Tsukiji, Chuo-ku, Tokyo 104-8655 (\u201cAjinomoto\u201d); and\nWHEREAS, GSK has agreed to enter into this Ag"
+    },
+    {
+      "effective_date": "Exhibit (d)(2) of the document is a confidentiality agreement between the company and its subsidiaries. The terms of this agreement are set forth in Exhibit A, which includes information about procedures, timing, and terms for the Possible Transaction. The letter agreement also outlines the obligations of the parties regarding the disclosure of confidential information, including the Previous Nondisclosure Agreement. The document is signed by Richard A. Packer as CEO of Zoll Medical Corporation and Koji Fujiwara as Director & Primary Executive Officer. All inquiries should be directed to any of the individuals listed below",
+      "jurisdiction": "To confirm and agree to the letter agreement, please sign below.\n\n[Your Name]\n[Your Signature]\n[Date]\n\nBy: _______________________________\nName: ____________________________\nTitle: ____________________________\nConfirmation and Agreement:\nI, [Your Name], hereby confirm and agree to the letter agreement dated [date] (the \"Agreement\") between ZOLL Medical Corporation (\"ZOLL\"), a Delaware corporation with its principal place of business at 1-105 Kanda Jinbocho, Chiyoda-ku, Tokyo 101-8101, Japan (\"Company\"), and Asahi Kasei Corporation (\"Asahi Kasei\"), a Japanese company with its registered office at 1-105 Kanda Jinbocho, Chiyoda-ku, Tokyo 101-8101, Japan (\"Affiliate\").\n\nI acknowledge that this letter agreement is confidential and may include trade secret information. I understand that the disclosure of such information could harm the Company and its subsidiaries, affiliates or divisions (collectively referred to as \"Evaluation Material\") and take certain other actions herein set forth. The term \u201cEvaluation Material\u201d does not include information that is or becomes available to me on a nonconfidential basis from a source other than the Company or its Affiliate, or in violation of the terms of this letter agreement.\n\nI understand that I am required to obtain the consent of the Company and/or any Affiliate before making any action, suit or proceeding related to this letter agreement or the Possible Transaction. I agree to cooperate with the Company and/or any Affiliate in connection with the Possible Transaction.\n\nI understand that this letter agreement may be executed in two or more counterparts, each of which shall be deemed an original, but all of which shall constitute one and the same instrument. I agree to sign my name on each counterpart.\n\nI acknowledge that this letter agreement constitutes a binding legal agreement between me and the Company and/or any Affiliate. This letter agreement supersedes all prior or contemporaneous agreements, understandings, or negotiations, whether written or oral, relating to the subject matter of this letter agreement.\n\nI agree that this letter agreement may be amended",
+      "term": "Exhibit (d)(2) of the document is a confidentiality agreement between the Exhibitor and the Company. The terms of this agreement are set forth in Exhibit A, which includes contact information for the Banker representative. The letter agreement is signed by both parties and includes a mutual non-disclosure agreement (Previous Non-Disclosure Agreement) that prohibits disclosing confidential information without prior consent. The document also includes a term of two years from the date of its execution, and the obligations of each party are governed by Massachusetts law. This letter agreement is signed by both parties and may be executed in counterparts"
+    },
+    {
+      "effective_date": "The Non-Disclosure Agreement (NDA) between the Company and Discovered Party is hereby amended by replacing Section 6 with the following:\n\nSection 6. Termination of NDA\n(a) Upon termination or expiration of this Agreement, the NDA shall automatically terminate and cease to be in effect.\n(b) The parties hereto agree that any and all information disclosed by Discovered Party under this Agreement shall become the property of Company.\n(c) Upon termination or expiration of this Agreement, the parties hereto agree that they will not use or disclose any Proprietary Information disclosed hereunder for any purpose other than as expressly permitted by this Agreement.\n(d) The parties hereto agree that all rights and obligations under this Agreement shall survive the termination of this Agreement, including without limitation, Section 2.5, 2.6, and 2.7, and Articles 4, 5, 6, 7, 8, and 9.\n(e) The parties hereto agree that any breach or threatened breach of this Agreement shall entitle the Company to seek injunctive relief and other equitable remedies, without the need for prior notice or a hearing, in addition to any other available remedies at law or in equity.\n(f) The parties hereto agree that any dispute arising out of or relating to this Agreement shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.\n(g) This Section 6 shall survive the termination or expiration of this Agreement for any reason",
+      "jurisdiction": "The Non-Disclosure Agreement (NDA) between the Company and Discovered Party is hereby amended by replacing Section 6 with the following:\n\nSection 6. Termination of NDA\n(a) Upon termination or expiration of this Agreement, the NDA shall automatically terminate and cease to be in effect.\n(b) The parties hereto agree that any and all information disclosed by Discovered Party under this Agreement shall become the property of Company.\n(c) Upon termination or expiration of this Agreement, the parties hereto agree that they will not use or disclose any Proprietary Information disclosed hereunder for any purpose other than as expressly permitted by this Agreement.\n(d) The parties hereto agree that all rights and obligations under this Agreement shall survive the termination of this Agreement, including without limitation, Section 2.5, 2.6, and 2.7, and Articles 4, 5, 6, 7, 8, and 9.\n(e) The parties hereto agree that any breach or threatened breach of this Agreement shall entitle the Company to seek injunctive relief and other equitable remedies, without the need for prior notice or a hearing, in addition to any other available remedies at law or in equity.\n(f) The parties hereto agree that any dispute arising out of or relating to this Agreement shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.\n(g) This Section 6 shall survive the termination or expiration of this Agreement for any reason",
+      "term": "The Non-Disclosure Agreement (NDA) between the Company and Discovered Party is hereby amended by replacing Section 6 with the following:\n\nSection 6. Termination of NDA\n(a) Upon termination or expiration of this Agreement, the NDA shall automatically terminate and cease to be in effect.\n(b) The parties hereto agree that any and all information disclosed by Discovered Party under this Agreement shall become the property of Company.\n(c) Upon termination or expiration of this Agreement, the parties hereto agree that they will not use or disclose any Proprietary Information disclosed hereunder for any purpose other than as expressly permitted by this Agreement.\n(d) The parties hereto agree that all rights and obligations under this Agreement shall survive the termination of this Agreement, including without limitation, Section 2.5, 2.6, and 2.7, and Articles 4, 5, 6, 7, 8, and 9.\n(e) The parties hereto agree that any breach or threatened breach of this Agreement shall entitle the Company to seek injunctive relief and other equitable remedies, without the need for prior notice or a hearing, in addition to any other available remedies at law or in equity.\n(f) The parties hereto agree that any dispute arising out of or relating to this Agreement shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.\n(g) This Section 6 shall survive the termination or expiration of this Agreement for any reason"
+    },
+    {
+      "effective_date": "In summary, the value of this field is the effective date of the Agreement (i.e., the date when the agreement becomes effective), which is stated in the opening paragraph. The value of the document is the Mutual No-Nondisclosure Agreement (MUNA) Exhibit (d)(2). The value of the field is the effective date, which is stated in the opening paragraph",
+      "jurisdiction": "In summary, the value of this field is \"US state whose law govern the agreement, from the governance-law clause - the state name only.\" The value only refers to the US state where the law governing the agreement is located. It does not refer to any specific jurisdiction or location",
+      "term": "In summary, the value of this field is \"duration of the agreement as stated, e.g. '2 years' - the length only, not start/end dates.\" The value only refers to the duration of the Agreement, which is specified in the document"
+    },
+    {
+      "effective_date": "To summarize the key points of this Agreement, it is a non-disclosure agreement between CUBIC COORPORAITION and JOHN D. THOMAS, signed on July 11, 2017. The document outlines the terms and conditions for providing Proprietary Information to Recipient, including confidentiality obligations, termination provisions, and waivers of breach or enforcement of contract. The Agreement is subject to California Civil Code Section 1654, which states that there can be no adequate remedy at law for unauthorized use or disclosure of Proprietary Information. The document is executed by both parties and supplements the terms and conditions in the Employee Invitation & Secrecy Agreement",
+      "jurisdiction": "To sign as a witness for the document, please provide your name and signature below. The document is in Word format and can be easily edited using Microsoft Word or another word processing software. Please ensure that you have read and agreed to the terms and conditions before signing. Thank you for your cooperation.\n\n[Your Name]\n[Date]\n[Your Signature]",
+      "term": "To sign as a witness for the document, please provide your name and signature below. The document is in Word format and can be easily edited using Microsoft Word or another word processing software. Please ensure that you have read and agreed to the terms and conditions before signing. Thank you for your cooperation.\n\n[Your Name]\n[Date]\n[Your Signature]"
+    },
+    {
+      "effective_date": "Explanation:\n\nThe Mutual Non-Disclosure Agreement (MNDA) is a legally binding agreement between Integrated Device Technology, Inc. And PLX Technology, Inc., which outlines the confidentiality and non-disclosure of certain information related to the Propoted Transaction. The MNDA was signed on March 31, 2012, and contains several provisions, including:\n\n1. During the evaluation of the Proposed Transaction, the Confidential Information will be used solely for the purposes of evaluating the Proposed Transaction. Prior to disclosing the Confidential Information to any Representacive, however, the Recipient shall inform the Representacive of the non-disclosure agreement with the Disclosing Party or any of its Representacive's separately signed a non-disclosure agreement.\n\n2. The public disclosure of the Proposed Transaction could have a material adverse effect on IDT's and PLX's businesses if, for any reason, a definitive agreement with respect to such transaction is not consummated. In consideration of the Confidential Information being furnished hereby, each party agrees that, without the prior written consent of the Chief FinanciaL Officer or General Counsel of the other party, for a period of 12 months from the date of this Agreement neither it nor any of its affiliates will, either directly or indirectly, seek employment or engage in any other contractual arrangement with persons who are now employed or engaged during the term of this Agreement by the other party or its affiliates, not to mention general solicitations of employment by a party not specifically directed towards the other party's employees or consultants including but not limited to advertising on the internet or in a newspaper or periodical of general circulation.\n\n3. This MNDA sets forth the entire agreement and underscores the parties' understanding that this Agreement is governed by, construed, interpreted, and enforced in accordance with the laws of the State of California without giving effect to principles of conflict of laws which would result in the application of the laws of any other jurisdiction.\n\n4. This MNDA may be executed in separate counterparts, each of which shall constitute one and the same agreement.\n\n5. This MND",
+      "jurisdiction": "Explanation:\n\nThe Mutual Non-Disclosure Agreement (MNDA) is a document that outlines the confidentiality obligations between two parties involved in a potential strategic transaction. The purpose of this agreement is to ensure that all information related to the Propoted Transaction, including but not limited to financial information, is kept confidential and not disclosed to unauthorized individuals or entities.\n\nThe MNDA contains several key provisions, including:\n\n1. The parties agree that during the evaluation of the Proposed Transaction, they will treat Confidential Information (CI) as confidential and not share it with any third party without prior written consent from each party. This includes financial information, business plans, and other sensitive data.\n\n2. The parties acknowledge that CI is essential for evaluating the Propoted Transaction and agree to keep it confidential. They also agree to take all reasonable measures to prevent unauthorized disclosure of CI.\n\n3. Each party agrees not to disclose any Confidential Information to its Representacive(s) without prior written consent from the other party. This includes employees, agents, and representatives of the Propoted Transaction's parties.\n\n4. The parties agree that they will not breach this Agr\u00e9ement (Agreement) by disclosing any Confidential Information to third parties without the express written consent of the other party.\n\n5. In consideration for the Confidential Information being furnished hereby, each party agrees not to, either directly or indirectly, solicit, employ, or otherwise contract with persons who are now employed or engaged (either as an employee or consultant) by the Propoted Transaction's parties, except for general solicitations of employment by a party not specifically directed towards the Proposed Transaction's employees or consultants.\n\n6. This Agreement sets forth the entire agreement and underscores the principles of conflict of laws which would result in the application of the laws of the State of California, without giving effect to principles of conflict of laws which would result in the application of the laws of another jurisdiction.\n\n7. This Agreement may be executed in separate counterparts, each of which shall be deemed an original and all of which together shall constitute one and the same instrument.\n\n8. This Agreement may be",
+      "term": "Explanation:\n\nThe Mutual Non-Disclosure Agreement (MNDA) is a document that outlines the confidentiality obligations between two parties involved in a potential strategic transaction. The purpose of this agreement is to ensure that all information related to the Propoted Transaction, including but not limited to financial information, is kept confidential and not shared with unauthorized individuals or entities.\n\nThe MNDA contains several key provisions, including:\n\n1. The Confidential Information will be used solely for evaluating the Proposed Transaction, provided that the Recipient shall inform the Representacive of the confidential nature of such information and undertake reasonable measures to restrain its Representacive from unauthorized disclose.\n\n2. The public disclosure of the Propoted Transaction could have a material adverse effect on IDT's and PLX's businesses if, for any reason, a definitive agreement with respect to such transaction is not consummated.\n\n3. Each party agrees that without the prior written consent of the Chief FinanciaL Officer or General Counsel of the other party, for a period of 12 months from the date of this Agreement neither it nor any of its affiliates will, either directly or indirectly, seek employment, or engage in any other contractual arrangement with (or cause or seek to cause to leave the employ of) any person who is now employed or engaged during the term of this Agreement by the other party or its affiliates, not exceeding six months prior to the date of such solicitation, employment or other contractual arrangement.\n\n4. This MNDA sets forth the entire agreement and understanding between the parties with respect to the subject matter hereof, and supersedes all prior and contemporaneous agreements, arrangements, understandings, promises and undertakings relating to the same subject matter.\n\n5. This MNDA may be executed in separate counterparts, each of which shall be deemed an original but all of which together shall constitute one and the same instrument.\n\n6. This MNDA may be modified or amended only by mutual agreement in writing signed by both parties.\n\n7. This MNDA shall be governed by and construed in accordance with the laws of the State of California, without giving effect"
+    },
+    {
+      "effective_date": "The Jamba, Inc. And Focus Brands, Inc. Agreement (the \"Agreement\") is entered into as of [DATE] by and between JAMBA, INC., a Delaware corporation (\"JAMBA\"), and FOCUS BRANDS INC., a Delaware corporation (\"FOCUS\").\n\n1. Scope of Agreement\nThe purpose of this Agreement is to establish the terms and conditions for the provision by JAMBA of certain services to FOCUS, including but not limited to: (a) marketing services; (b) advertising services; (c) promotional services; (d) product development services; (e) distribution services; (f) sales promotion services; and (g) other services as mutually agreed upon by the parties.\n\n2. Services\n(a) Marketing Services: JAMBA shall provide marketing services to FOCUS, including but not limited to: (i) developing and executing marketing strategies for FOCUS's products; (ii) creating and implementing advertising campaigns for FOCUS's products; (iii) managing and monitoring the effectiveness of FOCUS's marketing efforts; (iv) conducting market research to inform FOCUS's marketing strategy; and (v) providing other services as mutually agreed upon by the parties.\n\n(b) Advertising Services: JAMBA shall provide advertising services to FOCUS, including but not limited to: (i) creating and implementing advertising campaigns for FOCUS's products; (ii) managing and monitoring the effectiveness of FOCUS's advertising efforts; (iii) conducting market research to inform FOCUS's advertising strategy; and (iv) providing other services as mutually agreed upon by the parties.\n\n(c) Promotional Services: JAMBA shall provide promotional services to FOCUS, including but not limited to: (i) creating and implementing promotions for FOCUS's products; (ii) managing and monitoring the effectiveness of FOCUS's promotional efforts; (iii) conducting market research to inform FOCUS's promotional strategy; and (iv) providing other services as mutually agreed upon by the parties.\n\n(d) Product Development Services: JAM",
+      "jurisdiction": "The Jamba, Inc. And Focus Brands, Inc. Agreement (the \"Agreement\") is entered into as of [DATE] by and between JAMBA, INC., a Delaware corporation (\"JAMBA\"), and FOCUS BRANDS INC., a Delaware corporation (\"FOCUS\").\n\n1. Scope of Agreement\nThe purpose of this Agreement is to establish the terms and conditions for the provision by JAMBA of certain services to FOCUS, including but not limited to: (a) marketing services; (b) advertising services; (c) promotional services; (d) product development services; (e) distribution services; (f) sales promotion services; and (g) other services as mutually agreed upon by the parties.\n\n2. Services\n(a) Marketing Services: JAMBA shall provide marketing services to FOCUS, including but not limited to: (i) developing and executing marketing strategies for FOCUS's products; (ii) creating and implementing advertising campaigns for FOCUS's products; (iii) managing and monitoring the effectiveness of FOCUS's marketing efforts; (iv) conducting market research to inform FOCUS's marketing strategy; and (v) providing other services as mutually agreed upon by the parties.\n\n(b) Advertising Services: JAMBA shall provide advertising services to FOCUS, including but not limited to: (i) creating and implementing advertising campaigns for FOCUS's products; (ii) managing and monitoring the effectiveness of FOCUS's advertising efforts; (iii) conducting market research to inform FOCUS's advertising strategy; and (iv) providing other services as mutually agreed upon by the parties.\n\n(c) Promotional Services: JAMBA shall provide promotional services to FOCUS, including but not limited to: (i) creating and implementing promotions for FOCUS's products; (ii) managing and monitoring the effectiveness of FOCUS's promotional efforts; (iii) conducting market research to inform FOCUS's promotional strategy; and (iv) providing other services as mutually agreed upon by the parties.\n\n(d) Product Development Services: JAM",
+      "term": "The Jamba, Inc. And Focus Brands, Inc. Agreement (the \"Agreement\") is entered into as of [DATE] by and between JAMBA, INC., a Delaware corporation (\"JAMBA\"), and FOCUS BRANDS INC., a Delaware corporation (\"FOCUS\").\n\n1. Scope of Agreement\nThe purpose of this Agreement is to establish the terms and conditions for the provision by JAMBA of certain services to FOCUS, including but not limited to: (a) marketing services; (b) advertising services; (c) promotional services; (d) product development services; (e) distribution services; (f) sales promotion services; and (g) other services as mutually agreed upon by the parties.\n\n2. Services\n(a) Marketing Services: JAMBA shall provide marketing services to FOCUS, including but not limited to: (i) developing and executing marketing strategies for FOCUS's products; (ii) creating and implementing advertising campaigns for FOCUS's products; (iii) managing and monitoring the effectiveness of FOCUS's marketing efforts; (iv) conducting market research to inform FOCUS's marketing strategy; and (v) providing other services as mutually agreed upon by the parties.\n\n(b) Advertising Services: JAMBA shall provide advertising services to FOCUS, including but not limited to: (i) creating and implementing advertising campaigns for FOCUS's products; (ii) managing and monitoring the effectiveness of FOCUS's advertising efforts; (iii) conducting market research to inform FOCUS's advertising strategy; and (iv) providing other services as mutually agreed upon by the parties.\n\n(c) Promotional Services: JAMBA shall provide promotional services to FOCUS, including but not limited to: (i) creating and implementing promotions for FOCUS's products; (ii) managing and monitoring the effectiveness of FOCUS's promotional efforts; (iii) conducting market research to inform FOCUS's promotional strategy; and (iv) providing other services as mutually agreed upon by the parties.\n\n(d) Product Development Services: JAM"
+    },
+    {
+      "effective_date": "The value of this field is \"effective_date\" only, nothing else. The value should be a date in the opening paragraph",
+      "jurisdiction": "The value of this field is \"Confidential Information\" and it is defined as any and all information, data, diagram, and know-how programs furnished at any time by Common Sense to Recipient and Associates, whether in written, graphic or machine-readable form, and which is confidential or proprietary in nature or expressed or designated by Common Sense to be proprietary or confidential. The term \"Confidential Information\" does not include information that becomes known to Recipient from a source other than Common Sense and its Associates without breach of any obligation of confidence by Recipient or the party disclosing such information to Recipient",
+      "term": "The value of this field is \"Confidential Information\" and it is defined as any and all information, data, diagram, and know-how programs furnished at any time by Common Sense to Recipient and Associates, whether in written, graphic or machine-readable form, and which is confidential or proprietary in nature or expressed or designated by Common Sense to be proprietary or confidential. The following shall not be considered Confidential Information: (a) information that can be demonstrated by documentary evidence to have been known to Recipient at the time of disclosure with no obligation of confidentiality or limitation on use towards Common Sense; and (b) information that becomes known to Recipient from a source other than Common Sense and its Associates, as demonstrated by proper documentation without breach of any obligation of confidence by Recipient or the party disclosing such information to Recipient. The term \"Associate\" means, as to each party, such party's agents, representatives, advisors, employees, director(s) or officers. The term \"Confidential Information\" shall remain in full force and effect for a period of five (5) years. The parties acknowledge that Common Sense will be irreparably harmed if Recipient obligations under this Agreement are not specifically enforced and that Common Sense would not have an adequate remedy at law in the event of an actual or threatened violation or breach by Recipient of its obligations. Injunctive relief shall be available to enforce this Agreement against Recipient in addition to all other remedies it may have, and Common Sense shall be entitled to an injunction or any appropriate decree of specific performance for any actual or threatened violations or breaches by Recipient or Recipient's employees or agents without the necessity of proving actual damages. The parties agree that this Agreement shall not be assignable or transferable by either party without the prior written consent of the other party. Any provision herein which is prohibited or unenforceable in any jurisdiction shall, to the extent of such prohibition or unavailability, be severed from this Agreement and ineffective in any respect without invalidating the remaining terms and conditions. The parties agree that this Agreement shall be governed by and construed"
+    },
+    {
+      "effective_date": "Explanation:\n\nThe Agreement is made and entered into as of June 23, 2015, by and between Consac, LLC (the \"Recipient\") and MusclePharm Corporation, a Nevada corporation (the \"Company\"). Each party agrees that the Confidential Information disclosed herein shall be deemed to be Confidential Information of the other Party.\n\nSection 1: Recognition of Value\nThe parties acknowledge that the value of this Agreement is substantial and that it constitutes a valuable asset for each party. The parties agree that they will not disclose or use any Confidential Information in connection with a Possible Transaction (as defined below) without the prior written consent of the other Party, except as set forth herein.\n\nSection 2: Disclosure and Use of Confidential Information\n1. Recipient shall be responsible for the conduct of its business affairs and shall not disclose any Confidential Information to any third party without the prior written consent of the Company.\n\n2. The Company shall have the right to use, reproduce, distribute, and display Confidential Information solely for the purpose of performing its obligations under this Agreement.\n\n3. The Company shall not disclose any Confidential Information to any third party without the prior written consent of the Recipient.\n\nSection 3: Dispute Resolution\n1. If a Party believes that the other Party has breached this Agreement and has caused damage or injury, the Party alleging such breach shall provide written notice to the other Party specifying the nature of the alleged breach and the damages claimed. The other Party shall have thirty (30) days from receipt of such notice to respond in writing to the allegations.\n\n2. If a Party fails to respond within the thirty (30) day period, the allegation shall be deemed true and the dispute shall be resolved by arbitration in accordance with the rules of the American Arbitration Association. The arbitrator shall be selected from a list of arbitrators approved by the Company.\n\nSection 4: Confidentiality\n1. Each Party agrees that it will not disclose or use any Confidential Information of the other Party in any manner, except as expressly permitted under this Agreement.\n\n2",
+      "jurisdiction": "Explanation:\n\nThe Confidentiality and Non-Disclosure Agreement (the \"Agreement\") is made and entered into as of June 23, 2015 by and between MusclePharm Corporation (\"Recipient\"), a Nevada corporation, and Consac, LLC (\"Company\"), a Nevada corporation. The purpose of this Agreement is to protect the confidentiality and non-disclosure of certain Confidential Information disclosed by the Company in connection with a Possible Transaction between the Company and the Recipient (the \"Transactions\").\n\nSection 1: Definitions\n1.1 \"Confidential Information\" means any and all commercial, business, financial, technical and/or other data, information, know-how, techniques, inventions, processes, software, software documentation, designs, drawings, specifications, pricing, marketing plans, customer lists, sales records, promotional materials, advertising materials, financial statements, accounting records, business plans, business proposals, business strategies, business plans, business models, business practices, business processes, business opportunities, business relationships, business contacts, business partnerships, business transactions, business assets, trade secrets, customer lists, customer information, customer data, customer databases, customer lists, customer records, customer accounts, customer information, customer data, customer information, customer lists, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information, customer information,",
+      "term": "Explanation:\n\nThe Confidentiality and Non-Disclosure Agreement (the \"Agreement\") is made and entered into as of June 23, 2015 by and between MusclePharm Corporation (\"Recipient\"), a Nevada corporation, and Consac, LLC (\"Company\"), a Nevada corporation. The purpose of this Agreement is to protect the confidentiality and non-disclosure of certain Confidential Information disclosed by the Company in connection with a Possible Transaction between the Company and the Recipient (the \"Transactions\").\n\n1. Recipient shall be responsible for the conduct of its Representatives (\"Representacive\") regarding the Transactions, including but not limited to:\n\na) Disclosure of Confidential Information\n\nb) Review of Confidential Information\n\nc) Reporting of Confidential Information\n\nd) Use of Confidential Information\n\ne) Non-Disclosure of Confidential Information\n\nf) Confidentiality obligations\n\ng) Termination of confidentiality obligation upon termination or expiration of the Transactions\n\n2. Recipient shall not disclose any Confidential Information to any third party without the prior written consent of the Company, except as necessary to perform its duties under this Agreement.\n\n3. The Company shall not disclose any Confidential Information to any third party without the prior written consent of the Recipient, except as necessary to perform its duties under this Agreement.\n\n4. Each Party agrees that it will use reasonable commercial efforts to mitigate or avoid damage caused by disclosure of Confidential Information.\n\n5. The Company and the Recipient agree that any breach of this Agreement shall constitute a material breach, which shall entitle the other Party to immediate termination of this Agreement upon written notice.\n\n6. This Agreement constitutes the entire understanding between the Parties with respect to the subject matter hereof and supersedes all prior negotiations, understandings or agreements between the Parties relating to such subject matter.\n\n7. This Agreement may be executed in counterparts, each of which shall be deemed an original, but all of which together shall constitute one and the same instrument.\n\n8. This Agreement"
+    },
+    {
+      "effective_date": "This Agreement is made as of August 16, 2018, between CafePress Inc., having its principal place of business at 11909 Shelbyville Road, Louisville, Kentucky 40243 (\"CafePress\"), and District Photo, Inc., having its principal place of business at 10501 Rhode Island Avenue, Beltsville, Maryland 20705 (\"Company\").\n\nWHEREAS, in connection with discussion between Company and CafePress concerning a potential transaction between the parties, the Discovering Party (as defined below) may find it necessary and desirable to disclose Confidential Information to the other party (as defined below) for purposes of determining the feasibility of a business relationship between the parties.\n\nNOW, THEREFORE, in consideration of the disclosure of Confidential Information by each party and each party\u2019s willingness to protect the Confidential Information of the other party (\"Discovering Party\"), this Agreement is entered into as follows:\n\n1. Definitions. As used in this Agreement, the following terms shall have the meanings set forth below:\n\na. \"Confidential Information\" means any and all information disclosed by one party to the other party (\"Disclosing Party\") that is marked or labeled as confidential or proprietary, whether orally, in writing, or otherwise, including without limitation, trade secrets, know-how, technical data, financial information, business plans, marketing strategies, customer lists, pricing information, and any other information of a confidential nature.\n\nb. \"Disclosing Party\" means the party disclosing Confidential Information to the other party in accordance with this Agreement.\n\nc. \"Discovering Party\" means the party receiving Confidential Information from the Disclosing Party in accordance with this Agreement.\n\n2. Ownership of Confidential Information. The Discovering Party acknowledges that all Confidential Information disclosed by the Disclosing Party is confidential and proprietary, and that it will not disclose or use such Confidential Information for any purpose other than to perform its obligations under this Agreement.\n\n3. Use of Confidential Information. The Discovering Party agrees to use all reasonable efforts",
+      "jurisdiction": "This Agreement is made as of this 16th day of August 2018, between CafePress Inc., having its principal place of business at 11909 Shelbyville Road, Louisville, Kentucky 40243 (\u201cCafePress\u201d) and District Photo, Inc., having its principal place of business at 10501 Rhode Island Avenue, Beltsville, MD 20705 (\u201cCompany\u201d).\n\nWHEREAS, in connection with discussion between Company and CafePress concerning a potential transaction between the parties, the Discovering Party (as defined below) may find it necessary and desirable to disclose Confidential Information to the other party (as defined below) for purposes of discussions and business dealing;\nNOW, THEREFORE, in consideration of the disclosure of Confidential Information by each party, this Agreement is hereby made effective.\n\n1. DISCLOSURE OF CONFIDENTIAL INFORMATION.\n\n(a) \"Confidential Information\" means any information disclosed by one party to the other party (the \u201cDisclosing Party\u201d), whether orally, in writing, or through any other medium, that is marked as confidential or otherwise designated as such by the Disclosing Party. Confidential Information does not include information that:\n(i) Is known to the public at the time of disclosure;\n(ii) Was known to the receiving party prior to its receipt from the Disclosing Party;\n(iii) Is independently developed by the receiving party without use of any Confidential Information; or\n(iv) Is required to be disclosed by law, court order, or other legal process.\n\n(b) The receiving party agrees that it will not disclose, use, or transfer any Confidential Information to any third party, except as necessary to perform its obligations under this Agreement.\n\n2. GENERAL TERMS AND CONDITIONS.\n\n(a) This Agreement shall be governed by and construed in accordance with the laws of the Commonwealth of Kentucky, without giving effect to any choice of law or conflict of law rules that would cause the application of the laws of another jurisdiction.\n\n(b) Any provision of this Agreement which is prohibited or unenforce",
+      "term": "This Agreement is made as of this 16th day of August, 2018, between CafePress Inc., having its principal place of business at 11909 Shelbyville Road, Louisville, Kentucky 40243 (\u201cCafePress\u201d) and District Photo, Inc., having its principal place of business at 10501 Rhode Island Avenue, Beltsville, MD 20705 (\u201cCompany\u201d).\n\nWHEREAS, in connection with discussion between Company and CafePress concerning a potential transaction between the parties, the Discovering Party (as defined below) may find it necessary and desirable to disclose Confidential Information to the other party (as defined below) for purposes of determining the feasibility of a business relationship between the parties.\n\nNOW, THEREFORE, in consideration of the disclosure of Confidential Information by the Discovering Party, the Company agrees as follows:\n\n1. Disclosure and Use of Confidential Information. The Company shall not disclose any Confidential Information to any third party without the prior written consent of the Discovering Party. The Company shall use all reasonable efforts to maintain the confidentiality of the Confidential Information, and shall not disclose or use such Confidential Information for any purpose other than in connection with the business relationship between the parties.\n\n2. Non-Disclosure. The Company agrees that it will not disclose any Confidential Information to any third party without the prior written consent of the Discovering Party.\n\n3. Ownership. The Company shall own all right, title and interest in and to the Confidential Information disclosed by the Discovering Party.\n\n4. Confidentiality. The Company agrees that it will not disclose any Confidential Information to any third party without the prior written consent of the Discovering Party.\n\n5. Indemnification. The Company shall indemnify and hold harmless the Discovering Party from and against all claims, damages, losses, costs and expenses arising out of or related to any breach by the Company of this Agreement.\n\n6. Termination. This Agreement may be terminated by either party upon written notice to the other party if the other party breaches any material term of this Ag"
+    },
+    {
+      "effective_date": "To summarize the key points of this Agreement, it outlines the terms and conditions for a potential business transaction between Opsware Inc., a Delaware corporation, and Hewlett-Packard Company, a Delaware corporation. The agreement is made pursuant to the provision of this Agreement, which is governed by and construed in accordance with the laws of the State of Delaware.\n\nThe parties agree that Confidential Information shall mean any information, technical data or know-how, including but not limited to research, analysis, compilations, studies, memoranda or other documents (regardless of the form thereof) prepared by the receiving party or its Associates which contain, reflect or are based upon, in whole or in part, any information furnished to the receiving party or its Associates pursuant to this Agreement.\n\nThe parties agree that any notice or other communication required or permitted to be delivered to any party under this Agreement shall be in writing and shall be deemed properly given on the day of delivery if delivered by hand or facsimile (with confirmation of delivery) to the address or facsimile telepone number set forth below:\n\nIf to Opsware Inc.:\nHewlett-Packard Company\n599 N. Mathilda Avenue\nSuNNyvale, CA 94085\nAttn: John O'Faarrll\nFaX number: (408) 904\n12. Governing\nEach party hereby agrees and consents to the jurisdiction of any federal or state court within Wilmington, State of Delaware, having subject matter jurisdiction, for the purposes of any action, suit or proceeding arising out of or relating to this Agreement. To the fullest extent permitted by law, each party hereby agrees to waive trial by jury in any action proceeding or counterclaim brought under or pursuant to this Agreement. All modifications, waivers of and amendments to this Agreement must be in writing and signed by both parties.\n\nThe parties agree that all counterparts, if any, shall constitute one instrument. Any failure to enforce any provision of this Agreement shall not affect the validity of the remaining provisions. This Agreement may be executed in any number of counterparts, each of which",
+      "jurisdiction": "To summarize the key points of this Agreement, it outlines the terms and conditions for a potential business transaction between Opsware Inc., a Delaware corporation, and Hewlett-Packard Company, a Delaware corporation. The document is divided into two sections: \"Non-Disclosure of Confidential Information\" and \"Confidentiality Agreement\".\n\n1. Non-Disclosure of Confidential Information\nThe parties agree to treat the disclosing party's Confidential Information in accordance with the following provisions:\n\na) Non-disclosure of Confidential Information: The receiving party shall not disclose any Confidential Information of the disclosing party, except as required by law or permitted under this Agreement.\nb) Disclosure of Confidential Information: The receiving party may disclose Confidential Information only to its employees, consultants, attorneys, accountants, auditors, and other representatives who need such information in connection with the evaluation of a Transaction.\nc) Restrictions on Use: The receiving party shall not use any Confidential Information for any purpose other than evaluating a Transaction.\nd) Obligations of Disclosing Party: The disclosing party shall not disclose any Confidential Information to any third party without the prior written consent of the receiving party.\ne) Obligations of Receiving Party: The receiving party shall use its best efforts to protect the confidentiality of the disclosing party's Confidential Information and shall not disclose such information to any third party without the prior written consent of the disclosing party.\n\n2. Confidentiality Agreement\nThe parties agree that this Agreement constitutes a confidential agreement between them, and they will treat all Confidential Information as confidential. The receiving party agrees not to disclose any Confidential Information to any third party without the prior written consent of the disclosing party. The disclosing party agrees not to disclose any Confidential Information to any third party without the prior written consent of the receiving party.\n\nIn summary, this Agreement outlines the terms and conditions for a potential business transaction between Opsware Inc., a Delaware corporation, and Hewlett-Packard Company, a Delaware corporation. The parties agree to treat all Conf",
+      "term": "The value of this field is \"2 years\" - nothing else. This document only contains information regarding the duration of the agreement as stated, e.g. \"2 years\". Exhibit (d)(3) 9 a2179028zex-99 _d3.htm EXHIBIT 99.(D)(3)\\nQuickLinks -- Click here to rapidly navigate through this document\\nExhibit (d)(3)\\nMUTUAL NONDISCLOSURE AGREEMENT\\nThis MUTUAL NONDISCLOSURE AGREEMENT (this \"Agreement\") is made as of May 9, 2007 by and between Opsware Inc., a Delaware corporation (the \"Company\"), and Hewlett-Packard Company, a Delaware corporation (\"HP\"). The Company and HP are evaluating entering into a potential business transaction (the \"Transaction\") under which each may disclose certain Confidential Information to the other party (\"Affiliates\") and the respective director(s), officer(s), employee(s), agent(s), representative(s), consultant(s), and/or counsel(s) of each party. This Agreement is effective as of the date first written above. 1. Scope of Confidentiality. The parties agree that all Confidential Information disclosed by one party to the other party shall be kept confidential by the recipient thereof and shall not be used for any purpose other than those expressly authorized in writing by the disclosing party. 2. Non-Disclosure. Each party agrees that it will not disclose or use any Confidential Information of the other party, except as necessary to perform its obligations under this Agreement. 3. Ownership. The parties agree that all Confidential Information disclosed by one party to the other party shall be owned by the recipient thereof. 4. Non-Solicitation. Each party agrees that it will not solicit or attempt to induce any Affiliate of the other party to terminate its employment, consulting, or other relationship with the disclosing party. 5. Confidentiality Obligations. Each party agrees that it shall use reasonable efforts to maintain the confidentiality of all Confidential Information disclosed by the other party"
+    },
+    {
+      "effective_date": "To amend the Confidentiality Agreement dated as of June 23, 2010, between Allis-Chalmers Energy Inc. And Seawell Limited, please refer to the attached letter agreement. The reference to \"August 3, 2010\" in the last paragraph of the Agr\u00e9ement is hereby amended to read \"August 10, 2010\". If you are in agreement with the foregoing, please sign and return one copy of this letter agreement, which will constitute your agreement with respect to the matters set forth herein",
+      "jurisdiction": "From the document, what is the value of this field? Answer with the value only, nothing else.\nFIELD: jurisdiction\nTYPE: string\nDESCRIPTION: US state whose law govern the agreement, from the governance-law clause - the state name only, e.g. 'New York'\nDOCUMENT:\nEX-10.2 7 dex102.htm CONFIDENTIALITY AGREEMENT\\nExhibit 10.2\\nSeawell Limited\\n14-Par-laVillage, NY 11968 USA\\nPhone: (555) 555-5555\\nFax: (555) 555-5555\\nEmail: info@seawell.com\\nWebsite: www.seawell.com\\nThis Agreement is made on [insert date] by and between [insert name of Party A], a corporation duly organized and existing under the laws of [insert state/country], having its principal place of business at [insert address] (hereinafter referred to as \u201cParty A\u201d), and [insert name of Party B], a corporation duly organized and existing under the laws of [insert state/country], having its principal place of business at [insert address] (hereinafter referred to as \u201cParty B\u201d). WHEREAS, Party A and Party B have entered into a Confidentiality Agreement dated as of [insert date] (the \u201cAgreement\u201d), which is incorporated herein by reference. WHEREAS, Party A desires to enter into an agreement with Party B for the purpose of providing services to Party B in connection with the development and marketing of a new product, the subject matter of which is described in Exhibit 10.2 attached hereto (the \u201cProduct\u201d). NOW, THEREFORE, in consideration of the mutual promises contained herein, the parties agree as follows:\n1. Scope of Services. Party A agrees to provide services to Party B for the purpose of providing marketing and sales support for the Product. Such services shall include but not be limited to: (a) developing a comprehensive marketing plan for the Product; (b) creating and implementing advertising campaigns, including print, radio, television, and",
+      "term": "To amend the Confidentiality Agreement dated as of June 23, 2010, between Allis-Chalmers Energy Inc. And Seawell Limited, please refer to the attached letter agreement. The reference to \"August 3, 2010\" in the last paragraph of the Agr\u00e9ement is hereby amended to read \"August 10, 2010\". If you are in agreement with the foregoing, please sign and return one copy of this letter agreement, which will constitute your agreement with respect to the matters set forth herein"
+    },
+    {
+      "effective_date": "Exhibit (d)(3) of the Confinement Agreement between HID Global Corporation and LaserCard Corporation is a confidentiality agreement. The purpose of this document is to ensure that all non-public information is kept confidential, including any notes, analyses, and other materials prepared by or on behalf of the parties. The confidentiality agreement also includes a condition for further discussions with the Company (paragraph 3 below).\n\nThe parties agree that this letter agreement shall be terminated after three years from the date hereof, provided that any provision surviving such termination shall continue to survive. This Agreement is being delivered to you in duplicate. Kindly execute and return one copy of this letter, which will constitute our Agreement with respect to the subject matter of this letter.\n\nVerily yours,\n\nLASERCA RADIO COMPANY\nBy: /s/ Robert T. DeVincenzi\nName: R. T. DeVincenzi\nTitle: CEO\nConfirmed and Agrieved to this 6 day of November 2009",
+      "jurisdiction": "Exhibit (d)(3) of the Confinement Agreement between HID Global Corporation and LaserCard Corporation is a confidentiality agreement. The purpose of this document is to ensure that all non-public information is kept confidential, including any notes, analyses, and other materials prepared by or on behalf of the parties. The confidentiality agreement also includes a condition for further discussions with the Company (paragraph 3 below).\n\nThe letter agreement between HID Global Corporation and LaserCard Corporation is subject to the terms and conditions set forth in this document. The parties agree that any breach of this letter agreement shall be deemed to harm the interests of both parties, including but not limited to injunctions, equitable relief, and damages.\n\nThe validity and interpretation of this letter agreement are governed by Delaware law. The parties submit to the exclusive jurisdiction of the courts of the State of Delaware for the purpose of any suit, action or other proceeding arising out of or related to this letter agreement and the transactions contemplated thereby (paragraph 15 below).\n\nThe parties acknowledge that the Evaulation Material provided by HID Global Corporation is subject to export laws. The parties agree to superseeded this Agreement upon the termination of the Transaction, and any provision set forth herein shall terminate three days after the date of this letter (paragraph 20 below).\n\nThe parties acknowledge that the Evaulation Material provided by HID Global Corporation is subject to technical data developed in the United States. The parties agree to confirm that all non-public information is kept confidential, including any technical data developed in the United States (paragraph 21 below).\n\nThis Agr\u00e9ement is being delivered to you in duplicate. Kindly execute and return one copy of this letter, which will constitute your Agreeement with respect to the subject matter of this document",
+      "term": "Exhibit (d)(3) of the document is a confidentiality agreement between HID Global Corporation and LaserCard Corporation regarding a possible transaction. The confidentiality agreement outlines the terms and conditions for disclosing confidential information, including non-public information, to the other party. The parties agree that any breach of this letter agreement shall be deemed to harm the interests of both parties, and they will take all necessary measures to prevent such breaches. The confidentiality agreement is valid for two years from the date of its signing, and it includes a provision stating that any provision that survives termination shall continue to apply. The document is signed by Robert T. DeVincenzi as CEO of HID Global Corporation and Timothy B. Moxon as Director, M&A of LaserCard Corporation"
+    },
+    {
+      "effective_date": "In the Agreement between the Company and BTMU (exhibit (e)(2)), effective date is defined as \"date the agreement becomes effective,\" and there is no mention of a value for this field. The Confidentiality Agreement is also not mentioned in the letter agreement, but it is stated that confidential information will be treated with a confidentiality obligation by the Company, its Representatives, and any other source who provides such information to you or your Representatives. The term \"Evaluation Material\" does not include information that has been or becomes available to you on a non-confidential basis from a source other than the Company or its Representatives provided such source is not bound by a confidentiality obligation to the Company, and the forecast materials prepared by certain members of the Company's Board of Directors are subject to suitable and equitable provisions in order to carry out, so far as may be valid and enforceable, the intent and purpose of such invaliated or unequalized provision. The terms \"this Agreement\" and \"you\" refer to both parties to the Agreement",
+      "jurisdiction": "In the Agreement between UnionBanCal Corporation and BTMU (exhibit (e)(2)), the value of the Confidentiality Agreement is only $1. The value of this field is:\n\nFIELD: jurisdiction\nTYPE: string\nDESCRIPTION: US state whose law govern the agreement, from the governing-law clause - the state name only, e.g. 'New York",
+      "term": "In the Agreement between UnionBanCal Corporation and BTMU (exhibit (e)(2)), the value of this field is \"Confidentiality.\" The Confidentiality Agreeemnt has been signed by both parties, and it constitutes their agreement with respect to the subject matter"
+    },
+    {
+      "effective_date": "To sign as a witness for the signing of this Confidentiality Agreement, please provide your name and signature below.\n\n[Your Name]\n(Signature)\n\nBy signing below, I confirm that I have read and understand the contents of this Confidentiality Agreement and agree to abide by its terms",
+      "jurisdiction": "To sign as a witness for the signing of this Confidentiality Agreement, please provide your name and signature below. The date and place of execution are also required. Please ensure that you have read and understood all terms and conditions before signing. Once signed, please return the original to the other party for their records",
+      "term": "To sign as a witness for the signing of this Confidentiality Agreement, please provide your name and signature below.\n\n[Your Name]\n(Signature)\n\nBy signing below, I confirm that I have read and understand the contents of this Confidentiality Agreement and agree to abide by its terms"
+    },
+    {
+      "effective_date": "The Confirmation and Agreement for the Transaction between Orchestra-Pr\u00e9maman, S.A. And Destination Maternity Corporation (\u201cCompany\u201d) is hereby agreed upon by and between the parties hereto as follows:\n\n1. Introduction:\n\nOrchestra-Pr\u00e9maman, S.A. Is a French company that specializes in providing music education services to students of all ages. The Company is a Delaware corporation engaged in the business of providing online educational resources for students and teachers.\n\n2. Purpose of the Transaction:\n\nThe purpose of this Agreement is to establish a definitive agreement between the Company and Orchestra-Pr\u00e9maman, S.A., whereby the Company will acquire all of the outstanding shares of common stock of the Company for an amount equal to $100,000, plus a one-time cash payment of $50,000.\n\n3. Terms and Conditions:\n\nThe following terms and conditions shall apply to this Agreement:\n\na) The Company will pay the purchase price to the Company\u2019s Board of Directors (\u201cBoard\u201d) in cash within 14 days of the closing date.\n\nb) The Company will issue a press release announcing the closing of the transaction and providing details about the terms and conditions of the transaction, including the name of the acquiring company, the name of the acquiring shareholder, the number of shares acquired by the acquiring company, and the purchase price paid.\n\nc) The Company will provide a copy of this press release to the Board within 14 days of the closing date.\n\nd) The Company will pay the one-time cash payment to the Company\u2019s Board within 30 days of the closing date.\n\ne) The Company will continue to operate as an independent entity under its existing name and logo, and will not dissolve or cease operations during the Transaction period.\n\nf) The Company will provide a copy of this Agreement to the Board within 14 days of the closing date.\n\ng) The Company will maintain all records and documents related to the transaction for a period of at least three years after the closing date.\n\nh) The Company will not solicit or engage in any discussions with any third parties regarding the Transaction during the Transaction period",
+      "jurisdiction": "The Confirmation and Agreement for the Transaction between Orchestra-Pr\u00e9maman, S.A. And Destination Maternity Corporation (\u201cCompany\u201d) is hereby agreed upon by and between the parties hereto as follows:\n\n1. Introduction:\n\nOrchestra-Pr\u00e9maman, S.A. Is a French company that specializes in providing music education services to students of all ages. The Company is a Delaware corporation engaged in the business of providing online educational resources for students and teachers.\n\n2. Purpose of the Transaction:\n\nThe purpose of this Agreement is to establish a definitive agreement between the Company and Orchestra-Pr\u00e9maman, S.A., whereby the Company will acquire all of the outstanding shares of common stock of the Company for an amount equal to $100,000, plus a one-time cash payment of $50,000.\n\n3. Terms and Conditions:\n\nThe following terms and conditions shall apply to this Agreement:\n\na) The Company will pay the purchase price to the Company\u2019s Board of Directors (\u201cBoard\u201d) in cash within 14 days of the closing date.\n\nb) The Company will issue a press release announcing the closing of the transaction and providing details about the terms and conditions of the transaction, including the name of the acquiring company, the name of the acquiring shareholder, the number of shares acquired by the acquiring company, and the purchase price paid.\n\nc) The Company will provide a copy of this press release to the Board within 14 days of the closing date.\n\nd) The Company will pay the one-time cash payment to the Company\u2019s Board within 30 days of the closing date.\n\ne) The Company will continue to operate as an independent entity under its existing name and logo, and will not dissolve or cease operations during the Transaction period.\n\nf) The Company will provide a copy of this Agreement to the Board within 14 days of the closing date.\n\ng) The Company will maintain all records and documents related to the transaction for a period of at least three years after the closing date.\n\nh) The Company will not solicit or engage in any discussions with any third parties regarding the Transaction during the Transaction period",
+      "term": "The Confirmation and Agreement for the Transaction between Orchestra-Pr\u00e9maman, S.A. And Destination Maternity Corporation (\u201cCompany\u201d) is hereby agreed upon by and between the parties hereto as follows:\n\n1. Introduction:\n\nOrchestra-Pr\u00e9maman, S.A. Is a French company that specializes in providing music education services to students of all ages. The Company is a Delaware corporation engaged in the business of providing online educational resources for students and teachers.\n\n2. Purpose of the Transaction:\n\nThe purpose of this Agreement is to establish a definitive agreement between the Company and Orchestra-Pr\u00e9maman, S.A., whereby the Company will acquire all of the outstanding shares of common stock of the Company for an amount equal to $100,000, plus a one-time cash payment of $50,000.\n\n3. Terms and Conditions:\n\nThe following terms and conditions shall apply to this Agreement:\n\na) The Company will pay the purchase price to the Company\u2019s Board of Directors (\u201cBoard\u201d) in cash within 14 days of the closing date.\n\nb) The Company will issue a press release announcing the closing of the transaction and providing details about the terms and conditions of the transaction, including the name of the acquiring company, the name of the acquiring shareholder, the number of shares acquired by the acquiring company, and the purchase price paid.\n\nc) The Company will provide a copy of this press release to the Board within 14 days of the closing date.\n\nd) The Company will pay the one-time cash payment to the Company\u2019s Board within 30 days of the closing date.\n\ne) The Company will continue to operate as an independent entity under its existing name and logo, and will not dissolve or cease operations during the Transaction period.\n\nf) The Company will provide a copy of this Agreement to the Board within 14 days of the closing date.\n\ng) The Company will maintain all records and documents related to the transaction for a period of at least three years after the closing date.\n\nh) The Company will not solicit or engage in any discussions with any third parties regarding the Transaction during the Transaction period"
+    },
+    {
+      "effective_date": "The following is a summary of the key provisions in the Agreement for the Continuous Service Bonus and Employee Retention Plan between the First Bank of Beverly Hills, California (the \"Bank\") and Joseph W. Kiley, III (\"Employee\"). The Agreement was signed on December 21, 2005, and is effective as of January 1, 2006.\n\nThe Continuous Service Bonus Plan provides for a one-time bonus payment to Employee in the amount of $75,000.00 if Employee remains employed through June 30, 2006. If the Bank terminates Employee's employment prior to June 30, 2006, Employee will remain eligible to receive this continuous service bonus payment.\n\nThe Employee Retention Plan provides for a flow-through of all amounts and benefits due hereunder to Employee and if such amounts and benefits are not timeously paid or provided by the Bank, such amounts and benefits shall be paid or provided by the Company. The Company guarantees payment and provision of all amounts and benefits due from the Bank.\n\nThe Agreement incorporates by reference all applicable regulatory law, including California law. The notice requirements for any notice required under this Agreement are set forth in Section 8.10.\n\nThe parties acknowledge that they have had an opportunity to negotiate, carefully consider, and receive the advice of their respective attorneys before signing this Agreement. To the extent that either party does not seek the advice of an attorney, it knowsingly and freely waives such right.\n\nThis Agreement shall inure to the benefit of and be binding upon the Bank, its successor(s) and assigns, and upon the Employee and his heirs, executors, administrators and legal representatives. No party to this Agreement may delegate its or his duties hereunder without the prior written consent of the other parties to this Agreement.\n\nThe Agreement shall be governed by California law, and any disputes arising out of or relating to this Agreement shall be resolved in accordance with the laws of the State of California.\n\nThis Agreement constitutes the entire understanding between the parties hereto and supersedes all prior negotiations, understandings, agreements, representations, warranties,",
+      "jurisdiction": "The following is a summary of the key provisions in the Agreement for the Continuous Service Bonus and Employee Retention Plan between the First Bank of Beverly Hills, California (the \"Bank\") and Joseph W. Kiley, III (\"Employee\"). The Agreement was signed on December 21, 2005, and is effective as of January 1, 2006.\n\nThe Continuous Service Bonus Plan provides for a one-time bonus payment to Employee in the amount of $75,000.00 if Employee remains employed through June 30, 2006. If the Bank terminates Employee's employment prior to June 30, 2006, Employee will remain eligible to receive this continuous service bonus payment.\n\nThe Employee Retention Plan provides for a flow-through of all amounts and benefits due hereunder to Employee and if such amounts and benefits are not timeously paid or provided by the Bank, such amounts and benefits shall be paid or provided by the Company. The Company guarantees payment and provision of all amounts and benefits due from the Bank.\n\nThe Agreement incorporates by reference all applicable regulatory law, including California law. The notice requirements for any notice required under this Agreement are set forth in Section 8.10.\n\nThe parties acknowledge that they have had an opportunity to negotiate, carefully consider, and receive the advice of their respective attorneys before signing this Agreement. To the extent that either party does not seek the advice of an attorney, it knowsingly and freely waives such right.\n\nThis Agreement shall inure to the benefit of and be binding upon the Bank, its successor(s) and assigns, and upon the Employee and his heirs, executors, administrators and legal representatives. No party to this Agreement may delegate its or his duties hereunder without the prior written consent of the other parties to this Agreement.\n\nThe Agreement shall be governed by California law, and any disputes arising out of or relating to this Agreement shall be resolved in accordance with the laws of the State of California.\n\nThis Agreement constitutes the entire understanding between the parties hereto and supersedes all prior negotiations, understandings, agreements, representations, warranties,",
+      "term": "The following is a summary of the key provisions in the Agreement for the Continuous Service Bonus and Employee Retention Plan between the First Bank of Beverly Hills, California (the \"Bank\") and Joseph W. Kiley, III (\"Employee\"). The Agreement was signed on December 21, 2005, and is effective as of January 1, 2006.\n\nThe Continuous Service Bonus Plan provides for a one-time bonus payment to Employee in the amount of $75,000.00 if Employee remains employed through June 30, 2006. If the Bank terminates Employee's employment prior to June 30, 2006, Employee will remain eligible to receive this continuous service bonus payment.\n\nThe Employee Retention Plan provides for a flow-through of all amounts and benefits due hereunder to Employee and if such amounts and benefits are not timeously paid or provided by the Bank, such amounts and benefits shall be paid or provided by the Company. The Company guarantees payment and provision of all amounts and benefits due from the Bank.\n\nThe Agreement incorporates by reference all applicable regulatory law, including California law. The notice requirements for any notice required under this Agreement are set forth in Section 8.10.\n\nThe parties acknowledge that they have had an opportunity to negotiate, carefully consider, and receive the advice of their respective attorneys before signing this Agreement. To the extent that either party does not seek the advice of an attorney, it knowsingly and freely waives such right.\n\nThis Agreement shall inure to the benefit of and be binding upon the Bank, its successor(s) and assigns, and upon the Employee and his heirs, executors, administrators and legal representatives. No party to this Agreement may delegate its or his duties hereunder without the prior written consent of the other parties to this Agreement.\n\nThe Agreement shall be governed by California law, and any disputes arising out of or relating to this Agreement shall be resolved in accordance with the laws of the State of California.\n\nThis Agreement constitutes the entire understanding between the parties hereto and supersedes all prior negotiations, understandings, agreements, representations, warranties,"
+    },
+    {
+      "effective_date": "In accordance with the terms of the letter agreement between Williams Controls, Inc. And Houlhain Lokey \u2013 New York, LLC (\u201cCompany Representaci\u2019on\u201d), the following Annex A has been attached to this letter agreement.\n\nAnnex A: Company Representaci\u2019on\n\n1. Company Name and Address\n\nCompany Representaci\u2019on\n\nWilliams Controls, Inc.\n\n245 Park Avenue, 20 Floor\n\nNew York, NY 10167\n\nPhone: (212) 497-4100\n\nName\n\nOffice Information\n\nJim Lavelle\n\nManaging Director\n\nAssistant: Tana Dippolito\n\nTel: (212) 497-7911\n\nTDippolito@HL.com\n\nTelex: Faxt: Mobile: Email: (212) 497-4107\n\n(212) 497-7976\n\n(917) 605-1163\n\nEmail: (212) 497-4249\n\n(212) 497-7879\n\nBill Bronander\n\nFinancial Analyst\n\nTelex: Faxt: Mobile: Email: (212) 497-7879\n\n(203) 858-4632\n\nEmail: (212) 497-7976\n\nGene Bazemore\n\nSenior Vice President\n\nAssistant: Tana Dippolito\n\nTel: (212) 497-7911\n\nTDippolito@HL.com\n\nTelex: Faxt: Mobile: Email: (212) 497-4249\n\n(212) 497-7879\n\nEmail: (212) 497-4249\n\nDisha Mehta\n\nAssociate\n\nAssistant: Tana Dippolito\n\nTel: (212) 497-79",
+      "jurisdiction": "In accordance with the terms of the letter agreement between Williams Controls, Inc. And Houlhain Lokey \u2013 New York, LLC (\u201cCompany Representaci\u2019on\u201d), the following Annex A has been attached to this letter agreement.\n\nAnnex A: Company Representaci\u2019on\n\n1. Company Name and Address\n\nCompany Representaci\u2019on\n\nWilliams Controls, Inc.\n\n245 Park Avenue, 20 Floor\n\nNew York, NY 10167\n\nPhone: (212) 497-4100\n\nName\n\nOffice Information\n\nJim Lavelle\n\nManaging Director\n\nAssistant: Tana Dippolito\n\nTel: (212) 497-7911\n\nTDippolito@HL.com\n\nTelex: Faxt: Mobile: Email: (212) 497-4107\n\n(212) 497-7976\n\n(917) 605-1163\n\nEmail: (212) 497-4249\n\n(212) 497-7879\n\nBill Bronander\n\nFinancial Analyst\n\nTelex: Faxt: Mobile: Email: (212) 497-7879\n\n(203) 858-4632\n\nEmail: (212) 497-7976\n\nGene Bazemore\n\nSenior Vice President\n\nAssistant: Tana Dippolito\n\nTel: (212) 497-7911\n\nTDippolito@HL.com\n\nTelex: Faxt: Mobile: Email: (212) 497-4249\n\n(212) 497-7879\n\nEmail: (212) 497-4249\n\nDisha Mehta\n\nAssociate\n\nAssistant: Tana Dippolito\n\nTel: (212) 497-79",
+      "term": "In accordance with the terms of the letter agreement between Williams Controls, Inc. And Houlhain Lokey \u2013 New York, LLC (\u201cCompany Representaci\u2019on\u201d), the following Annex A has been attached to this letter agreement.\n\nAnnex A: Company Representaci\u2019on\n\n1. Company Name and Address\n\nCompany Representaci\u2019on\n\nWilliams Controls, Inc.\n\n245 Park Avenue, 20 Floor\n\nNew York, NY 10167\n\nPhone: (212) 497-4100\n\nName\n\nOffice Information\n\nJim Lavelle\n\nManaging Director\n\nAssistant: Tana Dippolito\n\nTel: (212) 497-7911\n\nTDippolito@HL.com\n\nTelex: Faxt: Mobile: Email: (212) 497-4107\n\n(212) 497-7976\n\n(917) 605-1163\n\nEmail: (212) 497-4249\n\n(212) 497-7879\n\nBill Bronander\n\nFinancial Analyst\n\nTelex: Faxt: Mobile: Email: (212) 497-7879\n\n(203) 858-4632\n\nEmail: (212) 497-7976\n\nGene Bazemore\n\nSenior Vice President\n\nAssistant: Tana Dippolito\n\nTel: (212) 497-7911\n\nTDippolito@HL.com\n\nTelex: Faxt: Mobile: Email: (212) 497-4249\n\n(212) 497-7879\n\nEmail: (212) 497-4249\n\nDisha Mehta\n\nAssociate\n\nAssistant: Tana Dippolito\n\nTel: (212) 497-79"
+    },
+    {
+      "effective_date": "The value of this field is \"effective_date\". It's a date the agreement becomes effective, usually stated in the opening paragraph. The description is that the document only applies to the Non-Disclosure Agr\u00e9ement and does not apply to any other agreements or documents",
+      "jurisdiction": "The value of this field is \"US state whose law govern the agreement, from the governance-law clause - the state name only, e.g. 'New York'\". The value should be substituted with the actual legal name of the state in question",
+      "term": "The value of this field is \"Non-Disclosure Agr\u00e9ement\". The value only, not start/end dates, and the length only"
+    },
+    {
+      "effective_date": "To view the full text of this Non-Disclosure Agreement, please click on the following link: https://docs.google.com/document/d/1_jJVbZY869hKLqv24GzMfFWr0573xwUcQHgBsXlRaI/edit?usp=sharing\n\nExplanation:\n\nThis Non-Disclosure Agreement (the \"Agreement\") is entered into on the date set forth below by and between Potbelly Corporation (\"Company\"), a Delaware corporation, and the parties listed below (collectively referred to as the \"Parties\"). Capitalized terms used but not defined herein shall have the meanings provided in the Setttlement Agr\u00e9ement.\n\n1. Confidential Information\n\na. The Company shall maintain confidentiality of all Confidential Information disclosed by any Party (the \"Disclosing Party\") to the other Parties (the \"Receiving Parties\").\n\nb. The Receiving Parties shall not disclose or use any Confidential Information for any purpose other than in connection with serving as directors, officers, employees, consultants, advisers, investment managers, or otherwise providing services to the Disclosing Party (the \"Disclosing Party's Representatives\").\n\nc. The Receiving Parties shall not use any Confidential Information for any purpose other than in connection with their respective current automatic archivation and backup procedures.\n\nd. The Receiving Parties shall not disclose or use any Confidential Information for any purpose other than in connection with the performance of their respective duties as directors, officers, employees, consultants, advisers, investment managers, or otherwise providing services to the Disclosing Party (the \"Disclosing Party's Representatives\").\n\ne. The Receiving Parties shall not use any Confidential Information for any purpose other than in connection with their respective current automatic archivation and backup procedures.\n\nf. The Receiving Parties shall not disclose or use any Confidential Information for any purpose other than in connection with the performance of their respective duties as directors, officers, employees, consultants, advisers, investment managers, or otherwise providing services to the Disclosing Party (the \"Disclosing Party's Representatives\")",
+      "jurisdiction": "To sign this Non-Disclosure Agreement, please fill out the following fields:\n\nExhibit A\nNon-Disclosure Agr\u00e9ement\n\nExhibit B\nDirector Representaci\u00f2n\n\nExhibit C\nAncora Principal\n\nExhibit D\nAncora Parti\u00e9s\n\nExhibit E\nReplacement\n\nExhibit F\nJoiner\n\nExhibit G\nCounter-signature by Director, Ancora Principal, Ancora Advisoirs, and Ancora Parties\n\nExhibit H\nSigned on behalf of the parties\n\nExhibit I\nDate\n\nExhibit J\nPrinted name and title of each party signing this Agreement\n\nExhibit K\nPrinted name and title of each party signing this Agreement\n\nExhibit L\nPrinted name and title of each party signing this Agreement\n\nExhibit M\nPrinted name and title of each party signing this Agreement\n\nExhibit N\nPrinted name and title of each party signing this Agreement\n\nExhibit O\nPrinted name and title of each party signing this Agreement\n\nExhibit P\nPrinted name and title of each party signing this Agreement\n\nExhibit Q\nPrinted name and title of each party signing this Agreement\n\nExhibit R\nPrinted name and title of each party signing this Agreement\n\nExhibit S\nPrinted name and title of each party signing this Agreement\n\nExhibit T\nPrinted name and title of each party signing this Agreement\n\nExhibit U\nPrinted name and title of each party signing this Agreement\n\nExhibit V\nPrinted name and title of each party signing this Agreement\n\nExhibit W\nPrinted name and title of each party signing this Agreement\n\nExhibit X\nPrinted name and title of each party signing this Agreement\n\nExhibit Y\nPrinted name and title of each party signing this Agreement\n\nExhibit Z\nPrinted name and title of each party signing this Agreement",
+      "term": "To sign this Non-Disclosure Agreement, please acknowledge the following:\n\nI, [Name], hereby agree to the terms and conditions set forth in this Non-Disclosure Agreement (the \"Agreement\") with respect to the confidential information disclosed by me or on my behalf. I understand that any breach of this Agreement may result in irreparable harm, and that damages alone will not be sufficient to compensate for such breaches.\n\nI acknowledge that I have read and understood the terms and conditions of this Agreement, including the definition of \"Confidential Information\" and the scope of my obligations under this Agreement.\n\nI agree to keep all Confidential Information confidential and not disclose it to any third party without the prior written consent of the Company (the \"Director\"), Ancora Parties, or Ancora Principals. I understand that any breach of this Agreement may result in irreparable harm, and that damages alone will not be sufficient to compensate for such breaches.\n\nI acknowledge that I am responsible for all actions taken on my behalf under this Agreement, including but not limited to the preparation, review, and distribution of Confidential Information.\n\nI agree that any breach of this Agreement by me or on my behalf may result in irreparable harm, and that damages alone will not be sufficient to compensate for such breaches.\n\nI acknowledge that I am responsible for all actions taken on my behalf under this Agreement, including but not limited to the preparation, review, and distribution of Confidential Information.\n\nI agree that any breach of this Agreement by me or on my behalf may result in irreparable harm, and that damages alone will not be sufficient to compensate for such breaches.\n\nI acknowledge that I am responsible for all actions taken on my behalf under this Agreement, including but not limited to the preparation, review, and distribution of Confidential Information.\n\nI agree that any breach of this Agreement by me or on my behalf may result in irreparable harm, and that damages alone will not be sufficient to compensate for such breaches.\n\nI acknowledge that I am responsible for all actions taken on my behalf under"
+    },
+    {
+      "effective_date": "To allow you to evaluate a possible transaction (the \"Poentatial Transaction\") involving Magnetek, Inc. (\"Magnetek\"), and/or its properties, we are prepared to provide you with access to information about the \"Proprietary Information.\" All Proprietary Information furnished by us or our Representatives shall be and remain the property of Magnetek. As used in this letter agreement, (i) the term \"person\" shall be broadly interpreted to include, without limitation, any corporation, general or limited partnership, limited liability company, joint venture or other entity and any individual, and (ii) the term \"Representacive\" means, as to any person, such person's affiliates and its/their director(s), officer(s), employee(s), agent(s), counsel and accountant(s). Without our prior written consent, you shall not, and you shall cause your affiliates not to, for a period of two (2) years from the date of this letter agreement, take any action to solicit, induce or otherwise offer employment to, engage in discussions regarding employment with, or induce or otherwise offer employment to any person who is now employed by us or any of our affiliates. This letter agreement shall be governed by and construed in accordance with the laws of the State of Delaware, excuding any choice of law rules that may direct the application of the laws of another jurisdiction. You expressly agree that any action brought pursuanat to this letter agreement or waivinq and relimiting the terms and conditions hereof shall be brought, heard and determined exclusively in the United States Federal District Court for the District of Delaware, and you consent to personal and subject matter jurisdiction and venue in such court and waive and relinquish all right to attack the suit or action made by mail executed or delivered. This letter agreement may be executed by signature(s) excuding any one (1) signature(s) on behalf of Magnetek, but each signature shall be deemed an original, but all signatures together shall constitute a single instrument. This letter agreement shall take effect as of the date hereof and, excuding as otherwise expressly set forth in this letter agreement, shall continue until such Proprietary Information no longer constitutes a trade",
+      "jurisdiction": "To allow you to evaluate a possible transaction (the \"Poentatial Transaction\"), we are prepared to provide you with access to information about the Company's properties and operations that we consider confidential and proprietary in nature. All Proprietary Information furnished by us or our Representatives pursuant to this letter agreement shall be and remain the property of the Company.\n\nAll Proprietary Information furnished by us or our Representatives pursuant to this letter agreement shall be and remain the property of the Company. As used in this letter agreement, \"Proprietary Information\" means any information that is not generally known to the public or otherwise available to the general public through no fault of the Company, including but not limited to:\n\n1. Intellectual Property Rights (including patents, trademarks, trade secrets, copyrights, and other proprietary rights)\n2. Financial Information (including financial statements, projections, and other financial data)\n3. Technical Data (including technical specifications, designs, drawings, and other information related to the Company's products or services)\n4. Trade Secrets (including confidential business information, trade secrets, and proprietary know-how)\n5. Non-Compete Agreements (including non-compete agreements, non-disclosure agreements, and other agreements relating to the Company's business)\n6. Confidentiality Agreements (including confidentiality agreements, non-disclosure agreements, and other agreements relating to the Company's business)\n7. Non-Solicitation Agreements (including non-solicitation agreements, non-compete agreements, and other agreements relating to the Company's business)\n8. Proprietary Information of Third Parties (including confidential information about third parties that is not generally known to the public or otherwise available to the general public through no fault of the Company)\n\nAll Proprietary Information furnished by us or our Representatives pursuant to this letter agreement shall be and remain the property of the Company. You agree that you will not disclose, use, or transfer any Proprietary Information in any manner whatsoever without the prior written consent of the Company.\n\nYou acknowledge and agree that the Company may have certain legal obligations under applicable law to protect its Proprietary",
+      "term": "To allow you to evaluate a possible transaction (the \"Poentatial Transaction\") involving Magnetek, Inc. (\"Magnetek\"), and/or its properties, we are prepared to provide you, upon your execution and delivery to us of this letter agreement, with access to information about the \"Proprietary Information.\" All Proprietary Information furnished by us or our Representatives pursuant to this letter agreement shall be and remain the property of Magnetek. As used in this letter agreement, (i) the term \"person\" shall be broadly interpreted to include, without limitation, any corporation, general or limited partnership, limited liability company, joint venture or other entity and any individual, and (ii) the term \"Representacive\" means, as to any person, such person\u2019s affiliates and its or their director(s), officer(s), employee(s), agent(s), counsel and accountant(s). Without our prior written consent, you shall not, and you shall cause your affiliates not to, for a period of two (2) years from the date of this letter agreement, take any action to solicit, induce or otherwise offer employment to, engage in business with, or enter into any contract with, any employee of Magnetek or its Representatives. This letter agreement shall be governed by and construed in accordance with the laws of the State of Delaware, excluide any choice of law rules that may direct the application of the laws of another jurisdiction. You waive personal service of any and all process in any such action or proceeding other than those set forth or provided for in this letter agreement. This letter agreement may be executed by signature(s) exchanged via facsimile or other electronic means and in one or more counterparts, each of which shall constitute an original, but all of which together shall constitute a single and enforceable instrument. Please confirm your agreement with the foregoing by signing and returning to us the duplicate copy of this letter agreement"
+    },
+    {
+      "effective_date": "To sign and return one copy of this letter, please sign and return one copy of the agreement as follows:\n\n[ORTHOVITA, INC. LETTTERHEAD]\nFearuary 25, 2011\nBryant Zanko\nVice President, Business Development\nStrykr Corporation\n2725 Fairfield Road\nKalaamozoo, MI\n\n[STRYKER TRADE SECRET RECIPIENTS]\nWilliam Cymbaluk, Vice President of Cliniical/Quality/Regulatory Affairs; Anthony Faucette, Sr. Manager, Sterilization Sciences; Rod Parker, Sr. Clinical Sciences Manager; and Leisel Masson, Sr. Microbiologist.\n\nStrykr further agree that it shall inform the Strykr Trade Secret Recipients of the confidential nature of the trade secret described herein and shall have agreed or shall otherwise be bound by an obligation to treat such information confidential in accordance with the Agrreeent.\n\nExcept as specifically provided herein all other terms and conditions of the Agrreeent shall remain unchanged and in full force and effect.\n\nIf you are in agreement with the foregoing, please sign and return one copy of this letter",
+      "jurisdiction": "To sign and return one copy of this letter, please sign and return one copy of the agreement as follows:\n\n[ORTHOVITA, INC. LETTTERHEAD]\nFearuary 25, 2011\nBryant Zanko\nVice President, Business Development\nStrykr Corporation\n2725 Fairfield Road\nKalaamozoo, MI\n\n[STRYKER TRADE SECRET RECIPIENTS]\nWilliam Cymbaluk, Vice President of Cliniical/Quality/Regulatory Affairs; Anthony Faucette, Sr. Manager, Sterilization Sciences; Rod Parker, Sr. Clinical Sciences Manager; and Leisel Masson, Sr. Microbiologist.\n\nStrykr further agree that it shall inform the Strykr Trade Secret Recipients of the confidential nature of the trade secret described herein and shall have agreed or shall otherwise be bound by an obligation to treat such information confidential in accordance with the Agrreeent.\n\nExcept as specifically provided herein all other terms and conditions of the Agrreeent shall remain unchanged and in full force and effect.\n\nIf you are in agreement with the foregoing, please sign and return one copy of this letter",
+      "term": "To sign and return one copy of this letter, please sign and return one copy of the agreement as follows:\n\n[ORTHOVITA, INC. LETTTERHEAD]\nFearuary 25, 2011\nBryant Zanko\nVice President, Business Development\nStrykr Corporation\n2725 Fairfield Road\nKalaamozoo, MI\n\n[STRYKER TRADE SECRET RECIPIENTS]\nWilliam Cymbaluk, Vice President of Cliniical/Quality/Regulatory Affairs; Anthony Faucette, Sr. Manager, Sterilization Sciences; Rod Parker, Sr. Clinical Sciences Manager; and Leisel Masson, Sr. Microbiologist.\n\nStrykr further agree that it shall inform the Strykr Trade Secret Recipients of the confidential nature of the trade secret described herein and shall have agreed or shall otherwise be bound by an obligation to treat such information confidential in accordance with the Agrreeent.\n\nExcept as specifically provided herein all other terms and conditions of the Agrreeent shall remain unchanged and in full force and effect.\n\nIf you are in agreement with the foregoing, please sign and return one copy of this letter"
+    }
+  ],
+  "gold": [
+    {
+      "effective_date": "2014-05-20",
+      "jurisdiction": "New York",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2012-09-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2015-03-01",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2009-04-30",
+      "jurisdiction": "Delaware",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2018-11-15",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2012-01-25",
+      "jurisdiction": "Massachusetts",
+      "term": "5 years"
+    },
+    {
+      "effective_date": "2008-07-31",
+      "jurisdiction": "Minnesota",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2014-11-25",
+      "jurisdiction": "New York",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2018-10-01",
+      "jurisdiction": "California",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2012-03-31",
+      "jurisdiction": "California",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2018-03-30",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2005-07-03",
+      "jurisdiction": "New York",
+      "term": "5 years"
+    },
+    {
+      "effective_date": "2015-06-23",
+      "jurisdiction": "New York",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "2018-08-16",
+      "jurisdiction": "Kentucky",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2007-05-09",
+      "jurisdiction": "Delaware",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "2010-06-23",
+      "jurisdiction": "Texas",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2009-11-06",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2008-07-02",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2007-03-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2016-03-15",
+      "jurisdiction": "Delaware",
+      "term": "9 months"
+    },
+    {
+      "effective_date": "2006-01-01",
+      "jurisdiction": "California",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "2012-07-05",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2015-12-08",
+      "jurisdiction": "Washington",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2017-10-02",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2015-04-02",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2011-01-18",
+      "jurisdiction": "New York",
+      "term": "2 years"
+    }
+  ],
+  "trace": [
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction",
+        "term"
+      ]
+    }
+  ]
+}

@@ -9,10 +9,17 @@ from .schemas import FieldSpec, Schema
 
 # ponytail: fixed format list, not a general date parser; extend list (or swap in
 # dateutil) when real benchmark data shows unparsed formats.
-_DATE_FORMATS = ("%Y-%m-%d", "%d %B %Y", "%B %d, %Y", "%d/%m/%Y", "%m/%d/%Y",
-                 "%d-%m-%Y", "%b %d, %Y", "%d %b %Y")
+_DATE_FORMATS = ("%Y-%m-%d", "%d %B %Y", "%B %d %Y", "%d/%m/%Y", "%m/%d/%Y",
+                 "%d-%m-%Y", "%b %d %Y", "%d %b %Y")  # commas stripped pre-parse
 
 _NUM_JUNK = re.compile(r"[$€£₹,\s]|(?:USD|EUR|GBP|INR|MYR|RM)", re.I)
+
+# spelled-out small numbers ("two years" vs "2 years" — contract language)
+_NUM_WORDS = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5",
+              "six": "6", "seven": "7", "eight": "8", "nine": "9", "ten": "10",
+              "eleven": "11", "twelve": "12"}
+# legalese date form: "30th day of April, 2009" -> "30 April, 2009"
+_ORDINAL_DAY = re.compile(r"\b(\d{1,2})(?:st|nd|rd|th)?\s+day\s+of\s+", re.I)
 
 
 def normalize(spec: FieldSpec, value: str) -> str:
@@ -31,6 +38,7 @@ def normalize(spec: FieldSpec, value: str) -> str:
         # free-form answers often append time-of-day ("14 MAR 2018 18:40")
         v_date = re.sub(r"[,\s]*\d{1,2}:\d{2}(:\d{2})?\s*(AM|PM)?\s*$", "", v,
                         flags=re.I).strip()
+        v_date = _ORDINAL_DAY.sub(r"\1 ", v_date).replace(",", "")
         for fmt in _DATE_FORMATS:
             try:
                 return datetime.strptime(v_date, fmt).date().isoformat()
@@ -40,7 +48,9 @@ def normalize(spec: FieldSpec, value: str) -> str:
     # string / enum — punctuation-insensitive: real OCR benchmarks (SROIE) differ
     # from gold in trailing periods/commas/spacing, which is not an extraction error
     v = re.sub(r"[^\w\s&/@-]", " ", v)
-    return re.sub(r"\s+", " ", v).strip().casefold()
+    tokens = [_NUM_WORDS.get(t, t) for t in
+              re.sub(r"\s+", " ", v).strip().casefold().split()]
+    return " ".join(tokens)
 
 
 def _token_jaccard_distance(a: str, b: str) -> float:

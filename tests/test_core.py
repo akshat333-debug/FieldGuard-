@@ -118,3 +118,24 @@ def test_date_normalize_strips_time_suffix():
     assert normalize(d, "14 March 2026, 9:05 AM") == "2026-03-14"
     # plain dates unaffected
     assert normalize(d, "05 Mar 2018") == "2018-03-05"
+
+
+def test_constrained_unparseable_json_degrades_to_empty():
+    class Broken(MockBackend):
+        def generate(self, prompt, *, force_json=False):
+            if force_json:
+                return '{"invoice_id": "INV-0042", "vendor": '  # truncated JSON
+            return super().generate(prompt, force_json=force_json)
+
+    values = extract_constrained(Broken(), DOC, SCHEMA)
+    assert all(v == "" for v in values.values())  # empty -> auto-flag downstream
+
+
+def test_normalize_number_words_and_legalese_dates():
+    s = FieldSpec("term", "string")
+    assert normalize(s, "two years") == normalize(s, "2 years")
+    assert normalize(s, "Five Years") == normalize(s, "5 years")
+    d = FieldSpec("d", "date")
+    assert normalize(d, "30th day of April, 2009") == "2009-04-30"
+    assert normalize(d, "April 30, 2009") == "2009-04-30"
+    assert normalize(d, "1st day of July 2026") == "2026-07-01"

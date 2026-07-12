@@ -33,7 +33,10 @@ def extract_constrained(backend: Backend, document: str, schema: Schema) -> dict
     try:
         obj = json.loads(raw)
     except json.JSONDecodeError:
-        obj = json.loads(_strip_fences(raw))  # one repair attempt, then let it raise
+        try:
+            obj = json.loads(_strip_fences(raw))  # one repair attempt
+        except json.JSONDecodeError:
+            obj = {}  # unparseable output -> all fields empty -> auto-flagged
     return {f.name: str(obj.get(f.name, "")) for f in schema.fields}
 
 

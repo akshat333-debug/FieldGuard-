@@ -1,0 +1,647 @@
+{
+  "model": "qwen2.5:3b",
+  "n": 26,
+  "threshold": 0.5,
+  "elapsed_sec": 333.1,
+  "report": {
+    "docs": 26,
+    "fields_total": 78,
+    "constrained_acc": 0.8846153846153846,
+    "final_acc": 0.8846153846153846,
+    "corruption_rate": 0.01282051282051282,
+    "flag_precision": 0.5961538461538461,
+    "flag_recall": 1.0,
+    "llm_calls": 65,
+    "full_verify_calls": 130,
+    "low_confidence": 9,
+    "notes": []
+  },
+  "finals": [
+    {
+      "effective_date": "2014-05-20",
+      "jurisdiction": "New York",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2012-09-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2015-03-01",
+      "jurisdiction": "Delaware",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2009-04-30",
+      "jurisdiction": "Delaware",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2018-11-15",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2012-01-25",
+      "jurisdiction": "Massachusetts",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2008-07-31",
+      "jurisdiction": "Minnesota",
+      "term": "fourth anniversary of the Effective Date"
+    },
+    {
+      "effective_date": "2023-04-15",
+      "jurisdiction": "New York",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2018-10-01",
+      "jurisdiction": "California",
+      "term": "one year"
+    },
+    {
+      "effective_date": "2012-03-31",
+      "jurisdiction": "California",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2018-03-30",
+      "jurisdiction": "Delaware",
+      "term": ""
+    },
+    {
+      "effective_date": "2005-07-03",
+      "jurisdiction": "New York",
+      "term": "5 years"
+    },
+    {
+      "effective_date": "2015-06-23",
+      "jurisdiction": "New York",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2018-08-16",
+      "jurisdiction": "Kentucky",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2007-05-09",
+      "jurisdiction": "Delaware",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "2010-06-23",
+      "jurisdiction": "Texas",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2009-11-06",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2008-07-02",
+      "jurisdiction": "Delaware",
+      "term": ""
+    },
+    {
+      "effective_date": "2007-03-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2016-03-15",
+      "jurisdiction": "Delaware",
+      "term": ""
+    },
+    {
+      "effective_date": "2006-01-01",
+      "jurisdiction": "California",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "2012-07-05",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2015-12-08",
+      "jurisdiction": "Washington",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2017-10-02",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2015-04-02",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2011-01-18",
+      "jurisdiction": "New York",
+      "term": "2 years"
+    }
+  ],
+  "gold": [
+    {
+      "effective_date": "2014-05-20",
+      "jurisdiction": "New York",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2012-09-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2015-03-01",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2009-04-30",
+      "jurisdiction": "Delaware",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2018-11-15",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2012-01-25",
+      "jurisdiction": "Massachusetts",
+      "term": "5 years"
+    },
+    {
+      "effective_date": "2008-07-31",
+      "jurisdiction": "Minnesota",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2014-11-25",
+      "jurisdiction": "New York",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2018-10-01",
+      "jurisdiction": "California",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2012-03-31",
+      "jurisdiction": "California",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2018-03-30",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2005-07-03",
+      "jurisdiction": "New York",
+      "term": "5 years"
+    },
+    {
+      "effective_date": "2015-06-23",
+      "jurisdiction": "New York",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "2018-08-16",
+      "jurisdiction": "Kentucky",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2007-05-09",
+      "jurisdiction": "Delaware",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "2010-06-23",
+      "jurisdiction": "Texas",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2009-11-06",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2008-07-02",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2007-03-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2016-03-15",
+      "jurisdiction": "Delaware",
+      "term": "9 months"
+    },
+    {
+      "effective_date": "2006-01-01",
+      "jurisdiction": "California",
+      "term": "12 months"
+    },
+    {
+      "effective_date": "2012-07-05",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2015-12-08",
+      "jurisdiction": "Washington",
+      "term": "1 year"
+    },
+    {
+      "effective_date": "2017-10-02",
+      "jurisdiction": "Delaware",
+      "term": "2 years"
+    },
+    {
+      "effective_date": "2015-04-02",
+      "jurisdiction": "Delaware",
+      "term": "3 years"
+    },
+    {
+      "effective_date": "2011-01-18",
+      "jurisdiction": "New York",
+      "term": "2 years"
+    }
+  ],
+  "trace": [
+    {
+      "constrained": {
+        "effective_date": "2014-05-20",
+        "jurisdiction": "New York",
+        "term": "3 years"
+      },
+      "unconstrained": {
+        "effective_date": "May 20, 2014",
+        "jurisdiction": "New York",
+        "term": "3 years"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-09-04",
+        "jurisdiction": "Delaware",
+        "term": "2 years"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Delaware",
+        "term": "two years"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-03-01",
+        "jurisdiction": "Delaware",
+        "term": "1 year"
+      },
+      "unconstrained": {
+        "effective_date": "2015-03-01",
+        "jurisdiction": "Delaware",
+        "term": "1 year"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2009-04-30",
+        "jurisdiction": "Delaware",
+        "term": "1 year"
+      },
+      "unconstrained": {
+        "effective_date": "30th day of April, 2009",
+        "jurisdiction": "Delaware",
+        "term": "one year"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-11-15",
+        "jurisdiction": "Delaware",
+        "term": "2 years"
+      },
+      "unconstrained": {
+        "effective_date": "15th day of November, 2018",
+        "jurisdiction": "Delaware",
+        "term": "2 years"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-01-25",
+        "jurisdiction": "Massachusetts",
+        "term": "2 years"
+      },
+      "unconstrained": {
+        "effective_date": "January 25, 2012",
+        "jurisdiction": "Commonwealth of Massachusetts",
+        "term": "5 years"
+      },
+      "flagged": [
+        "jurisdiction",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2008-07-31",
+        "jurisdiction": "Minnesota",
+        "term": "fourth anniversary of the Effective Date"
+      },
+      "unconstrained": {
+        "effective_date": "not specified",
+        "jurisdiction": "Minnesota",
+        "term": "four years"
+      },
+      "flagged": [
+        "effective_date",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2023-04-15",
+        "jurisdiction": "New York",
+        "term": "3 years"
+      },
+      "unconstrained": {
+        "effective_date": "not specified",
+        "jurisdiction": "New York",
+        "term": "3 years"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-10-01",
+        "jurisdiction": "California",
+        "term": "one year"
+      },
+      "unconstrained": {
+        "effective_date": "October 1, 2018",
+        "jurisdiction": "California",
+        "term": "one year"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-03-31",
+        "jurisdiction": "California",
+        "term": "1 year"
+      },
+      "unconstrained": {
+        "effective_date": "March 31, 2012",
+        "jurisdiction": "California",
+        "term": "one (1) year"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-03-30",
+        "jurisdiction": "Delaware",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "March 30, 2018",
+        "jurisdiction": "Delaware",
+        "term": "one year"
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2005-07-03",
+        "jurisdiction": "New York",
+        "term": "5 years"
+      },
+      "unconstrained": {
+        "effective_date": "2005-07-03",
+        "jurisdiction": "New York",
+        "term": "5 years"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-06-23",
+        "jurisdiction": "New York",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "June 23, 2015",
+        "jurisdiction": "New York",
+        "term": "2 years"
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-08-16",
+        "jurisdiction": "Kentucky",
+        "term": "3 years"
+      },
+      "unconstrained": {
+        "effective_date": "2018-08-16",
+        "jurisdiction": "Kentucky",
+        "term": "3 years"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2007-05-09",
+        "jurisdiction": "Delaware",
+        "term": "12 months"
+      },
+      "unconstrained": {
+        "effective_date": "May 9, 2007",
+        "jurisdiction": "Delaware",
+        "term": "12 months"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2010-06-23",
+        "jurisdiction": "Texas",
+        "term": "2 years"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Texas",
+        "term": "2 years"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2009-11-06",
+        "jurisdiction": "Delaware",
+        "term": "3 years"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Delaware",
+        "term": "three (3) years"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2008-07-02",
+        "jurisdiction": "Delaware",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "2008-07-02",
+        "jurisdiction": "Delaware",
+        "term": "unspecified"
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2007-03-04",
+        "jurisdiction": "Delaware",
+        "term": "2 years"
+      },
+      "unconstrained": {
+        "effective_date": "March 4, 2007",
+        "jurisdiction": "Delaware",
+        "term": "2 years"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2016-03-15",
+        "jurisdiction": "Delaware",
+        "term": ""
+      },
+      "unconstrained": {
+        "effective_date": "March 15, 2016",
+        "jurisdiction": "Delaware",
+        "term": "not specified"
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2006-01-01",
+        "jurisdiction": "California",
+        "term": "12 months"
+      },
+      "unconstrained": {
+        "effective_date": "January 1, 2006",
+        "jurisdiction": "California",
+        "term": "12 months"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-07-05",
+        "jurisdiction": "Delaware",
+        "term": "3 years"
+      },
+      "unconstrained": {
+        "effective_date": "July 5, 2012",
+        "jurisdiction": "Delaware",
+        "term": "3 years"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-12-08",
+        "jurisdiction": "Washington",
+        "term": "1 year"
+      },
+      "unconstrained": {
+        "effective_date": "December 8, 2015",
+        "jurisdiction": "Washington",
+        "term": "1 year"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2017-10-02",
+        "jurisdiction": "Delaware",
+        "term": "2 years"
+      },
+      "unconstrained": {
+        "effective_date": "October 2, 2017",
+        "jurisdiction": "Delaware",
+        "term": "2 years"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-04-02",
+        "jurisdiction": "Delaware",
+        "term": "3 years"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Delaware",
+        "term": "3 years"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2011-01-18",
+        "jurisdiction": "New York",
+        "term": "2 years"
+      },
+      "unconstrained": {
+        "effective_date": "January 18, 2011",
+        "jurisdiction": "New York",
+        "term": "2 years"
+      },
+      "flagged": []
+    }
+  ]
+}
