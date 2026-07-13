@@ -381,3 +381,26 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
 - Paper line: the threshold is a shallow cost knob on real data; default 0.5
   plus the structural rules (empty auto-flag, split-kept) carries the useful
   signal. sweep.py gained --schema (optional-field sweeps need it).
+
+## Iteration 25 — multi-valued fields: Kleister party
+- Built: `FieldSpec.multi` — set-valued fields ride the existing string plumbing
+  as '; '-joined values; sets materialize only in compare/metrics
+  (`normalize_set`, disagreement = 1 - set-Jaccard, metric = exact set
+  equality). Constrained path joins JSON arrays; prompts ask for ALL values;
+  adapter infers multi from list-typed gold. New dataset
+  `kleister_nda_party.jsonl` (83 docs, 4th field `party`, 1-3 values/doc).
+- **Legal-suffix normalization** (party errors demanded it): tail-position
+  corporate designators equate (Incorporated==Inc, Corporation==Corp,
+  L.L.C.==LLC via spaced-initialism collapse). Worth +4 party docs and +1.2pt
+  final on 3b. Interior words untouched ("Company Store" safe). Tests 36/36.
+- **Results (n=83, 4 fields = 332):** 3b constrained 0.723 -> final 0.738
+  (42% saved), CI [0.696, 0.780]; 1.5b 0.563 -> 0.572 (45% saved),
+  CI [0.521, 0.620] — still disjoint. Verification net-positive with the
+  hardest field in the schema.
+- Party exact-set accuracy: 3b 58/83, 1.5b 54/83. Residual error decomposes:
+  entity-boundary supersets (extra descriptive appendages, "State Commission"),
+  name variants beyond suffix rules ("Technologies" vs "Technology"), and gold
+  noise again (gold drops "First" from a company name; gold lists "Stilwell
+  Group" where the document names individual funds).
+- Strict exact-set is the honest headline; per-element partial credit would
+  flatter it — noted for the paper's metric discussion.

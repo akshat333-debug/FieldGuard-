@@ -16,8 +16,8 @@
   README embed. Done when: rendered, eyeballed, committed, pushed.
 
 ## Backlog
-- Multi-valued fields (Kleister `party`) — needs eval semantics for value sets.
-- Threshold sweep on Kleister (knob likely more alive: string-heavy fields).
+- [x] Multi-valued fields done (iteration 25).
+- [x] Kleister sweep done (iteration 24): shallow cost knob.
 - Paper draft skeleton from BUILDLOG findings.
 
 ## Design rules (settled, don't re-litigate)

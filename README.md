@@ -111,6 +111,21 @@ or watch that tripwire — the empty-field auto-flag no longer guards you.
 (tinyllama's point is the all-absent artifact described above — high "savings"
 because agreement-on-absence never flags.)
 
+### With the multi-valued `party` field (4 fields / 332)
+
+`party` is set-valued (1–3 parties per contract; exact-set match after
+normalization, incl. corporate-suffix equivalence Incorporated≡Inc, L.L.C.≡LLC):
+
+| | qwen2.5:3b | qwen2.5:1.5b |
+|---|---|---|
+| constrained → final accuracy | 0.723 → 0.738 | 0.563 → 0.572 |
+| party exact-set correct | 58/83 | 54/83 |
+| LLM calls vs verify-everything | **-42%** | **-45%** |
+| 95% CI (final) | [0.696, 0.780] | [0.521, 0.620] |
+
+Run: `python3 -m examples.experiment --data datasets/kleister_nda_party.jsonl
+--schema datasets/kleister_nda_party.schema.json --model <m> --n 83`.
+
 Two absence lessons (BUILDLOG iteration 21): (1) an "answer NONE if absent"
 instruction in the shared prompt made both paths lazily deny values that ARE
 in the document — instructions that correlate the paths break the

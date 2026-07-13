@@ -23,6 +23,8 @@ CELLS = (  # (results file, schema file, label)
     ("kleister_nda_desc_qwen2.5_3b_n83_t0.5", "kleister_nda.schema", "Kleister qwen2.5:3b"),
     ("kleister_nda_desc_qwen2.5_1.5b_n83_t0.5", "kleister_nda.schema", "Kleister qwen2.5:1.5b"),
     ("kleister_nda_desc_tinyllama_latest_n83_t0.5", "kleister_nda.schema", "Kleister tinyllama"),
+    ("kleister_nda_party_desc_qwen2.5_3b_n83_t0.5", "kleister_nda_party.schema", "Kleister+party qwen2.5:3b"),
+    ("kleister_nda_party_desc_qwen2.5_1.5b_n83_t0.5", "kleister_nda_party.schema", "Kleister+party qwen2.5:1.5b"),
 )
 
 
