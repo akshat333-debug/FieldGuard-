@@ -368,3 +368,16 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   problem, method (with the three measured resolution rules), setup, headline
   results with CIs, the three negative results unified as "don't correlate
   the paths", limitations, reproduction map.
+
+## Iteration 24 — Kleister threshold sweep: knob live but shallow
+- Sweep (t=0.3/0.5/0.75/0.9, n=40, both qwens) on the string-heavy contract
+  fields — the graded band is populated here, unlike SROIE:
+  - 3b: 111 -> 107 calls at t>=0.75 (flag recall 0.975 -> 0.950), final
+    accuracy FLAT at 0.750 across all thresholds.
+  - 1.5b: 106 -> 103 calls, recall 0.950 -> 0.925, accuracy flat at 0.567.
+- Reading: raising the threshold above default trades ~4% of calls for ~2.5pt
+  flag recall, and the skipped flags are repair-neutral (accuracy unchanged) —
+  partial string overlaps whose verification wasn't fixing anything anyway.
+- Paper line: the threshold is a shallow cost knob on real data; default 0.5
+  plus the structural rules (empty auto-flag, split-kept) carries the useful
+  signal. sweep.py gained --schema (optional-field sweeps need it).

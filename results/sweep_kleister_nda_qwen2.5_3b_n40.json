@@ -1,0 +1,30 @@
+[
+  {
+    "threshold": 0.3,
+    "final_acc": 0.7500000000000002,
+    "flag_precision": 0.5125,
+    "flag_recall": 0.975,
+    "llm_calls": 111
+  },
+  {
+    "threshold": 0.5,
+    "final_acc": 0.7500000000000002,
+    "flag_precision": 0.55,
+    "flag_recall": 0.975,
+    "llm_calls": 111
+  },
+  {
+    "threshold": 0.75,
+    "final_acc": 0.7500000000000002,
+    "flag_precision": 0.575,
+    "flag_recall": 0.95,
+    "llm_calls": 107
+  },
+  {
+    "threshold": 0.9,
+    "final_acc": 0.7500000000000002,
+    "flag_precision": 0.575,
+    "flag_recall": 0.95,
+    "llm_calls": 107
+  }
+]
