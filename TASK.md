@@ -11,14 +11,16 @@
 - 21: optional fields / structural absence (n=83); lazy-NONE prompt failure
   found + fixed; all-absent artifact tripwire.
 
-## Iteration 22 (current)
-- [ ] Kleister tradeoff figure (mirror of SROIE one) -> docs/tradeoff_kleister.svg,
-  README embed. Done when: rendered, eyeballed, committed, pushed.
+## Done (iterations 22-25)
+- 22: Kleister tradeoff figure (docs/tradeoff_kleister.svg).
+- 23: paper outline (docs/PAPER_OUTLINE.md).
+- 24: Kleister threshold sweep — shallow cost knob, default 0.5 fine.
+- 25: multi-valued fields (party, exact-set metric) + legal-suffix
+  normalization; verification net-positive on the 4-field schema.
 
 ## Backlog
-- [x] Multi-valued fields done (iteration 25).
-- [x] Kleister sweep done (iteration 24): shallow cost knob.
-- Paper draft skeleton from BUILDLOG findings.
+- Paper draft (full prose) from PAPER_OUTLINE.md.
+- Optional: partial-credit multi-value metric for the paper's metric discussion.
 
 ## Design rules (settled, don't re-litigate)
 - Split-kept: three-way split keeps constrained value.
