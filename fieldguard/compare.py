@@ -18,6 +18,13 @@ _NUM_JUNK = re.compile(r"[$€£₹,\s]|(?:USD|EUR|GBP|INR|MYR|RM)", re.I)
 _NUM_WORDS = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5",
               "six": "6", "seven": "7", "eight": "8", "nine": "9", "ten": "10",
               "eleven": "11", "twelve": "12"}
+
+# corporate-suffix equivalence ("II-VI Incorporated" == "II-VI Inc",
+# "PJM Interconnection L L C" == "PJM Interconnection LLC") — applied to the
+# TAIL of a string value only, where legal designators live
+_LEGAL_SUFFIX = {"incorporated": "inc", "corporation": "corp",
+                 "limited": "ltd", "company": "co"}
+_SPACED_TAIL = re.compile(r"\b((?:[a-z] )+[a-z])$")  # "l l c" / "l p" / "s a"
 # legalese date form: "30th day of April, 2009" -> "30 April, 2009"
 _ORDINAL_DAY = re.compile(r"\b(\d{1,2})(?:st|nd|rd|th)?\s+day\s+of\s+", re.I)
 
@@ -59,7 +66,10 @@ def normalize(spec: FieldSpec, value: str) -> str:
     v = re.sub(r"[^\w\s&/@-]", " ", v)
     tokens = [_NUM_WORDS.get(t, t) for t in
               re.sub(r"\s+", " ", v).strip().casefold().split()]
-    return " ".join(tokens)
+    if tokens:
+        tokens[-1] = _LEGAL_SUFFIX.get(tokens[-1], tokens[-1])
+    out = " ".join(tokens)
+    return _SPACED_TAIL.sub(lambda m: m.group(1).replace(" ", ""), out)
 
 
 def normalize_set(spec: FieldSpec, value: str) -> frozenset[str]:

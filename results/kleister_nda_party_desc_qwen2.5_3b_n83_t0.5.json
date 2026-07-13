@@ -1,0 +1,2463 @@
+{
+  "model": "qwen2.5:3b",
+  "n": 83,
+  "threshold": 0.5,
+  "elapsed_sec": 1852.9,
+  "report": {
+    "docs": 83,
+    "fields_total": 332,
+    "constrained_acc": 0.7108433734939759,
+    "final_acc": 0.7259036144578314,
+    "corruption_rate": 0.09036144578313253,
+    "flag_precision": 0.3132530120481927,
+    "flag_recall": 0.9879518072289156,
+    "llm_calls": 290,
+    "full_verify_calls": 498,
+    "low_confidence": 60,
+    "notes": []
+  },
+  "finals": [
+    {
+      "effective_date": "2014-05-20",
+      "jurisdiction": "New York",
+      "term": "3 years from the termination or expiration of the last of the Revised Transaction Documents to terminate or expire",
+      "party": "LIQUIDMETAL TECHNOLOGIES, INC.; VISSER PRECISION CAST, LLC"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New York",
+      "term": "",
+      "party": "Oglethorpe Power Corporation (An Electric Membership Corporation); Oglethorpe Power Corporation"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "JDA Software Group, Inc.; RedPrairie Holding, Inc."
+    },
+    {
+      "effective_date": "2009-02-23",
+      "jurisdiction": "Massachusetts",
+      "term": "",
+      "party": "Kenneth M. Bate"
+    },
+    {
+      "effective_date": "2015-03-01",
+      "jurisdiction": "Delaware",
+      "term": "1 year",
+      "party": "AUSPEX PHARMACEUTICALS; TEVA PHARMACEUTICAL INDUSTRIES, LTD."
+    },
+    {
+      "effective_date": "2012-01-11",
+      "jurisdiction": "Washington",
+      "term": "",
+      "party": "First Financial Northwest, Inc.; Stilwell Associates, L.P.; Stilwell Partners, L.P.; Stilwell Value Partners II, L.P.; Stilwell Value Partners VI, L.P.; Stilwell Value Partners VII, L.P.; Stilwell Value LLC; Stilwell Associates Insurance Fund of The S.A.L.I. Multi-Series Fund L.P.; Stilwell Advisers LLC; Joseph Stilwell; Spencer L. Schneider"
+    },
+    {
+      "effective_date": "2009-04-30",
+      "jurisdiction": "Delaware",
+      "term": "1 year after the date of this Agreement or, if earlier, upon the execution and delivery of a Transaction Agreement",
+      "party": "California Micro Devices Corporation; ON Semiconductor Corporation"
+    },
+    {
+      "effective_date": "2016-06-22",
+      "jurisdiction": "New Jersey",
+      "term": "2 years",
+      "party": "Nat Krishnamurti; Interpace Diagnostics Group, Inc."
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "New York",
+      "term": "",
+      "party": "Intercept Pharmaceuticals, Inc.; David Shapiro"
+    },
+    {
+      "effective_date": "2015-12-11",
+      "jurisdiction": "",
+      "term": "",
+      "party": "Anadigics, Inc.; II-VI Incorporated"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "NONE",
+      "term": "",
+      "party": "PJM Interconnection, L.L.C.; State Commission"
+    },
+    {
+      "effective_date": "2018-11-15",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "TESARO, Inc.; GlaxoSmithKline LLC; Ajinomoto Althea, Inc. DBA Ajinomoto Bio-Pharma Services"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "Allergan, Inc.; MAP Pharmaceuticals, Inc."
+    },
+    {
+      "effective_date": "2000-05-23",
+      "jurisdiction": "Delaware",
+      "term": "",
+      "party": "uDate.com, Inc.; Anthony Dunn"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "New York",
+      "term": "",
+      "party": "Virgin Mobile USA, LLC; , a licensee of Virgin Enterprises Ltd."
+    },
+    {
+      "effective_date": "2012-01-25",
+      "jurisdiction": "Massachusetts",
+      "term": "2 years",
+      "party": "Asahi Kasei Corporation; ZOLL Medical Corporation"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Minnesota",
+      "term": "fourth anniversary of the Effective Date",
+      "party": "3M Company; Cogent, Inc."
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "California",
+      "term": "2 years",
+      "party": "Penumbra, Inc.; Xxxxxx"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "New York",
+      "term": "3 years",
+      "party": "AOL Inc.; Verizon Corporate Services Group Inc."
+    },
+    {
+      "effective_date": "2018-10-01",
+      "jurisdiction": "California",
+      "term": "one year following the Effective Date",
+      "party": "CUBIC CORPORATION; JOHN D. THOMAS"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "",
+      "term": "",
+      "party": "Flexsteel Industries, Inc.; Jerald K. Dittmer"
+    },
+    {
+      "effective_date": "2012-03-31",
+      "jurisdiction": "California",
+      "term": "1 year",
+      "party": "Integrated Device Technology, Inc.; PLX Technology, Inc."
+    },
+    {
+      "effective_date": "2018-04-01",
+      "jurisdiction": "Virginia",
+      "term": "automatically renew for successive one-year terms (each a 'Renewal Term') unless either party notifies the other of its desire to terminate the Agreement no less than three (3) months before the expiration of the Scheduled Term or Renewal Term.",
+      "party": "Bruce L. Caswell; MAXIMUS, Inc."
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "North Carolina",
+      "term": "",
+      "party": "Inspire Pharmaceuticals, Inc.; Barry G. Pea"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Arizona",
+      "term": "",
+      "party": "JDA SOFTWARE, INC.; COMPUWARE CORPORATION"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Indiana",
+      "term": "1 year",
+      "party": "______\n_____ ______ ___; PEOPLES BANK SB"
+    },
+    {
+      "effective_date": "2017-01-01",
+      "jurisdiction": "New Jersey",
+      "term": "12 months after the Executive\u2019s termination of employment",
+      "party": "OceanFirst Financial Corp.; [\u2022]"
+    },
+    {
+      "effective_date": "2005-05-17",
+      "jurisdiction": "California",
+      "term": "",
+      "party": "Patricia Sueltz; salesforce.com, inc."
+    },
+    {
+      "effective_date": "2018-03-30",
+      "jurisdiction": "Delaware",
+      "term": "",
+      "party": "Jamba, Inc.; FOCUS Brands Inc."
+    },
+    {
+      "effective_date": "2013-05-01",
+      "jurisdiction": "Georgia",
+      "term": "1 year following the Separation Date",
+      "party": "Citi Trends, Inc.; Ivy Council"
+    },
+    {
+      "effective_date": "2005-07-03",
+      "jurisdiction": "New York",
+      "term": "five (5) years",
+      "party": "Common Sense Ltd.; Synova Healthcare, Inc."
+    },
+    {
+      "effective_date": "2015-06-23",
+      "jurisdiction": "New York",
+      "term": "",
+      "party": "Consac, LLC; MusclePharm Corporation"
+    },
+    {
+      "effective_date": "2008-01-01",
+      "jurisdiction": "California",
+      "term": "2 years",
+      "party": "BioLargo, Inc.; Joseph Provenzano"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Minnesota",
+      "term": "",
+      "party": "The St. Paul Travelers Companies, Inc."
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "California",
+      "term": "2 years",
+      "party": "KBSIII REIT Acquisition VII, LLC; KBS Limited Partnership III; KBS Real Estate Investment Trust III, Inc.; KBS Capital Advisors LLC"
+    },
+    {
+      "effective_date": "2018-08-16",
+      "jurisdiction": "Kentucky",
+      "term": "3 years following the expiration of the Disclosure Period",
+      "party": "CafePress Inc.; District Photo, Inc."
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Minnesota",
+      "term": "3 years following the date of her termination from Target",
+      "party": "Target Corporation; TARGET ENTERPRISE, INC.; Tina Tyler"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Ohio",
+      "term": "",
+      "party": "Fifth Third Processing Solutions, LLC; ; Employee"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "",
+      "term": "",
+      "party": "HI-TEX, INC.; QUAKER FABRIC CORPORATION OF FALL RIVER"
+    },
+    {
+      "effective_date": "2023-10-01",
+      "jurisdiction": "California",
+      "term": "",
+      "party": "GigPeak, Inc.; Integrated Device Technology, Inc."
+    },
+    {
+      "effective_date": "2000-02-10",
+      "jurisdiction": "Minnesota",
+      "term": "",
+      "party": "New England Business Service, Inc.; Premium Wear, Inc."
+    },
+    {
+      "effective_date": "2008-11-06",
+      "jurisdiction": "California",
+      "term": "survives the term of the Consulting Agreement and continues until all Confidential Information becomes publicly known",
+      "party": "BioLargo. Inc.; Howard Isaacs"
+    },
+    {
+      "effective_date": "2007-05-09",
+      "jurisdiction": "Delaware",
+      "term": "12 months following the date of this Agreement",
+      "party": "Opsware Inc.; Hewlett-Packard Company"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Illinois",
+      "term": "",
+      "party": "Jeremiah Kaye; AHP Servicing, LLC"
+    },
+    {
+      "effective_date": "2003-05-14",
+      "jurisdiction": "Minnesota",
+      "term": "2 years",
+      "party": "Flexsteel Industries, Inc.; DMI Furniture, Inc."
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Texas",
+      "term": "2 years",
+      "party": "Allis-Chalmers Energy Inc.; Seawell Limited"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "New Jersey",
+      "term": "",
+      "party": "AlgoRx Pharmaceuticals, Inc"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Delaware",
+      "term": "3 years after the date hereof",
+      "party": "HID Global Corporation; LASERCARD CORPORATION"
+    },
+    {
+      "effective_date": "2001-05-xx",
+      "jurisdiction": "Washington",
+      "term": "",
+      "party": "Corus Pharma, Inc.; A. Bruce Montgomery, M.D."
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "",
+      "term": "2 years",
+      "party": "Jeffrey L. Levine"
+    },
+    {
+      "effective_date": "2014-11-26",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "E2open, Inc.; Insight Venture Partners, LLC"
+    },
+    {
+      "effective_date": "1999-03-16",
+      "jurisdiction": "Oregon",
+      "term": "",
+      "party": "ACUMED, INC.; MEDEX SURGICAL"
+    },
+    {
+      "effective_date": "2008-07-02",
+      "jurisdiction": "Delaware",
+      "term": "",
+      "party": "THE BANK OF TOKYO-MITSUBISHI UFJ, LTD.; UNIONBANCAL CORPORATION"
+    },
+    {
+      "effective_date": "2012-06-11",
+      "jurisdiction": "Delaware",
+      "term": "NONE",
+      "party": "Lightwave Logic, Inc.; Ronald A. Bucchi"
+    },
+    {
+      "effective_date": "2007-03-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "Webex Communications, Inc.; Cisco Systems, Inc."
+    },
+    {
+      "effective_date": "2007-04-30",
+      "jurisdiction": "Massachusetts",
+      "term": "",
+      "party": "Accurel Systems International Corporation; Implant Sciences Corporation; Evans Analytical Group LLC"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "",
+      "term": "NONE",
+      "party": "Life Technologies Corporation; ; any affiliates, subsidiaries, and merged (predecessor) entities; ; Bernd Brust"
+    },
+    {
+      "effective_date": "2012-09-20",
+      "jurisdiction": "",
+      "term": "",
+      "party": "Contran Corporation; Precision Castparts Corp."
+    },
+    {
+      "effective_date": "2016-03-15",
+      "jurisdiction": "Delaware",
+      "term": "",
+      "party": "Orchestra-Pr\u00e9maman, S.A.; Destination Maternity Corporation"
+    },
+    {
+      "effective_date": "2005-09-29",
+      "jurisdiction": "Illinois",
+      "term": "",
+      "party": "Paul B. Mulhollem; Archer-Daniels-Midland Company"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Idaho",
+      "term": "",
+      "party": "Silver Valley Capital; Sterling Mining Company; Kimberly Gold Mines, Inc.; Shoshone Silver Mining Company; Michael L. Mooney"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Washington",
+      "term": "2 years",
+      "party": "PhotoWorks, Inc; American Greetings Corporation"
+    },
+    {
+      "effective_date": "2016-05-03",
+      "jurisdiction": "New York",
+      "term": "Not specified",
+      "party": "Wizard World, Inc.; John D. Maatta"
+    },
+    {
+      "effective_date": "2008-08-01",
+      "jurisdiction": "New York",
+      "term": "Not specified in the agreement",
+      "party": "Omrix Biopharmaceuticals, Inc.; Ethicon, Inc."
+    },
+    {
+      "effective_date": "2006-01-01",
+      "jurisdiction": "California",
+      "term": "12 months",
+      "party": "First Bank of Beverly Hills; Joseph W. Kiley, III"
+    },
+    {
+      "effective_date": "2015-03-16",
+      "jurisdiction": "Utah",
+      "term": "",
+      "party": "Galil Medical, Inc.; Perseon Corporation"
+    },
+    {
+      "effective_date": "2012-07-05",
+      "jurisdiction": "Delaware",
+      "term": "3 years from the date hereof",
+      "party": "Williams Controls, Inc.; Curtiss-Wright Controls, Inc."
+    },
+    {
+      "effective_date": "2015-12-08",
+      "jurisdiction": "Washington",
+      "term": "1 year from the date of this Non-Disclosure Agreement",
+      "party": "Anchor Bancorp; Varonica S. Ragan; Joel S. Lawson IV"
+    },
+    {
+      "effective_date": "2005-02-24",
+      "jurisdiction": "Virginia",
+      "term": "1 year immediately following the termination of such employment, whether voluntary or involuntary",
+      "party": "Mobile Satellite Ventures; Alexander H. Good"
+    },
+    {
+      "effective_date": "2006-12-19",
+      "jurisdiction": "New York",
+      "term": "",
+      "party": "MapInfo Corporation; Pitney Bowes Inc."
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "New York",
+      "term": "24 months",
+      "party": "TPG Capital, L.P.; Axcan Pharma Inc.; Eurand N.V."
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "",
+      "term": "10 years following the termination of the IP AGREEMENT",
+      "party": "Motorola, Inc.; Iridium Satellite LLC"
+    },
+    {
+      "effective_date": "2008-01-01",
+      "jurisdiction": "California",
+      "term": "not specified",
+      "party": "GigOptix LLC; Avi Katz"
+    },
+    {
+      "effective_date": "2017-10-02",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "Potbelly Corporation, Ancora Advisors, LLC, Fred DiSanto, James Chadwick, Brian Hopkins, Joseph Boehm"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": "",
+      "party": "The Schooner Group, LLC"
+    },
+    {
+      "effective_date": "2011-03-29",
+      "jurisdiction": "Texas",
+      "term": "2 years",
+      "party": "Stephen M. Mattessich; Newgistics, Inc."
+    },
+    {
+      "effective_date": "2011-05-26",
+      "jurisdiction": "California",
+      "term": "Merger Agreement is not specified in terms of duration but the Merger will occur after execution.",
+      "party": "Skyworks Solutions, Inc.; Richard K. Williams"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "",
+      "term": "",
+      "party": "MICROSOFT CORPORATION; Digital River, Inc."
+    },
+    {
+      "effective_date": "2015-04-02",
+      "jurisdiction": "Delaware",
+      "term": "3 years",
+      "party": "Alan S. Korman; Columbus McKinnon Corporation"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Washington",
+      "term": "5 years after we receive it",
+      "party": "MICROSOFT CORPORATION; Adaptive Biotechnologies"
+    },
+    {
+      "effective_date": "2011-01-18",
+      "jurisdiction": "New York",
+      "term": "2 years",
+      "party": "ORTHOVITA, INC.; Stryker Corporation"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Washington",
+      "term": "1 year after the Effective Date",
+      "party": "Alder BioPharmaceuticals, Inc.; H. Lundbeck A/S"
+    },
+    {
+      "effective_date": "NONE",
+      "jurisdiction": "Illinois",
+      "term": "",
+      "party": "US Foods, Inc.; Employee"
+    }
+  ],
+  "gold": [
+    {
+      "effective_date": "2014-05-20",
+      "jurisdiction": "New York",
+      "term": "3 years",
+      "party": "Liquidmetal Technology Inc.; Visser Precision Cast LLC"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New York",
+      "term": "",
+      "party": "Oglethorpe Power Corporation"
+    },
+    {
+      "effective_date": "2012-09-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "Jda Software Group Inc.; Redprairie Holding Inc."
+    },
+    {
+      "effective_date": "2009-02-23",
+      "jurisdiction": "Massachusetts",
+      "term": "",
+      "party": "Nitromed Inc.; Kenneth M. Bate"
+    },
+    {
+      "effective_date": "2015-03-01",
+      "jurisdiction": "Delaware",
+      "term": "3 years",
+      "party": "Auspex Pharmaceuticals; Teva Pharmaceutical Industries Ltd."
+    },
+    {
+      "effective_date": "2012-01-11",
+      "jurisdiction": "Washington",
+      "term": "",
+      "party": "Financial Northwest Inc.; Spencer L. Schneider; Stilwell Group"
+    },
+    {
+      "effective_date": "2009-04-30",
+      "jurisdiction": "Delaware",
+      "term": "1 year",
+      "party": "California Micro Devices Corporation; On Semiconductor Corporation"
+    },
+    {
+      "effective_date": "2016-06-22",
+      "jurisdiction": "New Jersey",
+      "term": "",
+      "party": "Nat Krishnamurti; Interpace Diagnostics Group Inc."
+    },
+    {
+      "effective_date": "2008-03-31",
+      "jurisdiction": "New York",
+      "term": "",
+      "party": "Intercept Pharmaceuticals Inc.; David Shapiro"
+    },
+    {
+      "effective_date": "2015-12-11",
+      "jurisdiction": "",
+      "term": "",
+      "party": "Anadigics Inc.; Ii-Vi Inc."
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": "",
+      "party": "Pjm Interconnection LLC"
+    },
+    {
+      "effective_date": "2018-11-15",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "Tesaro Inc.; Ajinomoto Althea Inc.; Glaxosmithkline LLC"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "Allergan Inc.; Map Pharmaceuticals Inc."
+    },
+    {
+      "effective_date": "2000-05-23",
+      "jurisdiction": "Delaware",
+      "term": "",
+      "party": "Udate.Com Inc.; Anthony Dunn"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New York",
+      "term": "2 years",
+      "party": "Virgin Mobile Usa LLC"
+    },
+    {
+      "effective_date": "2012-01-25",
+      "jurisdiction": "Massachusetts",
+      "term": "5 years",
+      "party": "Asahi Kasei Corporation; Zoll Medical Corporation"
+    },
+    {
+      "effective_date": "2008-07-31",
+      "jurisdiction": "Minnesota",
+      "term": "2 years",
+      "party": "Cogent Inc.; 3m Company"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "California",
+      "term": "2 years",
+      "party": "Penumbra Inc."
+    },
+    {
+      "effective_date": "2014-11-25",
+      "jurisdiction": "New York",
+      "term": "3 years",
+      "party": "Aol Inc.; Verizon Corporate Services Group Inc."
+    },
+    {
+      "effective_date": "2018-10-01",
+      "jurisdiction": "California",
+      "term": "1 year",
+      "party": "Cubic Corporation; John D. Thomas"
+    },
+    {
+      "effective_date": "2018-12-28",
+      "jurisdiction": "Iowa",
+      "term": "",
+      "party": "Flexsteel Industries Inc.; Jerald K. Dittmer"
+    },
+    {
+      "effective_date": "2012-03-31",
+      "jurisdiction": "California",
+      "term": "1 year",
+      "party": "Integrated Device Technology Inc.; Plx Technology Inc."
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Virginia",
+      "term": "3 years",
+      "party": "Bruce L. Caswell; Maximus Inc."
+    },
+    {
+      "effective_date": "2004-10-11",
+      "jurisdiction": "North Carolina",
+      "term": "",
+      "party": "Inspire Pharmaceuticals Inc.; Barry G. Pea"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Arizona",
+      "term": "",
+      "party": "Jda Software Inc.; Compuware Corporation"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Indiana",
+      "term": "",
+      "party": "Peoples Bank Sb"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New Jersey",
+      "term": "",
+      "party": "Oceanfinancial Corp."
+    },
+    {
+      "effective_date": "2005-05-17",
+      "jurisdiction": "California",
+      "term": "",
+      "party": "Patricia Sueltz; Salesforce.Com Inc."
+    },
+    {
+      "effective_date": "2018-03-30",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "Jamba Inc.; Focus Brands Inc."
+    },
+    {
+      "effective_date": "2013-05-01",
+      "jurisdiction": "Georgia",
+      "term": "",
+      "party": "Citi Trends Inc.; Ivy Council"
+    },
+    {
+      "effective_date": "2005-07-03",
+      "jurisdiction": "New York",
+      "term": "5 years",
+      "party": "Common Sense Ltd.; Synova Healthcare Inc."
+    },
+    {
+      "effective_date": "2015-06-23",
+      "jurisdiction": "New York",
+      "term": "12 months",
+      "party": "Consac LLC; Musclepharm Corporation"
+    },
+    {
+      "effective_date": "2008-01-01",
+      "jurisdiction": "California",
+      "term": "",
+      "party": "Biolargo Inc.; Joseph L. Provenzano"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Minnesota",
+      "term": "",
+      "party": "The St. Paul Travelers Companies Inc."
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "California",
+      "term": "2 years",
+      "party": "Kbs Capital Advisors LLC"
+    },
+    {
+      "effective_date": "2018-08-16",
+      "jurisdiction": "Kentucky",
+      "term": "1 year",
+      "party": "Cafepress Inc.; District Photo Inc."
+    },
+    {
+      "effective_date": "2016-01-27",
+      "jurisdiction": "Minnesota",
+      "term": "",
+      "party": "Target Corporation; Tina Tyler"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Ohio",
+      "term": "",
+      "party": "Fifth Third Processing Solutions LLC"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Michigan",
+      "term": "",
+      "party": "Hi-Tex Inc.; Quaker Fabric Corporation Of Fall River"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "California",
+      "term": "",
+      "party": "Gigpeak Inc.; Integrated Device Technology Inc."
+    },
+    {
+      "effective_date": "2000-02-10",
+      "jurisdiction": "Minnesota",
+      "term": "",
+      "party": "New England Business Service Inc.; Premium Wear Inc."
+    },
+    {
+      "effective_date": "2008-11-06",
+      "jurisdiction": "California",
+      "term": "",
+      "party": "Biolargo Inc.; Howard Isaacs"
+    },
+    {
+      "effective_date": "2007-05-09",
+      "jurisdiction": "Delaware",
+      "term": "12 months",
+      "party": "Opsware Inc.; Hewlett-Packard Company"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Illinois",
+      "term": "",
+      "party": "Jeremiah Kaye; Ahp Servicing LLC"
+    },
+    {
+      "effective_date": "2003-05-14",
+      "jurisdiction": "Minnesota",
+      "term": "",
+      "party": "Flexsteel Industries Inc.; Dmi Furniture Inc."
+    },
+    {
+      "effective_date": "2010-06-23",
+      "jurisdiction": "Texas",
+      "term": "2 years",
+      "party": "Allis-Chalmers Energy Inc.; Seawell Ltd."
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New Jersey",
+      "term": "10 years",
+      "party": "Algorx Pharmaceuticals Inc."
+    },
+    {
+      "effective_date": "2009-11-06",
+      "jurisdiction": "Delaware",
+      "term": "3 years",
+      "party": "Hid Global Corporation; Lasercard Corporation"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Washington",
+      "term": "",
+      "party": "Corus Pharma Inc.; A. Bruce Montgomery"
+    },
+    {
+      "effective_date": "2005-02-16",
+      "jurisdiction": "",
+      "term": "",
+      "party": "Omni National Bank; Jeffrey L. Levine"
+    },
+    {
+      "effective_date": "2014-11-26",
+      "jurisdiction": "Delaware",
+      "term": "",
+      "party": "E2open Inc.; Insight Venture Partners LLC"
+    },
+    {
+      "effective_date": "1999-03-16",
+      "jurisdiction": "Oregon",
+      "term": "",
+      "party": "Acumed Inc.; Medex Surgical"
+    },
+    {
+      "effective_date": "2008-07-02",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "Unionbancal Corporation; The Bank Of Tokyo-Mitsubishi Ufj"
+    },
+    {
+      "effective_date": "2012-06-11",
+      "jurisdiction": "Delaware",
+      "term": "",
+      "party": "Lightwave Logic Inc.; Ronald A. Bucchi"
+    },
+    {
+      "effective_date": "2007-03-04",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "Webex Communications Inc.; Cisco Systems Inc."
+    },
+    {
+      "effective_date": "2007-04-30",
+      "jurisdiction": "Massachusetts",
+      "term": "",
+      "party": "Accurel Systems International Corporation; Implant Sciences Corporation"
+    },
+    {
+      "effective_date": "2011-11-01",
+      "jurisdiction": "California",
+      "term": "",
+      "party": "Life Technologies Corporation; Bernd Brust"
+    },
+    {
+      "effective_date": "2012-09-20",
+      "jurisdiction": "",
+      "term": "",
+      "party": "Contran Corporation; Precision Castparts Corp."
+    },
+    {
+      "effective_date": "2016-03-15",
+      "jurisdiction": "Delaware",
+      "term": "9 months",
+      "party": "Orchestra-Pr\u00e9maman Sa; Destination Maternity Corporation"
+    },
+    {
+      "effective_date": "2005-09-29",
+      "jurisdiction": "Illinois",
+      "term": "",
+      "party": "Paul B. Mulhollem; Archer-Daniels-Midland Company"
+    },
+    {
+      "effective_date": "2005-05-04",
+      "jurisdiction": "Idaho",
+      "term": "",
+      "party": "Affiliated Companies; Michael L. Mooney"
+    },
+    {
+      "effective_date": "2007-08-14",
+      "jurisdiction": "Washington",
+      "term": "",
+      "party": "Photoworks Inc.; American Greetings Corporation"
+    },
+    {
+      "effective_date": "2016-05-03",
+      "jurisdiction": "New York",
+      "term": "",
+      "party": "Wizard World Inc.; John D. Maatta"
+    },
+    {
+      "effective_date": "2008-08-01",
+      "jurisdiction": "New York",
+      "term": "",
+      "party": "Omrix Biopharmaceuticals Inc.; Ethicon Inc."
+    },
+    {
+      "effective_date": "2006-01-01",
+      "jurisdiction": "California",
+      "term": "12 months",
+      "party": "Bank Of Beverly Hills; Joseph W. Kiley Iii"
+    },
+    {
+      "effective_date": "2015-03-16",
+      "jurisdiction": "Utah",
+      "term": "",
+      "party": "Galil Medical Inc.; Perseon Corporation"
+    },
+    {
+      "effective_date": "2012-07-05",
+      "jurisdiction": "Delaware",
+      "term": "3 years",
+      "party": "Curtiss-Wright Controls Inc.; Williams Controls Inc."
+    },
+    {
+      "effective_date": "2015-12-08",
+      "jurisdiction": "Washington",
+      "term": "1 year",
+      "party": "Anchor Bancorp; Joel S. Lawson Iv; Varonica S. Ragan"
+    },
+    {
+      "effective_date": "2005-02-24",
+      "jurisdiction": "Virginia",
+      "term": "",
+      "party": "Mobile Satellite Ventures; Alexander H. Good"
+    },
+    {
+      "effective_date": "2006-12-19",
+      "jurisdiction": "New York",
+      "term": "",
+      "party": "Mapinfo Corporation; Pitney Bowes Inc."
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "New York",
+      "term": "24 months",
+      "party": "Axcan Pharma Inc.; Tpg Capital LP; Eurand N.V."
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Illinois",
+      "term": "",
+      "party": "Motorola Inc.; Iridium Satellite LLC"
+    },
+    {
+      "effective_date": "2008-01-01",
+      "jurisdiction": "California",
+      "term": "",
+      "party": "Gigoptix LLC; Avi Katz"
+    },
+    {
+      "effective_date": "2017-10-02",
+      "jurisdiction": "Delaware",
+      "term": "2 years",
+      "party": "Potbelly Corporation; Ancora Advisors LLC"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "",
+      "term": "",
+      "party": "Ideal Restaurant Group Inc.; The Schooner Group LLC"
+    },
+    {
+      "effective_date": "2011-03-29",
+      "jurisdiction": "Texas",
+      "term": "",
+      "party": "Newgistics Inc.; Stephen M. Mattessich"
+    },
+    {
+      "effective_date": "2011-05-26",
+      "jurisdiction": "California",
+      "term": "",
+      "party": "Skyworks Solutions Inc.; Richard K. Williams"
+    },
+    {
+      "effective_date": "2006-09-01",
+      "jurisdiction": "Washington",
+      "term": "",
+      "party": "Microsoft Corporation; Digital River Inc."
+    },
+    {
+      "effective_date": "2015-04-02",
+      "jurisdiction": "Delaware",
+      "term": "3 years",
+      "party": "Columbus Mckinnon Corporation; Magnetek Inc."
+    },
+    {
+      "effective_date": "2017-07-21",
+      "jurisdiction": "Washington",
+      "term": "",
+      "party": "Adaptive Biotechnologies; Microsoft Corporation"
+    },
+    {
+      "effective_date": "2011-01-18",
+      "jurisdiction": "New York",
+      "term": "2 years",
+      "party": "Orthovita Inc.; Stryker Corporation"
+    },
+    {
+      "effective_date": "",
+      "jurisdiction": "Washington",
+      "term": "1 year",
+      "party": "Alder Biopharmaceuticals Inc.; H. Lundbeck A/S"
+    },
+    {
+      "effective_date": "2015-07-21",
+      "jurisdiction": "Illinois",
+      "term": "",
+      "party": "Us Foods Inc.; Pietro Satriano"
+    }
+  ],
+  "trace": [
+    {
+      "constrained": {
+        "effective_date": "2014-05-20",
+        "jurisdiction": "New York",
+        "term": "3 years from the termination or expiration of the last of the Revised Transaction Documents to terminate or expire",
+        "party": "LIQUIDMETAL TECHNOLOGIES, INC.; VISSER PRECISION CAST, LLC"
+      },
+      "unconstrained": {
+        "effective_date": "May 20, 2014",
+        "jurisdiction": "New York",
+        "term": "3 years",
+        "party": "Liquidmetal Technologies, Inc.; Visser Precision Cast, LLC"
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "New York",
+        "term": "",
+        "party": "Oglethorpe Power Corporation (An Electric Membership Corporation); Oglethorpe Power Corporation"
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "New York",
+        "term": "not specified",
+        "party": "Oglethorpe Power Corporation; Stone & Webster, Inc."
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "JDA Software Group, Inc.; RedPrairie Holding, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": ""
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2009-02-23",
+        "jurisdiction": "Massachusetts",
+        "term": "",
+        "party": "Kenneth M. Bate"
+      },
+      "unconstrained": {
+        "effective_date": "2009-02-23",
+        "jurisdiction": "Massachusetts",
+        "term": "ongoing",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-03-01",
+        "jurisdiction": "Delaware",
+        "term": "1 year",
+        "party": "AUSPEX PHARMACEUTICALS; TEVA PHARMACEUTICAL INDUSTRIES, LTD."
+      },
+      "unconstrained": {
+        "effective_date": "2015-03-01",
+        "jurisdiction": "Delaware",
+        "term": "1 year",
+        "party": "AUSPEX PHARMACEUTICALS; TEVA PHARMACEUTICAL INDUSTRIES, LTD."
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-01-11",
+        "jurisdiction": "Washington",
+        "term": "",
+        "party": "First Financial Northwest, Inc.; Stilwell Associates, L.P.; Stilwell Partners, L.P.; Stilwell Value Partners II, L.P.; Stilwell Value Partners VI, L.P.; Stilwell Value Partners VII, L.P.; Stilwell Value LLC; Stilwell Associates Insurance Fund of The S.A.L.I. Multi-Series Fund L.P.; Stilwell Advisers LLC; Joseph Stilwell; Spencer L. Schneider"
+      },
+      "unconstrained": {
+        "effective_date": "2012-01-11",
+        "jurisdiction": "Washington",
+        "term": "not specified",
+        "party": "First Financial Northwest, Inc.; Stilwell Associates, L.P.; Stilwell Partners, L.P.; Stilwell Value Partners II, L.P.; Stilwell Value Partners VI, L.P.; Stilwell Value Partners VII, L.P.; Stilwell Value LLC; Stilwell Associates Insurance Fund of The S.A.L .I . Multi-Series Fund L.P.; Stilwell Advisers LLC; Joseph Stilwell; Spencer L. Schneider"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2009-04-30",
+        "jurisdiction": "Delaware",
+        "term": "1 year after the date of this Agreement or, if earlier, upon the execution and delivery of a Transaction Agreement",
+        "party": "California Micro Devices Corporation; ON Semiconductor Corporation"
+      },
+      "unconstrained": {
+        "effective_date": "30th day of April, 2009",
+        "jurisdiction": "Delaware",
+        "term": "one year after the date of this Agreement or, if earlier, upon the execution and delivery of a Transaction Agreement",
+        "party": "California Micro Devices Corporation; ON Semiconductor Corporation"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2016-06-22",
+        "jurisdiction": "New Jersey",
+        "term": "2 years",
+        "party": "Nat Krishnamurti; Interpace Diagnostics Group, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "2016-06-22",
+        "jurisdiction": "New York",
+        "term": "2 years",
+        "party": ""
+      },
+      "flagged": [
+        "jurisdiction",
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2008-03-31",
+        "jurisdiction": "New York",
+        "term": "",
+        "party": "Intercept Pharmaceuticals, Inc.; David Shapiro"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "New York",
+        "term": "not provided",
+        "party": "Intercept Pharmaceuticals, Inc.; David Shapiro"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-12-11",
+        "jurisdiction": "",
+        "term": "",
+        "party": "Anadigics, Inc.; II-VI Incorporated"
+      },
+      "unconstrained": {
+        "effective_date": "December 11, 2015",
+        "jurisdiction": "",
+        "term": "perpetual",
+        "party": "Anadigics; II-VI Incorporated"
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2004-XX-XX",
+        "jurisdiction": "Pennsylvania",
+        "term": "",
+        "party": "PJM Interconnection, L.L.C.; State Commission"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "not provided",
+        "term": "not provided",
+        "party": "PJM Interconnection, L.L.C.; ; ; State Commission"
+      },
+      "flagged": [
+        "effective_date",
+        "jurisdiction"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-11-15",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "TESARO, Inc.; GlaxoSmithKline LLC; Ajinomoto Althea, Inc. DBA Ajinomoto Bio-Pharma Services"
+      },
+      "unconstrained": {
+        "effective_date": "2018-11-15",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "TESARO; GlaxoSmithKline LLC; Ajinomoto Althea, Inc. DBA Ajinomoto Bio-Pharma Services"
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-12-17",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "Allergan, Inc.; MAP Pharmaceuticals, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "Allergan, Inc.; MAP Pharmaceuticals, Inc."
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2000-05-23",
+        "jurisdiction": "Delaware",
+        "term": "",
+        "party": "uDate.com, Inc.; Anthony Dunn"
+      },
+      "unconstrained": {
+        "effective_date": "May 23, 2000",
+        "jurisdiction": "Delaware",
+        "term": "not specified",
+        "party": "uDate.com, Inc.; Anthony Dunn"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "200__",
+        "jurisdiction": "New York",
+        "term": "",
+        "party": "Virgin Mobile USA, LLC; , a licensee of Virgin Enterprises Ltd."
+      },
+      "unconstrained": {
+        "effective_date": "unknown",
+        "jurisdiction": "New York",
+        "term": "indefinite",
+        "party": "Virgin Mobile USA, LLC; ; Company"
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-01-25",
+        "jurisdiction": "Massachusetts",
+        "term": "2 years",
+        "party": "Asahi Kasei Corporation; ZOLL Medical Corporation"
+      },
+      "unconstrained": {
+        "effective_date": "2012-01-25",
+        "jurisdiction": "Massachusetts",
+        "term": "2 years",
+        "party": "ZOLL MEDICAL CORPORATION; ASAHI KASEI CORPORATION; Brown Brothers Harriman & Co."
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2008-07-31",
+        "jurisdiction": "Minnesota",
+        "term": "fourth anniversary of the Effective Date",
+        "party": "3M Company; Cogent, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Minnesota",
+        "term": "four years",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2023-04-01",
+        "jurisdiction": "California",
+        "term": "2 years",
+        "party": "Penumbra, Inc.; Xxxxxx"
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "California",
+        "term": "2 years",
+        "party": "Penumbra, Inc.;"
+      },
+      "flagged": [
+        "effective_date",
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2023-04-15",
+        "jurisdiction": "New York",
+        "term": "3 years",
+        "party": "AOL Inc.; Verizon Corporate Services Group Inc."
+      },
+      "unconstrained": {
+        "effective_date": "not specified",
+        "jurisdiction": "New York",
+        "term": "3 years",
+        "party": "AOL Inc.; Verizon Corporate Services Group Inc."
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-10-01",
+        "jurisdiction": "California",
+        "term": "one year following the Effective Date",
+        "party": "CUBIC CORPORATION; JOHN D. THOMAS"
+      },
+      "unconstrained": {
+        "effective_date": "October 1, 2018",
+        "jurisdiction": "California",
+        "term": "one year",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-12-28",
+        "jurisdiction": "",
+        "term": "",
+        "party": "Flexsteel Industries, Inc.; Jerald K. Dittmer"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "not provided",
+        "term": "perpetual",
+        "party": "Flexsteel Industries, Inc.; Jerald K. Dittmer"
+      },
+      "flagged": [
+        "effective_date",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-03-31",
+        "jurisdiction": "California",
+        "term": "1 year",
+        "party": "Integrated Device Technology, Inc.; PLX Technology, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "2012-03-31",
+        "jurisdiction": "California",
+        "term": "1 year",
+        "party": "Integrated Device Technology, Inc.; PLX Technology, Inc."
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-04-01",
+        "jurisdiction": "Virginia",
+        "term": "automatically renew for successive one-year terms (each a 'Renewal Term') unless either party notifies the other of its desire to terminate the Agreement no less than three (3) months before the expiration of the Scheduled Term or Renewal Term.",
+        "party": "Bruce L. Caswell; MAXIMUS, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "April 1, 2018",
+        "jurisdiction": "Virginia",
+        "term": "successive one-year terms",
+        "party": "Bruce L. Caswell; MAXIMUS, Inc."
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2004-10-11",
+        "jurisdiction": "North Carolina",
+        "term": "",
+        "party": "Inspire Pharmaceuticals, Inc.; Barry G. Pea"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "North Carolina",
+        "term": "not provided",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2000-01-01",
+        "jurisdiction": "Arizona",
+        "term": "",
+        "party": "JDA SOFTWARE, INC.; COMPUWARE CORPORATION"
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "Arizona",
+        "term": "not specified",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "___ day of ____, between ______\n_____ ______ ____",
+        "jurisdiction": "Indiana",
+        "term": "1 year",
+        "party": "______\n_____ ______ ___; PEOPLES BANK SB"
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "Indiana",
+        "term": "one year",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2017-01-01",
+        "jurisdiction": "New Jersey",
+        "term": "12 months after the Executive\u2019s termination of employment",
+        "party": "OceanFirst Financial Corp.; [\u2022]"
+      },
+      "unconstrained": {
+        "effective_date": "[\u2022] day of [\u2022], 2017",
+        "jurisdiction": "New Jersey",
+        "term": "12 months",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2005-05-17",
+        "jurisdiction": "California",
+        "term": "",
+        "party": "Patricia Sueltz; salesforce.com, inc."
+      },
+      "unconstrained": {
+        "effective_date": "2005-05-17",
+        "jurisdiction": "California",
+        "term": "not specified",
+        "party": ""
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-03-30",
+        "jurisdiction": "Delaware",
+        "term": "",
+        "party": "Jamba, Inc.; FOCUS Brands Inc."
+      },
+      "unconstrained": {
+        "effective_date": "March 30, 2018",
+        "jurisdiction": "Delaware",
+        "term": "one year",
+        "party": "Jamba, Inc.; FOCUS Brands Inc."
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2013-05-01",
+        "jurisdiction": "Georgia",
+        "term": "1 year following the Separation Date",
+        "party": "Citi Trends, Inc.; Ivy Council"
+      },
+      "unconstrained": {
+        "effective_date": "2013-05-01",
+        "jurisdiction": "Georgia",
+        "term": "1 year",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2005-07-03",
+        "jurisdiction": "New York",
+        "term": "five (5) years",
+        "party": "Common Sense Ltd.; Synova Healthcare, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "2005-07-03",
+        "jurisdiction": "New York",
+        "term": "5 years",
+        "party": "Common Sense Ltd.; Synova Healthcare, Inc."
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-06-23",
+        "jurisdiction": "New York",
+        "term": "",
+        "party": "Consac, LLC; MusclePharm Corporation"
+      },
+      "unconstrained": {
+        "effective_date": "2015-06-23",
+        "jurisdiction": "New York",
+        "term": "not specified",
+        "party": ""
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2008-01-01",
+        "jurisdiction": "California",
+        "term": "2 years",
+        "party": "BioLargo, Inc.; Joseph Provenzano"
+      },
+      "unconstrained": {
+        "effective_date": "2008-01-01",
+        "jurisdiction": "California",
+        "term": "\"survive the term of the Consulting Agreement and shall continue until such time as all Confidential Information disclosed hereunder becomes publicly known\"",
+        "party": "\"BioLargo, Inc.; Joseph Provenzano\""
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "Minnesota",
+        "term": "",
+        "party": "The St. Paul Travelers Companies, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "missing",
+        "jurisdiction": "Minnesota",
+        "term": "indefinite",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "20",
+        "jurisdiction": "California",
+        "term": "2 years",
+        "party": "KBSIII REIT Acquisition VII, LLC; KBS Limited Partnership III; KBS Real Estate Investment Trust III, Inc.; KBS Capital Advisors LLC"
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "California",
+        "term": "2 years",
+        "party": "KBSIII REIT Acquisition VII, LLC; KBS Limited Partnership III; KBS Real Estate Investment Trust III, Inc.; KBS Capital Advisors LLC"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-08-16",
+        "jurisdiction": "Kentucky",
+        "term": "3 years following the expiration of the Disclosure Period",
+        "party": "CafePress Inc.; District Photo, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "2018-08-16",
+        "jurisdiction": "Kentucky",
+        "term": "3 years",
+        "party": "CafePress Inc.; District Photo, Inc."
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2016-01-19",
+        "jurisdiction": "Minnesota",
+        "term": "3 years following the date of her termination from Target",
+        "party": "Target Corporation; TARGET ENTERPRISE, INC.; Tina Tyler"
+      },
+      "unconstrained": {
+        "effective_date": "not specified",
+        "jurisdiction": "Minnesota",
+        "term": "3 years",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "20XX-XX-XX",
+        "jurisdiction": "Ohio",
+        "term": "",
+        "party": "Fifth Third Processing Solutions, LLC; ; Employee"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Ohio",
+        "term": "1 year following termination of such employment for any reason.",
+        "party": "Fifth Third Processing Solutions, LLC; FIFTH THIRD PROCESSING SOLUTIONS, LLC"
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2023-04-01",
+        "jurisdiction": "",
+        "term": "",
+        "party": "HI-TEX, INC.; QUAKER FABRIC CORPORATION OF FALL RIVER"
+      },
+      "unconstrained": {
+        "effective_date": "not specified",
+        "jurisdiction": "not specified",
+        "term": "perpetual",
+        "party": "HI-TEX, INC.; QUAKER FABRIC CORPORATION OF FALL RIVER"
+      },
+      "flagged": [
+        "effective_date",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2023-10-01",
+        "jurisdiction": "California",
+        "term": "",
+        "party": "GigPeak, Inc.; Integrated Device Technology, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "20",
+        "jurisdiction": "California",
+        "term": "not specified",
+        "party": "GigPeak, Inc.; Integrated Device Technology, Inc."
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2000-02-10",
+        "jurisdiction": "Minnesota",
+        "term": "",
+        "party": "New England Business Service, Inc.; Premium Wear, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "2000-02-10",
+        "jurisdiction": "Minnesota",
+        "term": "not specified",
+        "party": "New England Business Service, Inc.; Premium Wear, Inc."
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2008-11-06",
+        "jurisdiction": "California",
+        "term": "survives the term of the Consulting Agreement and continues until all Confidential Information becomes publicly known",
+        "party": "BioLargo. Inc.; Howard Isaacs"
+      },
+      "unconstrained": {
+        "effective_date": "2008-11-06",
+        "jurisdiction": "California",
+        "term": "until all Confidential Information becomes publicly known",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2007-05-09",
+        "jurisdiction": "Delaware",
+        "term": "12 months following the date of this Agreement",
+        "party": "Opsware Inc.; Hewlett-Packard Company"
+      },
+      "unconstrained": {
+        "effective_date": "2007-05-09",
+        "jurisdiction": "Delaware",
+        "term": "12 months",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2018-01-01",
+        "jurisdiction": "Illinois",
+        "term": "",
+        "party": "Jeremiah Kaye; AHP Servicing, LLC"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Illinois",
+        "term": "not provided",
+        "party": "AHP Servicing, LLC; Jeremiah Kaye"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2003-05-14",
+        "jurisdiction": "Minnesota",
+        "term": "2 years",
+        "party": "Flexsteel Industries, Inc.; DMI Furniture, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "2003-05-14",
+        "jurisdiction": "Minnesota",
+        "term": "2 years",
+        "party": ""
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2010-06-23",
+        "jurisdiction": "Texas",
+        "term": "2 years",
+        "party": "Allis-Chalmers Energy Inc.; Seawell Limited"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Texas",
+        "term": "2 years",
+        "party": "Allis-Chalmers Energy Inc.; Seawell Limited"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "200_____",
+        "jurisdiction": "New Jersey",
+        "term": "",
+        "party": "AlgoRx Pharmaceuticals, Inc.; \u201cRecipient\u201d"
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "New Jersey",
+        "term": "",
+        "party": "AlgoRx Pharmaceuticals, Inc.;"
+      },
+      "flagged": [
+        "effective_date",
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2009-11-06",
+        "jurisdiction": "Delaware",
+        "term": "3 years after the date hereof",
+        "party": "HID Global Corporation; LASERCARD CORPORATION"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Delaware",
+        "term": "3 years",
+        "party": "HID Global Corporation; LASERCARD CORPORATION"
+      },
+      "flagged": [
+        "effective_date",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2001-05-xx",
+        "jurisdiction": "Washington",
+        "term": "",
+        "party": "Corus Pharma, Inc.; A. Bruce Montgomery, M.D."
+      },
+      "unconstrained": {
+        "effective_date": "May , 2001",
+        "jurisdiction": "Washington",
+        "term": "ongoing",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2005-02-16",
+        "jurisdiction": "",
+        "term": "2 years",
+        "party": "Jeffrey L. Levine"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "not provided",
+        "term": "2 years",
+        "party": "Omni National Bank; Jeffrey L. Levine"
+      },
+      "flagged": [
+        "effective_date",
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2014-11-26",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "E2open, Inc.; Insight Venture Partners, LLC"
+      },
+      "unconstrained": {
+        "effective_date": "November 26, 2014",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "E2open, Inc.; Insight Venture Partners, LLC"
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "1999-03-16",
+        "jurisdiction": "Oregon",
+        "term": "",
+        "party": "ACUMED, INC.; MEDEX SURGICAL"
+      },
+      "unconstrained": {
+        "effective_date": "1999-03-16",
+        "jurisdiction": "Oregon",
+        "term": "indefinitely",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2008-07-02",
+        "jurisdiction": "Delaware",
+        "term": "",
+        "party": "THE BANK OF TOKYO-MITSUBISHI UFJ, LTD.; UNIONBANCAL CORPORATION"
+      },
+      "unconstrained": {
+        "effective_date": "2008-07-02",
+        "jurisdiction": "Delaware",
+        "term": "not specified",
+        "party": ""
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-06-11",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "Lightwave Logic, Inc.; Ronald A. Bucchi"
+      },
+      "unconstrained": {
+        "effective_date": "2012-06-11",
+        "jurisdiction": "Delaware",
+        "term": "not specified",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2007-03-04",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "Webex Communications, Inc.; Cisco Systems, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "2007-03-04",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "Webex Communications, Inc.; Cisco Systems, Inc."
+      },
+      "flagged": []
+    },
+    {
+      "constrained": {
+        "effective_date": "2007-04-30",
+        "jurisdiction": "Massachusetts",
+        "term": "",
+        "party": "Accurel Systems International Corporation; Implant Sciences Corporation; Evans Analytical Group LLC"
+      },
+      "unconstrained": {
+        "effective_date": "2007-04-30",
+        "jurisdiction": "Massachusetts",
+        "term": "unspecified",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2011-10-25",
+        "jurisdiction": "",
+        "term": "2 years",
+        "party": "Life Technologies Corporation; ; any affiliates, subsidiaries, and merged (predecessor) entities; ; Bernd Brust"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "not provided",
+        "term": "not provided",
+        "party": "Life Technologies Corporation; any affiliates, subsidiaries, and merged (predecessor) entities collectively as Company; Bernd Brust as Employee"
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-09-20",
+        "jurisdiction": "",
+        "term": "",
+        "party": "Contran Corporation; Precision Castparts Corp."
+      },
+      "unconstrained": {
+        "effective_date": "2012-10-15",
+        "jurisdiction": "",
+        "term": "ongoing",
+        "party": "Contran Corporation; Precision Castparts Corp."
+      },
+      "flagged": [
+        "effective_date",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2016-03-15",
+        "jurisdiction": "Delaware",
+        "term": "",
+        "party": "Orchestra-Pr\u00e9maman, S.A.; Destination Maternity Corporation"
+      },
+      "unconstrained": {
+        "effective_date": "March 15, 2016",
+        "jurisdiction": "Delaware",
+        "term": "\"until January 1, 2017\"",
+        "party": "\"Orchestra-Pr\u00e9maman, S.A.\"; \"Destination Maternity Corporation\""
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2005-09-29",
+        "jurisdiction": "Illinois",
+        "term": "",
+        "party": "Paul B. Mulhollem; Archer-Daniels-Midland Company"
+      },
+      "unconstrained": {
+        "effective_date": "2005-09-29",
+        "jurisdiction": "Illinois",
+        "term": "2 years",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2005-05-04",
+        "jurisdiction": "Idaho",
+        "term": "",
+        "party": "Silver Valley Capital; Sterling Mining Company; Kimberly Gold Mines, Inc.; Shoshone Silver Mining Company; Michael L. Mooney"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Idaho",
+        "term": "not provided",
+        "party": "Silver Valley Capital; Sterling Mining Company; Kimberly Gold Mines, Inc.; Shoshone Silver Mining Company; Michael L. Mooney"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2007-08-14",
+        "jurisdiction": "Washington",
+        "term": "2 years",
+        "party": "PhotoWorks, Inc; American Greetings Corporation"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Washington",
+        "term": "2 years",
+        "party": "PhotoWorks, Inc; American Greetings Corporation"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2016-05-03",
+        "jurisdiction": "New York",
+        "term": "Not specified",
+        "party": "Wizard World, Inc.; John D. Maatta"
+      },
+      "unconstrained": {
+        "effective_date": "2016-05-03",
+        "jurisdiction": "New York",
+        "term": "2 years",
+        "party": "Wizard World, Inc.; John D. Maatta"
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2008-08-01",
+        "jurisdiction": "New York",
+        "term": "Not specified in the agreement",
+        "party": "Omrix Biopharmaceuticals, Inc.; Ethicon, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "1st day of August, 2008",
+        "jurisdiction": "New York",
+        "term": "2 years",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2006-01-01",
+        "jurisdiction": "California",
+        "term": "12 months",
+        "party": "First Bank of Beverly Hills; Joseph W. Kiley, III"
+      },
+      "unconstrained": {
+        "effective_date": "January 1, 2006",
+        "jurisdiction": "California",
+        "term": "12 months",
+        "party": ""
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-03-16",
+        "jurisdiction": "Utah",
+        "term": "",
+        "party": "Galil Medical, Inc.; Perseon Corporation"
+      },
+      "unconstrained": {
+        "effective_date": "2015-03-16",
+        "jurisdiction": "Utah",
+        "term": "unspecified",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2012-07-05",
+        "jurisdiction": "Delaware",
+        "term": "3 years from the date hereof",
+        "party": "Williams Controls, Inc.; Curtiss-Wright Controls, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "July 5, 2012",
+        "jurisdiction": "Delaware",
+        "term": "3 years",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-12-08",
+        "jurisdiction": "Washington",
+        "term": "1 year from the date of this Non-Disclosure Agreement",
+        "party": "Anchor Bancorp; Varonica S. Ragan; Joel S. Lawson IV"
+      },
+      "unconstrained": {
+        "effective_date": "December 8, 2015",
+        "jurisdiction": "Washington",
+        "term": "1 year",
+        "party": "Anchor Bancorp; Varonica S. Ragan; Joel S. Lawson IV"
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2005-02-24",
+        "jurisdiction": "Virginia",
+        "term": "1 year immediately following the termination of such employment, whether voluntary or involuntary",
+        "party": "Mobile Satellite Ventures; Alexander H. Good"
+      },
+      "unconstrained": {
+        "effective_date": "2005-02-24",
+        "jurisdiction": "Virginia",
+        "term": "1 year",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2006-12-19",
+        "jurisdiction": "New York",
+        "term": "",
+        "party": "MapInfo Corporation; Pitney Bowes Inc."
+      },
+      "unconstrained": {
+        "effective_date": "2006-12-19",
+        "jurisdiction": "New York",
+        "term": "18 months",
+        "party": "MapInfo Corporation; Pitney Bowes Inc."
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2010-07-13",
+        "jurisdiction": "New York",
+        "term": "24 months",
+        "party": "TPG Capital, L.P.; Axcan Pharma Inc.; Eurand N.V."
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "New York",
+        "term": "24 months",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2010-01-01",
+        "jurisdiction": "",
+        "term": "10 years following the termination of the IP AGREEMENT",
+        "party": "Motorola, Inc.; Iridium Satellite LLC"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "not provided",
+        "term": "10 years",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2008-01-01",
+        "jurisdiction": "California",
+        "term": "not specified",
+        "party": "GigOptix LLC; Avi Katz"
+      },
+      "unconstrained": {
+        "effective_date": "2008-01-01",
+        "jurisdiction": "California",
+        "term": "12 months",
+        "party": "GigOptix LLC; Avi Katz"
+      },
+      "flagged": [
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2017-10-02",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "Potbelly Corporation; Ancora Advisors, LLC"
+      },
+      "unconstrained": {
+        "effective_date": "October 2, 2017",
+        "jurisdiction": "Delaware",
+        "term": "2 years",
+        "party": "Potbelly Corporation; Ancora Advisors, LLC; Fred DiSanto; James Chadwick; Brian Hopkins; Joseph Boehm"
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": "",
+        "party": "The Schooner Group, LLC"
+      },
+      "unconstrained": {
+        "effective_date": "",
+        "jurisdiction": "",
+        "term": "",
+        "party": "Ideal Restaurant Group, Inc.; The Schooner Group, LLC"
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2011-03-29",
+        "jurisdiction": "Texas",
+        "term": "2 years",
+        "party": "Stephen M. Mattessich; Newgistics, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "March 29, 2011",
+        "jurisdiction": "Texas",
+        "term": "2 years",
+        "party": ""
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2011-05-26",
+        "jurisdiction": "California",
+        "term": "Merger Agreement is not specified in terms of duration but the Merger will occur after execution.",
+        "party": "Skyworks Solutions, Inc.; Richard K. Williams"
+      },
+      "unconstrained": {
+        "effective_date": "May 26, 2011",
+        "jurisdiction": "California",
+        "term": "perpetual",
+        "party": ""
+      },
+      "flagged": [
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2006-09-01",
+        "jurisdiction": "",
+        "term": "",
+        "party": "MICROSOFT CORPORATION; Digital River, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "not provided",
+        "term": "5 years",
+        "party": "MICROSOFT CORPORATION; Digital River, Inc."
+      },
+      "flagged": [
+        "effective_date",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-04-02",
+        "jurisdiction": "Delaware",
+        "term": "3 years",
+        "party": "Alan S. Korman; Columbus McKinnon Corporation"
+      },
+      "unconstrained": {
+        "effective_date": "April 2, 2015",
+        "jurisdiction": "Delaware",
+        "term": "3 years",
+        "party": "Columbus McKinnon Corporation; Magnetek, Inc."
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2017-07-21",
+        "jurisdiction": "Washington",
+        "term": "5 years after we receive it",
+        "party": "MICROSOFT CORPORATION; Adaptive Biotechnologies"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Washington",
+        "term": "5 years",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2011-01-18",
+        "jurisdiction": "New York",
+        "term": "2 years",
+        "party": "ORTHOVITA, INC.; Stryker Corporation"
+      },
+      "unconstrained": {
+        "effective_date": "January 18, 2011",
+        "jurisdiction": "New York",
+        "term": "2 years",
+        "party": ""
+      },
+      "flagged": [
+        "party"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2023-04-17",
+        "jurisdiction": "Washington",
+        "term": "1 year after the Effective Date",
+        "party": "Alder BioPharmaceuticals, Inc.; H. Lundbeck A/S"
+      },
+      "unconstrained": {
+        "effective_date": "not specified",
+        "jurisdiction": "Washington",
+        "term": "one (1) year",
+        "party": ""
+      },
+      "flagged": [
+        "effective_date",
+        "party",
+        "term"
+      ]
+    },
+    {
+      "constrained": {
+        "effective_date": "2015-07-21",
+        "jurisdiction": "Illinois",
+        "term": "",
+        "party": "US Foods, Inc.; Employee"
+      },
+      "unconstrained": {
+        "effective_date": "not provided",
+        "jurisdiction": "Illinois",
+        "term": "not provided",
+        "party": "US Foods, Inc.; Employee"
+      },
+      "flagged": [
+        "effective_date"
+      ]
+    }
+  ]
+}

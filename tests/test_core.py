@@ -54,7 +54,10 @@ def test_disagreement_scores():
     assert 0.5 < near < far < huge == 1.0
     s = FieldSpec("s", "string")
     assert field_disagreement(s, "Acme Corp", "acme corp") == 0.0
-    assert 0.0 < field_disagreement(s, "Acme Corp", "Acme Corporation") < 1.0
+    # "Corp" == "Corporation" now (legal-suffix rule); partial overlap needs
+    # a genuinely different token
+    assert field_disagreement(s, "Acme Corp", "Acme Corporation") == 0.0
+    assert 0.0 < field_disagreement(s, "Acme Corp", "Acme Holdings Corp") < 1.0
 
 
 def test_disagreement_dates_graded():
