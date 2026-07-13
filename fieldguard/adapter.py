@@ -39,7 +39,8 @@ def schema_from_json(path: str | pathlib.Path) -> Schema:
         FieldSpec(f["name"], f["type"],
                   enum=tuple(f["enum"]) if f.get("enum") else None,
                   description=f.get("description", ""),
-                  required=f.get("required", True))
+                  required=f.get("required", True),
+                  multi=f.get("multi", False))
         for f in spec["fields"]))
 
 
@@ -51,12 +52,18 @@ def load_jsonl(path: str | pathlib.Path, schema: Schema | None = None,
         if not line:
             continue
         rec = json.loads(line)
-        examples.append(Example(document=rec["document"],
-                                gold={k: str(v) for k, v in rec["gold"].items()}))
+        if not examples:
+            first_raw = rec["gold"]  # raw types drive schema inference
+        examples.append(Example(
+            document=rec["document"],
+            gold={k: "; ".join(str(x) for x in v) if isinstance(v, list) else str(v)
+                  for k, v in rec["gold"].items()}))
     if not examples:
         raise ValueError(f"no records in {path}")
     if schema is None:
-        first = examples[0].gold
-        schema = Schema(name, tuple(FieldSpec(k, _infer_type(v))
-                                    for k, v in first.items()))
+        schema = Schema(name, tuple(
+            FieldSpec(k, _infer_type(str(v[0])) if isinstance(v, list) and v
+                      else _infer_type(str(v)),
+                      multi=isinstance(v, list))
+            for k, v in first_raw.items()))
     return examples, schema

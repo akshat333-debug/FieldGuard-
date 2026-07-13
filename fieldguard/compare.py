@@ -62,6 +62,12 @@ def normalize(spec: FieldSpec, value: str) -> str:
     return " ".join(tokens)
 
 
+def normalize_set(spec: FieldSpec, value: str) -> frozenset[str]:
+    """Multi-valued fields: '; '-separated parts, each scalar-normalized."""
+    return frozenset(n for part in value.split(";")
+                     if (n := normalize(spec, part)))
+
+
 def _token_jaccard_distance(a: str, b: str) -> float:
     ta, tb = set(a.split()), set(b.split())
     if not ta and not tb:
@@ -76,6 +82,13 @@ def field_disagreement(spec: FieldSpec, a: str, b: str) -> float:
     default threshold (back-compat) while thresholds in (0.5, 1.0] become a real
     knob: skip near-agreements (rounding, off-by-a-day), keep gross corruption.
     """
+    if spec.multi:
+        sa, sb = normalize_set(spec, a), normalize_set(spec, b)
+        if sa == sb:
+            return 0.0
+        if not sa or not sb:
+            return 1.0
+        return 1.0 - len(sa & sb) / len(sa | sb)
     na, nb = normalize(spec, a), normalize(spec, b)
     if na == nb:
         return 0.0

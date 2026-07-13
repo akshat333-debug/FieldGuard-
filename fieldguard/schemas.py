@@ -9,10 +9,11 @@ FIELD_TYPES = {"string", "number", "integer", "date", "enum"}
 @dataclass(frozen=True)
 class FieldSpec:
     name: str
-    type: str  # one of FIELD_TYPES
+    type: str  # one of FIELD_TYPES (element type when multi)
     enum: tuple[str, ...] | None = None
     description: str = ""
     required: bool = True  # optional fields may be legitimately absent
+    multi: bool = False    # set-valued; canonical string form is '; '-joined
 
     def __post_init__(self) -> None:
         if self.type not in FIELD_TYPES:
@@ -43,6 +44,8 @@ class Schema:
                 p["format"] = "date"
             if f.enum:
                 p["enum"] = list(f.enum)
+            if f.multi:
+                p = {"type": "array", "items": p}
             if f.description:
                 p["description"] = f.description
             props[f.name] = p

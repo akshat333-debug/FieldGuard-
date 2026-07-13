@@ -22,11 +22,14 @@ def main() -> None:
     ap.add_argument("--thresholds", default="0.1,0.5,0.9")
     ap.add_argument("--data", default=None,
                     help="external JSONL dataset (adapter shape); overrides synthetic")
+    ap.add_argument("--schema", default=None,
+                    help="explicit schema JSON (descriptions/optional); else inferred")
     args = ap.parse_args()
 
     if args.data:
-        from fieldguard.adapter import load_jsonl
-        examples, schema = load_jsonl(args.data)
+        from fieldguard.adapter import load_jsonl, schema_from_json
+        explicit = schema_from_json(args.schema) if args.schema else None
+        examples, schema = load_jsonl(args.data, schema=explicit)
         examples = examples[:args.n]
         docs = [ex.document for ex in examples]
     else:

@@ -67,6 +67,9 @@ def main() -> None:
             # absent fields are legitimate (schema marks them optional):
             # gold "" means "the document does not state it"
             gold = {k: gold.get(k, "") for k in FIELDS}
+            # party is multi-valued: every party= entry, as a list
+            gold["party"] = [kv.split("=", 1)[1].replace("_", " ")
+                             for kv in exp.split() if kv.startswith("party=")]
             text = row[5]
             if len(text) > HEAD + TAIL:
                 mid = clause_windows(text[HEAD:len(text) - TAIL])

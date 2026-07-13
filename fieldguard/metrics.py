@@ -3,12 +3,14 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from .compare import normalize
+from .compare import normalize, normalize_set
 from .schemas import Schema
 
 
 def _eq(schema: Schema, name: str, a: str, b: str) -> bool:
     spec = schema.field(name)
+    if spec.multi:
+        return normalize_set(spec, a) == normalize_set(spec, b)
     return normalize(spec, a) == normalize(spec, b)
 
 

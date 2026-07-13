@@ -20,6 +20,7 @@ def _field_lines(schema: Schema) -> str:
     # answer NONE.
     return "\n".join(f"- {f.name} ({f.type})"
                      + (f" one of {list(f.enum)}" if f.enum else "")
+                     + (" [list ALL values, separated by '; ']" if f.multi else "")
                      + (f" — {f.description}" if f.description else "")
                      for f in schema.fields)
 
@@ -45,7 +46,13 @@ def extract_constrained(backend: Backend, document: str, schema: Schema) -> dict
             obj = json.loads(_strip_fences(raw))  # one repair attempt
         except json.JSONDecodeError:
             obj = {}  # unparseable output -> all fields empty -> auto-flagged
-    return {f.name: str(obj.get(f.name, "")) for f in schema.fields}
+
+    def as_str(v) -> str:
+        if isinstance(v, list):  # multi fields arrive as JSON arrays
+            return "; ".join(str(x) for x in v)
+        return str(v)
+
+    return {f.name: as_str(obj.get(f.name, "")) for f in schema.fields}
 
 
 # strip leading bullets/quotes and bold/backtick markers; keep '_' (legit in names)

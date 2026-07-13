@@ -165,3 +165,30 @@ def test_optional_fields_absence_semantics():
     from fieldguard.extract import _field_lines
     assert "NONE" not in _field_lines(sch)
     assert sch.to_json_schema()["required"] == ["total"]
+
+
+def test_multi_valued_fields():
+    from fieldguard.compare import normalize_set
+    from fieldguard.metrics import _eq
+    party = FieldSpec("party", "string", multi=True)
+    sch = Schema("s", (party,))
+    # order- and punctuation-insensitive set equality
+    assert (normalize_set(party, "Acme Corp; Beta LLC")
+            == normalize_set(party, "beta llc ; ACME CORP."))
+    assert _eq(sch, "party", "A Inc; B Ltd", "B Ltd; A Inc")
+    # graded set disagreement: shared element scores between 0 and 1
+    half = field_disagreement(party, "Acme Corp; Beta LLC", "Acme Corp")
+    assert 0.0 < half < 1.0
+    assert field_disagreement(party, "Acme Corp", "Gamma GmbH") == 1.0
+    # constrained path joins JSON arrays
+    class ArrayBackend(MockBackend):
+        def generate(self, prompt, *, force_json=False):
+            if force_json:
+                return '{"party": ["Acme Corp", "Beta LLC"]}'
+            return "party: Acme Corp; Beta LLC"
+    values = extract_constrained(ArrayBackend(), "doc", sch)
+    assert values["party"] == "Acme Corp; Beta LLC"
+    # prompt carries the list marker; JSON schema is an array
+    from fieldguard.extract import _field_lines
+    assert "list ALL values" in _field_lines(sch)
+    assert sch.to_json_schema()["properties"]["party"]["type"] == "array"
