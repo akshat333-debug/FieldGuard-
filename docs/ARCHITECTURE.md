@@ -31,10 +31,14 @@ final record (+ metrics.report() when gold labels exist)
 - **schemas.FieldSpec** — `name`, `type` ∈ {string, number, integer, date, enum}, optional `enum`
   values, optional `description` (flows into BOTH extraction prompts and the arbiter query —
   worth +3 points final accuracy on SROIE via entity disambiguation, see BUILDLOG 11), and
-  `required` (default True). Optional fields may be legitimately absent: prompts say "answer
-  NONE if not stated", absence phrases ("none", "not provided", …) normalize to empty, and
-  both-paths-absent counts as agreement instead of tripping the empty auto-flag.
-  `Schema.to_json_schema()` renders the prompt-side JSON Schema (required list honors it).
+  `required` (default True), and `multi` (set-valued; canonical string form is `; `-joined).
+  Optional fields may be legitimately absent, expressed **structurally**: the shared
+  extraction prompts carry NO "answer NONE" marker (that instruction made both paths lazily
+  deny present values — BUILDLOG 21; only the ARBITER may be told it), absence phrases
+  ("none", "not provided", …) normalize to empty, and both-paths-absent counts as agreement
+  instead of tripping the empty auto-flag.
+  `Schema.to_json_schema()` renders the prompt-side JSON Schema (required list honors
+  `required`; `multi` fields render as arrays).
 - **backends.Backend** — single method `generate(prompt, force_json=False) -> str`, plus `.calls`
   counter (cost accounting). Implementations:
   - `MockBackend` — offline. Reads `field: value` lines from the DOCUMENT block of the prompt
@@ -57,12 +61,23 @@ final record (+ metrics.report() when gold labels exist)
   so every typed mismatch clears the 0.5 default while thresholds above it skip
   near-agreements. Empty required field on either path auto-flags at 1.0 (catches the
   correlated both-paths-empty failure disagreement can't see).
-- **verify** — for each flagged field, one targeted query ("value only"). Final value =
+  `multi` fields compare as SETS (`normalize_set` over `; `-separated parts, each scalar-
+  normalized); disagreement = 1 − set-Jaccard. String normalization also equates
+  tail-position corporate designators (Incorporated≡Inc, L.L.C.≡LLC) and spelled-out
+  small numbers (two≡2) — each rule added in response to an observed false positive.
+- **verify** — for each flagged field, one targeted query ("value only"). The arbiter is
+  **blind**: it never sees the disagreeing candidates (a candidate-aware judge parrots the
+  refusal candidate and manufactures false majorities — BUILDLOG 19). Final value =
   majority under normalized equality among {constrained, unconstrained, arbiter};
-  ties → arbiter wins, confidence marked low.
-- **metrics** — field accuracy (final vs gold), corruption rate (constrained wrong ∧
-  unconstrained right), flag precision/recall vs actually-corrupted set, calls used vs
-  calls a full re-verification would need.
+  a three-way split is **split-kept** — keep the CONSTRAINED (production) value and mark it
+  low-confidence, because trusting a lone arbiter measurably damaged accuracy (BUILDLOG 17).
+  Equality here must match compare/metrics equality: `_key()` uses `normalize_set` for
+  `multi` fields, since scalar comparison is order-sensitive (audit, BUILDLOG 26).
+- **metrics** — field accuracy (final vs gold; set equality for `multi`), corruption rate
+  (constrained wrong ∧ unconstrained right), flag precision/recall vs actually-corrupted set
+  in BOTH macro (per-doc mean) and micro (corpus-pooled) form — they differ materially and
+  micro has measured *lower* on these benchmarks — plus calls used vs calls a full
+  re-verification would need.
 - **data** — deterministic synthetic invoices (seeded), fields: invoice_id, vendor,
   total, date, currency. Gold labels included.
 - **adapter** — external datasets as JSONL (`{"document":…, "gold":{…}}`); schema inferred
