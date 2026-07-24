@@ -38,6 +38,20 @@ def bootstrap_ci(per_doc: list[float], n_boot: int = 10_000,
     return mean, means[int(0.025 * n_boot)], means[int(0.975 * n_boot)]
 
 
+def flag_pr(rep: dict) -> str:
+    """macro (per-doc mean) vs micro (corpus-pooled) flag precision/recall.
+
+    Micro fields are absent from results recorded before they were
+    instrumented; show a dash rather than inventing a number.
+    """
+    macro = f"{rep['flag_precision']:.2f}/{rep['flag_recall']:.2f}"
+    if not rep.get("flag_flagged"):
+        return f"{macro} / --"
+    micro_p = rep["flag_tp"] / rep["flag_flagged"]
+    micro_r = rep["flag_tp"] / rep["flag_corrupted"] if rep["flag_corrupted"] else 1.0
+    return f"{macro} / {micro_p:.2f}/{micro_r:.2f}"
+
+
 def main() -> None:
     print(f"{'cell':28} {'final acc':>9}   95% CI (doc bootstrap)")
     for stem, schema_stem, label in CELLS:
@@ -58,6 +72,7 @@ def main() -> None:
                      if not normalize(f, fin.get(f.name, "")))
         warn = f"   [!] {absent}/{n_fields} answers absent" if absent > n_fields // 2 else ""
         print(f"{label:28} {mean:>9.3f}   [{lo:.3f}, {hi:.3f}]{warn}")
+        print(f"{'':28} {'flag P/R macro / micro:':>9} {flag_pr(res['report'])}")
 
 
 if __name__ == "__main__":
