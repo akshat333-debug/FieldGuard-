@@ -6,8 +6,9 @@ Line format (ExtractBench-shaped; adapt upstream files to this once):
 Schema is inferred from the first record's gold types unless provided:
     values parseable as numbers -> "number", ISO dates -> "date", else "string".
 
-# ponytail: inference covers flat schemas only; nested/list fields need a real
-# per-dataset adapter — write one when a real benchmark lands.
+List-valued gold infers `multi=True` (set-valued field). # ponytail: NESTED
+objects are still out of scope — inference is one level deep; write a
+per-dataset adapter if a benchmark needs nesting.
 """
 from __future__ import annotations
 

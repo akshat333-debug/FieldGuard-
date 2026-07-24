@@ -66,8 +66,8 @@ class MockBackend:
 class OpenAICompatBackend:
     """Minimal client for any /v1/chat/completions endpoint (OpenAI, Ollama, vLLM).
 
-    # ponytail: sync urllib, no retries/streaming; add a real client lib only if
-    # rate limits or streaming become a need.
+    # ponytail: sync urllib, one timeout retry, no streaming/backoff; add a real
+    # client lib only if rate limits or streaming become a need.
     """
 
     def __init__(self, base_url: str, model: str, api_key: str | None = None,

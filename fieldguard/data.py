@@ -1,7 +1,7 @@
 """Deterministic synthetic invoice dataset with gold labels (offline development).
 
-# ponytail: synthetic invoices only; real-benchmark adapters (ExtractBench etc.)
-# plug in later — pipeline only needs (documents, gold, schema).
+Synthetic data is for offline tests/demo only. Real benchmarks (SROIE,
+Kleister-NDA) load through `adapter.load_jsonl` — see `examples/convert_*.py`.
 """
 from __future__ import annotations
 
