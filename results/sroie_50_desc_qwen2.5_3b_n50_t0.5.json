@@ -2,7 +2,7 @@
   "model": "qwen2.5:3b",
   "n": 50,
   "threshold": 0.5,
-  "elapsed_sec": 389.9,
+  "elapsed_sec": 417.7,
   "report": {
     "docs": 50,
     "fields_total": 200,
@@ -14,6 +14,9 @@
     "llm_calls": 117,
     "full_verify_calls": 300,
     "low_confidence": 5,
+    "flag_tp": 8,
+    "flag_flagged": 17,
+    "flag_corrupted": 11,
     "notes": []
   },
   "finals": [

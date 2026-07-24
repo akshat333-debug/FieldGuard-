@@ -448,6 +448,34 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   macro lets easy documents carry equal weight to hard ones. Paper now reports
   which averaging each table uses and claims neither as canonical. Recorded
   because the wrong prediction was already written down.
+## Iteration 27 — paper draft, related work, patent reality check
+- `docs/PAPER.md`: full prose draft (abstract -> conclusion), written from the
+  outline then **verified line-by-line against `results/`**, which caught three
+  errors in the draft itself: (1) Kleister tinyllama savings sign — it SAVES
+  59% via the absent artifact, not costs 59%; (2) "near-total low-confidence
+  when broken" is true on SROIE (200/200) but false on Kleister (4/249, same
+  artifact); (3) the micro-vs-macro prediction above.
+- **Related-work pass with real citation checks — and a hit.** PromptPort
+  (arXiv:2601.06151, 2026) already does per-field confidence + field-level
+  override + conservative safe-override for structured extraction. Three of our
+  design points have direct precedent. Recorded as precedent, not novelty; the
+  surviving claim is narrower and specifically about the SIGNAL: the constraint
+  manipulation itself (no trained verifier — PromptPort trains a DistilBERT —
+  and no second model).
+- **Patent reality check.** Granted adjacent art exists: US12032919B1
+  (post-calibration of LLM confidence scoring for extracting data points from
+  documents) and US12353469B1 (verification and citation for LM outputs). The
+  patent path is narrower than the earlier optimistic read; any filing needs a
+  professional freedom-to-operate search, not a literature search.
+- Cited datasets properly (Huang et al. ICDAR 2019 SROIE; Stanisławek et al.
+  arXiv:2105.05796 Kleister) and added a checked references section.
+
+## Iteration 28 — party figure; generator robustness
+- Third tradeoff figure (`docs/tradeoff_kleister_party.svg`) for the 4-field
+  variant. `examples/figure.py` now skips models a benchmark did not run
+  (party has no tinyllama cell) instead of crashing on a missing file; test
+  pinned. 40 tests.
+
 - Audit self-correction: the audit first claimed the README had no party table.
   It did (§"With the multi-valued `party` field") — the initial grep matched
   only `##` headers and missed the `###` subsection, and a duplicate section
