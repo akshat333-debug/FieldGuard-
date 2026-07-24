@@ -30,6 +30,10 @@ BENCHMARKS = (  # (results prefix, n, title, x_max, x_step, out file)
      "tradeoff_sroie.svg"),
     ("kleister_nda_desc", 83, "Kleister-NDA contracts (83 docs / 249 fields)",
      460, 100, "tradeoff_kleister.svg"),
+    # 4-field variant incl. the set-valued `party`; tinyllama not run here
+    ("kleister_nda_party_desc", 83,
+     "Kleister-NDA + party (83 docs / 332 fields)", 520, 100,
+     "tradeoff_kleister_party.svg"),
 )
 
 
@@ -70,6 +74,8 @@ def render(prefix: str, n: int, title: str, x_max: int, x_step: int,
     points = []
     for tag, name, color, side in MODELS:
         path = ROOT / "results" / f"{prefix}_{tag}_n{n}_t0.5.json"
+        if not path.exists():  # a benchmark need not cover every model
+            continue
         rep = json.loads(path.read_text())["report"]
         points.append((rep, name, color, side))
         full_cost = rep["full_verify_calls"]

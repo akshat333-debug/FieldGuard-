@@ -146,6 +146,8 @@ and the split-kept resolution rule (an uncorroborated flag keeps the
 constrained value instead of trusting a lone arbiter answer — arbiter-wins was
 measurably damaging accuracy; BUILDLOG iteration 17).
 
+![Accuracy vs verification cost on Kleister-NDA + party](docs/tradeoff_kleister_party.svg)
+
 Regenerate: `python3 -m examples.sweep --data datasets/sroie_15.jsonl --model <m> --n 15
 --thresholds 0.3,0.5,0.6,0.75,0.9` then `python3 -m examples.figure`.
 

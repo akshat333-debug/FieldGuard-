@@ -53,6 +53,21 @@ def test_sroie_box_text_keeps_commas():
         assert box_to_text(p) == "NO.53 55,57 & 59, JALAN SAGU 18,\nTOTAL RM 9.00"
 
 
+def test_figure_skips_models_without_results(tmp_path, monkeypatch):
+    """A benchmark need not cover every model (party has no tinyllama run)."""
+    import examples.figure as fig
+
+    results = tmp_path / "results"
+    results.mkdir()
+    (tmp_path / "docs").mkdir()
+    (results / "bench_qwen2.5_3b_n2_t0.5.json").write_text(json.dumps(
+        {"report": {"final_acc": 0.8, "llm_calls": 10, "full_verify_calls": 20}}))
+    monkeypatch.setattr(fig, "ROOT", tmp_path)
+
+    fig.render("bench", 2, "t", 30, 10, "out.svg")   # must not raise
+    assert (tmp_path / "docs" / "out.svg").exists()
+
+
 def test_schema_from_json_descriptions_flow_to_prompts(tmp_path):
     from fieldguard.adapter import schema_from_json
     from fieldguard.extract import _field_lines
