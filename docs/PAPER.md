@@ -127,9 +127,11 @@ defaults — never by asking the shared prompts to answer "NONE" (§5.3).
 
 ## 3. Experimental setup
 
-**Benchmarks.** SROIE (ICDAR 2019 scanned receipts; 50 docs × 4 fields;
+**Benchmarks.** SROIE (Huang et al., ICDAR 2019 Robust Reading Challenge on
+Scanned Receipts OCR and Information Extraction; 50 docs × 4 fields;
 company/date/address/total; gold-noise ceiling ≈ 0.92, as SROIE gold sometimes
-disagrees with its own OCR text). Kleister-NDA (83 real contracts;
+disagrees with its own OCR text). Kleister-NDA (Stanisławek et al., 2021,
+arXiv:2105.05796 — key information extraction from long documents; 83 contracts;
 effective_date/jurisdiction/term, all optional, 75/249 gold fields legitimately
 absent; a fourth set-valued `party` field in the 4-field variant). Long
 contracts are truncated by keyword windows around the governing-law and term
@@ -279,25 +281,99 @@ python3 -m pytest tests/ -q            # 39 tests
 
 Zero runtime dependencies; figures are hand-emitted SVG.
 
-## 8. Related work (to expand)
+## 8. Related work
 
-- Constrained/grammar decoding: JSON mode, Outlines, Guidance, XGrammar —
-  structural guarantees, no value guarantees.
-- Distribution-preserving decoding: GAD/ASAp, BoostCD, draft-conditioned
-  decoding — correct the *distribution*, evaluated on likelihood rather than
-  extraction accuracy, and require decoder access.
-- Format-degradation measurement: "The Format Tax," alignment-tax analyses —
-  diagnose the damage; no deployable per-field mitigation.
-- Extraction benchmarks: JSONSchemaBench (schema coverage/efficiency),
-  ExtractBench (aggregate accuracy) — document-level scoring, no repair.
-- Selective prediction / abstention and LLM-as-judge: our arbiter is
-  deliberately *not* a judge (§5.2).
+**Constrained / grammar-guided decoding.** Willard and Louf (2023,
+arXiv:2307.09702) formalize guided generation as FSM state transitions, the
+basis of Outlines; Guidance, XGrammar, llama.cpp and the OpenAI/Gemini JSON
+modes implement variants. JSONSchemaBench (Geng et al., 2025,
+arXiv:2501.10868) evaluates six such frameworks over 10K real schemas. All
+target *structural* validity; none certify values.
 
-**Positioning.** Prior work measures the damage or corrects the decoder. We
-predict corruption at the individual field level, black-box, and spend
-verification only where the prediction fires.
+**Distribution-preserving decoding.** Grammar-Aligned Decoding with ASAp (Park
+et al., NeurIPS 2024, arXiv:2405.21047) shows grammar-constrained decoding
+distorts the model's distribution and corrects it to match the constrained
+conditional; BoostCD (arXiv:2506.14901) combines constrained and unconstrained
+decoding by boosting; draft-conditioned decoding conditions on a free-form
+draft. These are the closest in *spirit* — BoostCD in particular also exploits
+an unconstrained signal — but they operate inside the decoder (logits,
+resampling), optimize likelihood rather than extraction correctness, and repair
+generation uniformly rather than identifying which fields need attention.
+FieldGuard needs no decoder access and produces a per-field decision.
 
-## 9. Conclusion
+**Measuring the format tax.** "The Format Tax" (arXiv:2604.03616) separates
+prompt-level format requests from decoder-level constraints to locate the
+degradation; alignment-tax analyses of constrained reflection
+(arXiv:2604.06066) report similar effects. These diagnose; they do not
+mitigate per field.
+
+**Structured-extraction benchmarks.** ExtractBench (arXiv:2602.12247) and the
+Structured Output Benchmark (arXiv:2604.25359) score extraction quality at the
+document/aggregate level. We use benchmark *documents* (SROIE, Kleister) rather
+than competing with these leaderboards, and we report a repair, not a score.
+
+**Closest prior work — and an honest overlap.** PromptPort (arXiv:2601.06151,
+2026) is a reliability layer for cross-model structured extraction that
+provides **per-field confidence**, **field-level override** instead of
+instance-level rejection, and a **conservative safe-override policy**. Three of
+our design points therefore have direct precedent, and we do not claim them as
+novel. The differences are in the confidence *signal* and the scope:
+
+| | PromptPort | FieldGuard |
+|---|---|---|
+| confidence signal | trained lightweight verifier (DistilBERT) | second sample of the *same* model, constraint removed |
+| extra components | trained model + canonicalization | none (no training, no second model) |
+| framing | cross-model output reliability | isolates the *constraint* as the manipulated variable |
+| cost model | verifier runs per field | arbiter runs only on flagged fields |
+
+Our claim is narrower as a result: not "per-field confidence for structured
+extraction" (PromptPort has that), but that **the constraint manipulation
+itself is a sufficient confidence signal** — no verifier to train, no second
+model to host — and that framing it causally lets us say *which kind* of
+corruption is detectable (§6).
+
+**Selective prediction, abstention, LLM-as-judge.** Our arbiter is deliberately
+*not* a judge: §5.2 measures the judge formulation and shows it manufactures
+false majorities.
+
+**Patent landscape.** Granted patents already cover adjacent ground — e.g.
+US12032919B1 (post-calibration of LLM confidence scoring, applied to extracting
+data points from electronic documents with confidence scores) and US12353469B1
+(verification and citation for language-model outputs). Any filing must be
+scoped tightly to the dual-path signal and cleared by a professional
+patent-database search; the searches behind this section were literature
+searches, not a freedom-to-operate opinion.
+
+## 9. References
+
+Verified during the related-work pass; arXiv IDs checked, not merely recalled.
+
+- Willard, B. T., Louf, R. *Efficient Guided Generation for Large Language
+  Models.* arXiv:2307.09702 (2023). [Outlines / FSM-guided decoding]
+- Geng, S. et al. *JSONSchemaBench: A Rigorous Benchmark of Structured Outputs
+  for Language Models.* arXiv:2501.10868 (2025).
+- Park, K., Wang, J., Berg-Kirkpatrick, T. et al. *Grammar-Aligned Decoding.*
+  NeurIPS 2024, arXiv:2405.21047. [ASAp]
+- *Combining Constrained and Unconstrained Decoding via Boosting: BoostCD.*
+  arXiv:2506.14901.
+- *The Format Tax.* arXiv:2604.03616.
+- *From Hallucination to Structure Snowballing: The Alignment Tax of
+  Constrained Decoding in LLM Reflection.* arXiv:2604.06066.
+- *ExtractBench: A Benchmark and Evaluation Methodology for Complex Structured
+  Extraction.* arXiv:2602.12247.
+- *The Structured Output Benchmark.* arXiv:2604.25359.
+- *PromptPort: A Reliability Layer for Cross-Model Structured Extraction.*
+  arXiv:2601.06151 (2026). [closest prior work — §8]
+- Huang, Z., Chen, K., He, J., Bai, X., Karatzas, D., Lu, S., Jawahar, C. V.
+  *ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information
+  Extraction.* ICDAR 2019. [SROIE]
+- Stanisławek, T. et al. *Kleister: Key Information Extraction Datasets
+  Involving Long Documents with Complex Layouts.* arXiv:2105.05796 (2021).
+- US12032919B1, *Post-calibration of large language model confidence scoring
+  via combined techniques.*
+- US12353469B1, *Verification and citation for language model outputs.*
+
+## 10. Conclusion
 
 Forcing structure does not force truth. The value damage constrained decoding
 causes is detectable without decoder access, from a single extra unconstrained
