@@ -121,7 +121,7 @@ normalization, incl. corporate-suffix equivalence Incorporated≡Inc, L.L.C.≡L
 | constrained → final accuracy | 0.723 → 0.744 | 0.563 → 0.572 |
 | party exact-set correct | 60/83 | 54/83 |
 | LLM calls vs verify-everything | **-42%** | **-45%** |
-| 95% CI (final) | [0.696, 0.780] | [0.521, 0.620] |
+| 95% CI (final) | [0.699, 0.786] | [0.521, 0.620] |
 
 Run: `python3 -m examples.experiment --data datasets/kleister_nda_party.jsonl
 --schema datasets/kleister_nda_party.schema.json --model <m> --n 83`.

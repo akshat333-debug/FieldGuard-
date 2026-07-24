@@ -438,6 +438,16 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   test count, and a `Resolution.source` docstring value the code never emits.
   README party numbers refreshed to the post-fix run (final 0.738 -> 0.744,
   party exact-set 58 -> **60/83**).
+- **1.5b party re-run: unchanged** (0.563 -> 0.572, 274 calls, 54/83 party).
+  The bug required an arbiter to corroborate a path in a different element
+  order, which happened only on 3b in this corpus — so the fix moved one model
+  and not the other. Post-fix 3b CI [0.696, 0.780] -> [0.699, 0.786].
+- **Micro-vs-macro assumption falsified by measurement.** The audit predicted
+  micro-averaged flag precision would read *higher* than macro. On
+  Kleister+party 1.5b it reads LOWER (micro 0.130/0.933 vs macro 0.263/0.988):
+  macro lets easy documents carry equal weight to hard ones. Paper now reports
+  which averaging each table uses and claims neither as canonical. Recorded
+  because the wrong prediction was already written down.
 - Audit self-correction: the audit first claimed the README had no party table.
   It did (§"With the multi-valued `party` field") — the initial grep matched
   only `##` headers and missed the `###` subsection, and a duplicate section
