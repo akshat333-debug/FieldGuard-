@@ -44,9 +44,13 @@ def run(backend: Backend, documents: list[str], schema: Schema,
             corrupted = corrupted_fields(schema, dual.constrained,
                                          dual.unconstrained, g)
             corrupted_total += len(corrupted)
-            p, r = score_flags(corrupted, {f.field for f in flags})
+            flagged_names = {f.field for f in flags}
+            p, r = score_flags(corrupted, flagged_names)
             prec_sum += p
             rec_sum += r
+            report.flag_tp += len(flagged_names & corrupted)
+            report.flag_flagged += len(flagged_names)
+            report.flag_corrupted += len(corrupted)
 
     report.llm_calls = backend.calls
     # verify-everything baseline: same dual extract + one arbiter per field

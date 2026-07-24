@@ -51,6 +51,23 @@ def test_report_summary_renders():
     assert "final accuracy" in text and "saved" in text
 
 
+def test_micro_flag_metrics_pool_across_docs():
+    """Micro P/R pool fields corpus-wide; macro averages per doc (can differ)."""
+    from fieldguard.metrics import Report
+
+    backend, docs, gold, _ = _setup(n=20, rate=0.2)
+    _, report = run(backend, docs, INVOICE_SCHEMA, gold=gold)
+    assert report.flag_corrupted > 0
+    assert report.flag_tp == report.flag_corrupted          # perfect mock recall
+    assert report.flag_precision_micro == 1.0
+    assert report.flag_recall_micro == 1.0
+
+    # empty corpus -> vacuous 1.0, no ZeroDivisionError
+    blank = Report()
+    assert blank.flag_precision_micro == 1.0
+    assert blank.flag_recall_micro == 1.0
+
+
 def test_trace_collects_duals_and_flags():
     from fieldguard.backends import MockBackend
     from fieldguard.data import make_dataset

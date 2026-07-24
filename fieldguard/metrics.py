@@ -41,7 +41,21 @@ class Report:
     llm_calls: int = 0
     full_verify_calls: int = 0       # what verify-everything would have cost
     low_confidence: int = 0          # fields the system itself marked unreliable
+    # macro (per-doc mean) is what flag_precision/flag_recall above report; micro
+    # pools fields across the corpus. Macro punishes a clean doc with one stray
+    # flag at precision 0.0, so the two can differ materially — report both.
+    flag_tp: int = 0
+    flag_flagged: int = 0
+    flag_corrupted: int = 0
     notes: list[str] = field(default_factory=list)
+
+    @property
+    def flag_precision_micro(self) -> float:
+        return self.flag_tp / self.flag_flagged if self.flag_flagged else 1.0
+
+    @property
+    def flag_recall_micro(self) -> float:
+        return self.flag_tp / self.flag_corrupted if self.flag_corrupted else 1.0
 
     def summary(self) -> str:
         saved = self.full_verify_calls and (
@@ -51,7 +65,9 @@ class Report:
             f"constrained accuracy : {self.constrained_acc:.3f}\n"
             f"final accuracy       : {self.final_acc:.3f}\n"
             f"corruption rate      : {self.corruption_rate:.3f}\n"
-            f"flag precision/recall: {self.flag_precision:.3f} / {self.flag_recall:.3f}\n"
+            f"flag precision/recall: {self.flag_precision:.3f} / {self.flag_recall:.3f}"
+            f"  (micro {self.flag_precision_micro:.3f} / "
+            f"{self.flag_recall_micro:.3f})\n"
             f"LLM calls used       : {self.llm_calls} "
             f"(verify-everything baseline: {self.full_verify_calls}, "
             f"saved {saved:.0%})\n"
