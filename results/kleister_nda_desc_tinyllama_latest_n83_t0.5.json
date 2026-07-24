@@ -2,7 +2,7 @@
   "model": "tinyllama:latest",
   "n": 83,
   "threshold": 0.5,
-  "elapsed_sec": 820.7,
+  "elapsed_sec": 964.0,
   "report": {
     "docs": 83,
     "fields_total": 249,
@@ -14,6 +14,9 @@
     "llm_calls": 170,
     "full_verify_calls": 415,
     "low_confidence": 4,
+    "flag_tp": 0,
+    "flag_flagged": 4,
+    "flag_corrupted": 0,
     "notes": []
   },
   "finals": [

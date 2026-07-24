@@ -189,6 +189,34 @@ Accuracy separation between 3b and 1.5b is CI-disjoint on both benchmarks
 gold-absence share, and both-paths-absent counts as agreement. This is an
 artifact, detected by a shipped tripwire (§4.4), not a result.
 
+### 4.1a Flag precision: macro vs micro (report both)
+
+The averaging choice moves flag precision more than any modeling decision, so
+we report both. Recall is stable; precision is not.
+
+| cell | macro P / R | micro P / R |
+|---|---|---|
+| SROIE 3b | 0.78 / 0.95 | 0.47 / 0.73 |
+| SROIE 1.5b | 0.69 / 0.97 | 0.29 / 0.82 |
+| SROIE tinyllama | 0.09 / 1.00 | 0.09 / 1.00 |
+| Kleister 3b | 0.51 / 0.99 | 0.22 / 0.93 |
+| Kleister 1.5b | 0.56 / 0.96 | 0.20 / 0.79 |
+| Kleister tinyllama | 0.98 / 1.00 | **0.00** / 1.00 |
+
+Two lessons. (i) Micro reads *lower* than macro everywhere — the opposite of
+our pre-registered guess — because macro lets easy, few-field documents carry
+equal weight to hard ones. (ii) The Kleister tinyllama row is the sharpest
+illustration of the strict-precision caveat (§3): macro 0.98 vs micro 0.00.
+The model answers "absent" for every field; under the strict corrupted
+definition (constrained wrong AND unconstrained right) nothing is "corrupted,"
+so every flag is a false positive and micro precision collapses to zero — even
+though flagging every field of a model that extracts nothing is exactly correct
+behavior. Neither number is wrong; both are reported; the operator reads them
+next to the low-confidence count and the absence tripwire, not alone.
+
+These numbers reproduced to the digit on a second run (temperature 0), which is
+the reproducibility claim made concrete.
+
 ### 4.2 Multi-valued fields
 
 Adding the set-valued `party` field (83 docs × 4 fields = 332) keeps

@@ -470,6 +470,18 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
 - Cited datasets properly (Huang et al. ICDAR 2019 SROIE; Stanisławek et al.
   arXiv:2105.05796 Kleister) and added a checked references section.
 
+## Iteration 29 — micro P/R populated corpus-wide; determinism proven
+- Re-ran all six published cells (`examples/rerun_all.sh`). **Zero drift** on
+  every accuracy/cost number across both benchmarks × three models — the
+  temperature-0 reproducibility claim, verified to the digit.
+- Micro flag P/R now stored everywhere. Micro reads LOWER than macro in all six
+  cells (pre-registered guess was "higher" — falsified, iteration 26). Table in
+  PAPER.md §4.1a.
+- Sharpest case: Kleister tinyllama macro precision 0.98 vs micro **0.00** — the
+  all-absent model flags every field, and under strict "corrupted" nothing
+  counts as corrupted, so micro precision is zero while the behavior (flag
+  everything from a model that extracts nothing) is correct. Both reported.
+
 ## Iteration 28 — party figure; generator robustness
 - Third tradeoff figure (`docs/tradeoff_kleister_party.svg`) for the 4-field
   variant. `examples/figure.py` now skips models a benchmark did not run
