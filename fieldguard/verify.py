@@ -5,10 +5,21 @@ import re
 from dataclasses import dataclass
 
 from .backends import Backend
-from .compare import Flag, normalize
+from .compare import Flag, normalize, normalize_set
 from .schemas import FieldSpec, Schema
 
 _NUMBER = re.compile(r"[-+]?\d[\d,]*\.?\d*")
+
+
+def _key(spec: FieldSpec, value: str):
+    """Comparison key: set-valued for multi fields, scalar otherwise.
+
+    Resolution must use the SAME equality as flag_fields/metrics — comparing a
+    multi-valued answer with scalar normalize is order-sensitive, so an arbiter
+    that corroborates a path in a different order was scored as a three-way
+    split (kept the wrong value, marked it low-confidence).
+    """
+    return normalize_set(spec, value) if spec.multi else normalize(spec, value)
 
 
 def _clean_answer(spec: FieldSpec, text: str) -> str:
@@ -23,6 +34,9 @@ def _clean_answer(spec: FieldSpec, text: str) -> str:
             if v.casefold() in low:
                 return v
     if spec.type in ("number", "integer"):
+        if spec.multi:  # keep every element; first-match search would truncate
+            nums = _NUMBER.findall(t)
+            return "; ".join(nums) if nums else t
         m = _NUMBER.search(t)
         if m:
             return m.group(0)
@@ -33,7 +47,7 @@ def _clean_answer(spec: FieldSpec, text: str) -> str:
 class Resolution:
     field: str
     value: str
-    source: str        # "agreement" | "majority" | "arbiter"
+    source: str        # "agreement" | "majority" | "split-kept"
     confident: bool
 
 
@@ -77,7 +91,7 @@ def resolve(backend: Backend, document: str, schema: Schema,
             continue
         fl = flagged[name]
         arb = _clean_answer(spec, _arbiter_query(backend, document, spec))
-        n_con, n_unc, n_arb = (normalize(spec, v) for v in
+        n_con, n_unc, n_arb = (_key(spec, v) for v in
                                (fl.constrained, fl.unconstrained, arb))
         if n_arb == n_unc or n_arb == n_con:
             winner = arb if n_arb == n_unc else fl.constrained

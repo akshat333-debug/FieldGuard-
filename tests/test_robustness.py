@@ -43,6 +43,15 @@ def test_clean_answer_string_passthrough():
     assert _clean_answer(spec, '"INV-9".') == "INV-9"
 
 
+def test_clean_answer_multi_number_keeps_all_elements():
+    """Latent truncation: first-match search dropped all but one value."""
+    multi_num = FieldSpec("amounts", "number", multi=True)
+    assert _clean_answer(multi_num, "The amounts are 10.50, 20 and 30.") == \
+        "10.50; 20; 30"
+    single = FieldSpec("total", "number")
+    assert _clean_answer(single, "10.50 and 20") == "10.50"
+
+
 def test_empty_fields_always_flagged():
     """Correlated failure: both paths empty must still flag (tinyllama finding)."""
     from fieldguard.compare import flag_fields

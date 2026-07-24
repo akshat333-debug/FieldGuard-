@@ -68,6 +68,31 @@ def test_three_way_split_keeps_constrained_low_confidence():
     assert not res["total"].confident
 
 
+def test_multi_value_resolution_is_order_insensitive():
+    """Resolution must use set equality for multi fields (audit bug).
+
+    Scalar normalize is order-sensitive, so an arbiter corroborating a path in a
+    different order was scored a three-way split: wrong value kept, confidence
+    wrongly lowered.
+    """
+    from fieldguard.compare import Flag
+    from fieldguard.schemas import FieldSpec, Schema
+
+    party = FieldSpec("party", "string", multi=True)
+    sch = Schema("s", (party,))
+
+    class Arb(MockBackend):
+        def generate(self, prompt, *, force_json=False):
+            self.calls += 1
+            return "Beta LLC; Acme Corp"      # unconstrained's set, other order
+
+    flags = [Flag("party", "Acme Corp", "Acme Corp; Beta LLC", 1.0)]
+    res = resolve(Arb(), "doc", sch, {"party": "Acme Corp"}, flags)["party"]
+    assert res.source == "majority"
+    assert res.confident
+    assert res.value == "Beta LLC; Acme Corp"
+
+
 def test_arbiter_stays_blind_to_candidates():
     # regression for BUILDLOG iteration 19: a candidate-aware arbiter parrots
     # refusal candidates and manufactures false majorities — keep it blind

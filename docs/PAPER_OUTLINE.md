@@ -39,6 +39,18 @@ commit that introduced it (BUILDLOG has the map).
   local Ollama, temperature 0, max_tokens 512.
 - Metrics: field accuracy vs gold (doc-bootstrap 95% CIs), flag P/R vs
   actually-corrupted set, LLM calls vs verify-everything baseline.
+- **Flag-precision caveat (report this honestly):** "corrupted" is defined
+  narrowly as *constrained wrong AND unconstrained right* — the damage the
+  constraint itself caused. A field that is wrong on BOTH paths is still
+  flagged (correctly: it is unreliable, and it is reported low-confidence),
+  but scores as a false positive under this definition. Reported precision is
+  therefore a LOWER bound on operational usefulness; the numbers understate
+  the flag's value as a general unreliability signal. An "either-path-wrong"
+  denominator would raise precision substantially — we report the strict one.
+- **Averaging:** flag P/R are macro-averaged per document (a clean document
+  with one stray flag contributes precision 0.0). Micro-averaging pooled over
+  fields is the more standard choice and would read higher; state which one
+  the table uses, and ideally report both in the paper.
 
 ## 4. Results
 - **Adaptive cost (headline)**: calls saved vs verify-everything — SROIE
@@ -72,11 +84,14 @@ commit that introduced it (BUILDLOG has the map).
   corruption is out of scope by design).
 - Threshold knob mechanically live but severity distribution is bimodal on
   these benchmarks (gross-or-none); graded band unpopulated.
-- Flat single-valued schemas only (Kleister `party` multi-value out of scope).
+- Multi-valued fields are supported (set semantics: `; `-joined values,
+  set-Jaccard disagreement, exact-set metric — Kleister `party`), but scored
+  strictly: per-element partial credit would flatter the numbers (§ metrics).
 - Small-model absence hallucination is correlated -> undetectable.
 
 ## 7. Reproduction
 - `python3 -m examples.convert_sroie / convert_kleister` -> JSONL slices
   (committed), `python3 -m examples.experiment --data ... --schema ...`,
   `python3 -m examples.analyze` (CIs + tripwire), `python3 -m examples.figure`.
-- Zero runtime deps; 35 unit tests.
+- Zero runtime deps; 37 unit tests (each negative result and audit fix pinned
+  by a named regression test).
