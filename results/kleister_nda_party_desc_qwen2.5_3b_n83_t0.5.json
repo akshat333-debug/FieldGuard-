@@ -2,18 +2,18 @@
   "model": "qwen2.5:3b",
   "n": 83,
   "threshold": 0.5,
-  "elapsed_sec": 1844.5,
+  "elapsed_sec": 1889.2,
   "report": {
     "docs": 83,
     "fields_total": 332,
     "constrained_acc": 0.7228915662650602,
-    "final_acc": 0.7379518072289156,
+    "final_acc": 0.7439759036144579,
     "corruption_rate": 0.09036144578313253,
     "flag_precision": 0.3132530120481927,
     "flag_recall": 0.9879518072289156,
     "llm_calls": 290,
     "full_verify_calls": 498,
-    "low_confidence": 60,
+    "low_confidence": 68,
     "notes": []
   },
   "finals": [
@@ -243,7 +243,7 @@
       "effective_date": "NONE",
       "jurisdiction": "Ohio",
       "term": "",
-      "party": "Fifth Third Processing Solutions, LLC; ; Employee"
+      "party": "Fifth Third Processing Solutions, LLC"
     },
     {
       "effective_date": "NONE",
@@ -459,7 +459,7 @@
       "effective_date": "2017-10-02",
       "jurisdiction": "Delaware",
       "term": "2 years",
-      "party": "Potbelly Corporation, Ancora Advisors, LLC, Fred DiSanto, James Chadwick, Brian Hopkins, Joseph Boehm"
+      "party": "Potbelly Corporation; Ancora Advisors, LLC"
     },
     {
       "effective_date": "",

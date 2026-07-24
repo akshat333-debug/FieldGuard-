@@ -404,3 +404,43 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   Group" where the document names individual funds).
 - Strict exact-set is the honest headline; per-element partial credit would
   flatter it — noted for the paper's metric discussion.
+
+## Iteration 26 — full audit: one real bug in multi-value resolution
+- **Bug (was corrupting published numbers):** `resolve()` compared candidate
+  values with scalar `normalize` while `flag_fields`/`metrics` used
+  `normalize_set`. For multi-valued fields the scalar form is order-sensitive,
+  so an arbiter that corroborated a path *in a different order* was scored a
+  three-way split — keeping the wrong value AND marking it low-confidence.
+  Reproduced end-to-end before fixing; `_key()` now routes multi fields to set
+  equality everywhere. Regression test:
+  `test_multi_value_resolution_is_order_insensitive`.
+- **Re-measured party 3b (n=83).** Extraction was bit-identical (same 290
+  calls, same flags, constrained 0.723), so the delta isolates the fix:
+  - final accuracy **0.738 -> 0.744** (2 party values corrected)
+  - low-confidence **60 -> 68**: set semantics also *refuses* false majorities
+    that scalar comparison manufactured by collapsing element boundaries
+    ("A B" read as equal to {"A","B"}). Those 8 fields were being reported
+    confident on a bogus match; they are now correctly flagged unreliable.
+  - Both directions are honesty gains: more correct values, fewer false
+    confidence claims.
+- **Latent bug fixed:** multi + number arbiter answers were truncated to the
+  first number (`search` vs `findall`). No current dataset hits it.
+- **Metric caveats documented (not silently changed):**
+  1. "Corrupted" is defined as *constrained wrong AND unconstrained right*. A
+     field wrong on BOTH paths is flagged (correctly — it is unreliable, and it
+     is reported low-confidence) but scores as a false positive. Reported flag
+     precision is a **lower bound** on operational usefulness. This is most of
+     why party precision reads 0.313.
+  2. Flag P/R were macro-averaged per doc only (a clean doc with one stray flag
+     contributes precision 0.0). Added **micro** (corpus-pooled) alongside;
+     stored results predate the fields, so future runs carry both.
+- Stale docs fixed: paper outline listed multi-value as out of scope (it ships),
+  test count, and a `Resolution.source` docstring value the code never emits.
+  README party numbers refreshed to the post-fix run (final 0.738 -> 0.744,
+  party exact-set 58 -> **60/83**).
+- Audit self-correction: the audit first claimed the README had no party table.
+  It did (§"With the multi-valued `party` field") — the initial grep matched
+  only `##` headers and missed the `###` subsection, and a duplicate section
+  got added before the mistake was caught. Removed. Lesson: grep for the
+  content, not the heading level.
+- Tests 36 -> 39.

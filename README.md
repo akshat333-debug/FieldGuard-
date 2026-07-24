@@ -118,13 +118,18 @@ normalization, incl. corporate-suffix equivalence Incorporated≡Inc, L.L.C.≡L
 
 | | qwen2.5:3b | qwen2.5:1.5b |
 |---|---|---|
-| constrained → final accuracy | 0.723 → 0.738 | 0.563 → 0.572 |
-| party exact-set correct | 58/83 | 54/83 |
+| constrained → final accuracy | 0.723 → 0.744 | 0.563 → 0.572 |
+| party exact-set correct | 60/83 | 54/83 |
 | LLM calls vs verify-everything | **-42%** | **-45%** |
 | 95% CI (final) | [0.696, 0.780] | [0.521, 0.620] |
 
 Run: `python3 -m examples.experiment --data datasets/kleister_nda_party.jsonl
 --schema datasets/kleister_nda_party.schema.json --model <m> --n 83`.
+
+**Reported flag precision is a lower bound.** "Corrupted" counts only fields the
+constraint itself damaged (constrained wrong *and* unconstrained right); a field
+wrong on both paths is still flagged and reported low-confidence but scores as a
+false positive — most of why party precision reads 0.313.
 
 Two absence lessons (BUILDLOG iteration 21): (1) an "answer NONE if absent"
 instruction in the shared prompt made both paths lazily deny values that ARE
