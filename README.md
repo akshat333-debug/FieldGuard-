@@ -40,6 +40,11 @@ python3 -m examples.build_dashboard   # regenerate from results/
 | **dual-path disagreement** (`compare.py`) | corruption the *constraint* caused — the paths differ | anything both paths get wrong identically |
 | **source grounding** (`ground.py`) | *fabrication* — a value the document never states, however confidently both paths agree | values misread from a corrupted source (they are present in it) |
 
+Confirmed live end-to-end on Kleister qwen2.5:1.5b (n=83): final accuracy
+**0.562 → 0.647 (+8.4 pts)** at **221 → 221 LLM calls** — the repair replaces a
+value rather than querying for one, so it is free. Extraction was bit-identical
+to the baseline run, isolating the delta to the rule.
+
 Grounding is the newer, orthogonal signal. It is training-free like the first
 one, and it directly attacks the correlated blind spot the first one cannot see
 (measured: it catches 35% of qwen2.5:1.5b's Kleister errors at 0.84 precision,

@@ -330,9 +330,27 @@ gold labels: the observed ungrounded rate, ≈4% on capable models versus ≈15%
 fabricating ones in these cells. This is the same adaptive stance as the cost
 result — the system measures its own extractor and spends accordingly.
 
+**Live end-to-end confirmation.** The table above is an offline reconstruction
+over stored outputs, so we re-ran the winning cell through the full pipeline
+with the rule enabled (`--ground-repair`, Kleister qwen2.5:1.5b, n=83):
+
+| | baseline | + grounding repair |
+|---|---|---|
+| constrained accuracy | 0.550 | 0.550 (extraction untouched) |
+| final accuracy | 0.562 | **0.647** (+8.4 pts) |
+| LLM calls | 221 | **221** (repair is free — no arbiter query) |
+| ungrounded rate (gate) | — | 45/249 = **18.1%** |
+
+The live result matches the offline prediction to three decimals, extraction is
+bit-identical (confirming the delta is the repair rule and nothing else), and
+the repair costs **zero additional model calls** — it replaces a value rather
+than querying for one. The gate read 18.1%, correctly above the fabricating
+band, with no gold labels involved.
+
 **Honest caveat.** That gate is suggested by four informative cells. It is a
 hypothesis with a clean mechanism, not a validated threshold, and we report it
-as such.
+as such. In particular the ~4%/~15% separation is observed, not tuned, and a
+model sitting between those bands has not been tested.
 
 ## 6. Limitations
 

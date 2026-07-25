@@ -495,6 +495,17 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   the cells cleanly (~4% capable vs ~15% fabricating). Honest caveat recorded:
   four informative cells is a hypothesis, not a calibrated threshold.
 
+## Iteration 32 — grounding repair confirmed live end-to-end
+- Ran the full pipeline with `--ground-repair` on Kleister qwen2.5:1.5b (n=83):
+  constrained 0.550 (bit-identical to baseline, so the delta is the rule alone),
+  final 0.562 -> **0.647 (+8.4 pts)**, LLM calls **221 -> 221** (the repair
+  substitutes a value, it does not query), gate read 18.1%.
+- The offline reconstruction predicted 0.647 and the live run returned 0.647 —
+  matching to three decimals. Worth noting for method: the offline study cost
+  zero LLM calls and was a faithful predictor, so the cheap experiment was the
+  right first move; the live run existed to falsify it, not to discover it.
+- 45 field values changed, exactly the ungrounded count.
+
 ## Iteration 31 — dashboard frontend
 - `docs/dashboard.html`: self-contained (no server/deps) field-level inspector
   regenerated from stored runs by `examples/build_dashboard.py`. Shows both
