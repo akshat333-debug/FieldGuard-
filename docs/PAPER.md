@@ -275,16 +275,76 @@ All three failures are the same failure. Anything that correlates the two paths
 independence the disagreement signal is built on. **The method's power is the
 independence of its samples**, and every design decision must protect it.
 
+## 5a. A second signal: source grounding
+
+The blind spot in §6 — errors both paths share — is not uniformly opaque. It
+decomposes into two families, and one of them is attackable with a second
+training-free signal.
+
+**Fabrication.** A weak extractor invents a plausible value for a field the
+document never states (measured: qwen2.5:1.5b produces a value for 69 of 75
+legitimately-absent Kleister fields, identically on both paths). Disagreement
+cannot see this — but the *source* can: a value appearing nowhere in the
+document is unsupported however confidently the paths agree. We compute a
+support score per field by checking the value against the document under the
+same normalization used for comparison (symmetric, so "2 years" grounds against
+"two (2) years" and an ISO date grounds against "30th day of April, 2009").
+
+**Misreading.** A value misread from a corrupted source *is* present in that
+source, so grounding cannot see it either. That family remains out of scope for
+both signals — the honest boundary of the whole approach.
+
+**Detection (offline, on stored outputs, no additional LLM calls).**
+
+| cell | errors | caught | precision | false alarms |
+|---|---|---|---|---|
+| SROIE 3b | 29 | 0 (0%) | — | 0 |
+| SROIE 1.5b | 54 | 5 (9%) | 1.00 | 0 |
+| Kleister 3b | 58 | 7 (12%) | 0.58 | 5 |
+| Kleister 1.5b | 109 | 38 (35%) | 0.84 | 7 |
+| Kleister+party 3b | 85 | 4 (5%) | 0.33 | 8 |
+| Kleister+party 1.5b | 142 | 35 (25%) | 0.80 | 9 |
+
+The signal is *selective*, which is the point: it fires where fabrication is
+the failure mode (optional fields + a weak model) and is inert where models copy
+values off a receipt (SROIE: zero catches, zero false alarms — it costs nothing
+to leave on).
+
+**Repair, and why it is opt-in.** Detection alone does not help: under
+split-kept, an arbiter answering NONE disagrees with both fabricating paths, so
+the fabricated value is kept and merely marked low-confidence. The rule that
+moves accuracy is *unsupported value on an optional field → absent*:
+
+| cell | accuracy | fixed / broken |
+|---|---|---|
+| Kleister 1.5b | 0.562 → **0.647** (+8.4) | 28 / 7 |
+| Kleister+party 1.5b | 0.572 → **0.630** (+5.7) | 26 / 7 |
+| Kleister 3b | 0.767 → 0.771 (+0.4) | 6 / 5 |
+| Kleister+party 3b | 0.744 → 0.735 (**−0.9**) | 3 / 6 |
+| SROIE (both) | unchanged (0.000) | 0 / 0 |
+
+The rule rescues a fabricating extractor and slightly harms a reliable one,
+where the few ungrounded values are normalization edge cases rather than
+inventions. So it ships **off by default**, gated by a statistic that needs no
+gold labels: the observed ungrounded rate, ≈4% on capable models versus ≈15% on
+fabricating ones in these cells. This is the same adaptive stance as the cost
+result — the system measures its own extractor and spends accordingly.
+
+**Honest caveat.** That gate is suggested by four informative cells. It is a
+hypothesis with a clean mechanism, not a validated threshold, and we report it
+as such.
+
 ## 6. Limitations
 
-- **Correlated errors are invisible by construction.** If the model misreads
-  the source identically on both paths, there is no disagreement to detect. We
-  demonstrate this deliberately: injecting 8% OCR character noise drops
-  accuracy to 0.920 while **zero flags fire**. The signal detects
-  *constraint-induced* corruption; *source-induced* corruption is out of scope
-  and needs a different mechanism.
-- **Small-model absence hallucination** is a correlated error, hence
-  undetectable (§4.4).
+- **Correlated errors are invisible to disagreement by construction.** If the
+  model misreads the source identically on both paths, there is no
+  disagreement to detect. We demonstrate this deliberately: injecting 8% OCR
+  character noise drops accuracy to 0.920 while **zero flags fire**. §5a
+  recovers one half of this family (fabrication) with a second signal; the
+  other half (misreading a corrupted source) is out of scope for both, since a
+  misread value is genuinely present in the document it was misread from.
+- **The grounding gate is unvalidated.** Four informative cells suggest the
+  ungrounded-rate threshold; that is a hypothesis, not a calibration.
 - **The threshold is a shallow knob** on these benchmarks. Severity is
   bimodal (gross-or-none) on receipts; on contract strings the graded band is
   populated but raising the threshold trades ~4% of calls for ~2.5 points of

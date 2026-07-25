@@ -22,6 +22,33 @@ likely constraint-corrupted, and **only those fields** are re-verified with a ta
 single-field query. Result: recover most of the lost accuracy at a fraction of the
 verification cost. Pure black-box — no logits, no fine-tuning, bolts onto any stack.
 
+## Dashboard
+
+`docs/dashboard.html` is a self-contained inspector (no server, no deps) built
+from the stored runs — open it in a browser. Pick a run, step through real
+documents, and see per field: both generation paths, whether the disagreement
+detector fired, whether the source supports the kept value, and the gold.
+
+```bash
+python3 -m examples.build_dashboard   # regenerate from results/
+```
+
+## Two signals
+
+| signal | catches | blind to |
+|---|---|---|
+| **dual-path disagreement** (`compare.py`) | corruption the *constraint* caused — the paths differ | anything both paths get wrong identically |
+| **source grounding** (`ground.py`) | *fabrication* — a value the document never states, however confidently both paths agree | values misread from a corrupted source (they are present in it) |
+
+Grounding is the newer, orthogonal signal. It is training-free like the first
+one, and it directly attacks the correlated blind spot the first one cannot see
+(measured: it catches 35% of qwen2.5:1.5b's Kleister errors at 0.84 precision,
+while firing zero times on SROIE, where models copy values rather than invent
+them). Its repair rule is **capability-dependent** — it rescues a fabricating
+model (+8.4 points) and slightly harms a reliable one (−0.9), so it is opt-in
+(`--ground-repair`), gated by a gold-free runtime signal: `ungrounded_rate`,
+≈4% on capable models vs ≈15% on fabricating ones.
+
 ## Quickstart
 
 ```bash
