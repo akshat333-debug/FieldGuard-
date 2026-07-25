@@ -20,6 +20,7 @@ failure family remains out of scope for both signals.
 from __future__ import annotations
 
 import re
+from functools import lru_cache
 
 from .compare import normalize, normalize_set
 from .schemas import FieldSpec
@@ -39,6 +40,7 @@ _DATE_SPANS = re.compile(
     r"|\w{3,9}\s+\d{1,2},?\s+\d{4}", re.I)
 
 
+@lru_cache(maxsize=8)  # every field of a document re-derives the same sets
 def _doc_tokens(document: str) -> set[str]:
     # normalize the DOCUMENT with the same rules used on values, so number
     # words ("two"->"2") and punctuation are handled symmetrically; a value is
@@ -47,6 +49,7 @@ def _doc_tokens(document: str) -> set[str]:
     return tokens | {t.rstrip("s") for t in tokens}  # light plural tolerance
 
 
+@lru_cache(maxsize=8)
 def _doc_numbers(document: str) -> set[str]:
     out = set()
     for raw in _DOC_NUMBER.findall(document):
