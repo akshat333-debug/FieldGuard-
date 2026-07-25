@@ -6,21 +6,21 @@
 <title>FieldGuard — extraction verification bench</title>
 <style>
 :root{
-  --ground:#eef1ef; --surface:#ffffff; --sunk:#e4e8e5;
+  --ground:#eef1ef; --surface:#ffffff; --sunk:#e4e8e5; --raise:#f7f9f7;
   --ink:#0f1419; --ink-2:#41504f; --ink-3:#6d7b79;
-  --rule:#cdd5d2; --rule-strong:#aab5b2;
+  --rule:#cdd5d2; --rule-strong:#a7b3af;
   --accent:#3450b5; --accent-soft:#dde2f6;
   --ok:#1f7a5c; --ok-soft:#dcece5;
-  --warn:#b07607; --warn-soft:#f6ead2;
+  --warn:#a56a00; --warn-soft:#f6ead2;
   --bad:#9e3b34; --bad-soft:#f3dedc;
   --mono:ui-monospace,"SF Mono",Menlo,"DejaVu Sans Mono",monospace;
   --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --ground:#0f1419; --surface:#161d23; --sunk:#0b1015;
+    --ground:#0f1419; --surface:#161d23; --sunk:#0b1015; --raise:#1c242b;
     --ink:#e7ecea; --ink-2:#a9b6b3; --ink-3:#7d8b89;
-    --rule:#28323a; --rule-strong:#3b4852;
+    --rule:#28323a; --rule-strong:#41505b;
     --accent:#8ba2f0; --accent-soft:#1e2942;
     --ok:#5fc39b; --ok-soft:#12281f;
     --warn:#e0a94a; --warn-soft:#2c2312;
@@ -28,114 +28,150 @@
   }
 }
 :root[data-theme="dark"]{
-  --ground:#0f1419; --surface:#161d23; --sunk:#0b1015;
+  --ground:#0f1419; --surface:#161d23; --sunk:#0b1015; --raise:#1c242b;
   --ink:#e7ecea; --ink-2:#a9b6b3; --ink-3:#7d8b89;
-  --rule:#28323a; --rule-strong:#3b4852;
+  --rule:#28323a; --rule-strong:#41505b;
   --accent:#8ba2f0; --accent-soft:#1e2942;
   --ok:#5fc39b; --ok-soft:#12281f;
   --warn:#e0a94a; --warn-soft:#2c2312;
   --bad:#e2827a; --bad-soft:#2e1a18;
 }
 :root[data-theme="light"]{
-  --ground:#eef1ef; --surface:#ffffff; --sunk:#e4e8e5;
+  --ground:#eef1ef; --surface:#ffffff; --sunk:#e4e8e5; --raise:#f7f9f7;
   --ink:#0f1419; --ink-2:#41504f; --ink-3:#6d7b79;
-  --rule:#cdd5d2; --rule-strong:#aab5b2;
+  --rule:#cdd5d2; --rule-strong:#a7b3af;
   --accent:#3450b5; --accent-soft:#dde2f6;
   --ok:#1f7a5c; --ok-soft:#dcece5;
-  --warn:#b07607; --warn-soft:#f6ead2;
+  --warn:#a56a00; --warn-soft:#f6ead2;
   --bad:#9e3b34; --bad-soft:#f3dedc;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
   font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px 72px}
-a{color:var(--accent)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px 80px}
 .tnum{font-variant-numeric:tabular-nums}
-
-/* masthead */
-header.bench{border-bottom:1px solid var(--rule);margin-bottom:28px;
-  padding:26px 0 18px;display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;
-  justify-content:space-between}
-.brand{display:flex;flex-direction:column;gap:6px}
-.brand h1{font-family:var(--mono);font-size:26px;font-weight:600;margin:0;
-  letter-spacing:-0.02em;text-wrap:balance}
-.brand .sub{color:var(--ink-2);max-width:58ch;font-size:14px}
-.stamp{font-family:var(--mono);font-size:11px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--ink-3);border:1px solid var(--rule);
-  padding:5px 9px}
-button.theme{font-family:var(--mono);font-size:11px;letter-spacing:.12em;
-  text-transform:uppercase;background:var(--surface);color:var(--ink-2);
-  border:1px solid var(--rule);padding:6px 10px;cursor:pointer}
-button.theme:hover{border-color:var(--rule-strong);color:var(--ink)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
+/* masthead */
+header.bench{border-bottom:1px solid var(--rule-strong);margin-bottom:26px;
+  padding:26px 0 18px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;
+  justify-content:space-between}
+.brand h1{font-family:var(--mono);font-size:27px;font-weight:600;margin:6px 0 0;
+  letter-spacing:-0.02em}
+.brand .sub{color:var(--ink-2);max-width:62ch;font-size:14px;margin:7px 0 0}
+.stamp{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink-3);border:1px solid var(--rule);
+  padding:4px 9px;display:inline-block}
+button.theme{font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;background:var(--surface);color:var(--ink-2);
+  border:1px solid var(--rule);padding:7px 11px;cursor:pointer}
+button.theme:hover{border-color:var(--rule-strong);color:var(--ink)}
+
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3);font-weight:600;
+  border-bottom:1px solid var(--rule);padding-bottom:7px;margin:34px 0 14px;
+  display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+h2.sec .note{letter-spacing:0;text-transform:none;font-family:var(--sans);
+  font-size:12.5px;color:var(--ink-3)}
+.lede{color:var(--ink-2);max-width:74ch;margin:0 0 18px;font-size:14px}
+
+/* ── pipeline spine ─────────────────────────────────────────── */
+.pipe-scroll{overflow-x:auto;border:1px solid var(--rule);background:var(--surface)}
+.pipe{display:grid;grid-template-columns:repeat(8,minmax(126px,1fr));
+  min-width:1000px}
+.stg{border-right:1px solid var(--rule);padding:11px 12px 13px;position:relative;
+  display:flex;flex-direction:column;gap:5px}
+.stg:last-child{border-right:0}
+.stg.branch-a{background:linear-gradient(to bottom,var(--raise) 0 34px,transparent 34px)}
+.stg.branch-b{background:linear-gradient(to bottom,var(--raise) 0 34px,transparent 34px)}
+.stg-n{font-family:var(--mono);font-size:10px;color:var(--ink-3);
+  letter-spacing:.1em}
+.stg-t{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.02em}
+.stg-v{font-family:var(--mono);font-size:11px;color:var(--ink-2);
+  word-break:break-word;line-height:1.45;min-height:1.45em;
+  white-space:pre-line}  /* stage 04 emits two lines when the paths differ */
+.stg-v.empty{color:var(--ink-3);font-style:italic}
+.sig{font-family:var(--mono);font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);
+  padding:1px 5px;align-self:flex-start}
+.stg.novel{background:var(--accent-soft)}
+.stg.novel .stg-t{color:var(--ink)}
+.stg.dim{opacity:.5}
+.stg.dim .stg-v{text-decoration:line-through}
+.lane{font-family:var(--mono);font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.pipe-legend{display:flex;flex-wrap:wrap;gap:16px;padding:9px 13px;
+  border-top:1px solid var(--rule);font-size:12px;color:var(--ink-3);
+  background:var(--sunk)}
+.pipe-legend b{font-family:var(--mono);font-weight:600;color:var(--accent)}
+
 /* readouts */
-/* 2x2 then 4-across — auto-fit would orphan the 4th tile at mid widths */
-.readouts{display:grid;grid-template-columns:repeat(2,1fr);
-  gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:32px}
+.readouts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--rule);border:1px solid var(--rule)}
 @media (min-width:940px){.readouts{grid-template-columns:repeat(4,1fr)}}
 .readout{background:var(--surface);padding:14px 16px 15px}
-.readout .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+.readout .k{font-family:var(--mono);font-size:10px;letter-spacing:.13em;
   text-transform:uppercase;color:var(--ink-3)}
-.readout .v{font-family:var(--mono);font-size:27px;font-weight:600;
+.readout .v{font-family:var(--mono);font-size:26px;font-weight:600;
   letter-spacing:-0.02em;margin-top:3px}
 .readout .n{font-size:12.5px;color:var(--ink-2)}
 .d-ok{color:var(--ok)} .d-warn{color:var(--warn)} .d-bad{color:var(--bad)}
 
-h2.sec{font-family:var(--mono);font-size:12px;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--ink-3);font-weight:600;
-  border-bottom:1px solid var(--rule);padding-bottom:7px;margin:0 0 16px}
-.lede{color:var(--ink-2);max-width:70ch;margin:-6px 0 20px;font-size:14px}
-
-/* cell picker */
-.cells{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+/* run picker */
+.cells{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
 .cell{background:var(--surface);border:1px solid var(--rule);padding:9px 12px;
-  cursor:pointer;text-align:left;font-family:var(--sans);color:var(--ink)}
+  cursor:pointer;text-align:left;color:var(--ink);font-family:var(--sans)}
 .cell:hover{border-color:var(--rule-strong)}
 .cell[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
-.cell .cb{font-size:12.5px;color:var(--ink-2)}
+.cell .cb{font-size:12px;color:var(--ink-2)}
 .cell .cm{font-family:var(--mono);font-size:13px;font-weight:600}
 
 /* inspector */
-.inspector{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);
+.inspector{display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr);
   gap:1px;background:var(--rule);border:1px solid var(--rule)}
-/* stacked: the verdicts are the point, so they lead; the source is reference
-   and gets a shorter scroll box so it can't swallow the page scroll */
 @media (max-width:900px){
   .inspector{grid-template-columns:1fr}
   .pane-source{order:2}
-  .doctext{max-height:300px}
+  .doctext{max-height:280px}
 }
 .pane{background:var(--surface);min-width:0}
-.pane-head{display:flex;justify-content:space-between;align-items:center;
-  gap:10px;padding:10px 14px;border-bottom:1px solid var(--rule)}
-.pane-head .t{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+.pane-head{display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:10px 14px;border-bottom:1px solid var(--rule)}
+.pane-head .t{font-family:var(--mono);font-size:10px;letter-spacing:.13em;
   text-transform:uppercase;color:var(--ink-3)}
 .docnav{display:flex;gap:4px;flex-wrap:wrap;padding:10px 14px;
   border-bottom:1px solid var(--rule)}
-.docnav button{font-family:var(--mono);font-size:11.5px;width:26px;height:24px;
+.docnav button{font-family:var(--mono);font-size:11.5px;min-width:26px;height:24px;
   background:var(--surface);border:1px solid var(--rule);color:var(--ink-2);
-  cursor:pointer;padding:0}
-.docnav button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);
-  color:#fff}
-.doctext{font-family:var(--mono);font-size:11.5px;line-height:1.65;
+  cursor:pointer;padding:0 4px}
+.docnav button[aria-pressed="true"]{background:var(--accent);
+  border-color:var(--accent);color:#fff}
+.doctext{font-family:var(--mono);font-size:11.5px;line-height:1.7;
   white-space:pre-wrap;word-break:break-word;padding:14px;margin:0;
-  max-height:560px;overflow:auto;color:var(--ink-2);background:var(--sunk)}
+  max-height:520px;overflow:auto;color:var(--ink-2);background:var(--sunk)}
+.doctext mark{background:var(--accent-soft);color:var(--ink);
+  outline:1px solid var(--accent);padding:0 1px}
 
 /* field rows */
-.field{border-bottom:1px solid var(--rule);padding:12px 14px}
+.field{border-bottom:1px solid var(--rule);padding:0}
 .field:last-child{border-bottom:0}
+.field-btn{width:100%;text-align:left;background:none;border:0;cursor:pointer;
+  padding:11px 14px;color:var(--ink);font-family:var(--sans);display:block}
+.field.sel{background:var(--accent-soft)}
+.field.sel .field-btn{box-shadow:inset 2px 0 0 var(--accent)}
 .field-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .fname{font-family:var(--mono);font-size:13px;font-weight:600}
-.chip{font-family:var(--mono);font-size:10px;letter-spacing:.1em;
-  text-transform:uppercase;padding:2px 7px;border:1px solid currentColor}
+.ftype{font-family:var(--mono);font-size:10px;color:var(--ink-3)}
+.chip{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;
+  text-transform:uppercase;padding:2px 6px;border:1px solid currentColor;
+  white-space:nowrap}
 .chip.ok{color:var(--ok);background:var(--ok-soft)}
 .chip.warn{color:var(--warn);background:var(--warn-soft)}
 .chip.bad{color:var(--bad);background:var(--bad-soft)}
-.chip.mute{color:var(--ink-3);background:transparent}
+.chip.mute{color:var(--ink-3)}
 .spacer{flex:1}
-.paths{display:grid;grid-template-columns:88px 1fr;gap:3px 10px;margin-top:9px}
-.plabel{font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+.paths{display:grid;grid-template-columns:82px 1fr;gap:2px 10px;margin-top:8px}
+.plabel{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--ink-3);padding-top:2px}
 .pval{font-family:var(--mono);font-size:12px;word-break:break-word}
 .pval.empty{color:var(--ink-3);font-style:italic}
@@ -145,23 +181,21 @@ h2.sec{font-family:var(--mono);font-size:12px;letter-spacing:.15em;
 
 /* table */
 .tablewrap{overflow-x:auto;border:1px solid var(--rule);background:var(--surface)}
-table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:720px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:780px}
 th,td{text-align:right;padding:9px 13px;border-bottom:1px solid var(--rule)}
 th:first-child,td:first-child{text-align:left}
-thead th{font-family:var(--mono);font-size:10px;letter-spacing:.11em;
+thead th{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;
   text-transform:uppercase;color:var(--ink-3);font-weight:600;
   border-bottom:1px solid var(--rule-strong)}
 tbody tr:last-child td{border-bottom:0}
 td.model{font-family:var(--mono);font-size:12.5px}
-.bar{position:relative;height:5px;background:var(--sunk);margin-top:5px}
+tr.sel{background:var(--accent-soft)}
+.bar{position:relative;height:4px;background:var(--sunk);margin-top:5px}
 .bar span{position:absolute;inset:0 auto 0 0;background:var(--accent)}
-footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--rule);
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);
   color:var(--ink-3);font-size:12.5px;display:flex;justify-content:space-between;
   gap:14px;flex-wrap:wrap}
 code{font-family:var(--mono);font-size:.92em;background:var(--sunk);padding:1px 4px}
-@media (prefers-reduced-motion:no-preference){
-  .field,.readout{transition:background-color .15s ease}
-}
 </style>
 </head>
 <body>
@@ -172,56 +206,58 @@ code{font-family:var(--mono);font-size:.92em;background:var(--sunk);padding:1px 
     <span class="stamp">Verification bench</span>
     <h1>FieldGuard</h1>
     <p class="sub">Schema-forced decoding guarantees structure, not truth. Every
-      field below was extracted twice — once under the schema, once free-form —
-      and only the fields where those two paths disagree were re-verified.</p>
+      field is extracted twice — once under the schema, once free-form — and only
+      the fields where those paths disagree are ever re-verified.</p>
   </div>
   <button class="theme" id="themeBtn" type="button">Toggle theme</button>
 </header>
 
-<section aria-labelledby="sum">
-  <h2 class="sec" id="sum">Selected run</h2>
-  <div class="readouts" id="readouts"></div>
-</section>
-
-<section aria-labelledby="insp">
-  <h2 class="sec" id="insp">Field inspector</h2>
-  <p class="lede">Pick a run, then step through documents. Each field shows both
-    generation paths, whether the disagreement detector fired, and whether the
-    source document actually supports the value that was kept.</p>
-  <div class="cells" id="cells" role="group" aria-label="Runs"></div>
-  <div class="inspector">
-    <div class="pane pane-source">
-      <div class="pane-head"><span class="t">Source document</span>
-        <span class="t" id="docCount"></span></div>
-      <div class="docnav" id="docnav" role="group" aria-label="Documents"></div>
-      <pre class="doctext" id="doctext"></pre>
-    </div>
-    <div class="pane">
-      <div class="pane-head"><span class="t">Extracted fields</span>
-        <span class="t" id="fieldSummary"></span></div>
-      <div id="fields"></div>
-    </div>
+<h2 class="sec">Pipeline <span class="note" id="pipeFor"></span></h2>
+<p class="lede">The selected field's actual journey, stage by stage. Two stages
+  carry the method's novelty: <b>disagreement</b> compares the two paths against
+  each other, <b>grounding</b> compares the kept value against the source. They
+  fail independently, which is why both exist.</p>
+<div class="pipe-scroll">
+  <div class="pipe" id="pipe"></div>
+  <div class="pipe-legend">
+    <span><b>SIGNAL 1</b> catches corruption the constraint caused</span>
+    <span><b>SIGNAL 2</b> catches values the document never supported</span>
+    <span>Stages 6–7 run only when a field is flagged — that is the saving</span>
   </div>
-</section>
+</div>
 
-<section aria-labelledby="bm" style="margin-top:38px">
-  <h2 class="sec" id="bm">All runs</h2>
-  <p class="lede">Verification spend tracks extractor quality without tuning:
-    the weaker the model, the more fields disagree, the more of the
-    verify-everything budget gets spent.</p>
-  <div class="tablewrap">
-    <table>
-      <thead><tr>
-        <th>Run</th><th>Constrained</th><th>Final</th><th>Flag P/R</th>
-        <th>Low-conf</th><th>Calls</th><th>Saved</th>
-      </tr></thead>
-      <tbody id="tbody"></tbody>
-    </table>
+<h2 class="sec">Selected run</h2>
+<div class="readouts" id="readouts"></div>
+
+<h2 class="sec">Field inspector <span class="note">click a field to trace it</span></h2>
+<div class="cells" id="cells" role="group" aria-label="Runs"></div>
+<div class="inspector">
+  <div class="pane pane-source">
+    <div class="pane-head"><span class="t">Source document</span>
+      <span class="t" id="docCount"></span></div>
+    <div class="docnav" id="docnav" role="group" aria-label="Documents"></div>
+    <pre class="doctext" id="doctext"></pre>
   </div>
-</section>
+  <div class="pane">
+    <div class="pane-head"><span class="t">Extracted fields</span>
+      <span class="t" id="fieldSummary"></span></div>
+    <div id="fields"></div>
+  </div>
+</div>
+
+<h2 class="sec">All runs <span class="note">verification spend tracks extractor quality</span></h2>
+<div class="tablewrap">
+  <table>
+    <thead><tr>
+      <th>Run</th><th>Constrained</th><th>Final</th><th>Flag P/R</th>
+      <th>Low-conf</th><th>Calls</th><th>Saved</th>
+    </tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
 
 <footer>
-  <span>Local models via Ollama · temperature 0 · every number reproduced
+  <span>Local models via Ollama · temperature 0 · every figure reproduced
     exactly on re-run</span>
   <span>Regenerate: <code>python3 -m examples.build_dashboard</code></span>
 </footer>
@@ -230,37 +266,81 @@ code{font-family:var(--mono);font-size:.92em;background:var(--sunk);padding:1px 
 <script>
 const DATA = /*__DATA__*/null;
 const $ = (id) => document.getElementById(id);
-let sel = 0, doc = 0;
+let sel = 0, doc = 0, fld = 0;
 
-const themeBtn = $("themeBtn");
-themeBtn.addEventListener("click", () => {
+$("themeBtn").addEventListener("click", () => {
   const cur = document.documentElement.getAttribute("data-theme");
   const dark = cur ? cur === "dark"
     : matchMedia("(prefers-color-scheme: dark)").matches;
   document.documentElement.setAttribute("data-theme", dark ? "light" : "dark");
 });
 
-function pct(x){ return (x*100).toFixed(1) + "%"; }
-function esc(s){ return String(s ?? "").replace(/[&<>]/g,
-  c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+const pct = (x) => (x*100).toFixed(1) + "%";
+const esc = (s) => String(s ?? "").replace(/[&<>]/g,
+  c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const curField = () => DATA[sel].sample[doc].fields[fld];
 
+/* ── pipeline ─────────────────────────────────────────────── */
+function renderPipe(){
+  const f = curField();
+  const flagged = f.flagged;
+  const ungrounded = f.grounded < 0.5;
+  $("pipeFor").textContent = `tracing “${f.name}” · document ${doc+1}`;
+
+  const cell = (n, title, value, opts={}) => {
+    const cls = ["stg", opts.cls || ""].join(" ");
+    const vcls = value ? (opts.vcls || "") : "empty";
+    return `<div class="${cls}">
+      <div class="stg-n">${n}</div>
+      ${opts.lane ? `<div class="lane">${opts.lane}</div>` : ""}
+      ${opts.sig ? `<div class="sig">${opts.sig}</div>` : ""}
+      <div class="stg-t">${title}</div>
+      <div class="stg-v ${vcls}">${value ? esc(value) : (opts.emptyText || "—")}</div>
+    </div>`;
+  };
+
+  const scoreTxt = f.score === null ? "no comparison"
+    : `${f.score.toFixed(2)} ${flagged ? "≥ 0.50 → flag" : "< 0.50 → pass"}`;
+
+  $("pipe").innerHTML =
+    cell("01", "Source", `${f.type} field`, {vcls:"tnum"}) +
+    cell("02", "Constrained", f.constrained, {lane:"path A · schema-forced",
+      cls:"branch-a", emptyText:"— absent —"}) +
+    cell("03", "Free-form", f.unconstrained, {lane:"path B · no schema",
+      cls:"branch-b", emptyText:"— absent —"}) +
+    cell("04", "Normalize",
+      f.norm_c === f.norm_u
+        ? `both → ${f.norm_c || "∅"}`
+        : `A → ${f.norm_c || "∅"}\nB → ${f.norm_u || "∅"}`) +
+    cell("05", "Disagree", scoreTxt, {sig:"Signal 1", cls:"novel"}) +
+    cell("06", "Arbiter", flagged ? "re-queried once" : "skipped — no cost",
+      {cls: flagged ? "" : "dim"}) +
+    cell("07", "Ground",
+      ungrounded ? `support ${f.grounded.toFixed(2)} → unsupported`
+                 : `support ${f.grounded.toFixed(2)} → in source`,
+      {sig:"Signal 2", cls:"novel"}) +
+    cell("08", "Kept", f.final,
+      {vcls: f.correct ? "" : "", emptyText:"— absent —"});
+}
+
+/* ── readouts ─────────────────────────────────────────────── */
 function renderReadouts(){
   const c = DATA[sel];
-  const delta = c.final - c.constrained;
-  const dcls = delta > 0.0005 ? "d-ok" : delta < -0.0005 ? "d-bad" : "";
-  const dtxt = delta === 0 ? "no change"
-    : (delta > 0 ? "+" : "") + (delta*100).toFixed(1) + " pts vs constrained";
-  const savedCls = c.saved > 0.3 ? "d-ok" : c.saved > 0.05 ? "d-warn" : "d-bad";
+  const d = c.final - c.constrained;
+  const dcls = d > 0.0005 ? "d-ok" : d < -0.0005 ? "d-bad" : "";
+  const dtxt = d === 0 ? "no change vs constrained"
+    : `${d>0?"+":""}${(d*100).toFixed(1)} pts vs constrained`;
+  const sc = c.saved > 0.3 ? "d-ok" : c.saved > 0.05 ? "d-warn" : "d-bad";
   $("readouts").innerHTML = `
     <div class="readout"><div class="k">Final accuracy</div>
       <div class="v tnum">${c.final.toFixed(3)}</div>
       <div class="n ${dcls}">${dtxt}</div></div>
     <div class="readout"><div class="k">Verification saved</div>
-      <div class="v tnum ${savedCls}">${pct(c.saved)}</div>
-      <div class="n">${c.calls} of ${c.full_calls} calls used</div></div>
+      <div class="v tnum ${sc}">${pct(c.saved)}</div>
+      <div class="n">${c.calls} of ${c.full_calls} calls</div></div>
     <div class="readout"><div class="k">Flag precision / recall</div>
       <div class="v tnum">${c.macro_p.toFixed(2)}<span style="color:var(--ink-3)">/</span>${c.macro_r.toFixed(2)}</div>
-      <div class="n">macro${c.micro_p !== null ? " · micro P " + c.micro_p.toFixed(2) : ""}</div></div>
+      <div class="n">macro${c.micro_p !== null ? ` · micro P ${c.micro_p.toFixed(2)}` : ""}</div></div>
     <div class="readout"><div class="k">Self-reported unreliable</div>
       <div class="v tnum">${c.low_conf}</div>
       <div class="n">of ${c.fields_n} fields</div></div>`;
@@ -270,10 +350,10 @@ function renderCells(){
   $("cells").innerHTML = DATA.map((c,i) => `
     <button class="cell" type="button" aria-pressed="${i===sel}" data-i="${i}">
       <div class="cb">${esc(c.benchmark)}</div>
-      <div class="cm">${esc(c.model)}</div>
-    </button>`).join("");
+      <div class="cm">${esc(c.model)}</div></button>`).join("");
   $("cells").querySelectorAll("button").forEach(b =>
-    b.addEventListener("click", () => { sel = +b.dataset.i; doc = 0; renderAll(); }));
+    b.addEventListener("click", () => {
+      sel = +b.dataset.i; doc = 0; fld = 0; renderAll(); }));
 }
 
 function renderDocNav(){
@@ -283,50 +363,66 @@ function renderDocNav(){
     `<button type="button" aria-pressed="${i===doc}" data-i="${i}"
       aria-label="Document ${i+1}">${i+1}</button>`).join("");
   $("docnav").querySelectorAll("button").forEach(b =>
-    b.addEventListener("click", () => { doc = +b.dataset.i; renderDoc(); }));
+    b.addEventListener("click", () => {
+      doc = +b.dataset.i; fld = 0; renderDoc(); }));
+}
+
+/* highlight the kept value's literal span in the source, when present */
+function markedDoc(text, value){
+  const v = (value || "").trim();
+  if (v.length < 3) return esc(text);
+  const i = text.toLowerCase().indexOf(v.toLowerCase());
+  if (i < 0) return esc(text);
+  return esc(text.slice(0,i)) + "<mark>" + esc(text.slice(i, i+v.length))
+    + "</mark>" + esc(text.slice(i+v.length));
 }
 
 function renderDoc(){
   renderDocNav();
   const d = DATA[sel].sample[doc];
-  $("doctext").textContent = d.text;
-  const flagged = d.fields.filter(f => f.flagged).length;
-  const wrong = d.fields.filter(f => !f.correct).length;
+  $("doctext").innerHTML = markedDoc(d.text, d.fields[fld].final);
   $("fieldSummary").textContent =
-    `${flagged} flagged · ${wrong} incorrect`;
+    `${d.fields.filter(f=>f.flagged).length} flagged · `
+    + `${d.fields.filter(f=>!f.correct).length} incorrect`;
 
-  $("fields").innerHTML = d.fields.map(f => {
+  $("fields").innerHTML = d.fields.map((f,i) => {
     const chips = [];
     chips.push(f.flagged
-      ? `<span class="chip warn">flagged${f.score !== null ? " " + f.score : ""}</span>`
+      ? `<span class="chip warn">flagged ${f.score!==null?f.score.toFixed(2):""}</span>`
       : `<span class="chip ok">paths agree</span>`);
     if (f.grounded < 0.5)
-      chips.push(`<span class="chip bad">unsupported by source</span>`);
+      chips.push(`<span class="chip bad">unsupported</span>`);
     if (f.optional) chips.push(`<span class="chip mute">optional</span>`);
     chips.push(f.correct
       ? `<span class="chip ok">matches gold</span>`
       : `<span class="chip bad">differs from gold</span>`);
-
     const val = (v, cls) => v && v.trim()
       ? `<div class="pval ${cls}">${esc(v)}</div>`
       : `<div class="pval empty">— absent —</div>`;
     const diff = f.flagged ? "diff" : "";
-    return `<div class="field">
-      <div class="field-top"><span class="fname">${esc(f.name)}</span>
-        <span class="spacer"></span>${chips.join("")}</div>
-      <div class="paths">
-        <div class="plabel">Constrained</div>${val(f.constrained, diff)}
-        <div class="plabel">Free-form</div>${val(f.unconstrained, diff)}
-        <div class="plabel">Kept</div>${val(f.final, "final " + (f.correct ? "" : "wrong"))}
-        <div class="plabel">Gold</div>${val(f.gold, "")}
-      </div></div>`;
+    return `<div class="field ${i===fld?"sel":""}">
+      <button class="field-btn" type="button" data-i="${i}"
+        aria-label="Trace ${esc(f.name)} through the pipeline">
+        <div class="field-top"><span class="fname">${esc(f.name)}</span>
+          <span class="ftype">${esc(f.type)}</span>
+          <span class="spacer"></span>${chips.join("")}</div>
+        <div class="paths">
+          <div class="plabel">Constrained</div>${val(f.constrained, diff)}
+          <div class="plabel">Free-form</div>${val(f.unconstrained, diff)}
+          <div class="plabel">Kept</div>${val(f.final, "final " + (f.correct?"":"wrong"))}
+          <div class="plabel">Gold</div>${val(f.gold, "")}
+        </div></button></div>`;
   }).join("");
+
+  $("fields").querySelectorAll(".field-btn").forEach(b =>
+    b.addEventListener("click", () => { fld = +b.dataset.i; renderDoc(); }));
+  renderPipe();
 }
 
 function renderTable(){
   const max = Math.max(...DATA.map(c => c.full_calls));
   $("tbody").innerHTML = DATA.map((c,i) => `
-    <tr${i===sel ? ' style="background:var(--accent-soft)"' : ""}>
+    <tr class="${i===sel?"sel":""}">
       <td class="model">${esc(c.benchmark)} · ${esc(c.model)}</td>
       <td class="tnum">${c.constrained.toFixed(3)}</td>
       <td class="tnum"><strong>${c.final.toFixed(3)}</strong></td>
@@ -334,8 +430,7 @@ function renderTable(){
       <td class="tnum">${c.low_conf}</td>
       <td class="tnum">${c.calls}
         <div class="bar"><span style="width:${(c.calls/max*100).toFixed(1)}%"></span></div></td>
-      <td class="tnum ${c.saved > 0.3 ? "d-ok" : c.saved > 0.05 ? "d-warn" : "d-bad"}">
-        ${pct(c.saved)}</td>
+      <td class="tnum ${c.saved>0.3?"d-ok":c.saved>0.05?"d-warn":"d-bad"}">${pct(c.saved)}</td>
     </tr>`).join("");
 }
 

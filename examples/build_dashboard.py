@@ -66,8 +66,14 @@ def collect() -> list[dict]:
                 fin = final.get(spec.name, "")
                 fields.append({
                     "name": spec.name,
+                    "type": spec.type + ("[]" if spec.multi else ""),
+                    "desc": spec.description,
                     "constrained": con,
                     "unconstrained": unc,
+                    # canonical forms the comparator actually sees — this is
+                    # where "$54.20" and "54.2" become the same string
+                    "norm_c": normalize(spec, con),
+                    "norm_u": normalize(spec, unc),
                     "final": fin,
                     "gold": gold[spec.name],
                     "flagged": spec.name in flagged,

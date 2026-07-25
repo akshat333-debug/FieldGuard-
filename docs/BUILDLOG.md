@@ -341,7 +341,7 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   parser yields "" for missing lines; only the single-field ARBITER is told it
   may answer NONE. Regression test pins the marker out.
 - **Post-fix, n=83:** 3b constrained 0.771 -> final 0.767 (damage 28 -> 12,
-  near-parity), 45% calls saved, flag recall 0.988. 1.5b 0.550 -> 0.562
+  near-parity), 45% calls saved, flag recall 0.988. 1.5b 0.550 -> 0.566
   (verification net-positive again), 47% saved.
 - **Capability finding:** absent-gold fields answered correctly-absent: 3b
   54/75, 1.5b 6/75 — the smaller model hallucinates a value for almost every
@@ -487,7 +487,7 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   69/75 absent-field hallucinations documented as undetectable in iteration 21);
   **inert on SROIE** (0 caught, 0 false alarms) — models copy off receipts.
 - Repair rule (unsupported + optional -> absent) is **capability-dependent**:
-  1.5b +8.4pts / +5.7pts, 3b +0.4 (noise) and party 3b **-0.9 (harmful)**.
+  1.5b +8.0pts / +5.7pts, 3b +0.4 (noise) and party 3b **-0.9 (harmful)**.
   Detection alone would NOT have helped: under split-kept an arbiter answering
   NONE disagrees with both fabricating paths, so the fabrication is kept.
 - Shipped OFF by default (`ground_repair=False`, `--ground-repair` to enable),
@@ -498,8 +498,8 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
 ## Iteration 32 — grounding repair confirmed live end-to-end
 - Ran the full pipeline with `--ground-repair` on Kleister qwen2.5:1.5b (n=83):
   constrained 0.550 (bit-identical to baseline, so the delta is the rule alone),
-  final 0.562 -> **0.647 (+8.4 pts)**, LLM calls **221 -> 221** (the repair
-  substitutes a value, it does not query), gate read 18.1%.
+  final 0.566 -> **0.647 (+8.0 pts)**, LLM calls **221 -> 221** (the repair
+  substitutes a value, it does not query), gate read 17.7%.
 - The offline reconstruction predicted 0.647 and the live run returned 0.647 —
   matching to three decimals. Worth noting for method: the offline study cost
   zero LLM calls and was a faithful predictor, so the cheap experiment was the

@@ -41,7 +41,7 @@ python3 -m examples.build_dashboard   # regenerate from results/
 | **source grounding** (`ground.py`) | *fabrication* — a value the document never states, however confidently both paths agree | values misread from a corrupted source (they are present in it) |
 
 Confirmed live end-to-end on Kleister qwen2.5:1.5b (n=83): final accuracy
-**0.562 → 0.647 (+8.4 pts)** at **221 → 221 LLM calls** — the repair replaces a
+**0.566 → 0.647 (+8.0 pts)** at **221 → 221 LLM calls** — the repair replaces a
 value rather than querying for one, so it is free. Extraction was bit-identical
 to the baseline run, isolating the delta to the rule.
 
@@ -50,7 +50,7 @@ one, and it directly attacks the correlated blind spot the first one cannot see
 (measured: it catches 35% of qwen2.5:1.5b's Kleister errors at 0.84 precision,
 while firing zero times on SROIE, where models copy values rather than invent
 them). Its repair rule is **capability-dependent** — it rescues a fabricating
-model (+8.4 points) and slightly harms a reliable one (−0.9), so it is opt-in
+model (+8.0 points) and slightly harms a reliable one (−0.9), so it is opt-in
 (`--ground-repair`), gated by a gold-free runtime signal: `ungrounded_rate`,
 ≈4% on capable models vs ≈15% on fabricating ones.
 
@@ -124,12 +124,12 @@ schema (75/249 gold fields are legitimately absent; the extractor must answer
 | | qwen2.5:3b | qwen2.5:1.5b | tinyllama-1.1B |
 |---|---|---|---|
 | constrained accuracy | 0.771 | 0.550 | 0.301* |
-| final accuracy | 0.767 | 0.562 | 0.301* |
+| final accuracy | 0.767 | 0.566 | 0.301* |
 | flag precision / recall | 0.506 / 0.988 | 0.558 / 0.964 | 0.976 / 1.0 |
 | absent fields answered absent | 54/75 | 6/75 | 75/75* |
 | LLM calls vs verify-everything | **-45%** | **-47%** | -59%* |
 
-95% CIs (doc bootstrap): 3b [0.715, 0.819] vs 1.5b [0.494, 0.627] — disjoint;
+95% CIs (doc bootstrap): 3b [0.715, 0.819] vs 1.5b [0.498, 0.631] — disjoint;
 the model separation is established in this domain too.
 
 *tinyllama answers absent for **all 249 fields** — its 0.301 is exactly the

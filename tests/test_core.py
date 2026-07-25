@@ -170,6 +170,21 @@ def test_optional_fields_absence_semantics():
     assert sch.to_json_schema()["required"] == ["total"]
 
 
+def test_phrased_absence_is_recognized():
+    """Models say "date not provided", not bare "not provided" (dashboard find).
+
+    Exact membership scored that CORRECT absence answer as a wrong value.
+    """
+    opt = FieldSpec("effective_date", "date", required=False)
+    for phrasing in ("date not provided", "Not Provided.", "value unknown",
+                     "jurisdiction not stated", "NONE"):
+        assert normalize(opt, phrasing) == "", phrasing
+    # a real value that merely contains such a word is untouched
+    assert normalize(opt, "None of the above clauses apply to the seller") != ""
+    req = FieldSpec("total", "number", required=False)
+    assert normalize(req, "12.50") == "12.5"
+
+
 def test_multi_valued_fields():
     from fieldguard.compare import normalize_set
     from fieldguard.metrics import _eq

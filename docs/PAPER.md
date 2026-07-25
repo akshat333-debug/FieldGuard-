@@ -167,7 +167,7 @@ neither as the "true" number.
 | SROIE — calls saved | **61%** | **56%** | 0% |
 | SROIE — constrained → final | 0.820 → 0.855 | 0.715 → 0.730 | 0.005 → 0.005 |
 | Kleister — calls saved | **45%** | **47%** | 59%* |
-| Kleister — constrained → final | 0.771 → 0.767 | 0.550 → 0.562 | 0.301* |
+| Kleister — constrained → final | 0.771 → 0.767 | 0.550 → 0.566 | 0.301* |
 
 Verification spend tracks extractor quality monotonically on SROIE, with no
 knob to tune. On the broken model there, every field is flagged, **200/200**
@@ -183,7 +183,7 @@ extracting correctly — which is precisely why the tripwire exists.
 
 Accuracy separation between 3b and 1.5b is CI-disjoint on both benchmarks
 (SROIE [0.810, 0.900] vs [0.680, 0.780]; Kleister [0.715, 0.819] vs
-[0.494, 0.627]), so the ordering is established, not noise.
+[0.498, 0.631]), so the ordering is established, not noise.
 
 \* tinyllama answers "absent" for all 249 Kleister fields; 0.301 is exactly the
 gold-absence share, and both-paths-absent counts as agreement. This is an
@@ -317,7 +317,7 @@ moves accuracy is *unsupported value on an optional field → absent*:
 
 | cell | accuracy | fixed / broken |
 |---|---|---|
-| Kleister 1.5b | 0.562 → **0.647** (+8.4) | 28 / 7 |
+| Kleister 1.5b | 0.566 → **0.647** (+8.0) | 27 / 7 |
 | Kleister+party 1.5b | 0.572 → **0.630** (+5.7) | 26 / 7 |
 | Kleister 3b | 0.767 → 0.771 (+0.4) | 6 / 5 |
 | Kleister+party 3b | 0.744 → 0.735 (**−0.9**) | 3 / 6 |
@@ -340,7 +340,7 @@ offline for every stored run:
 | Kleister+party 3b | 3.6% | skip | **−0.9** | correct (avoids harm) |
 | Kleister 3b | 4.8% | skip | +0.4 (noise) | correct |
 | Kleister+party 1.5b | 13.3% | **enable** | **+5.7** | correct |
-| Kleister 1.5b | 18.1% | **enable** | **+8.4** | correct |
+| Kleister 1.5b | 17.7% | **enable** | **+8.0** | correct |
 
 The gate makes the right enable/skip call on all six cells, including the one
 where the rule would have *hurt*. The separation (≤4.8% versus ≥13.3%) is a
@@ -353,14 +353,14 @@ with the rule enabled (`--ground-repair`, Kleister qwen2.5:1.5b, n=83):
 | | baseline | + grounding repair |
 |---|---|---|
 | constrained accuracy | 0.550 | 0.550 (extraction untouched) |
-| final accuracy | 0.562 | **0.647** (+8.4 pts) |
+| final accuracy | 0.566 | **0.647** (+8.0 pts) |
 | LLM calls | 221 | **221** (repair is free — no arbiter query) |
-| ungrounded rate (gate) | — | 45/249 = **18.1%** |
+| ungrounded rate (gate) | — | 44/249 = **17.7%** |
 
 The live result matches the offline prediction to three decimals, extraction is
 bit-identical (confirming the delta is the repair rule and nothing else), and
 the repair costs **zero additional model calls** — it replaces a value rather
-than querying for one. The gate read 18.1%, correctly above the fabricating
+than querying for one. The gate read 17.7%, correctly above the fabricating
 band, with no gold labels involved.
 
 **Honest caveat.** That gate is suggested by four informative cells. It is a

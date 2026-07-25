@@ -35,7 +35,20 @@ _ABSENCE = {"none", "n/a", "na", "null", "not provided", "not specified",
 
 
 def is_absent(spec: FieldSpec, value: str) -> bool:
-    return not spec.required and value.strip().casefold() in _ABSENCE
+    """Optional field whose value says 'the document does not state this'.
+
+    Exact membership alone misses the phrasings models actually produce
+    ("date not provided" rather than bare "not provided"), which scored a
+    CORRECT absence answer as a wrong value. Short values ending in an absence
+    phrase count too; the word cap keeps a real value that merely mentions one
+    of these words from being read as absence.
+    """
+    if spec.required:
+        return False
+    v = re.sub(r"[^\w\s/]", "", value.strip().casefold()).strip()
+    if v in _ABSENCE:
+        return True
+    return len(v.split()) <= 4 and any(v.endswith(p) for p in _ABSENCE)
 
 
 def normalize(spec: FieldSpec, value: str) -> str:
