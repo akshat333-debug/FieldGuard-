@@ -33,6 +33,9 @@ def main() -> None:
                     help="external JSONL dataset (adapter shape); overrides synthetic")
     ap.add_argument("--schema", default=None,
                     help="explicit schema JSON (field descriptions); else inferred")
+    ap.add_argument("--ground-repair", action="store_true",
+                    help="replace source-unsupported optional values with absence "
+                         "(capability-dependent — see pipeline.run docstring)")
     args = ap.parse_args()
 
     if args.data:
@@ -61,7 +64,8 @@ def main() -> None:
     t0 = time.time()
     trace: list[dict] = []
     finals, report = run(backend, docs, schema, gold=gold,
-                         threshold=args.threshold, trace=trace)
+                         threshold=args.threshold, trace=trace,
+                         ground_repair=args.ground_repair)
     elapsed = time.time() - t0
 
     print(f"\n{report.summary()}\nelapsed: {elapsed:.1f}s")
@@ -75,7 +79,8 @@ def main() -> None:
     results.mkdir(exist_ok=True)
     tag = (f"{pathlib.Path(args.data).stem}_" if args.data else "") + \
           ("desc_" if args.schema else "") + \
-          ("hard_" if args.hard else "") + (f"noise{args.noise}_" if args.noise else "")
+          ("hard_" if args.hard else "") + (f"noise{args.noise}_" if args.noise else "") + \
+          ("ground_" if args.ground_repair else "")
     path = results / f"{tag}{args.model.replace(':', '_')}_n{len(docs)}_t{args.threshold}.json"
     path.write_text(json.dumps(out, indent=2))
     print(f"results -> {path}")

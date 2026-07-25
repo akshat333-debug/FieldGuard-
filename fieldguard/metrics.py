@@ -47,7 +47,15 @@ class Report:
     flag_tp: int = 0
     flag_flagged: int = 0
     flag_corrupted: int = 0
+    # fields whose final value the source document does not support — a
+    # gold-independent fabrication estimate, and the runtime gate for whether
+    # grounding repair is worth enabling (see pipeline.run docstring)
+    ungrounded: int = 0
     notes: list[str] = field(default_factory=list)
+
+    @property
+    def ungrounded_rate(self) -> float:
+        return self.ungrounded / self.fields_total if self.fields_total else 0.0
 
     @property
     def flag_precision_micro(self) -> float:
@@ -71,7 +79,9 @@ class Report:
             f"LLM calls used       : {self.llm_calls} "
             f"(verify-everything baseline: {self.full_verify_calls}, "
             f"saved {saved:.0%})\n"
-            f"low-confidence fields: {self.low_confidence}/{self.fields_total}"
+            f"low-confidence fields: {self.low_confidence}/{self.fields_total}\n"
+            f"ungrounded (fabrication estimate): {self.ungrounded}"
+            f"/{self.fields_total} ({self.ungrounded_rate:.1%})"
         )
 
 
