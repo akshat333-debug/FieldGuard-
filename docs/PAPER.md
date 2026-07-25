@@ -326,9 +326,25 @@ moves accuracy is *unsupported value on an optional field → absent*:
 The rule rescues a fabricating extractor and slightly harms a reliable one,
 where the few ungrounded values are normalization edge cases rather than
 inventions. So it ships **off by default**, gated by a statistic that needs no
-gold labels: the observed ungrounded rate, ≈4% on capable models versus ≈15% on
-fabricating ones in these cells. This is the same adaptive stance as the cost
-result — the system measures its own extractor and spends accordingly.
+gold labels: the observed ungrounded rate. This is the same adaptive stance as
+the cost result — the system measures its own extractor and spends accordingly.
+
+**The gate, and whether it decides correctly.** The ungrounded rate is a
+deterministic function of (final values, source document), so it is recoverable
+offline for every stored run:
+
+| cell | ungrounded rate | gate | repair effect | decision |
+|---|---|---|---|---|
+| SROIE 3b | 0.0% | skip | 0.000 | correct |
+| SROIE 1.5b | 2.5% | skip | 0.000 | correct |
+| Kleister+party 3b | 3.6% | skip | **−0.9** | correct (avoids harm) |
+| Kleister 3b | 4.8% | skip | +0.4 (noise) | correct |
+| Kleister+party 1.5b | 13.3% | **enable** | **+5.7** | correct |
+| Kleister 1.5b | 18.1% | **enable** | **+8.4** | correct |
+
+The gate makes the right enable/skip call on all six cells, including the one
+where the rule would have *hurt*. The separation (≤4.8% versus ≥13.3%) is a
+gap, not a boundary we placed inside a continuum of observations.
 
 **Live end-to-end confirmation.** The table above is an offline reconstruction
 over stored outputs, so we re-ran the winning cell through the full pipeline

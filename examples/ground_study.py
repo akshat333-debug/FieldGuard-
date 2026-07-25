@@ -75,6 +75,34 @@ def study(stem: str, data_stem: str, schema_stem: str, label: str) -> None:
           f"   precision={prec:.2f}")
 
 
+def gate(stem: str, data_stem: str, schema_stem: str, label: str) -> None:
+    """The runtime gate: ungrounded rate, computed WITHOUT gold labels.
+
+    This is the statistic an operator can actually observe in production to
+    decide whether grounding repair is worth enabling. It is a deterministic
+    function of (final values, source document), so it is recoverable offline
+    from any stored run — no re-execution needed.
+    """
+    res_path = ROOT / "results" / f"{stem}.json"
+    if not res_path.exists():
+        print(f"{label:22} — missing")
+        return
+    res = json.loads(res_path.read_text())
+    schema = schema_from_json(ROOT / "datasets" / f"{schema_stem}.schema.json")
+    examples, _ = load_jsonl(ROOT / "datasets" / f"{data_stem}.jsonl",
+                             schema=schema)
+
+    ungrounded = total = 0
+    for ex, final in zip(examples, res["finals"]):
+        for spec in schema.fields:
+            total += 1
+            ungrounded += support(spec, final.get(spec.name, ""),
+                                  ex.document) < THRESHOLD
+    rate = ungrounded / total if total else 0.0
+    band = "FABRICATING" if rate >= 0.10 else "reliable"
+    print(f"{label:22} {ungrounded:>4}/{total:<5} {rate:>7.1%}   {band}")
+
+
 def main() -> None:
     print("Source-grounding signal on stored outputs (no LLM calls)\n")
     print(f"{'cell':22} {'errors':>10}  {'caught by grounding':>22}"
@@ -83,6 +111,13 @@ def main() -> None:
         study(*cell)
     print("\nRead: 'caught' = wrong values grounding would flag; "
           "'false alarms' = correct values it would flag anyway.")
+
+    print("\n\nRuntime gate — ungrounded rate (NO gold labels used)\n")
+    print(f"{'cell':22} {'ungrounded':>10} {'rate':>7}   band")
+    for cell in CELLS:
+        gate(*cell)
+    print("\nThe repair rule is enabled when a run lands in the FABRICATING "
+          "band.\nSeparation is observed, not tuned — see PAPER.md 5a caveat.")
 
 
 if __name__ == "__main__":
