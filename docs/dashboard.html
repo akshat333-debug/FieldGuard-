@@ -170,9 +170,22 @@ h2.sec .note{letter-spacing:0;text-transform:none;font-family:var(--sans);
 .chip.bad{color:var(--bad);background:var(--bad-soft)}
 .chip.mute{color:var(--ink-3)}
 .spacer{flex:1}
+/* four values as ALIGNED COLUMNS so a difference is caught by scanning
+   horizontally; collapses to labelled rows when there isn't width for it */
+.colhead{display:none;padding:6px 14px;border-bottom:1px solid var(--rule);
+  background:var(--sunk)}
 .paths{display:grid;grid-template-columns:82px 1fr;gap:2px 10px;margin-top:8px}
+@media (min-width:1100px){
+  .colhead{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .paths{grid-template-columns:repeat(4,1fr);gap:0 10px;margin-top:9px}
+  .paths .plabel{display:none}
+  .pval{border-left:1px solid var(--rule);padding-left:8px}
+  .pval:first-of-type{border-left:0;padding-left:0}
+}
 .plabel{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--ink-3);padding-top:2px}
+.chlabel{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3)}
 .pval{font-family:var(--mono);font-size:12px;word-break:break-word}
 .pval.empty{color:var(--ink-3);font-style:italic}
 .pval.diff{color:var(--warn)}
@@ -241,6 +254,10 @@ code{font-family:var(--mono);font-size:.92em;background:var(--sunk);padding:1px 
   <div class="pane">
     <div class="pane-head"><span class="t">Extracted fields</span>
       <span class="t" id="fieldSummary"></span></div>
+    <div class="colhead">
+      <span class="chlabel">Constrained</span><span class="chlabel">Free-form</span>
+      <span class="chlabel">Kept</span><span class="chlabel">Gold</span>
+    </div>
     <div id="fields"></div>
   </div>
 </div>

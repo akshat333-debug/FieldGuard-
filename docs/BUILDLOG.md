@@ -506,6 +506,38 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   right first move; the live run existed to falsify it, not to discover it.
 - 45 field values changed, exactly the ungrounded count.
 
+## Iteration 33 — dashboard v2: the pipeline made legible
+- The v1 dashboard showed *outcomes*; it never showed the mechanism. v2 makes an
+  8-stage pipeline the spine of the page — SOURCE / CONSTRAINED / FREE-FORM /
+  NORMALIZE / **DISAGREE (signal 1)** / ARBITER / **GROUND (signal 2)** / KEPT —
+  and it is driven by the field you click, so every tile shows that field's real
+  value at that stage. Stage 06 renders dimmed and struck through when the field
+  was not flagged, which is the cost saving made visible rather than asserted.
+- Stage 04 shows the actual canonical forms from `normalize()`, so the reader can
+  see "2018-12-25" and "25/12/2018" collapse to one string — the normalizer
+  doing its job instead of being described.
+- Source pane now highlights the kept value's literal span in the document.
+- **Stitch (Google) was used for the design exploration.** It generated a mockup
+  from a written brief; the one idea worth taking was laying the four values out
+  as ALIGNED COLUMNS (constrained | free-form | kept | gold) instead of stacked
+  rows, which turns a difference into something you catch by scanning across.
+  Adopted, with a labelled-row fallback below 1100px. The rest of the
+  implementation is hand-written and wired to real stored results — the Stitch
+  output is a static mockup with invented numbers and is kept only as
+  `docs/stitch/bench_mockup.png` for provenance.
+- **A real bug fell out of using it:** tracing a Kleister field showed
+  "date not provided" kept and marked as an unsupported fabrication. The model
+  had answered correctly — the absence check was exact-match, so the phrasing
+  slipped through and a right answer was scored wrong. Fixed (iteration 34).
+
+## Iteration 34 — phrased absence
+- `is_absent` now also accepts short values ENDING in an absence phrase, with a
+  four-word cap so a genuine value merely containing such a word is untouched.
+- Honest magnitude: **1 field** in the entire corpus. Kleister 1.5b final
+  0.562 -> 0.566, ungrounded 45 -> 44 (17.7%). The repair endpoint is unchanged
+  (0.647), so the grounding headline becomes **+8.0**, not +8.4. Gate decisions
+  unchanged (still 6/6 correct). 15 citations updated across README/PAPER/BUILDLOG.
+
 ## Iteration 31 — dashboard frontend
 - `docs/dashboard.html`: self-contained (no server/deps) field-level inspector
   regenerated from stored runs by `examples/build_dashboard.py`. Shows both

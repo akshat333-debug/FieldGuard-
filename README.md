@@ -25,9 +25,23 @@ verification cost. Pure black-box — no logits, no fine-tuning, bolts onto any 
 ## Dashboard
 
 `docs/dashboard.html` is a self-contained inspector (no server, no deps) built
-from the stored runs — open it in a browser. Pick a run, step through real
-documents, and see per field: both generation paths, whether the disagreement
-detector fired, whether the source supports the kept value, and the gold.
+from the stored runs — open it in a browser.
+
+An **8-stage pipeline** is the spine of the page, and it is driven by whichever
+field you click, showing that field's real value at every stage:
+
+```
+01 SOURCE → 02 CONSTRAINED ┐                    ┌ 06 ARBITER ┐
+                           ├ 04 NORMALIZE → 05 DISAGREE ─────┼ 07 GROUND → 08 KEPT
+           03 FREE-FORM ───┘                    └ (skipped)  ┘
+                                          signal 1      signal 2
+```
+
+Stage 06 renders dimmed and struck through whenever a field was not flagged —
+the cost saving shown rather than asserted. Stage 04 prints the actual canonical
+forms, so you can watch `2018-12-25` and `25/12/2018` collapse into one string.
+Field values are laid out as aligned columns (constrained │ free-form │ kept │
+gold) so a discrepancy is caught by scanning across.
 
 ```bash
 python3 -m examples.build_dashboard   # regenerate from results/
