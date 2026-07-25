@@ -22,6 +22,14 @@
   related-work pass found PromptPort precedent; patent reality check.
 - 28: party figure + figure-generator robustness.
 
+## Done (iterations 30-31)
+- 30: **source grounding** — second, orthogonal, training-free signal that
+  attacks the fabrication half of our own correlated blind spot. Detection
+  measured offline (35% of Kleister 1.5b errors at 0.84 precision; inert on
+  SROIE). Absence-repair is capability-dependent (+8.4 on 1.5b, -0.9 on 3b),
+  so it is opt-in and gated by the gold-free `ungrounded_rate`.
+- 31: dashboard frontend (`docs/dashboard.html`) + build script.
+
 ## Backlog
 - Populate micro flag P/R corpus-wide (re-run of published cells in progress;
   `examples/rerun_all.sh`). Extraction is temp-0 deterministic, so accuracy

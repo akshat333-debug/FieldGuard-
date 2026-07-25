@@ -470,6 +470,46 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
 - Cited datasets properly (Huang et al. ICDAR 2019 SROIE; Stanisławek et al.
   arXiv:2105.05796 Kleister) and added a checked references section.
 
+## Iteration 30 — SECOND SIGNAL: source grounding (attacks our own blind spot)
+- Motivation: the documented correlated blind spot is not monolithic. It splits
+  into **fabrication** (value invented, absent from the source) and
+  **misreading** (value misread from corrupted source). The first is attackable
+  by a signal orthogonal to disagreement: does the document support the value?
+- Built `fieldguard/ground.py` — training-free support scoring, reusing the
+  SAME normalization as compare.py in both directions (first version scored
+  correct values as ungrounded merely for being spelled differently: ISO dates
+  vs "30th day of April, 2009", "2 years" vs "two (2) years"; symmetric
+  normalization + light plural tolerance roughly halved false alarms and lifted
+  Kleister 1.5b precision 0.73 -> 0.84).
+- **Measured offline on stored outputs — zero LLM calls** (`ground_study.py`,
+  `ground_repair_study.py`), which is why this was cheap to falsify.
+- Detection: catches 35% of Kleister 1.5b errors at 0.84 precision (exactly the
+  69/75 absent-field hallucinations documented as undetectable in iteration 21);
+  **inert on SROIE** (0 caught, 0 false alarms) — models copy off receipts.
+- Repair rule (unsupported + optional -> absent) is **capability-dependent**:
+  1.5b +8.4pts / +5.7pts, 3b +0.4 (noise) and party 3b **-0.9 (harmful)**.
+  Detection alone would NOT have helped: under split-kept an arbiter answering
+  NONE disagrees with both fabricating paths, so the fabrication is kept.
+- Shipped OFF by default (`ground_repair=False`, `--ground-repair` to enable),
+  gated by `Report.ungrounded_rate` — a gold-free runtime statistic separating
+  the cells cleanly (~4% capable vs ~15% fabricating). Honest caveat recorded:
+  four informative cells is a hypothesis, not a calibrated threshold.
+
+## Iteration 31 — dashboard frontend
+- `docs/dashboard.html`: self-contained (no server/deps) field-level inspector
+  regenerated from stored runs by `examples/build_dashboard.py`. Shows both
+  generation paths, flag state + score, grounding support, and gold per field.
+- Design identity: monospace as the DISPLAY face (subject is ledgers and
+  extraction), ultramarine accent kept separate from the semantic
+  verified/flagged/unsupported palette, hairline rules, near-square corners.
+- Two layout bugs found only by opening it in a browser: an orphaned 4th
+  readout tile at mid widths (auto-fit), and a tall inner-scrolling document
+  pane that swallowed page scroll on narrow screens, burying the verdicts.
+  Fixed by fixed 2x2->4 grid and by ordering verdicts first when stacked.
+- The inspector immediately surfaces the blind spot on document 1: both paths
+  agree on "SDN BND" where gold says "SDN BHD" — a correlated OCR error, shown
+  live as "paths agree / differs from gold".
+
 ## Iteration 29 — micro P/R populated corpus-wide; determinism proven
 - Re-ran all six published cells (`examples/rerun_all.sh`). **Zero drift** on
   every accuracy/cost number across both benchmarks × three models — the
