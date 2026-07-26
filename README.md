@@ -22,10 +22,39 @@ likely constraint-corrupted, and **only those fields** are re-verified with a ta
 single-field query. Result: recover most of the lost accuracy at a fraction of the
 verification cost. Pure black-box — no logits, no fine-tuning, bolts onto any stack.
 
-## Dashboard
+## Live app (real model, real time)
+
+```bash
+python3 -m fieldguard.server            # http://localhost:8000
+```
+
+Paste a document (or pick one of the shipped SROIE / Kleister samples with its
+gold labels), pick a local model, hit Run. The page then streams **one frame per
+pipeline stage as it happens** over Server-Sent Events — the two extraction
+prompts and their raw responses, the canonical forms actually compared, the
+per-field disagreement scores, each blind arbiter call as it lands, the
+source-support bars, and finally the record FieldGuard ships **next to the record
+plain JSON mode would have shipped**, scored against gold.
+
+Every stage states what it is for and what would go wrong without it, so the
+mechanism is legible to someone watching for the first time. Nothing is
+pre-computed: `fieldguard/live.py` runs the same primitives as the batch
+pipeline, and a test (`tests/test_live.py`) pins the streamed result to be
+byte-identical to `pipeline.run` on the same input — the demo cannot drift into
+theatre.
+
+```bash
+python3 -m fieldguard.server --model qwen2.5:1.5b --port 8080
+python3 -m fieldguard.server --base-url https://api.openai.com/v1 --model gpt-4o-mini
+```
+
+Pick the `mock` model to drive the page with no LLM at all (offline).
+
+## Results dashboard
 
 `docs/dashboard.html` is a self-contained inspector (no server, no deps) built
-from the stored runs — open it in a browser.
+from the stored runs — open it in a browser. Static by design: it is a *viewer*
+over completed benchmark runs, the counterpart to the live app above.
 
 An **8-stage pipeline** is the spine of the page, and it is driven by whichever
 field you click, showing that field's real value at every stage:
@@ -96,6 +125,9 @@ backend = OpenAICompatBackend(base_url="http://localhost:11434/v1", model="llama
 | `fieldguard/pipeline.py` | End-to-end orchestration |
 | `fieldguard/calibrate.py` | Threshold sweep: accuracy vs verification-cost curve |
 | `fieldguard/adapter.py` | JSONL loader for external datasets, schema inference |
+| `fieldguard/ground.py` | Second signal: is the kept value supported by the source? |
+| `fieldguard/live.py` | Instrumented single-document run — yields one event per stage |
+| `fieldguard/server.py` | Stdlib HTTP server streaming those events to `web/live.html` |
 
 ## Real benchmark: SROIE receipts (ICDAR 2019, 50 docs / 200 fields)
 
@@ -197,18 +229,33 @@ measurably damaging accuracy; BUILDLOG iteration 17).
 Regenerate: `python3 -m examples.sweep --data datasets/sroie_15.jsonl --model <m> --n 15
 --thresholds 0.3,0.5,0.6,0.75,0.9` then `python3 -m examples.figure`.
 
-## First real-model results (local Ollama, 8 prose invoices / 40 fields)
+## Smoke test, NOT a result (local Ollama, 8 synthetic prose invoices / 40 fields)
+
+> **Read the 1.000 as "this set is saturated", not as "the method is perfect."**
+> These 8 documents are synthetic and were written by this repo (`data.py`) with
+> the values stated in clean prose. qwen2.5:3b reads all 40 fields correctly
+> under constraint, so `corruption_rate` is **0.000** — there was nothing for
+> FieldGuard to repair, and 1.000 → 1.000 measures the *dataset*, not the
+> mechanism. A benchmark with no headroom cannot separate methods. Cite SROIE
+> and Kleister-NDA above; this cell exists to prove the code runs end-to-end
+> against a real model and that a broken extractor still gets caught.
 
 | | qwen2.5:3b | tinyllama-1.1B |
 |---|---|---|
-| constrained accuracy | 1.000 | 0.000 |
-| final accuracy | 1.000 | 0.400 |
+| constrained accuracy | 1.000 *(saturated)* | 0.000 |
+| final accuracy | 1.000 *(saturated)* | 0.400 |
+| constraint-corrupted fields available to repair | **0/40** | 6/40 |
 | flag precision / recall | 0.875 / 1.0 | 0.938 / 1.0 |
 | low-confidence self-report | 0/40 | 37/40 |
-| LLM calls vs verify-everything | **-70%** | 0% (all flagged) |
+| LLM calls vs verify-everything | -70% | 0% (all flagged) |
 
-Verification spend adapts to model quality: near-zero overhead on a capable
-model, full spend plus loud self-reporting on a broken one. Known limitation
+(The same caveat applies to `python3 -m examples.demo`, whose 1.000 is true *by
+construction*: `MockBackend` is a perfect reader and the corruptions are the
+ones this repo injects. It is a smoke test for the wiring, not evidence.)
+
+The one thing this cell does show is that verification spend adapts to model
+quality: near-zero overhead on a capable model, full spend plus loud
+self-reporting on a broken one. Known limitation
 (documented in `docs/BUILDLOG.md`): identical correlated errors across both
 paths are invisible to disagreement by construction; the empty-field case is
 auto-flagged.

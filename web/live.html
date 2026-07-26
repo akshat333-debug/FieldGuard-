@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FieldGuard — live</title>
+<style>
+:root{
+  --bg:#0a0b0d; --panel:#121418; --panel-2:#171a1f; --line:#242830;
+  --ink:#e9e7e4; --dim:#8a9099; --dimmer:#5f6670;
+  --a:#5eead4;            /* path A — constrained */
+  --b:#fbbf24;            /* path B — free-form   */
+  --flag:#ff6b5b; --ok:#4ade80; --violet:#a78bfa;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--sans);
+  font-size:14px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+button,select,input,textarea{font:inherit;color:inherit}
+a{color:var(--a)}
+
+/* ── top bar ─────────────────────────────────────────── */
+.bar{
+  position:sticky; top:0; z-index:20; display:flex; align-items:center;
+  gap:18px; padding:0 20px; height:56px; background:rgba(10,11,13,.86);
+  backdrop-filter:blur(12px); border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:baseline;gap:9px;flex:none}
+.brand b{font-size:15px;letter-spacing:-.01em;font-weight:640}
+.brand span{
+  font:500 10px/1 var(--mono); letter-spacing:.16em; color:var(--dimmer);
+  border:1px solid var(--line); padding:4px 6px; border-radius:4px;
+}
+.ctl{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--dim)}
+.ctl select,.ctl input[type=number]{
+  background:var(--panel-2); border:1px solid var(--line); border-radius:6px;
+  padding:5px 8px; font-size:12px; max-width:220px;
+}
+.ctl input[type=number]{width:64px;font-family:var(--mono)}
+.spacer{flex:1}
+.run{
+  background:var(--ink); color:#0a0b0d; border:0; border-radius:7px;
+  padding:8px 18px; font-weight:640; font-size:13px; cursor:pointer;
+  letter-spacing:-.01em;
+}
+.run:hover{background:#fff}
+.run:disabled{opacity:.4;cursor:progress}
+.toggle{display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none}
+.toggle input{accent-color:var(--violet)}
+
+/* ── layout ──────────────────────────────────────────── */
+.wrap{display:grid;grid-template-columns:minmax(300px,380px) 1fr;
+      gap:0;align-items:start}
+@media (max-width:960px){.wrap{grid-template-columns:1fr}}
+.left{
+  border-right:1px solid var(--line); padding:20px; position:sticky; top:56px;
+  max-height:calc(100vh - 56px); overflow:auto;
+}
+@media (max-width:960px){.left{position:static;max-height:none;border-right:0;
+  border-bottom:1px solid var(--line)}}
+.right{padding:20px 24px 120px;min-width:0}
+
+.lbl{
+  font:600 10px/1 var(--mono); letter-spacing:.16em; color:var(--dimmer);
+  text-transform:uppercase; margin:0 0 9px;
+}
+textarea#doc{
+  width:100%; height:290px; resize:vertical; background:var(--panel);
+  border:1px solid var(--line); border-radius:8px; padding:12px;
+  font:12px/1.65 var(--mono); color:var(--ink); white-space:pre-wrap;
+}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{
+  font:11px/1 var(--mono); border:1px solid var(--line); border-radius:999px;
+  padding:6px 10px; color:var(--dim); background:var(--panel);
+}
+.chip i{font-style:normal;color:var(--dimmer)}
+.chip.opt{border-style:dashed}
+
+/* ── stage cards ─────────────────────────────────────── */
+.stage{
+  border:1px solid var(--line); border-radius:12px; background:var(--panel);
+  margin-bottom:12px; overflow:hidden; opacity:.34;
+  transition:opacity .35s ease, border-color .35s ease, transform .35s ease;
+}
+.stage.live{opacity:1;border-color:#3a4049}
+.stage.done{opacity:1}
+.stage.skip{opacity:.42}
+.stage.skip .body{display:none}
+.head{
+  display:flex;align-items:center;gap:12px;padding:13px 16px;cursor:default;
+  border-bottom:1px solid transparent;
+}
+.stage.done .head,.stage.live .head{border-bottom-color:var(--line)}
+.num{
+  font:600 11px/1 var(--mono); color:var(--dimmer); width:20px; flex:none;
+  letter-spacing:.04em;
+}
+.title{font-weight:620;letter-spacing:-.01em;font-size:14px}
+.sub{color:var(--dim);font-size:12px}
+.state{margin-left:auto;font:11px/1 var(--mono);color:var(--dimmer)}
+.stage.live .state{color:var(--a)}
+.dot{
+  width:7px;height:7px;border-radius:50%;background:var(--dimmer);flex:none;
+}
+.stage.live .dot{background:var(--a);animation:pulse 1.1s ease-in-out infinite}
+.stage.done .dot{background:var(--ok)}
+.stage.skip .dot{background:transparent;border:1px solid var(--dimmer)}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.8)}}
+.body{padding:14px 16px 16px}
+
+.why{
+  font-size:12.5px;color:var(--dim);border-left:2px solid var(--line);
+  padding:2px 0 2px 12px;margin:0 0 12px;
+}
+.why b{color:var(--ink);font-weight:600}
+.note{
+  margin-top:10px;font-size:12.5px;border-radius:8px;padding:10px 12px;
+  border:1px solid rgba(167,139,250,.28); background:rgba(167,139,250,.06);
+  color:#cfc6f5;
+}
+.note::before{
+  content:"NOVELTY"; display:block; font:600 9.5px/1 var(--mono);
+  letter-spacing:.16em; color:var(--violet); margin-bottom:6px;
+}
+.note.counter{border-color:rgba(255,107,91,.26);background:rgba(255,107,91,.06);color:#f7cfc9}
+.note.counter::before{content:"WITHOUT THIS";color:var(--flag)}
+
+/* ── data tables ─────────────────────────────────────── */
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{
+  text-align:left;font:600 9.5px/1 var(--mono);letter-spacing:.14em;
+  color:var(--dimmer);text-transform:uppercase;padding:0 10px 7px 0;
+  border-bottom:1px solid var(--line);white-space:nowrap;
+}
+td{padding:8px 10px 8px 0;border-bottom:1px solid #1b1e24;vertical-align:top}
+tr:last-child td{border-bottom:0}
+.f{font:12px/1.5 var(--mono);color:var(--dim);white-space:nowrap}
+.v{font:12px/1.5 var(--mono);word-break:break-word}
+.va{color:var(--a)} .vb{color:var(--b)}
+.muted{color:var(--dimmer)}
+.eq{color:var(--dimmer)}
+.hit{color:var(--ok)} .miss{color:var(--flag)}
+.pill{
+  display:inline-block;font:10px/1 var(--mono);padding:4px 7px;border-radius:5px;
+  border:1px solid var(--line);color:var(--dim);white-space:nowrap;
+}
+.pill.flag{border-color:rgba(255,107,91,.4);color:var(--flag);background:rgba(255,107,91,.08)}
+.pill.ok{border-color:rgba(74,222,128,.35);color:var(--ok);background:rgba(74,222,128,.07)}
+.pill.warn{border-color:rgba(251,191,36,.35);color:var(--b);background:rgba(251,191,36,.07)}
+.strike{text-decoration:line-through;color:var(--dimmer)}
+
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 14px;font-size:11.5px;color:var(--dim)}
+.legend span{display:flex;align-items:center;gap:6px}
+.sw{width:9px;height:9px;border-radius:2px;flex:none}
+
+details.raw{margin-top:12px}
+details.raw summary{
+  cursor:pointer;font:10px/1 var(--mono);letter-spacing:.13em;color:var(--dimmer);
+  text-transform:uppercase;list-style:none;
+}
+details.raw summary::-webkit-details-marker{display:none}
+details.raw summary::before{content:"▸ ";}
+details.raw[open] summary::before{content:"▾ ";}
+pre.raw{
+  margin:9px 0 0;padding:11px;background:#0d0f12;border:1px solid var(--line);
+  border-radius:7px;font:11px/1.6 var(--mono);color:var(--dim);
+  white-space:pre-wrap;max-height:280px;overflow:auto;
+}
+.bars{display:flex;gap:2px;align-items:center}
+.bar-t{height:5px;border-radius:3px;background:#232830;flex:1;overflow:hidden;max-width:120px}
+.bar-f{height:100%;background:var(--a)}
+
+/* ── verdict ─────────────────────────────────────────── */
+.verdict{border-color:#3a4049;background:linear-gradient(180deg,#171a20,#121418)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+      background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:14px}
+.kpi{background:var(--panel-2);padding:13px 14px}
+.kpi .k{font:600 9.5px/1 var(--mono);letter-spacing:.14em;color:var(--dimmer);text-transform:uppercase}
+.kpi .n{font:600 25px/1.15 var(--sans);letter-spacing:-.03em;margin-top:8px;font-variant-numeric:tabular-nums}
+.kpi .d{font-size:11.5px;color:var(--dim);margin-top:3px}
+.kpi .n.good{color:var(--ok)} .kpi .n.bad{color:var(--flag)} .kpi .n.acc{color:var(--a)}
+
+.diff{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.diff-row{display:grid;grid-template-columns:150px 1fr;gap:0;border-bottom:1px solid #1b1e24}
+.diff-row:last-child{border-bottom:0}
+.diff-row>div{padding:10px 12px}
+.diff-row .k{font:12px/1.5 var(--mono);color:var(--dim);background:#0f1114}
+.was{font:12px/1.5 var(--mono);color:var(--flag);text-decoration:line-through}
+.now{font:12px/1.5 var(--mono);color:var(--ok)}
+.arrow{color:var(--dimmer);margin:0 8px}
+
+.err{border:1px solid rgba(255,107,91,.5);background:rgba(255,107,91,.08);
+     color:#ffb9b0;padding:13px 15px;border-radius:10px;font:12px/1.6 var(--mono);
+     white-space:pre-wrap;margin-bottom:12px}
+.hint{color:var(--dimmer);font-size:12px;margin-top:10px}
+.cost{
+  position:fixed;left:0;right:0;bottom:0;z-index:15;display:flex;gap:22px;
+  align-items:center;padding:11px 22px;background:rgba(10,11,13,.92);
+  backdrop-filter:blur(12px);border-top:1px solid var(--line);
+  font:11.5px/1 var(--mono);color:var(--dim);
+}
+.cost b{color:var(--ink);font-weight:600}
+.cost .g{color:var(--ok)}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="brand"><b>FieldGuard</b><span>LIVE</span></div>
+  <div class="ctl">corpus
+    <select id="corpus"></select>
+  </div>
+  <div class="ctl">document
+    <select id="sample"></select>
+  </div>
+  <div class="ctl">model
+    <select id="model"></select>
+  </div>
+  <div class="ctl">threshold
+    <input id="thr" type="number" min="0" max="1" step="0.05" value="0.5">
+  </div>
+  <label class="ctl toggle" title="Replace values the source does not support with absence (optional fields only)">
+    <input type="checkbox" id="repair"> ground-repair
+  </label>
+  <div class="spacer"></div>
+  <button class="run" id="run">Run</button>
+</div>
+
+<div class="wrap">
+  <div class="left">
+    <p class="lbl">Source document</p>
+    <textarea id="doc" spellcheck="false"></textarea>
+    <p class="lbl" style="margin-top:18px">Schema — fields to fill</p>
+    <div class="chips" id="chips"></div>
+    <p class="hint" id="goldhint"></p>
+  </div>
+
+  <div class="right" id="stages"></div>
+</div>
+
+<div class="cost">
+  <span>LLM calls <b id="c-calls">—</b></span>
+  <span>verify-everything baseline <b id="c-base">—</b></span>
+  <span>saved <b class="g" id="c-saved">—</b></span>
+  <span id="c-status" style="margin-left:auto"></span>
+</div>
+
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const el = (t, c, h) => { const n = document.createElement(t);
+  if (c) n.className = c; if (h !== undefined) n.innerHTML = h; return n; };
+const esc = s => String(s ?? "").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const show = s => (s === "" || s == null) ? '<span class="muted">∅ empty</span>' : esc(s);
+
+/* ── stage definitions: the narrative the page has to carry ───────── */
+const STAGES = [
+  { id:"source", n:"01", title:"Source", sub:"document + schema",
+    why:"The raw document and the fields we want filled. Nothing has been extracted yet." },
+
+  { id:"constrained", n:"02", title:"Path A — constrained", sub:"schema-forced JSON",
+    why:"The model is forced to emit JSON matching the schema. This is what production stacks already do, and it guarantees the <b>shape</b> of the answer: every key present, every type right.",
+    counter:"Schema enforcement is where most pipelines stop. A forced-valid <code>{\"total\": 45}</code> passes every validator while the receipt says 54.20. Structure was never the thing that was wrong." },
+
+  { id:"unconstrained", n:"03", title:"Path B — free-form", sub:"same model, no schema",
+    why:"The same model, the same document, the same temperature — asked in plain text instead. No JSON mode, no grammar mask, no schema.",
+    note:"The <b>only</b> variable that changed between path A and path B is the constraint itself. So any value that moves between them is a value the constraint moved. That is the entire signal — no logits, no fine-tuned verifier, no second model, no labels." },
+
+  { id:"normalize", n:"04", title:"Normalize", sub:"canonical forms",
+    why:"Both answers are reduced to a canonical form before they are compared: <code>$54.20</code> and <code>54.2</code>, <code>25/12/2018</code> and <code>2018-12-25</code>, <code>Acme Incorporated</code> and <code>Acme Inc</code>.",
+    counter:"Compare the raw strings and formatting noise reads as disagreement — nearly every field flags, the arbiter is called on all of them, and the cost saving disappears." },
+
+  { id:"disagree", n:"05", title:"Disagree", sub:"signal 1 — per-field score",
+    why:"A graded disagreement score per field. Above threshold ⇒ suspect. Everything below is accepted as extracted and <b>never queried again</b>.",
+    note:"This is where the money is saved. Verifying every field costs one extra call per field; verifying only the fields the two paths dispute costs a fraction — and the fraction shrinks automatically as the extractor gets better." },
+
+  { id:"arbiter", n:"06", title:"Arbiter", sub:"selective re-verification",
+    why:"Only flagged fields get a targeted single-field query. Unflagged fields skip this stage entirely.",
+    note:"The arbiter is <b>blind</b> — it never sees the two disputed values. Shown the candidates, real models parrot the refusal candidate (\"not provided\") and manufacture a false majority; measured, judge-style prompting cost 5 accuracy points. Blind arbitration, plus keeping the constrained value on a three-way split, was the accuracy-safe combination." },
+
+  { id:"ground", n:"07", title:"Ground", sub:"signal 2 — source support",
+    why:"Is the kept value actually present in the document? Checked token-by-token against the source, with the same normalization used above.",
+    note:"Disagreement is blind by construction to errors <b>both</b> paths share — a small model that invents a plausible value invents the same one twice, and the two paths agree perfectly on a fabrication. Grounding attacks exactly that blind spot, and it needs no training either." },
+
+  { id:"kept", n:"08", title:"Kept", sub:"final record vs. plain JSON mode",
+    why:"The record FieldGuard ships, next to the record schema-enforcement alone would have shipped." },
+];
+
+const stageEl = {};
+function buildStages(){
+  const host = $("#stages"); host.innerHTML = "";
+  for (const s of STAGES){
+    const card = el("div","stage");
+    card.innerHTML =
+      '<div class="head"><span class="dot"></span><span class="num">'+s.n+'</span>'+
+      '<span class="title">'+s.title+'</span><span class="sub">'+s.sub+'</span>'+
+      '<span class="state">idle</span></div>'+
+      '<div class="body"><p class="why">'+s.why+'</p>'+
+      (s.note ? '<div class="note">'+s.note+'</div>' : '')+
+      (s.counter ? '<div class="note counter">'+s.counter+'</div>' : '')+
+      '<div class="data"></div></div>';
+    host.appendChild(card);
+    stageEl[s.id] = card;
+  }
+}
+const setState = (id, cls, txt) => {
+  const c = stageEl[id]; if (!c) return;
+  c.className = "stage " + cls;
+  c.querySelector(".state").textContent = txt;
+};
+const dataOf = id => stageEl[id].querySelector(".data");
+
+/* ── config + samples ─────────────────────────────────────────────── */
+let CFG = null, FIELDS = [], GOLD = null;
+
+async function loadConfig(){
+  CFG = await (await fetch("/api/config")).json();
+  const cs = $("#corpus"); cs.innerHTML = "";
+  for (const [k, v] of Object.entries(CFG.corpora))
+    cs.appendChild(el("option", null, k)).value = k;
+  const ms = $("#model"); ms.innerHTML = "";
+  for (const m of CFG.models) ms.appendChild(el("option", null, m)).value = m;
+  ms.appendChild(el("option", null, "mock (offline, no LLM)")).value = "mock";
+  ms.value = CFG.models.includes(CFG.default_model) ? CFG.default_model
+           : (CFG.models[0] || "mock");
+  if (!CFG.backend_ready)
+    $("#c-status").innerHTML = '<span style="color:var(--flag)">backend unreachable — '
+      + esc(CFG.base_url) + '</span>';
+  cs.onchange = onCorpus; $("#sample").onchange = onSample;
+  onCorpus();
+}
+
+function onCorpus(){
+  const c = CFG.corpora[$("#corpus").value];
+  FIELDS = c.fields;
+  const ss = $("#sample"); ss.innerHTML = "";
+  c.samples.forEach((s, i) => ss.appendChild(
+    el("option", null, "sample " + (i + 1) + " — " + s.document.trim().slice(0, 44).replace(/\s+/g," ") + "…")
+  ).value = s.id);
+  $("#chips").innerHTML = c.fields.map(f =>
+    '<span class="chip' + (f.required ? '' : ' opt') + '">' + esc(f.name) +
+    ' <i>' + esc(f.type) + (f.multi ? '[]' : '') + (f.required ? '' : ' · optional') + '</i></span>'
+  ).join("");
+  onSample();
+}
+function onSample(){
+  const c = CFG.corpora[$("#corpus").value];
+  const s = c.samples.find(x => x.id === $("#sample").value) || c.samples[0];
+  $("#doc").value = s.document;
+  GOLD = s.gold;
+  $("#goldhint").textContent =
+    "Gold labels loaded for this sample — the verdict will be scored against them. "
+    + "Editing the document detaches gold.";
+}
+$("#doc")?.addEventListener("input", () => {
+  if (GOLD){ GOLD = null; $("#goldhint").textContent =
+    "Document edited — gold detached; the run will report a verdict without scoring."; }
+});
+
+/* ── SSE-over-POST ────────────────────────────────────────────────── */
+async function* stream(body){
+  const res = await fetch("/api/analyze", {
+    method:"POST", headers:{"Content-Type":"application/json"},
+    body: JSON.stringify(body)
+  });
+  if (!res.ok || !res.body){
+    let msg; try { msg = (await res.json()).error; } catch { msg = res.statusText; }
+    yield { stage:"error", message: msg }; return;
+  }
+  const rd = res.body.getReader(), dec = new TextDecoder();
+  let buf = "";
+  for(;;){
+    const { value, done } = await rd.read();
+    if (done) break;
+    buf += dec.decode(value, { stream:true });
+    let i;
+    while ((i = buf.indexOf("\n\n")) >= 0){
+      const frame = buf.slice(0, i); buf = buf.slice(i + 2);
+      if (frame.startsWith("data: ")) yield JSON.parse(frame.slice(6));
+    }
+  }
+}
+
+/* ── renderers ────────────────────────────────────────────────────── */
+function rawBlock(label, ev){
+  if (!ev.prompt && !ev.output) return "";
+  return '<details class="raw"><summary>' + label +
+    (ev.sec ? ' · ' + ev.sec + 's' : '') + '</summary>' +
+    (ev.prompt ? '<pre class="raw">' + esc(ev.prompt) + '</pre>' : '') +
+    (ev.output ? '<pre class="raw">' + esc(ev.output) + '</pre>' : '') +
+    '</details>';
+}
+
+function renderValues(ev, cls){
+  const rows = FIELDS.map(f =>
+    '<tr><td class="f">' + esc(f.name) + '</td><td class="v ' + cls + '">' +
+    show(ev.values[f.name]) + '</td></tr>').join("");
+  return '<table><thead><tr><th>field</th><th>value</th></tr></thead><tbody>'
+    + rows + '</tbody></table>';
+}
+
+const R = {
+  source(ev){
+    setState("source","done", FIELDS.length + " fields");
+    dataOf("source").innerHTML =
+      '<table><thead><tr><th>field</th><th>type</th><th>presence</th></tr></thead><tbody>'
+      + ev.fields.map(f => '<tr><td class="f">' + esc(f.name) + '</td><td class="v muted">'
+        + esc(f.type) + (f.multi ? "[]" : "") + '</td><td>'
+        + (f.required ? '<span class="pill">required</span>'
+                      : '<span class="pill warn">may be absent</span>')
+        + '</td></tr>').join("")
+      + '</tbody></table>';
+  },
+  constrained(ev){
+    setState("constrained","done", ev.sec + "s · 1 call");
+    dataOf("constrained").innerHTML = renderValues(ev, "va")
+      + rawBlock("prompt + raw JSON response", ev);
+  },
+  unconstrained(ev){
+    setState("unconstrained","done", ev.sec + "s · 1 call");
+    dataOf("unconstrained").innerHTML = renderValues(ev, "vb")
+      + rawBlock("prompt + raw plain-text response", ev);
+  },
+  normalize(ev){
+    setState("normalize","done","canonicalised");
+    const rows = ev.rows.map(r => {
+      const same = r.norm_constrained === r.norm_unconstrained;
+      return '<tr><td class="f">' + esc(r.field) + '</td>' +
+        '<td class="v va">' + show(r.constrained) + '<div class="v ' + (same?'eq':'muted') +
+          '" style="font-size:11px">↳ ' + show(r.norm_constrained) + '</div></td>' +
+        '<td class="v vb">' + show(r.unconstrained) + '<div class="v ' + (same?'eq':'muted') +
+          '" style="font-size:11px">↳ ' + show(r.norm_unconstrained) + '</div></td>' +
+        '<td>' + (same ? '<span class="pill ok">identical</span>'
+                       : '<span class="pill flag">differs</span>') + '</td></tr>';
+    }).join("");
+    dataOf("normalize").innerHTML =
+      '<div class="legend"><span><i class="sw" style="background:var(--a)"></i>path A constrained</span>'
+      + '<span><i class="sw" style="background:var(--b)"></i>path B free-form</span>'
+      + '<span>↳ canonical form actually compared</span></div>'
+      + '<table><thead><tr><th>field</th><th>path A</th><th>path B</th><th></th></tr></thead><tbody>'
+      + rows + '</tbody></table>';
+  },
+  disagree(ev){
+    const n = ev.flags.length;
+    setState("disagree","done", n + " of " + ev.verify_everything + " flagged");
+    const flagged = ev.flags.map(f =>
+      '<tr><td class="f">' + esc(f.field) + '</td>' +
+      '<td class="v va">' + show(f.constrained) + '</td>' +
+      '<td class="v vb">' + show(f.unconstrained) + '</td>' +
+      '<td><span class="pill flag">' + f.score.toFixed(2) + '</span></td></tr>').join("");
+    const clean = ev.clean.map(c => '<span class="pill ok">' + esc(c) + ' agreed</span>').join(" ");
+    dataOf("disagree").innerHTML =
+      (n ? '<table><thead><tr><th>flagged field</th><th>path A</th><th>path B</th>'
+         + '<th>score ≥ ' + ev.threshold + '</th></tr></thead><tbody>' + flagged + '</tbody></table>'
+         : '<p class="hint">No field disputed — both paths produced the same canonical value everywhere.</p>')
+      + (clean ? '<div class="chips" style="margin-top:12px">' + clean + '</div>' : '')
+      + '<p class="hint">' + n + ' arbiter call' + (n === 1 ? '' : 's') + ' will be made instead of '
+      + ev.verify_everything + '. ' + ev.clean.length + ' field'
+      + (ev.clean.length === 1 ? '' : 's') + ' skipped.</p>';
+    // pre-render the arbiter stage so skips are visible before the calls land
+    ARB = { total:n, done:0, clean:ev.clean, rows:[] };
+    if (n === 0){
+      setState("arbiter","skip","skipped — nothing disputed");
+      dataOf("arbiter").innerHTML = "";
+    } else {
+      setState("arbiter","live","0/" + n);
+    }
+  },
+  arbiter_field(ev){
+    ARB.done++;
+    ARB.rows.push(
+      '<tr><td class="f">' + esc(ev.field) + '</td>' +
+      '<td class="v muted">' + show(ev.arbiter_raw).slice(0, 160) + '</td>' +
+      '<td class="v ' + (ev.source === "split-kept" ? "" : "hit") + '">' + show(ev.value) + '</td>' +
+      '<td><span class="pill ' + (ev.confident ? "ok" : "warn") + '">' + esc(ev.source) + '</span></td></tr>');
+    setState("arbiter","live", ARB.done + "/" + ARB.total);
+    renderArbiter();
+  },
+  arbiter_done(){
+    if (ARB.total) setState("arbiter","done", ARB.total + " re-verified");
+    renderArbiter();
+  },
+  ground(ev){
+    const bad = ev.rows.filter(r => !r.grounded);
+    setState("ground","done", bad.length ? bad.length + " unsupported" : "all supported");
+    dataOf("ground").innerHTML =
+      '<table><thead><tr><th>field</th><th>kept value</th><th>source support</th><th></th></tr></thead><tbody>'
+      + ev.rows.map(r =>
+        '<tr><td class="f">' + esc(r.field) + '</td><td class="v">' + show(r.value) + '</td>' +
+        '<td><div class="bars"><div class="bar-t"><div class="bar-f" style="width:' +
+          Math.round(r.support * 100) + '%;background:' + (r.grounded ? "var(--ok)" : "var(--flag)") +
+          '"></div></div><span class="f" style="margin-left:8px">' + r.support.toFixed(2) + '</span></div></td>' +
+        '<td>' + (r.repaired ? '<span class="pill warn">repaired to absent</span>'
+                : r.grounded ? '<span class="pill ok">in document</span>'
+                             : '<span class="pill flag">not in document</span>') + '</td></tr>').join("")
+      + '</tbody></table>'
+      + '<p class="hint">Ungrounded rate ' + (ev.ungrounded_rate * 100).toFixed(0)
+      + '% — this needs no labels, so it is usable at runtime. Measured ≈4% on a reliable extractor '
+      + 'and ≈15% on a fabricating one; that gap is the gate for turning repair on.'
+      + (ev.repair_enabled ? '' : ' Repair is currently <b>off</b>.') + '</p>';
+  },
+  kept(ev){
+    setState("kept","done", ev.changed.length + " field(s) changed");
+    stageEl.kept.classList.add("verdict");
+    const g = ev.gold_eval;
+    const kpi = (k, n, d, cls) =>
+      '<div class="kpi"><div class="k">' + k + '</div><div class="n ' + (cls||"") + '">' + n
+      + '</div><div class="d">' + d + '</div></div>';
+
+    let kpis = "";
+    if (g){
+      const delta = Math.round((g.final_acc - g.baseline_acc) * FIELDS.length);
+      kpis += kpi("plain JSON mode", (g.baseline_acc*100).toFixed(0) + "%",
+                  g.baseline_correct.length + "/" + FIELDS.length + " fields correct",
+                  g.baseline_acc < g.final_acc ? "bad" : "");
+      kpis += kpi("FieldGuard", (g.final_acc*100).toFixed(0) + "%",
+                  g.final_correct.length + "/" + FIELDS.length + " fields correct", "acc");
+      kpis += kpi("net repaired", (delta > 0 ? "+" : "") + delta,
+                  g.repaired.length + " fixed · " + g.broken.length + " broken",
+                  delta > 0 ? "good" : delta < 0 ? "bad" : "");
+    }
+    kpis += kpi("LLM calls", ev.calls,
+                "vs " + ev.verify_everything_calls + " to verify every field");
+    kpis += kpi("verification saved", ev.saved_pct + "%",
+                "calls avoided on agreed fields", ev.saved_pct > 0 ? "good" : "");
+    if (ev.low_confidence.length)
+      kpis += kpi("low confidence", ev.low_confidence.length,
+                  "flagged, uncorroborated — routed to review", "bad");
+
+    const rows = FIELDS.map(f => {
+      const was = ev.baseline[f.name], now = ev.record[f.name];
+      const changed = ev.changed.includes(f.name);
+      const mark = g
+        ? (g.final_correct.includes(f.name)
+            ? '<span class="pill ok">matches gold</span>'
+            : '<span class="pill flag">≠ gold: ' + esc(g.gold[f.name] || "∅") + '</span>')
+        : "";
+      return '<div class="diff-row"><div class="k">' + esc(f.name) + '</div><div>'
+        + (changed
+            ? '<span class="was">' + show(was) + '</span><span class="arrow">→</span>'
+              + '<span class="now">' + show(now) + '</span>'
+            : '<span class="v">' + show(now) + '</span> <span class="pill">unchanged</span>')
+        + ' ' + mark + '</div></div>';
+    }).join("");
+
+    dataOf("kept").innerHTML = '<div class="kpis">' + kpis + '</div>'
+      + '<p class="lbl">What plain JSON mode would have shipped → what FieldGuard ships</p>'
+      + '<div class="diff">' + rows + '</div>'
+      + (ev.changed.length === 0
+          ? '<p class="hint">Nothing changed on this document — the extractor was already right, '
+            + 'and FieldGuard proved it for ' + ev.saved_pct + '% less than checking every field.</p>'
+          : '');
+
+    $("#c-calls").textContent = ev.calls;
+    $("#c-base").textContent = ev.verify_everything_calls;
+    $("#c-saved").textContent = ev.saved_pct + "%";
+    $("#c-status").textContent = "done";
+  },
+  error(ev){
+    $("#stages").prepend(el("div","err", esc(ev.message || "run failed")));
+    $("#c-status").textContent = "failed";
+  },
+};
+
+let ARB = { total:0, done:0, rows:[] };
+function renderArbiter(){
+  const skipped = ARB.clean && ARB.clean.length
+    ? '<div class="chips" style="margin-top:12px">' + ARB.clean.map(c =>
+        '<span class="chip strike">' + esc(c) + ' — no call made</span>').join("") + '</div>'
+    : "";
+  dataOf("arbiter").innerHTML = (ARB.rows.length
+    ? '<table><thead><tr><th>field</th><th>blind arbiter answer</th><th>kept</th>'
+      + '<th>resolution</th></tr></thead><tbody>' + ARB.rows.join("") + '</tbody></table>'
+    : "") + skipped;
+}
+
+/* ── run ──────────────────────────────────────────────────────────── */
+async function run(){
+  buildStages();
+  $("#run").disabled = true;
+  $("#c-calls").textContent = $("#c-base").textContent = $("#c-saved").textContent = "—";
+  $("#c-status").innerHTML = $("#model").value === "mock"
+    ? '<span style="color:var(--b)">mock backend — wiring check only, ' +
+      'it reads "field: value" lines and will score 0 on real documents</span>'
+    : "running…";
+  setState("source","live","reading");
+  const body = {
+    corpus: $("#corpus").value,
+    document: $("#doc").value,
+    model: $("#model").value,
+    threshold: parseFloat($("#thr").value),
+    ground_repair: $("#repair").checked,
+    gold: GOLD,
+  };
+  const next = { source:"constrained", constrained:"unconstrained",
+                 unconstrained:"normalize", normalize:"disagree",
+                 arbiter_done:"ground", ground:"kept" };
+  try {
+    for await (const ev of stream(body)){
+      (R[ev.stage] || (()=>{}))(ev);
+      // nothing flagged -> the arbiter stage is skipped, so grounding is next
+      if (ev.stage === "disagree" && ARB.total === 0) setState("ground","live","checking source");
+      else if (next[ev.stage]) setState(next[ev.stage],"live","working");
+    }
+  } catch (e) {
+    R.error({ message: String(e) });
+  }
+  $("#run").disabled = false;
+  if ($("#c-status").textContent === "running…") $("#c-status").textContent = "ended";
+}
+
+/* keep the mock warning up after the run finishes */
+const _setDone = R.kept;
+R.kept = ev => { _setDone(ev); if ($("#model").value === "mock")
+  $("#c-status").innerHTML = '<span style="color:var(--b)">mock backend — '
+    + 'wiring check only, gold scores are meaningless here</span>';
+}
+
+buildStages();
+$("#run").onclick = run;
+loadConfig().catch(e => R.error({ message:"config failed: " + e }));
+</script>
+</body>
+</html>
