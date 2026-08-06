@@ -532,6 +532,12 @@ const R = {
       kpis += kpi("low confidence", ev.low_confidence.length,
                   "flagged, uncorroborated — routed to review", "bad");
 
+    const conf = c => {
+      const col = c >= 0.7 ? "var(--ok)" : c >= 0.4 ? "var(--b)" : "var(--flag)";
+      return '<span class="pill" title="unified confidence: resolution band × source support"'
+        + ' style="border-color:' + col + ';color:' + col + '">conf '
+        + c.toFixed(2) + '</span>';
+    };
     const rows = FIELDS.map(f => {
       const was = ev.baseline[f.name], now = ev.record[f.name];
       const changed = ev.changed.includes(f.name);
@@ -545,6 +551,7 @@ const R = {
             ? '<span class="was">' + show(was) + '</span><span class="arrow">→</span>'
               + '<span class="now">' + show(now) + '</span>'
             : '<span class="v">' + show(now) + '</span> <span class="pill">unchanged</span>')
+        + ' ' + (ev.confidence ? conf(ev.confidence[f.name]) : '')
         + ' ' + mark + '</div></div>';
     }).join("");
 

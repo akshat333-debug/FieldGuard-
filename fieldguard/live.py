@@ -21,6 +21,7 @@ from typing import Iterator
 
 from .backends import Backend
 from .compare import flag_fields, normalize, normalize_set
+from .confidence import confidence
 from .extract import extract_constrained, extract_unconstrained
 from .ground import support
 from .schemas import FieldSpec, Schema
@@ -127,9 +128,9 @@ def analyze(backend: Backend, document: str, schema: Schema,
                                "confident": r.confident}
                            for n, r in resolutions.items()}}
 
-    ground_rows, ungrounded_n = [], 0
+    ground_rows, supports, ungrounded_n = [], {}, 0
     for spec in schema.fields:
-        s = support(spec, record[spec.name], document)
+        s = supports[spec.name] = support(spec, record[spec.name], document)
         ok = s >= ground_threshold
         repaired = False
         if not ok:
@@ -154,6 +155,9 @@ def analyze(backend: Backend, document: str, schema: Schema,
     final = {"stage": "kept",
              "record": record,
              "baseline": constrained,          # what plain JSON mode would ship
+             # pre-repair support on purpose: a repaired field stays low
+             "confidence": {n: round(confidence(r.source, supports[n]), 3)
+                            for n, r in resolutions.items()},
              "changed": changed,
              "low_confidence": [n for n, r in resolutions.items() if not r.confident],
              "calls": calls,

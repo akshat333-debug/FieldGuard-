@@ -70,7 +70,11 @@ def main() -> None:
             # party is multi-valued: every party= entry, as a list
             gold["party"] = [kv.split("=", 1)[1].replace("_", " ")
                              for kv in exp.split() if kv.startswith("party=")]
-            text = row[5]
+            # the TSV encodes newlines/tabs as literal two-char escapes; feeding
+            # them through verbatim glued words together ("into\nas") and put
+            # 74 fake "\n" tokens per contract in front of every model
+            text = (row[5].replace("\\n", "\n").replace("\\t", "\t")
+                    .replace("\\r", ""))
             if len(text) > HEAD + TAIL:
                 mid = clause_windows(text[HEAD:len(text) - TAIL])
                 text = "\n[...]\n".join(p for p in

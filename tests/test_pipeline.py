@@ -78,4 +78,5 @@ def test_trace_collects_duals_and_flags():
     run(MockBackend(), [e.document for e in ex], INVOICE_SCHEMA,
         gold=[e.gold for e in ex], trace=trace)
     assert len(trace) == 2
-    assert set(trace[0]) == {"constrained", "unconstrained", "flagged"}
+    assert set(trace[0]) == {"constrained", "unconstrained", "flagged",
+                             "resolution", "support", "confidence"}

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from .backends import Backend
 from .compare import flag_fields
+from .confidence import confidence
 from .extract import dual_extract
 from .ground import support
 from .metrics import Report, corrupted_fields, field_accuracy, score_flags
@@ -45,19 +46,28 @@ def run(backend: Backend, documents: list[str], schema: Schema,
         record = final_record(resolutions)
 
         # second signal: values the source does not support (see ground.py)
+        supports = {s.name: support(s, record[s.name], doc) for s in schema.fields}
         for spec in schema.fields:
-            if support(spec, record[spec.name], doc) >= ground_threshold:
+            if supports[spec.name] >= ground_threshold:
                 continue
             report.ungrounded += 1
             if ground_repair and not spec.required:
                 record[spec.name] = ""
+                # supports[] deliberately keeps the LOW pre-repair score: the
+                # system just judged this field fabricated, and the confidence
+                # ranking should say so even after the value is blanked
 
         finals.append(record)
         report.low_confidence += sum(not r.confident for r in resolutions.values())
         if trace is not None:
             trace.append({"constrained": dual.constrained,
                           "unconstrained": dual.unconstrained,
-                          "flagged": sorted(f.field for f in flags)})
+                          "flagged": sorted(f.field for f in flags),
+                          "resolution": {n: r.source for n, r in resolutions.items()},
+                          "support": {n: round(s, 3) for n, s in supports.items()},
+                          "confidence": {n: round(confidence(r.source,
+                                                             supports[n]), 3)
+                                         for n, r in resolutions.items()}})
 
         if gold is not None:
             g = gold[i]

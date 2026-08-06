@@ -83,8 +83,29 @@ final record (+ metrics.report() when gold labels exist)
 - **adapter** — external datasets as JSONL (`{"document":…, "gold":{…}}`); schema inferred
   from the first record's gold types, or explicit via `schema_from_json` (adds field
   descriptions). `examples/convert_sroie.py` converts the SROIE receipt benchmark.
-- **pipeline** — orchestration; `run(trace=[])` captures per-doc dual outputs + flag sets
-  for error analysis (how BUILDLOG 12's blind-spot decomposition was measured).
+- **ground** — second signal, orthogonal to disagreement: lexical support of the KEPT
+  value against the source document (same normalization rules, symmetric). Catches
+  fabrication — errors both paths share — which disagreement is blind to by construction.
+  `Report.ungrounded_rate` is gold-free and gates the opt-in repair rule (~4% reliable vs
+  ~15% fabricating extractor). Repair replaces an unsupported optional value with absence
+  at zero extra LLM calls.
+- **confidence** — unified per-field score = resolution band (agreement 1.0 > majority 0.7
+  > split-kept 0.3) × (0.5 + 0.5·support). Constants fixed, nothing fitted; only the
+  ranking is claimed, and `examples/risk_coverage.py` measures it (risk–coverage / AURC
+  against flag-only, support-only and random baselines). A ground-repaired field keeps its
+  LOW pre-repair support so repair cannot launder a fabrication into high confidence.
+- **pipeline** — orchestration; `run(trace=[])` captures per-doc dual outputs, flag sets,
+  and per-field resolution/support/confidence for offline error analysis (how BUILDLOG
+  12's blind-spot decomposition and the risk–coverage study are computed without re-runs).
+- **live** — the same primitives as `pipeline.run`, restructured as a generator that
+  yields one event per stage for a single document (source → both extractions with raw
+  prompt/response → normalize → disagree → per-field arbiter → ground → kept-with-
+  counterfactual). `tests/test_live.py` pins its final record and call counts to
+  `pipeline.run`'s, so the interactive path cannot drift from the measured one.
+- **server** — stdlib `ThreadingHTTPServer`; serves `web/live.html`, `/api/config`
+  (bundled corpus samples + models discovered from the backend), and `/api/analyze`,
+  which streams `live.analyze` events as Server-Sent Events. Localhost demo surface —
+  no auth, put a real server in front before exposing it.
 
 ## Deliberate simplifications
 
