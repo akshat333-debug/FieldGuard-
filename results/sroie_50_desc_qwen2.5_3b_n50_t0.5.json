@@ -2,7 +2,7 @@
   "model": "qwen2.5:3b",
   "n": 50,
   "threshold": 0.5,
-  "elapsed_sec": 417.7,
+  "elapsed_sec": 679.7,
   "report": {
     "docs": 50,
     "fields_total": 200,
@@ -17,6 +17,7 @@
     "flag_tp": 8,
     "flag_flagged": 17,
     "flag_corrupted": 11,
+    "ungrounded": 0,
     "notes": []
   },
   "finals": [
@@ -637,7 +638,25 @@
         "address": "53 55,57 & 59, JALAN SAGU 18, TAMAN DAYA, 81100 JOHOR BAHRU, JOHOR.",
         "total": "9.00"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -654,7 +673,25 @@
       },
       "flagged": [
         "address"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "split-kept",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.3,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -671,7 +708,25 @@
       },
       "flagged": [
         "date"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "majority",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 0.7,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -688,7 +743,25 @@
       },
       "flagged": [
         "company"
-      ]
+      ],
+      "resolution": {
+        "company": "majority",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.7,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -705,7 +778,25 @@
       },
       "flagged": [
         "date"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "majority",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 0.7,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -722,7 +813,25 @@
       },
       "flagged": [
         "address"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "majority",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.7,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -737,7 +846,25 @@
         "address": "NO.53 JALAN PUTRA 1, TAMAN SRIPUTRA, 81200 JOHOR BAHRU, JOHOR",
         "total": "327.00"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -754,7 +881,25 @@
       },
       "flagged": [
         "company"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -769,7 +914,25 @@
         "address": "NO.59 JALAN PERMAS 9/5, BANDAR BARU PERMAS JAYA, 81760 JOHOR BAHRU",
         "total": "112.45"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -786,7 +949,25 @@
       },
       "flagged": [
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "majority"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 0.7
+      }
     },
     {
       "constrained": {
@@ -801,7 +982,25 @@
         "address": "67,JLN MEWAH 25/63 TMN SRI MUDA,40400 SHAH ALAM.",
         "total": "14.10"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -816,7 +1015,25 @@
         "address": "NO. 17-G, JALAN SETIA INDAH (X) U13/X, SETIA ALAM, SEKSYEN U13, 40170 SHAH ALAM",
         "total": "15.00"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -831,7 +1048,25 @@
         "address": "NO.113G & 115G, JALAN SETIA GEMBILANG U13/BG BANDAR SETIA ALAM, 40170 BANDAR SETIA ALAM, SELANGOR.",
         "total": "15.90"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -848,7 +1083,25 @@
       },
       "flagged": [
         "address"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "split-kept",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.3,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -863,7 +1116,25 @@
         "address": "NO.23 BATU 10, TAMAN SENTOSA, JALAN KAPAR, 42200 KLANG, SELANGOR.",
         "total": "32.70"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -878,7 +1149,25 @@
         "address": "NO.113G & 115G, JALAN SETIA GEMBILANG U13/BG BANDAR SETIA ALAM, 40170 BANDAR SETIA ALAM, SELANGOR.",
         "total": "15.90"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -893,7 +1182,25 @@
         "address": "NO: 28, JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D.E, MALAYSIA",
         "total": "73.00"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -908,7 +1215,25 @@
         "address": "NO: 28, JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D. E, MALAYSIA",
         "total": "39.80"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -923,7 +1248,25 @@
         "address": "NO: 28, JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D.E, MALAYSIA",
         "total": "73.0"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -940,7 +1283,25 @@
       },
       "flagged": [
         "date"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "majority",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 0.7,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -955,7 +1316,25 @@
         "address": "75, JALAN SS 22/19, DAMANSARA JAYA, 47400 PJ,",
         "total": "54.5"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -970,7 +1349,25 @@
         "address": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",
         "total": "4.90"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -987,7 +1384,25 @@
       },
       "flagged": [
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "majority"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 0.7
+      }
     },
     {
       "constrained": {
@@ -1002,7 +1417,25 @@
         "address": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",
         "total": "27.55"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1017,7 +1450,25 @@
         "address": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",
         "total": "55.10"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1032,7 +1483,25 @@
         "address": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",
         "total": "18.00"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1047,7 +1516,25 @@
         "address": "NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",
         "total": "153.35"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1064,7 +1551,25 @@
       },
       "flagged": [
         "date"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "majority",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 0.7,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1081,7 +1586,25 @@
       },
       "flagged": [
         "date"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "majority",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.909,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 0.7,
+        "address": 0.955,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1098,7 +1621,25 @@
       },
       "flagged": [
         "date"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "majority",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 0.7,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1113,7 +1654,25 @@
         "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",
         "total": "8.20"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1130,7 +1689,25 @@
       },
       "flagged": [
         "address"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "split-kept",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.3,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1145,7 +1722,25 @@
         "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",
         "total": "8.20"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.909,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.955,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1160,7 +1755,25 @@
         "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOL",
         "total": "8.20"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.909,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.955,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1175,7 +1788,25 @@
         "address": "NO.59 JALAN PERMAS 9/5, BANDAR BARU PERMAS JAYA, 81750 JOHOR BAHRU",
         "total": "332.30"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1190,7 +1821,25 @@
         "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOL",
         "total": "8.20"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.909,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.955,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1205,7 +1854,25 @@
         "address": "12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",
         "total": "8.20"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1222,7 +1889,25 @@
       },
       "flagged": [
         "address"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "split-kept",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.3,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1237,7 +1922,25 @@
         "address": "S117, Second Floor, AEON TEBRAU CITY, 1, Jalan Desa Tebrau, Taman Desa Tebrau, 81100 Johor Bahru, Johor",
         "total": "13.10"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1252,7 +1955,25 @@
         "address": "AVTIVO PLAZA, LOT B-F-11, BLOCK B NO1.JALAN PJU 9/1,D'SARA AVEVUE BANDAR SRI D'SARA, 52000 XL",
         "total": "189.75"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1267,7 +1988,25 @@
         "address": "109, SS21/1A, DAMANSARA UTAMA",
         "total": "343.95"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1282,7 +2021,25 @@
         "address": "109, SS21/1A, DAMANSARA UTAMA",
         "total": "174.90"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1297,7 +2054,25 @@
         "address": "LOT 38, 39 101 BOULEVARD, JALAN KENARI 5, BANDAR PUCHONG JAYA, 47170 PUCHONG, SELANGOR",
         "total": "64.15"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1312,7 +2087,25 @@
         "address": "78G, JALAN SS21/62, DAMANSARA UTAMA, 47400 PETALING JAYA.",
         "total": "190.00"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1327,7 +2120,25 @@
         "address": "12,JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHAR",
         "total": "8.60"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.909,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.955,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1342,7 +2153,25 @@
         "address": "12,JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOL,81200 JOHOR BAHRU,JOHOR",
         "total": "6.90"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.909,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 0.955,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1360,7 +2189,25 @@
       "flagged": [
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "agreement",
+        "date": "majority",
+        "address": "agreement",
+        "total": "majority"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 0.7,
+        "address": 1.0,
+        "total": 0.7
+      }
     },
     {
       "constrained": {
@@ -1375,7 +2222,25 @@
         "address": "K3-113, JL Ibrahim Sultan, 80300 Johor Bahru, Johor",
         "total": "170.00"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1390,7 +2255,25 @@
         "address": "NO4,JALAN PERJIRANAN 10,TAMAN AIR BIRU,81700 PASIR GUDANG,JOHOR.",
         "total": "100.90"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     },
     {
       "constrained": {
@@ -1405,7 +2288,25 @@
         "address": "NO.59 JALAN PERMAS 9/5, BANDAR BARU PERMAS JAYA, 81760 JOHOR BAHRU",
         "total": "8.00"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "company": "agreement",
+        "date": "agreement",
+        "address": "agreement",
+        "total": "agreement"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      }
     }
   ]
 }

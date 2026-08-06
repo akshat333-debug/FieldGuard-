@@ -84,18 +84,55 @@ python3 -m examples.build_dashboard   # regenerate from results/
 | **source grounding** (`ground.py`) | *fabrication* — a value the document never states, however confidently both paths agree | values misread from a corrupted source (they are present in it) |
 
 Confirmed live end-to-end on Kleister qwen2.5:1.5b (n=83): final accuracy
-**0.566 → 0.647 (+8.0 pts)** at **221 → 221 LLM calls** — the repair replaces a
+**0.562 → 0.655 (+9.2 pts)** at **224 → 224 LLM calls** — the repair replaces a
 value rather than querying for one, so it is free. Extraction was bit-identical
 to the baseline run, isolating the delta to the rule.
 
 Grounding is the newer, orthogonal signal. It is training-free like the first
-one, and it directly attacks the correlated blind spot the first one cannot see
-(measured: it catches 35% of qwen2.5:1.5b's Kleister errors at 0.84 precision,
-while firing zero times on SROIE, where models copy values rather than invent
-them). Its repair rule is **capability-dependent** — it rescues a fabricating
-model (+8.0 points) and slightly harms a reliable one (−0.9), so it is opt-in
-(`--ground-repair`), gated by a gold-free runtime signal: `ungrounded_rate`,
-≈4% on capable models vs ≈15% on fabricating ones.
+one, and it directly attacks the correlated blind spot the first one cannot see.
+Measured on clean text (post encoding repair, see below), per cell:
+
+| cell | errors caught | precision | repair effect (fixed/broken) |
+|---|---|---|---|
+| Kleister 1.5b | 30/109 (28%) | 0.97 | **+9.2 pts** (24/1) |
+| Kleister 3b | 7/58 (12%) | 1.00 | +2.8 pts (7/0) |
+| Kleister+party 1.5b | 31/144 (22%) | 0.97 | +6.9 pts (24/1) |
+| Kleister+party 3b | 6/92 (7%) | 1.00 | +1.8 pts (6/0) |
+| SROIE (both qwen) | 0–5 | 1.00 | ±0.0 (no-op) |
+
+On clean text the repair helped **every** cell it fired in and broke at most
+one field — an earlier draft reported it harming the capable model (−0.9);
+that harm was an artifact of the corrupted Kleister encoding (the false alarms
+were values split by fake `\n` tokens), and it disappeared with the repair of
+the data. The rule stays opt-in (`--ground-repair`) with the gold-free
+`ungrounded_rate` as the expected-gain signal: 12.4% on the fabricating cell
+vs 0–2.8% on reliable ones (the party 1.5b cell reads 9.6% — the boundary is
+not sharp, and the band edges are observed, not tuned).
+
+## Unified confidence (selective prediction)
+
+Each field also gets one confidence score: resolution band (agreement >
+corroborated majority > uncorroborated split) × source support — fixed
+constants, nothing fitted, ranking-only claim. `python3 -m
+examples.risk_coverage` measures it with risk–coverage curves/AURC against
+flag-only, support-only and random baselines from stored traces (zero LLM
+calls). A ground-repaired field keeps its low pre-repair support, so repair
+cannot launder a fabrication into high confidence.
+
+AURC, all six cells (lower = errors ranked later; random = the error rate):
+
+| cell | random | flag-only | support-only | **combined** |
+|---|---|---|---|---|
+| SROIE 3b | 0.145 | 0.123 | 0.141 | **0.114** |
+| SROIE 1.5b | 0.270 | 0.203 | 0.245 | **0.191** |
+| Kleister 3b | 0.233 | 0.143 | 0.187 | **0.141** |
+| Kleister 1.5b | 0.438 | 0.299 | 0.262 | **0.221** |
+| Kleister+party 3b | 0.277 | 0.174 | 0.248 | **0.146** |
+| Kleister+party 1.5b | 0.434 | 0.290 | 0.320 | **0.243** |
+
+The combined score wins **6/6** — and neither single signal does: flag-only
+nearly ties on capable models, support-only wins on the fabricating one; the
+combination is best everywhere.
 
 ## Quickstart
 
@@ -169,20 +206,25 @@ schema (75/249 gold fields are legitimately absent; the extractor must answer
 
 | | qwen2.5:3b | qwen2.5:1.5b | tinyllama-1.1B |
 |---|---|---|---|
-| constrained accuracy | 0.771 | 0.550 | 0.301* |
-| final accuracy | 0.767 | 0.566 | 0.301* |
-| flag precision / recall | 0.506 / 0.988 | 0.558 / 0.964 | 0.976 / 1.0 |
-| absent fields answered absent | 54/75 | 6/75 | 75/75* |
-| LLM calls vs verify-everything | **-45%** | **-47%** | -59%* |
+| constrained accuracy | 0.775 | 0.546 | 0.301* |
+| final accuracy | 0.767 | 0.562 | 0.301* |
+| + grounding repair (free) | **0.795** | **0.655** | — |
+| flag precision / recall | 0.657 / 1.0 | 0.514 / 0.976 | 1.0 / 1.0* |
+| absent fields answered absent | 49/75 | 3/75 | 75/75* |
+| LLM calls vs verify-everything | **-49%** | **-46%** | -60%* |
 
-95% CIs (doc bootstrap): 3b [0.715, 0.819] vs 1.5b [0.498, 0.631] — disjoint;
-the model separation is established in this domain too.
+95% CIs (doc bootstrap): 3b [0.719, 0.815] vs 1.5b [0.502, 0.622] — disjoint;
+the model separation is established in this domain too. (All Kleister numbers
+are post encoding repair — the source TSV escapes newlines as literal `\n`
+and the first converter fed them through; see BUILDLOG 36.)
 
 *tinyllama answers absent for **all 249 fields** — its 0.301 is exactly the
-gold-absence share, and both-paths-absent counts as agreement, so the score
-is an artifact. `examples/analyze.py` prints a `[!] N/N answers absent`
-tripwire for this; on all-optional schemas keep at least one required field
-or watch that tripwire — the empty-field auto-flag no longer guards you.
+gold-absence share, and both-paths-absent counts as agreement, so **zero
+flags fire** (166 calls = exactly the two extractions per document; the 1.0
+flag P/R is the vacuous no-flags/no-corruption default, not skill).
+`examples/analyze.py` prints a `[!] N/N answers absent` tripwire for this; on
+all-optional schemas keep at least one required field or watch that tripwire
+— the empty-field auto-flag no longer guards you.
 
 ![Accuracy vs verification cost on Kleister-NDA](docs/tradeoff_kleister.svg)
 
@@ -196,10 +238,11 @@ normalization, incl. corporate-suffix equivalence Incorporated≡Inc, L.L.C.≡L
 
 | | qwen2.5:3b | qwen2.5:1.5b |
 |---|---|---|
-| constrained → final accuracy | 0.723 → 0.744 | 0.563 → 0.572 |
-| party exact-set correct | 60/83 | 54/83 |
-| LLM calls vs verify-everything | **-42%** | **-45%** |
-| 95% CI (final) | [0.699, 0.786] | [0.521, 0.620] |
+| constrained → final accuracy | 0.723 → 0.723 | 0.551 → 0.566 |
+| + grounding repair (free) | **0.741** | **0.636** |
+| party exact-set correct | 60/83 | 52/83 |
+| LLM calls vs verify-everything | **-45%** | **-44%** |
+| 95% CI (final) | [0.678, 0.765] | [0.518, 0.611] |
 
 Run: `python3 -m examples.experiment --data datasets/kleister_nda_party.jsonl
 --schema datasets/kleister_nda_party.schema.json --model <m> --n 83`.
@@ -207,16 +250,16 @@ Run: `python3 -m examples.experiment --data datasets/kleister_nda_party.jsonl
 **Reported flag precision is a lower bound.** "Corrupted" counts only fields the
 constraint itself damaged (constrained wrong *and* unconstrained right); a field
 wrong on both paths is still flagged and reported low-confidence but scores as a
-false positive — most of why party precision reads 0.313.
+false positive — most of why party precision reads 0.31–0.33.
 
 Two absence lessons (BUILDLOG iteration 21): (1) an "answer NONE if absent"
 instruction in the shared prompt made both paths lazily deny values that ARE
 in the document — instructions that correlate the paths break the
 disagreement signal (same failure family as the reverted judge arbiter);
 absence must be expressed structurally. (2) Absence detection is a
-capability: 3b answers 54/75 absent fields correctly, 1.5b hallucinates a
-value for 69/75 — identically on both paths, the documented correlated
-blind spot.
+capability: 3b answers 49/75 absent fields correctly, 1.5b hallucinates a
+value for 72/75 — identically on both paths, the documented correlated
+blind spot (which is exactly where grounding repair earns its +9.2).
 
 Same adaptive-cost shape in a second domain. Contracts pushed three fixes into
 the method: clause-window truncation, number-word/legalese-date normalization,

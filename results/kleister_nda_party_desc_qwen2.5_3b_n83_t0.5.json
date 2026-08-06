@@ -2,37 +2,41 @@
   "model": "qwen2.5:3b",
   "n": 83,
   "threshold": 0.5,
-  "elapsed_sec": 1889.2,
+  "elapsed_sec": 2571.0,
   "report": {
     "docs": 83,
     "fields_total": 332,
     "constrained_acc": 0.7228915662650602,
-    "final_acc": 0.7439759036144579,
-    "corruption_rate": 0.09036144578313253,
-    "flag_precision": 0.3132530120481927,
+    "final_acc": 0.7228915662650602,
+    "corruption_rate": 0.06325301204819277,
+    "flag_precision": 0.3333333333333333,
     "flag_recall": 0.9879518072289156,
-    "llm_calls": 290,
+    "llm_calls": 273,
     "full_verify_calls": 498,
-    "low_confidence": 68,
+    "low_confidence": 70,
+    "flag_tp": 20,
+    "flag_flagged": 107,
+    "flag_corrupted": 21,
+    "ungrounded": 6,
     "notes": []
   },
   "finals": [
     {
       "effective_date": "2014-05-20",
       "jurisdiction": "New York",
-      "term": "3 years from the termination or expiration of the last of the Revised Transaction Documents to terminate or expire",
+      "term": "3 years from the termination or expiration of the last of the Revised Transaction Documents to terminate or expire; provided that this Agreement shall continue in full force and effect with respect to any Confidential Information that constitutes a trade secret under applicable law for such additional period as such Confidential Information remains a trade secret under such applicable law",
       "party": "LIQUIDMETAL TECHNOLOGIES, INC.; VISSER PRECISION CAST, LLC"
     },
     {
       "effective_date": "",
       "jurisdiction": "New York",
       "term": "",
-      "party": "Oglethorpe Power Corporation (An Electric Membership Corporation); Oglethorpe Power Corporation"
+      "party": "Oglethorpe Power Corporation (An Electric Membership Corporation); Stone & Webster, Inc.; Westinghouse Electric Company, LLC"
     },
     {
-      "effective_date": "",
+      "effective_date": "NONE",
       "jurisdiction": "Delaware",
-      "term": "2 years",
+      "term": "two years",
       "party": "JDA Software Group, Inc.; RedPrairie Holding, Inc."
     },
     {
@@ -51,7 +55,7 @@
       "effective_date": "2012-01-11",
       "jurisdiction": "Washington",
       "term": "",
-      "party": "First Financial Northwest, Inc.; Stilwell Associates, L.P.; Stilwell Partners, L.P.; Stilwell Value Partners II, L.P.; Stilwell Value Partners VI, L.P.; Stilwell Value Partners VII, L.P.; Stilwell Value LLC; Stilwell Associates Insurance Fund of The S.A.L.I. Multi-Series Fund L.P.; Stilwell Advisers LLC; Joseph Stilwell; Spencer L. Schneider"
+      "party": "First Financial Northwest, Inc.; Stilwell Associates, L.P.; Stilwell Partners, L.P.; Stilwell Value Partners II, L.P.; Stilwell Value Partners VI, L.P.; Stilwell Value Partners VII, L.P.; Stilwell Value LLC; Stilwell Associates Insurance Fund of The S.A.L .I . Multi-Series Fund L.P.; Stilwell Advisers LLC; Joseph Stilwell; Spencer L. Schneider"
     },
     {
       "effective_date": "2009-04-30",
@@ -62,7 +66,7 @@
     {
       "effective_date": "2016-06-22",
       "jurisdiction": "New Jersey",
-      "term": "2 years",
+      "term": "2 years following cessation of Employee\u2019s employment with Employer for any reason",
       "party": "Nat Krishnamurti; Interpace Diagnostics Group, Inc."
     },
     {
@@ -73,13 +77,13 @@
     },
     {
       "effective_date": "2015-12-11",
-      "jurisdiction": "",
-      "term": "",
+      "jurisdiction": "None",
+      "term": "None",
       "party": "Anadigics, Inc.; II-VI Incorporated"
     },
     {
       "effective_date": "NONE",
-      "jurisdiction": "NONE",
+      "jurisdiction": "Pennsylvania",
       "term": "",
       "party": "PJM Interconnection, L.L.C.; State Commission"
     },
@@ -90,7 +94,7 @@
       "party": "TESARO, Inc.; GlaxoSmithKline LLC; Ajinomoto Althea, Inc. DBA Ajinomoto Bio-Pharma Services"
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "2012-12-17",
       "jurisdiction": "Delaware",
       "term": "2 years",
       "party": "Allergan, Inc.; MAP Pharmaceuticals, Inc."
@@ -105,7 +109,7 @@
       "effective_date": "NONE",
       "jurisdiction": "New York",
       "term": "",
-      "party": "Virgin Mobile USA, LLC; , a licensee of Virgin Enterprises Ltd."
+      "party": "Virgin Mobile USA, LLC; a licensee of Virgin Enterprises Ltd."
     },
     {
       "effective_date": "2012-01-25",
@@ -121,12 +125,12 @@
     },
     {
       "effective_date": "NONE",
-      "jurisdiction": "California",
+      "jurisdiction": "NONE",
       "term": "2 years",
       "party": "Penumbra, Inc.; Xxxxxx"
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "",
       "jurisdiction": "New York",
       "term": "3 years",
       "party": "AOL Inc.; Verizon Corporate Services Group Inc."
@@ -152,7 +156,7 @@
     {
       "effective_date": "2018-04-01",
       "jurisdiction": "Virginia",
-      "term": "automatically renew for successive one-year terms (each a 'Renewal Term') unless either party notifies the other of its desire to terminate the Agreement no less than three (3) months before the expiration of the Scheduled Term or Renewal Term.",
+      "term": "Automatic renewal for successive one-year terms (each a 'Renewal Term') unless either party notifies the other of its desire to terminate the Agreement no less than three (3) months before the expiration of the Scheduled Term or Renewal Term.",
       "party": "Bruce L. Caswell; MAXIMUS, Inc."
     },
     {
@@ -162,7 +166,7 @@
       "party": "Inspire Pharmaceuticals, Inc.; Barry G. Pea"
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "2000-01-01",
       "jurisdiction": "Arizona",
       "term": "",
       "party": "JDA SOFTWARE, INC.; COMPUWARE CORPORATION"
@@ -171,7 +175,7 @@
       "effective_date": "NONE",
       "jurisdiction": "Indiana",
       "term": "1 year",
-      "party": "______\n_____ ______ ___; PEOPLES BANK SB"
+      "party": "Employee; PEOPLES BANK SB"
     },
     {
       "effective_date": "2017-01-01",
@@ -183,7 +187,7 @@
       "effective_date": "2005-05-17",
       "jurisdiction": "California",
       "term": "",
-      "party": "Patricia Sueltz; salesforce.com, inc."
+      "party": "salesforce.com, inc.; Patricia Sueltz"
     },
     {
       "effective_date": "2018-03-30",
@@ -194,7 +198,7 @@
     {
       "effective_date": "2013-05-01",
       "jurisdiction": "Georgia",
-      "term": "1 year following the Separation Date",
+      "term": "",
       "party": "Citi Trends, Inc.; Ivy Council"
     },
     {
@@ -219,10 +223,10 @@
       "effective_date": "",
       "jurisdiction": "Minnesota",
       "term": "",
-      "party": "The St. Paul Travelers Companies, Inc."
+      "party": "THE ST. PAUL TRAVELERS COMPANIES , INC"
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "20,3",
       "jurisdiction": "California",
       "term": "2 years",
       "party": "KBSIII REIT Acquisition VII, LLC; KBS Limited Partnership III; KBS Real Estate Investment Trust III, Inc.; KBS Capital Advisors LLC"
@@ -234,21 +238,21 @@
       "party": "CafePress Inc.; District Photo, Inc."
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "2016-01-19",
       "jurisdiction": "Minnesota",
       "term": "3 years following the date of her termination from Target",
       "party": "Target Corporation; TARGET ENTERPRISE, INC.; Tina Tyler"
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "",
       "jurisdiction": "Ohio",
       "term": "",
-      "party": "Fifth Third Processing Solutions, LLC"
+      "party": "Fifth Third Processing Solutions, LLC; Employee"
     },
     {
-      "effective_date": "NONE",
-      "jurisdiction": "",
-      "term": "",
+      "effective_date": "None",
+      "jurisdiction": "None",
+      "term": "None",
       "party": "HI-TEX, INC.; QUAKER FABRIC CORPORATION OF FALL RIVER"
     },
     {
@@ -267,7 +271,7 @@
       "effective_date": "2008-11-06",
       "jurisdiction": "California",
       "term": "survives the term of the Consulting Agreement and continues until all Confidential Information becomes publicly known",
-      "party": "BioLargo. Inc.; Howard Isaacs"
+      "party": "BioLargo, Inc.; Howard Isaacs"
     },
     {
       "effective_date": "2007-05-09",
@@ -294,25 +298,25 @@
       "party": "Allis-Chalmers Energy Inc.; Seawell Limited"
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "200_____",
       "jurisdiction": "New Jersey",
       "term": "",
       "party": "AlgoRx Pharmaceuticals, Inc"
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "2009-11-06",
       "jurisdiction": "Delaware",
       "term": "3 years after the date hereof",
-      "party": "HID Global Corporation; LASERCARD CORPORATION"
+      "party": "HID Global Corporation; LaserCard Corporation"
     },
     {
-      "effective_date": "2001-05-xx",
+      "effective_date": "2001-05-00",
       "jurisdiction": "Washington",
       "term": "",
       "party": "Corus Pharma, Inc.; A. Bruce Montgomery, M.D."
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "2005-02-16",
       "jurisdiction": "",
       "term": "2 years",
       "party": "Jeffrey L. Levine"
@@ -327,18 +331,18 @@
       "effective_date": "1999-03-16",
       "jurisdiction": "Oregon",
       "term": "",
-      "party": "ACUMED, INC.; MEDEX SURGICAL"
+      "party": "Acumed, Inc.; Medex Surgical"
     },
     {
       "effective_date": "2008-07-02",
       "jurisdiction": "Delaware",
       "term": "",
-      "party": "THE BANK OF TOKYO-MITSUBISHI UFJ, LTD.; UNIONBANCAL CORPORATION"
+      "party": "UnionBanCal Corporation; The Bank of Tokyo-Mitsubishi UFJ, Ltd.; THE SPECIAL COMMITTEE OF THE BOARD OF DIRECTORS OF UNIONBANCAL CORPORATION"
     },
     {
       "effective_date": "2012-06-11",
       "jurisdiction": "Delaware",
-      "term": "NONE",
+      "term": "until his successor is appointed or elected and shall qualify",
       "party": "Lightwave Logic, Inc.; Ronald A. Bucchi"
     },
     {
@@ -354,10 +358,10 @@
       "party": "Accurel Systems International Corporation; Implant Sciences Corporation; Evans Analytical Group LLC"
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "2011-10-25",
       "jurisdiction": "",
-      "term": "NONE",
-      "party": "Life Technologies Corporation; ; any affiliates, subsidiaries, and merged (predecessor) entities; ; Bernd Brust"
+      "term": "2 years",
+      "party": "Life Technologies Corporation"
     },
     {
       "effective_date": "2012-09-20",
@@ -369,22 +373,22 @@
       "effective_date": "2016-03-15",
       "jurisdiction": "Delaware",
       "term": "",
-      "party": "Orchestra-Pr\u00e9maman, S.A.; Destination Maternity Corporation"
+      "party": "Destination Maternity Corporation; Orchestra-Pr\u00e9maman, S.A."
     },
     {
       "effective_date": "2005-09-29",
       "jurisdiction": "Illinois",
-      "term": "",
+      "term": "NONE",
       "party": "Paul B. Mulhollem; Archer-Daniels-Midland Company"
     },
     {
       "effective_date": "NONE",
       "jurisdiction": "Idaho",
       "term": "",
-      "party": "Silver Valley Capital; Sterling Mining Company; Kimberly Gold Mines, Inc.; Shoshone Silver Mining Company; Michael L. Mooney"
+      "party": "Michael L. Mooney"
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "2007-08-14",
       "jurisdiction": "Washington",
       "term": "2 years",
       "party": "PhotoWorks, Inc; American Greetings Corporation"
@@ -392,13 +396,13 @@
     {
       "effective_date": "2016-05-03",
       "jurisdiction": "New York",
-      "term": "Not specified",
+      "term": "upon termination of Employee\u2019s employment for any reason",
       "party": "Wizard World, Inc.; John D. Maatta"
     },
     {
       "effective_date": "2008-08-01",
       "jurisdiction": "New York",
-      "term": "Not specified in the agreement",
+      "term": "Not specified",
       "party": "Omrix Biopharmaceuticals, Inc.; Ethicon, Inc."
     },
     {
@@ -434,38 +438,38 @@
     {
       "effective_date": "2006-12-19",
       "jurisdiction": "New York",
-      "term": "",
+      "term": "18 months from the Effective Date",
       "party": "MapInfo Corporation; Pitney Bowes Inc."
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "2010-07-13",
       "jurisdiction": "New York",
       "term": "24 months",
       "party": "TPG Capital, L.P.; Axcan Pharma Inc.; Eurand N.V."
     },
     {
       "effective_date": "NONE",
-      "jurisdiction": "",
-      "term": "10 years following the termination of the IP AGREEMENT",
+      "jurisdiction": "NONE",
+      "term": "10 years following the termination of the IP AGREEMENTs",
       "party": "Motorola, Inc.; Iridium Satellite LLC"
     },
     {
-      "effective_date": "2008-01-01",
+      "effective_date": "2007-04-09",
       "jurisdiction": "California",
-      "term": "not specified",
+      "term": "12 months imm[ed] from this Agreement or amended, as the case may be",
       "party": "GigOptix LLC; Avi Katz"
     },
     {
       "effective_date": "2017-10-02",
       "jurisdiction": "Delaware",
       "term": "2 years",
-      "party": "Potbelly Corporation; Ancora Advisors, LLC"
+      "party": "Potbelly Corporation; Ancora Advisors, LLC; Fred DiSanto; James Chadwick; Brian Hopkins; Joseph Boehm"
     },
     {
       "effective_date": "",
       "jurisdiction": "",
       "term": "",
-      "party": "The Schooner Group, LLC"
+      "party": "Ideal Restaurant Group, Inc.; The Schooner Group, LLC"
     },
     {
       "effective_date": "2011-03-29",
@@ -476,41 +480,41 @@
     {
       "effective_date": "2011-05-26",
       "jurisdiction": "California",
-      "term": "Merger Agreement is not specified in terms of duration but the Merger will occur after execution.",
+      "term": "NONE",
       "party": "Skyworks Solutions, Inc.; Richard K. Williams"
     },
     {
       "effective_date": "NONE",
       "jurisdiction": "",
-      "term": "",
+      "term": "5 years following the date that Disclosing Party first discloses such Confidential Information to Receiving Party",
       "party": "MICROSOFT CORPORATION; Digital River, Inc."
     },
     {
       "effective_date": "2015-04-02",
       "jurisdiction": "Delaware",
       "term": "3 years",
-      "party": "Alan S. Korman; Columbus McKinnon Corporation"
+      "party": "Columbus McKinnon Corporation; Magnetek, Inc."
     },
     {
       "effective_date": "NONE",
       "jurisdiction": "Washington",
-      "term": "5 years after we receive it",
+      "term": "5 years after receiving the confidential information",
       "party": "MICROSOFT CORPORATION; Adaptive Biotechnologies"
     },
     {
       "effective_date": "2011-01-18",
       "jurisdiction": "New York",
-      "term": "2 years",
+      "term": "two years",
       "party": "ORTHOVITA, INC.; Stryker Corporation"
     },
     {
       "effective_date": "NONE",
       "jurisdiction": "Washington",
-      "term": "1 year after the Effective Date",
+      "term": "1 year after the Effective Date or earlier termination by a party upon 30 days' prior written notice",
       "party": "Alder BioPharmaceuticals, Inc.; H. Lundbeck A/S"
     },
     {
-      "effective_date": "NONE",
+      "effective_date": "2015-07-21",
       "jurisdiction": "Illinois",
       "term": "",
       "party": "US Foods, Inc.; Employee"
@@ -1021,25 +1025,44 @@
       "constrained": {
         "effective_date": "2014-05-20",
         "jurisdiction": "New York",
-        "term": "3 years from the termination or expiration of the last of the Revised Transaction Documents to terminate or expire",
+        "term": "3 years from the termination or expiration of the last of the Revised Transaction Documents to terminate or expire; provided that this Agreement shall continue in full force and effect with respect to any Confidential Information that constitutes a trade secret under applicable law for such additional period as such Confidential Information remains a trade secret under such applicable law",
         "party": "LIQUIDMETAL TECHNOLOGIES, INC.; VISSER PRECISION CAST, LLC"
       },
       "unconstrained": {
         "effective_date": "May 20, 2014",
         "jurisdiction": "New York",
         "term": "3 years",
-        "party": "Liquidmetal Technologies, Inc.; Visser Precision Cast, LLC"
+        "party": "Liquidmetal Technology, Inc.; Visser Precision Cast, LLC"
       },
       "flagged": [
+        "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
         "effective_date": "",
         "jurisdiction": "New York",
         "term": "",
-        "party": "Oglethorpe Power Corporation (An Electric Membership Corporation); Oglethorpe Power Corporation"
+        "party": "Oglethorpe Power Corporation (An Electric Membership Corporation); Stone & Webster, Inc.; Westinghouse Electric Company, LLC"
       },
       "unconstrained": {
         "effective_date": "",
@@ -1049,24 +1072,60 @@
       },
       "flagged": [
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.857
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.279
+      }
     },
     {
       "constrained": {
-        "effective_date": "",
+        "effective_date": "2012-09-04",
         "jurisdiction": "Delaware",
-        "term": "2 years",
+        "term": "two years",
         "party": "JDA Software Group, Inc.; RedPrairie Holding, Inc."
       },
       "unconstrained": {
-        "effective_date": "not provided",
+        "effective_date": "not specified",
         "jurisdiction": "Delaware",
         "term": "2 years",
-        "party": ""
+        "party": "JDA Software Group, Inc.; RedPrairie Holding, Inc.; New Mountain Capital, LLC"
       },
       "flagged": [
-        "party"
-      ]
+        "effective_date"
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1078,13 +1137,30 @@
       "unconstrained": {
         "effective_date": "2009-02-23",
         "jurisdiction": "Massachusetts",
-        "term": "ongoing",
+        "term": "not specified",
         "party": ""
       },
       "flagged": [
-        "party",
-        "term"
-      ]
+        "party"
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "majority"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.7
+      }
     },
     {
       "constrained": {
@@ -1099,14 +1175,32 @@
         "term": "1 year",
         "party": "AUSPEX PHARMACEUTICALS; TEVA PHARMACEUTICAL INDUSTRIES, LTD."
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.5,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.75,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "2012-01-11",
         "jurisdiction": "Washington",
         "term": "",
-        "party": "First Financial Northwest, Inc.; Stilwell Associates, L.P.; Stilwell Partners, L.P.; Stilwell Value Partners II, L.P.; Stilwell Value Partners VI, L.P.; Stilwell Value Partners VII, L.P.; Stilwell Value LLC; Stilwell Associates Insurance Fund of The S.A.L.I. Multi-Series Fund L.P.; Stilwell Advisers LLC; Joseph Stilwell; Spencer L. Schneider"
+        "party": "First Financial Northwest, Inc.; Stilwell Associates, L.P.; Stilwell Partners, L.P.; Stilwell Value Partners II, L.P.; Stilwell Value Partners VI, L.P.; Stilwell Value Partners VII, L.P.; Stilwell Value LLC; Stilwell Associates Insurance Fund of The S.A.L .I . Multi-Series Fund L.P.; Stilwell Advisers LLC; Joseph Stilwell; Spencer L. Schneider"
       },
       "unconstrained": {
         "effective_date": "2012-01-11",
@@ -1114,7 +1208,25 @@
         "term": "not specified",
         "party": "First Financial Northwest, Inc.; Stilwell Associates, L.P.; Stilwell Partners, L.P.; Stilwell Value Partners II, L.P.; Stilwell Value Partners VI, L.P.; Stilwell Value Partners VII, L.P.; Stilwell Value LLC; Stilwell Associates Insurance Fund of The S.A.L .I . Multi-Series Fund L.P.; Stilwell Advisers LLC; Joseph Stilwell; Spencer L. Schneider"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.667
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.833
+      }
     },
     {
       "constrained": {
@@ -1126,16 +1238,36 @@
       "unconstrained": {
         "effective_date": "30th day of April, 2009",
         "jurisdiction": "Delaware",
-        "term": "one year after the date of this Agreement or, if earlier, upon the execution and delivery of a Transaction Agreement",
+        "term": "1 year",
         "party": "California Micro Devices Corporation; ON Semiconductor Corporation"
       },
-      "flagged": []
+      "flagged": [
+        "term"
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.667
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.833
+      }
     },
     {
       "constrained": {
         "effective_date": "2016-06-22",
         "jurisdiction": "New Jersey",
-        "term": "2 years",
+        "term": "2 years following cessation of Employee\u2019s employment with Employer for any reason",
         "party": "Nat Krishnamurti; Interpace Diagnostics Group, Inc."
       },
       "unconstrained": {
@@ -1146,8 +1278,27 @@
       },
       "flagged": [
         "jurisdiction",
-        "party"
-      ]
+        "party",
+        "term"
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "split-kept",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 0.3,
+        "term": 0.3,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1164,13 +1315,31 @@
       },
       "flagged": [
         "effective_date"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "2015-12-11",
-        "jurisdiction": "",
-        "term": "",
+        "jurisdiction": "None",
+        "term": "None",
         "party": "Anadigics, Inc.; II-VI Incorporated"
       },
       "unconstrained": {
@@ -1182,7 +1351,25 @@
       "flagged": [
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1192,15 +1379,32 @@
         "party": "PJM Interconnection, L.L.C.; State Commission"
       },
       "unconstrained": {
-        "effective_date": "not provided",
-        "jurisdiction": "not provided",
-        "term": "not provided",
-        "party": "PJM Interconnection, L.L.C.; ; ; State Commission"
+        "effective_date": "",
+        "jurisdiction": "Pennsylvania",
+        "term": "\"not specified\"",
+        "party": "PJM Interconnection, L.L.C.; State Commission"
       },
       "flagged": [
-        "effective_date",
-        "jurisdiction"
-      ]
+        "effective_date"
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 0.0,
+        "term": 1.0,
+        "party": 0.667
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 0.5,
+        "term": 1.0,
+        "party": 0.833
+      }
     },
     {
       "constrained": {
@@ -1210,14 +1414,32 @@
         "party": "TESARO, Inc.; GlaxoSmithKline LLC; Ajinomoto Althea, Inc. DBA Ajinomoto Bio-Pharma Services"
       },
       "unconstrained": {
-        "effective_date": "2018-11-15",
+        "effective_date": "15th day of November, 2018",
         "jurisdiction": "Delaware",
         "term": "2 years",
         "party": "TESARO; GlaxoSmithKline LLC; Ajinomoto Althea, Inc. DBA Ajinomoto Bio-Pharma Services"
       },
       "flagged": [
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1227,14 +1449,30 @@
         "party": "Allergan, Inc.; MAP Pharmaceuticals, Inc."
       },
       "unconstrained": {
-        "effective_date": "not provided",
+        "effective_date": "December 17, 2012",
         "jurisdiction": "Delaware",
         "term": "2 years",
         "party": "Allergan, Inc.; MAP Pharmaceuticals, Inc."
       },
-      "flagged": [
-        "effective_date"
-      ]
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1249,26 +1487,61 @@
         "term": "not specified",
         "party": "uDate.com, Inc.; Anthony Dunn"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "200__",
         "jurisdiction": "New York",
         "term": "",
-        "party": "Virgin Mobile USA, LLC; , a licensee of Virgin Enterprises Ltd."
+        "party": "Virgin Mobile USA, LLC; a licensee of Virgin Enterprises Ltd."
       },
       "unconstrained": {
-        "effective_date": "unknown",
+        "effective_date": "not specified",
         "jurisdiction": "New York",
-        "term": "indefinite",
+        "term": "not specified",
         "party": "Virgin Mobile USA, LLC; ; Company"
       },
       "flagged": [
         "effective_date",
-        "party",
-        "term"
-      ]
+        "party"
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1281,9 +1554,27 @@
         "effective_date": "2012-01-25",
         "jurisdiction": "Massachusetts",
         "term": "2 years",
-        "party": "ZOLL MEDICAL CORPORATION; ASAHI KASEI CORPORATION; Brown Brothers Harriman & Co."
+        "party": "ZOLL MEDICAL CORPORATION; ASAHI KASEI CORPORATION"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.667
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.833
+      }
     },
     {
       "constrained": {
@@ -1293,7 +1584,7 @@
         "party": "3M Company; Cogent, Inc."
       },
       "unconstrained": {
-        "effective_date": "not provided",
+        "effective_date": "not specified",
         "jurisdiction": "Minnesota",
         "term": "four years",
         "party": ""
@@ -1302,7 +1593,25 @@
         "effective_date",
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
@@ -1313,18 +1622,36 @@
       },
       "unconstrained": {
         "effective_date": "",
-        "jurisdiction": "California",
+        "jurisdiction": "",
         "term": "2 years",
-        "party": "Penumbra, Inc.;"
+        "party": "Penumbra, Inc.; Xxxxxx"
       },
       "flagged": [
         "effective_date",
-        "party"
-      ]
+        "jurisdiction"
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "majority",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 0.7,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
-        "effective_date": "2023-04-15",
+        "effective_date": "",
         "jurisdiction": "New York",
         "term": "3 years",
         "party": "AOL Inc.; Verizon Corporate Services Group Inc."
@@ -1335,9 +1662,25 @@
         "term": "3 years",
         "party": "AOL Inc.; Verizon Corporate Services Group Inc."
       },
-      "flagged": [
-        "effective_date"
-      ]
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1355,7 +1698,25 @@
       "flagged": [
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
@@ -1367,13 +1728,30 @@
       "unconstrained": {
         "effective_date": "not provided",
         "jurisdiction": "not provided",
-        "term": "perpetual",
+        "term": "not provided",
         "party": "Flexsteel Industries, Inc.; Jerald K. Dittmer"
       },
       "flagged": [
-        "effective_date",
-        "term"
-      ]
+        "effective_date"
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1383,18 +1761,36 @@
         "party": "Integrated Device Technology, Inc.; PLX Technology, Inc."
       },
       "unconstrained": {
-        "effective_date": "2012-03-31",
+        "effective_date": "March 31, 2012",
         "jurisdiction": "California",
         "term": "1 year",
         "party": "Integrated Device Technology, Inc.; PLX Technology, Inc."
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "2018-04-01",
         "jurisdiction": "Virginia",
-        "term": "automatically renew for successive one-year terms (each a 'Renewal Term') unless either party notifies the other of its desire to terminate the Agreement no less than three (3) months before the expiration of the Scheduled Term or Renewal Term.",
+        "term": "Automatic renewal for successive one-year terms (each a 'Renewal Term') unless either party notifies the other of its desire to terminate the Agreement no less than three (3) months before the expiration of the Scheduled Term or Renewal Term.",
         "party": "Bruce L. Caswell; MAXIMUS, Inc."
       },
       "unconstrained": {
@@ -1405,7 +1801,25 @@
       },
       "flagged": [
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.974,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.296,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1423,7 +1837,25 @@
       "flagged": [
         "effective_date",
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1433,7 +1865,7 @@
         "party": "JDA SOFTWARE, INC.; COMPUWARE CORPORATION"
       },
       "unconstrained": {
-        "effective_date": "",
+        "effective_date": "2000",
         "jurisdiction": "Arizona",
         "term": "not specified",
         "party": ""
@@ -1441,25 +1873,61 @@
       "flagged": [
         "effective_date",
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "split-kept",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 0.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 0.15,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
-        "effective_date": "___ day of ____, between ______\n_____ ______ ____",
+        "effective_date": "___ day of ____, between _______ _____ ____, the \u201cEmployee\u201d and Peoples Bank SB (the \u201cPeoples\u201d or \u201cBank\u201d).",
         "jurisdiction": "Indiana",
         "term": "1 year",
-        "party": "______\n_____ ______ ___; PEOPLES BANK SB"
+        "party": "Employee; PEOPLES BANK SB"
       },
       "unconstrained": {
-        "effective_date": "",
+        "effective_date": "not provided",
         "jurisdiction": "Indiana",
-        "term": "one year",
+        "term": "1 year",
         "party": ""
       },
       "flagged": [
         "effective_date",
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1472,20 +1940,38 @@
         "effective_date": "[\u2022] day of [\u2022], 2017",
         "jurisdiction": "New Jersey",
         "term": "12 months",
-        "party": ""
+        "party": "OceanFirst Financial Corp.; [\u2022] (Executive)"
       },
       "flagged": [
         "effective_date",
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "split-kept",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "majority"
+      },
+      "support": {
+        "effective_date": 0.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.15,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.7
+      }
     },
     {
       "constrained": {
         "effective_date": "2005-05-17",
         "jurisdiction": "California",
         "term": "",
-        "party": "Patricia Sueltz; salesforce.com, inc."
+        "party": "salesforce.com, inc.; Patricia Sueltz"
       },
       "unconstrained": {
         "effective_date": "2005-05-17",
@@ -1495,7 +1981,25 @@
       },
       "flagged": [
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1512,25 +2016,60 @@
       },
       "flagged": [
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "2013-05-01",
         "jurisdiction": "Georgia",
-        "term": "1 year following the Separation Date",
+        "term": "",
         "party": "Citi Trends, Inc.; Ivy Council"
       },
       "unconstrained": {
         "effective_date": "2013-05-01",
         "jurisdiction": "Georgia",
         "term": "1 year",
-        "party": ""
+        "party": "Citi Trends, Inc.; Ivy Council"
       },
       "flagged": [
-        "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1545,7 +2084,25 @@
         "term": "5 years",
         "party": "Common Sense Ltd.; Synova Healthcare, Inc."
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1558,11 +2115,27 @@
         "effective_date": "2015-06-23",
         "jurisdiction": "New York",
         "term": "not specified",
-        "party": ""
+        "party": "Consac, LLC; MusclePharm Corporation"
       },
-      "flagged": [
-        "party"
-      ]
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.75
+      }
     },
     {
       "constrained": {
@@ -1575,18 +2148,36 @@
         "effective_date": "2008-01-01",
         "jurisdiction": "California",
         "term": "\"survive the term of the Consulting Agreement and shall continue until such time as all Confidential Information disclosed hereunder becomes publicly known\"",
-        "party": "\"BioLargo, Inc.; Joseph Provenzano\""
+        "party": "BioLargo, Inc.; Joseph Provenzano"
       },
       "flagged": [
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "",
         "jurisdiction": "Minnesota",
         "term": "",
-        "party": "The St. Paul Travelers Companies, Inc."
+        "party": "THE ST. PAUL TRAVELERS COMPANIES , INC"
       },
       "unconstrained": {
         "effective_date": "missing",
@@ -1598,24 +2189,60 @@
         "effective_date",
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
-        "effective_date": "20",
+        "effective_date": "20,3",
         "jurisdiction": "California",
         "term": "2 years",
         "party": "KBSIII REIT Acquisition VII, LLC; KBS Limited Partnership III; KBS Real Estate Investment Trust III, Inc.; KBS Capital Advisors LLC"
       },
       "unconstrained": {
-        "effective_date": "",
+        "effective_date": "2033-03-15",
         "jurisdiction": "California",
         "term": "2 years",
-        "party": "KBSIII REIT Acquisition VII, LLC; KBS Limited Partnership III; KBS Real Estate Investment Trust III, Inc.; KBS Capital Advisors LLC"
+        "party": "KBSIII REIT Acquisition VII, LLC; KBS Limited Partnership III; KBS Real Estate Investment Trust III, Inc.; KBS Capital Advisors LLC;"
       },
       "flagged": [
         "effective_date"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "split-kept",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 0.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.15,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1632,7 +2259,25 @@
       },
       "flagged": [
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1642,41 +2287,73 @@
         "party": "Target Corporation; TARGET ENTERPRISE, INC.; Tina Tyler"
       },
       "unconstrained": {
-        "effective_date": "not specified",
+        "effective_date": "January 19, 2016",
         "jurisdiction": "Minnesota",
         "term": "3 years",
-        "party": ""
+        "party": "Target Corporation; Target Enterprise, Inc.; Tina Tyler"
       },
       "flagged": [
-        "effective_date",
-        "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.75
+      }
     },
     {
       "constrained": {
-        "effective_date": "20XX-XX-XX",
+        "effective_date": "",
         "jurisdiction": "Ohio",
         "term": "",
-        "party": "Fifth Third Processing Solutions, LLC; ; Employee"
+        "party": "Fifth Third Processing Solutions, LLC; Employee"
       },
       "unconstrained": {
         "effective_date": "not provided",
         "jurisdiction": "Ohio",
-        "term": "1 year following termination of such employment for any reason.",
-        "party": "Fifth Third Processing Solutions, LLC; FIFTH THIRD PROCESSING SOLUTIONS, LLC"
+        "term": "1 year following termination of employment",
+        "party": "Fifth Third Processing Solutions, LLC; Employee"
       },
       "flagged": [
-        "effective_date",
-        "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
-        "effective_date": "2023-04-01",
-        "jurisdiction": "",
-        "term": "",
+        "effective_date": "None",
+        "jurisdiction": "None",
+        "term": "None",
         "party": "HI-TEX, INC.; QUAKER FABRIC CORPORATION OF FALL RIVER"
       },
       "unconstrained": {
@@ -1686,9 +2363,26 @@
         "party": "HI-TEX, INC.; QUAKER FABRIC CORPORATION OF FALL RIVER"
       },
       "flagged": [
-        "effective_date",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1698,14 +2392,32 @@
         "party": "GigPeak, Inc.; Integrated Device Technology, Inc."
       },
       "unconstrained": {
-        "effective_date": "20",
+        "effective_date": "2023",
         "jurisdiction": "California",
         "term": "not specified",
         "party": "GigPeak, Inc.; Integrated Device Technology, Inc."
       },
       "flagged": [
         "effective_date"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "split-kept",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 0.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.15,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1720,25 +2432,60 @@
         "term": "not specified",
         "party": "New England Business Service, Inc.; Premium Wear, Inc."
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "2008-11-06",
         "jurisdiction": "California",
         "term": "survives the term of the Consulting Agreement and continues until all Confidential Information becomes publicly known",
-        "party": "BioLargo. Inc.; Howard Isaacs"
+        "party": "BioLargo, Inc.; Howard Isaacs"
       },
       "unconstrained": {
         "effective_date": "2008-11-06",
         "jurisdiction": "California",
-        "term": "until all Confidential Information becomes publicly known",
-        "party": ""
+        "term": "\"survive the term of the Consulting Agreement\"",
+        "party": "BioLargo. Inc.; Howard Isaacs"
       },
       "flagged": [
-        "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1748,15 +2495,32 @@
         "party": "Opsware Inc.; Hewlett-Packard Company"
       },
       "unconstrained": {
-        "effective_date": "2007-05-09",
+        "effective_date": "May 9, 2007",
         "jurisdiction": "Delaware",
         "term": "12 months",
-        "party": ""
+        "party": "Opsware Inc.; Hewlett-Packard Company"
       },
       "flagged": [
-        "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.75
+      }
     },
     {
       "constrained": {
@@ -1773,7 +2537,25 @@
       },
       "flagged": [
         "effective_date"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -1790,7 +2572,25 @@
       },
       "flagged": [
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1807,35 +2607,70 @@
       },
       "flagged": [
         "effective_date"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.75
+      }
     },
     {
       "constrained": {
         "effective_date": "200_____",
         "jurisdiction": "New Jersey",
         "term": "",
-        "party": "AlgoRx Pharmaceuticals, Inc.; \u201cRecipient\u201d"
+        "party": "AlgoRx Pharmaceuticals, Inc.; AlgoRx"
       },
       "unconstrained": {
-        "effective_date": "",
+        "effective_date": "200_____",
         "jurisdiction": "New Jersey",
         "term": "",
         "party": "AlgoRx Pharmaceuticals, Inc.;"
       },
       "flagged": [
-        "effective_date",
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "majority"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.7
+      }
     },
     {
       "constrained": {
         "effective_date": "2009-11-06",
         "jurisdiction": "Delaware",
         "term": "3 years after the date hereof",
-        "party": "HID Global Corporation; LASERCARD CORPORATION"
+        "party": "HID Global Corporation; LaserCard Corporation"
       },
       "unconstrained": {
-        "effective_date": "not provided",
+        "effective_date": "not provided in the document",
         "jurisdiction": "Delaware",
         "term": "3 years",
         "party": "HID Global Corporation; LASERCARD CORPORATION"
@@ -1843,11 +2678,29 @@
       "flagged": [
         "effective_date",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "split-kept",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 0.3,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.75
+      }
     },
     {
       "constrained": {
-        "effective_date": "2001-05-xx",
+        "effective_date": "2001-05-00",
         "jurisdiction": "Washington",
         "term": "",
         "party": "Corus Pharma, Inc.; A. Bruce Montgomery, M.D."
@@ -1862,7 +2715,25 @@
         "effective_date",
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "split-kept",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 0.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.75
+      },
+      "confidence": {
+        "effective_date": 0.15,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 0.263
+      }
     },
     {
       "constrained": {
@@ -1872,15 +2743,32 @@
         "party": "Jeffrey L. Levine"
       },
       "unconstrained": {
-        "effective_date": "not provided",
-        "jurisdiction": "not provided",
+        "effective_date": "February 16, 2005",
+        "jurisdiction": "",
         "term": "2 years",
         "party": "Omni National Bank; Jeffrey L. Levine"
       },
       "flagged": [
-        "effective_date",
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1892,17 +2780,35 @@
       "unconstrained": {
         "effective_date": "November 26, 2014",
         "jurisdiction": "Delaware",
-        "term": "2 years",
+        "term": "two years",
         "party": "E2open, Inc.; Insight Venture Partners, LLC"
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "1999-03-16",
         "jurisdiction": "Oregon",
         "term": "",
-        "party": "ACUMED, INC.; MEDEX SURGICAL"
+        "party": "Acumed, Inc.; Medex Surgical"
       },
       "unconstrained": {
         "effective_date": "1999-03-16",
@@ -1913,14 +2819,32 @@
       "flagged": [
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
         "effective_date": "2008-07-02",
         "jurisdiction": "Delaware",
         "term": "",
-        "party": "THE BANK OF TOKYO-MITSUBISHI UFJ, LTD.; UNIONBANCAL CORPORATION"
+        "party": "UnionBanCal Corporation; The Bank of Tokyo-Mitsubishi UFJ, Ltd.; THE SPECIAL COMMITTEE OF THE BOARD OF DIRECTORS OF UNIONBANCAL CORPORATION"
       },
       "unconstrained": {
         "effective_date": "2008-07-02",
@@ -1930,25 +2854,61 @@
       },
       "flagged": [
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
         "effective_date": "2012-06-11",
         "jurisdiction": "Delaware",
-        "term": "2 years",
+        "term": "until his successor is appointed or elected and shall qualify",
         "party": "Lightwave Logic, Inc.; Ronald A. Bucchi"
       },
       "unconstrained": {
-        "effective_date": "2012-06-11",
+        "effective_date": "June 11, 2012",
         "jurisdiction": "Delaware",
-        "term": "not specified",
+        "term": "ongoing",
         "party": ""
       },
       "flagged": [
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1961,9 +2921,29 @@
         "effective_date": "2007-03-04",
         "jurisdiction": "Delaware",
         "term": "2 years",
-        "party": "Webex Communications, Inc.; Cisco Systems, Inc."
+        "party": ""
       },
-      "flagged": []
+      "flagged": [
+        "party"
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.5,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.75,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -1981,26 +2961,60 @@
       "flagged": [
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.667
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 0.25
+      }
     },
     {
       "constrained": {
         "effective_date": "2011-10-25",
         "jurisdiction": "",
         "term": "2 years",
-        "party": "Life Technologies Corporation; ; any affiliates, subsidiaries, and merged (predecessor) entities; ; Bernd Brust"
+        "party": "Life Technologies Corporation"
       },
       "unconstrained": {
-        "effective_date": "not provided",
-        "jurisdiction": "not provided",
-        "term": "not provided",
-        "party": "Life Technologies Corporation; any affiliates, subsidiaries, and merged (predecessor) entities collectively as Company; Bernd Brust as Employee"
+        "effective_date": "2011-10-25",
+        "jurisdiction": "",
+        "term": "2 years",
+        "party": "Life Technologies Corporation; any affiliates, subsidiaries, and merged (predecessor) entities collectively the \"Company\"; Bernd Brust"
       },
       "flagged": [
-        "effective_date",
-        "party",
-        "term"
-      ]
+        "party"
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "majority"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.5,
+        "party": 0.667
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.75,
+        "party": 0.583
+      }
     },
     {
       "constrained": {
@@ -2012,55 +3026,109 @@
       "unconstrained": {
         "effective_date": "2012-10-15",
         "jurisdiction": "",
-        "term": "ongoing",
+        "term": "2 years",
         "party": "Contran Corporation; Precision Castparts Corp."
       },
       "flagged": [
         "effective_date",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "split-kept",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.3,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "2016-03-15",
         "jurisdiction": "Delaware",
         "term": "",
-        "party": "Orchestra-Pr\u00e9maman, S.A.; Destination Maternity Corporation"
+        "party": "Destination Maternity Corporation; Orchestra-Pr\u00e9maman, S.A."
       },
       "unconstrained": {
         "effective_date": "March 15, 2016",
         "jurisdiction": "Delaware",
-        "term": "\"until January 1, 2017\"",
-        "party": "\"Orchestra-Pr\u00e9maman, S.A.\"; \"Destination Maternity Corporation\""
+        "term": "Not specified",
+        "party": ""
       },
       "flagged": [
-        "term"
-      ]
+        "party"
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
         "effective_date": "2005-09-29",
         "jurisdiction": "Illinois",
-        "term": "",
+        "term": "not specified (duration not stated)",
         "party": "Paul B. Mulhollem; Archer-Daniels-Midland Company"
       },
       "unconstrained": {
         "effective_date": "2005-09-29",
         "jurisdiction": "Illinois",
-        "term": "2 years",
+        "term": "not specified",
         "party": ""
       },
       "flagged": [
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
         "effective_date": "2005-05-04",
         "jurisdiction": "Idaho",
         "term": "",
-        "party": "Silver Valley Capital; Sterling Mining Company; Kimberly Gold Mines, Inc.; Shoshone Silver Mining Company; Michael L. Mooney"
+        "party": "Michael L. Mooney"
       },
       "unconstrained": {
         "effective_date": "not provided",
@@ -2069,8 +3137,27 @@
         "party": "Silver Valley Capital; Sterling Mining Company; Kimberly Gold Mines, Inc.; Shoshone Silver Mining Company; Michael L. Mooney"
       },
       "flagged": [
-        "effective_date"
-      ]
+        "effective_date",
+        "party"
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -2080,49 +3167,99 @@
         "party": "PhotoWorks, Inc; American Greetings Corporation"
       },
       "unconstrained": {
-        "effective_date": "not provided",
+        "effective_date": "8/14/2007",
         "jurisdiction": "Washington",
         "term": "2 years",
         "party": "PhotoWorks, Inc; American Greetings Corporation"
       },
-      "flagged": [
-        "effective_date"
-      ]
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.667
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.833
+      }
     },
     {
       "constrained": {
         "effective_date": "2016-05-03",
         "jurisdiction": "New York",
-        "term": "Not specified",
+        "term": "upon termination of Employee\u2019s employment for any reason",
         "party": "Wizard World, Inc.; John D. Maatta"
       },
       "unconstrained": {
         "effective_date": "2016-05-03",
         "jurisdiction": "New York",
-        "term": "2 years",
-        "party": "Wizard World, Inc.; John D. Maatta"
-      },
-      "flagged": [
-        "term"
-      ]
-    },
-    {
-      "constrained": {
-        "effective_date": "2008-08-01",
-        "jurisdiction": "New York",
-        "term": "Not specified in the agreement",
-        "party": "Omrix Biopharmaceuticals, Inc.; Ethicon, Inc."
-      },
-      "unconstrained": {
-        "effective_date": "1st day of August, 2008",
-        "jurisdiction": "New York",
-        "term": "2 years",
+        "term": "any reason",
         "party": ""
       },
       "flagged": [
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.3
+      }
+    },
+    {
+      "constrained": {
+        "effective_date": "2008-08-01",
+        "jurisdiction": "New York",
+        "term": "Not specified",
+        "party": "Omrix Biopharmaceuticals, Inc.; Ethicon, Inc."
+      },
+      "unconstrained": {
+        "effective_date": "1st day of August, 2008",
+        "jurisdiction": "New York",
+        "term": "not specified",
+        "party": "Omrix Biopharmaceuticals, Inc.; Ethicon, Inc."
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -2139,7 +3276,25 @@
       },
       "flagged": [
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -2157,7 +3312,25 @@
       "flagged": [
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
@@ -2175,7 +3348,25 @@
       "flagged": [
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -2192,7 +3383,25 @@
       },
       "flagged": [
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -2210,24 +3419,61 @@
       "flagged": [
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
         "effective_date": "2006-12-19",
         "jurisdiction": "New York",
-        "term": "",
+        "term": "18 months from the Effective Date",
         "party": "MapInfo Corporation; Pitney Bowes Inc."
       },
       "unconstrained": {
         "effective_date": "2006-12-19",
         "jurisdiction": "New York",
         "term": "18 months",
-        "party": "MapInfo Corporation; Pitney Bowes Inc."
+        "party": ""
       },
       "flagged": [
+        "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
@@ -2237,75 +3483,145 @@
         "party": "TPG Capital, L.P.; Axcan Pharma Inc.; Eurand N.V."
       },
       "unconstrained": {
-        "effective_date": "not provided",
+        "effective_date": "2010-07-13",
         "jurisdiction": "New York",
         "term": "24 months",
         "party": ""
       },
       "flagged": [
-        "effective_date",
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
         "effective_date": "2010-01-01",
-        "jurisdiction": "",
-        "term": "10 years following the termination of the IP AGREEMENT",
+        "jurisdiction": "Delaware",
+        "term": "10 years following the termination of the IP AGREEMENTs",
         "party": "Motorola, Inc.; Iridium Satellite LLC"
       },
       "unconstrained": {
         "effective_date": "not provided",
         "jurisdiction": "not provided",
         "term": "10 years",
-        "party": ""
+        "party": "Motorola, Inc.; Iridium Satellite LLC"
       },
       "flagged": [
         "effective_date",
-        "party",
+        "jurisdiction",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "majority",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 0.7,
+        "term": 0.3,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
-        "effective_date": "2008-01-01",
+        "effective_date": "2007-04-09",
         "jurisdiction": "California",
-        "term": "not specified",
+        "term": "12 months imm[ed] from this Agreement or amended, as the case may be",
         "party": "GigOptix LLC; Avi Katz"
       },
       "unconstrained": {
-        "effective_date": "2008-01-01",
+        "effective_date": "January 1, 2008",
         "jurisdiction": "California",
         "term": "12 months",
         "party": "GigOptix LLC; Avi Katz"
       },
       "flagged": [
+        "effective_date",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "split-kept",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.3,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "2017-10-02",
         "jurisdiction": "Delaware",
         "term": "2 years",
-        "party": "Potbelly Corporation; Ancora Advisors, LLC"
+        "party": "Potbelly Corporation; Ancora Advisors, LLC; Fred DiSanto; James Chadwick; Brian Hopkins; Joseph Boehm"
       },
       "unconstrained": {
         "effective_date": "October 2, 2017",
         "jurisdiction": "Delaware",
         "term": "2 years",
-        "party": "Potbelly Corporation; Ancora Advisors, LLC; Fred DiSanto; James Chadwick; Brian Hopkins; Joseph Boehm"
+        "party": "Potbelly Corporation; Ancora Advisors, LLC; Frederick DiSanto; James Chadwick; Brian Hopkins; Joseph Boehm"
       },
-      "flagged": [
-        "party"
-      ]
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.75
+      }
     },
     {
       "constrained": {
         "effective_date": "",
         "jurisdiction": "",
         "term": "",
-        "party": "The Schooner Group, LLC"
+        "party": "Ideal Restaurant Group, Inc.; The Schooner Group, LLC"
       },
       "unconstrained": {
         "effective_date": "",
@@ -2313,9 +3629,25 @@
         "term": "",
         "party": "Ideal Restaurant Group, Inc.; The Schooner Group, LLC"
       },
-      "flagged": [
-        "party"
-      ]
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
@@ -2332,66 +3664,137 @@
       },
       "flagged": [
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
         "effective_date": "2011-05-26",
         "jurisdiction": "California",
-        "term": "Merger Agreement is not specified in terms of duration but the Merger will occur after execution.",
+        "term": "Merger Agreement is effective upon execution and delivery by the Parties; provided, however, that if the Merger is not consummated and the Merger Agreement is terminated, this Agreement shall automatically terminate concurrently with the termination of the Merger Agreement.",
         "party": "Skyworks Solutions, Inc.; Richard K. Williams"
       },
       "unconstrained": {
         "effective_date": "May 26, 2011",
         "jurisdiction": "California",
-        "term": "perpetual",
-        "party": ""
+        "term": "not specified",
+        "party": "Skyworks Solutions, Inc.; Richard K. Williams"
       },
       "flagged": [
-        "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 1.0
+      }
     },
     {
       "constrained": {
         "effective_date": "2006-09-01",
         "jurisdiction": "",
-        "term": "",
+        "term": "5 years following the date that Disclosing Party first discloses such Confidential Information to Receiving Party",
         "party": "MICROSOFT CORPORATION; Digital River, Inc."
       },
       "unconstrained": {
-        "effective_date": "not provided",
-        "jurisdiction": "not provided",
-        "term": "5 years",
+        "effective_date": "not specified",
+        "jurisdiction": "not specified",
+        "term": "10 years",
         "party": "MICROSOFT CORPORATION; Digital River, Inc."
       },
       "flagged": [
         "effective_date",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.75
+      }
     },
     {
       "constrained": {
         "effective_date": "2015-04-02",
         "jurisdiction": "Delaware",
         "term": "3 years",
-        "party": "Alan S. Korman; Columbus McKinnon Corporation"
+        "party": "Columbus McKinnon Corporation; Magnetek, Inc."
       },
       "unconstrained": {
         "effective_date": "April 2, 2015",
         "jurisdiction": "Delaware",
         "term": "3 years",
-        "party": "Columbus McKinnon Corporation; Magnetek, Inc."
+        "party": "Columbus McKinnon Corporation; Magnetek, Inc.; Scott S. Cramer (Columbus McKinnon Corporation); Alan S. Korman (Columbus McKinnon Corporation)"
       },
       "flagged": [
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.667
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.25
+      }
     },
     {
       "constrained": {
         "effective_date": "2017-07-21",
         "jurisdiction": "Washington",
-        "term": "5 years after we receive it",
+        "term": "5 years after receiving the confidential information",
         "party": "MICROSOFT CORPORATION; Adaptive Biotechnologies"
       },
       "unconstrained": {
@@ -2404,34 +3807,70 @@
         "effective_date",
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.857,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 0.279,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
         "effective_date": "2011-01-18",
         "jurisdiction": "New York",
-        "term": "2 years",
+        "term": "two years",
         "party": "ORTHOVITA, INC.; Stryker Corporation"
       },
       "unconstrained": {
-        "effective_date": "January 18, 2011",
+        "effective_date": "2011-01-18",
         "jurisdiction": "New York",
         "term": "2 years",
         "party": ""
       },
       "flagged": [
         "party"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 0.225
+      }
     },
     {
       "constrained": {
         "effective_date": "2023-04-17",
         "jurisdiction": "Washington",
-        "term": "1 year after the Effective Date",
+        "term": "1 year after the Effective Date or earlier termination by a party upon 30 days' prior written notice",
         "party": "Alder BioPharmaceuticals, Inc.; H. Lundbeck A/S"
       },
       "unconstrained": {
-        "effective_date": "not specified",
+        "effective_date": "not provided",
         "jurisdiction": "Washington",
         "term": "one (1) year",
         "party": ""
@@ -2440,7 +3879,25 @@
         "effective_date",
         "party",
         "term"
-      ]
+      ],
+      "resolution": {
+        "effective_date": "majority",
+        "jurisdiction": "agreement",
+        "term": "split-kept",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.7,
+        "jurisdiction": 1.0,
+        "term": 0.3,
+        "party": 0.3
+      }
     },
     {
       "constrained": {
@@ -2450,14 +3907,33 @@
         "party": "US Foods, Inc.; Employee"
       },
       "unconstrained": {
-        "effective_date": "not provided",
+        "effective_date": "2015-07-21",
         "jurisdiction": "Illinois",
-        "term": "not provided",
-        "party": "US Foods, Inc.; Employee"
+        "term": "unspecified",
+        "party": ""
       },
       "flagged": [
-        "effective_date"
-      ]
+        "party",
+        "term"
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "majority",
+        "party": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0,
+        "party": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.7,
+        "party": 0.3
+      }
     }
   ]
 }

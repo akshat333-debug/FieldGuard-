@@ -39,16 +39,22 @@ def is_absent(spec: FieldSpec, value: str) -> bool:
 
     Exact membership alone misses the phrasings models actually produce
     ("date not provided" rather than bare "not provided"), which scored a
-    CORRECT absence answer as a wrong value. Short values ending in an absence
-    phrase count too; the word cap keeps a real value that merely mentions one
-    of these words from being read as absence.
+    CORRECT absence answer as a wrong value. Short values ENDING in an absence
+    phrase count too — as trailing WORDS, never as a character suffix: the
+    first version used str.endswith and read "North Carolina" / "Arizona" /
+    "Indiana" as absent because they end in the letters "na" (audit,
+    BUILDLOG 37). The word cap keeps a real value that merely mentions an
+    absence word from being read as absence.
     """
     if spec.required:
         return False
     v = re.sub(r"[^\w\s/]", "", value.strip().casefold()).strip()
     if v in _ABSENCE:
         return True
-    return len(v.split()) <= 4 and any(v.endswith(p) for p in _ABSENCE)
+    words = v.split()
+    if len(words) > 4:
+        return False
+    return any(words[-len(pw):] == pw for p in _ABSENCE if (pw := p.split()))
 
 
 def normalize(spec: FieldSpec, value: str) -> str:

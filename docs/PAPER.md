@@ -23,7 +23,7 @@ disagree, after type-aware normalization, are flagged and re-verified with a
 single targeted query; unflagged fields cost nothing. On two real benchmarks
 (SROIE receipts, Kleister-NDA contracts) and three local models, this recovers
 the accuracy lost to constraint-forcing while cutting verification calls by
-42–61% on capable models. The saving is not a tuned hyperparameter: it tracks
+44–61% on capable models, and a grounding-based repair adds up to +9.2 accuracy points at zero additional calls. The saving is not a tuned hyperparameter: it tracks
 extractor quality automatically, degrading to full spend and 200/200
 low-confidence self-reporting when the underlying model is broken — except in
 one artifact case we characterize, where a model that refuses every field buys
@@ -71,6 +71,13 @@ Our contributions:
    deliberately.
 5. **Three negative results**, each with a regression test pinning the reverted
    behavior.
+6. **A second, orthogonal signal** — source grounding — that attacks the
+   correlated blind spot of (4), with a gold-free runtime gate for its
+   capability-dependent repair rule (§5a).
+7. **A unified per-field confidence** (resolution band × source support;
+   fixed constants, nothing fitted) evaluated as a selective predictor with
+   risk–coverage curves and AURC against single-signal and random baselines
+   (§5b).
 
 ## 2. Method
 
@@ -140,6 +147,16 @@ clauses to fit a 4k local context.
 **Models.** qwen2.5:3b (capable), qwen2.5:1.5b (mid), tinyllama-1.1B (broken),
 served locally via Ollama, temperature 0, max_tokens 512.
 
+**Data statement (encoding repair).** The Kleister TSV distribution encodes
+newlines as literal two-character `\n` escapes. Our first converter fed them
+through verbatim (≈70 fake `\n` tokens per contract, adjacent words glued
+across line breaks), and every Kleister number in earlier drafts was measured
+on that corrupted text. The converter now unescapes, the shipped JSONL files
+were repaired (documents only, gold untouched), and all Kleister cells were
+re-run on clean text; the tables below are post-repair. SROIE was unaffected.
+We disclose this because the pre/post delta is itself a measurement of how
+much low-level input noise moves small-model extraction.
+
 **Metrics.** Field accuracy vs gold with doc-level bootstrap 95% CIs (fields
 within a document are correlated, so documents are the exchangeable unit);
 flag precision/recall against the corrupted set; LLM calls against a
@@ -166,8 +183,8 @@ neither as the "true" number.
 |---|---|---|---|
 | SROIE — calls saved | **61%** | **56%** | 0% |
 | SROIE — constrained → final | 0.820 → 0.855 | 0.715 → 0.730 | 0.005 → 0.005 |
-| Kleister — calls saved | **45%** | **47%** | 59%* |
-| Kleister — constrained → final | 0.771 → 0.767 | 0.550 → 0.566 | 0.301* |
+| Kleister — calls saved | **49%** | **46%** | 60%* |
+| Kleister — constrained → final | 0.775 → 0.767 | 0.546 → 0.562 | 0.301* |
 
 Verification spend tracks extractor quality monotonically on SROIE, with no
 knob to tune. On the broken model there, every field is flagged, **200/200**
@@ -176,14 +193,15 @@ degradation.
 
 The Kleister tinyllama column inverts this and is **not** a counter-example to
 the mechanism but an instance of the artifact in §4.4: answering "absent"
-everywhere makes both paths agree, so nothing is flagged, cost looks *low*
-(59% "saved") and only 4/249 fields are marked low-confidence. Agreement
+everywhere makes both paths agree, so nothing is flagged at all (166 calls = exactly the
+two extractions per document, 60% "saved") and 0/249 fields are marked
+low-confidence. Agreement
 purchased by refusing to answer is indistinguishable from agreement earned by
 extracting correctly — which is precisely why the tripwire exists.
 
 Accuracy separation between 3b and 1.5b is CI-disjoint on both benchmarks
-(SROIE [0.810, 0.900] vs [0.680, 0.780]; Kleister [0.715, 0.819] vs
-[0.498, 0.631]), so the ordering is established, not noise.
+(SROIE [0.810, 0.900] vs [0.680, 0.780]; Kleister [0.719, 0.815] vs
+[0.502, 0.622]), so the ordering is established, not noise.
 
 \* tinyllama answers "absent" for all 249 Kleister fields; 0.301 is exactly the
 gold-absence share, and both-paths-absent counts as agreement. This is an
@@ -199,30 +217,32 @@ we report both. Recall is stable; precision is not.
 | SROIE 3b | 0.78 / 0.95 | 0.47 / 0.73 |
 | SROIE 1.5b | 0.69 / 0.97 | 0.29 / 0.82 |
 | SROIE tinyllama | 0.09 / 1.00 | 0.09 / 1.00 |
-| Kleister 3b | 0.51 / 0.99 | 0.22 / 0.93 |
-| Kleister 1.5b | 0.56 / 0.96 | 0.20 / 0.79 |
-| Kleister tinyllama | 0.98 / 1.00 | **0.00** / 1.00 |
+| Kleister 3b | 0.66 / 1.00 | 0.16 / 1.00 |
+| Kleister 1.5b | 0.51 / 0.98 | 0.21 / 0.86 |
+| Kleister tinyllama | 1.00 / 1.00* | (no flags fired) |
 
 Two lessons. (i) Micro reads *lower* than macro everywhere — the opposite of
 our pre-registered guess — because macro lets easy, few-field documents carry
 equal weight to hard ones. (ii) The Kleister tinyllama row is the sharpest
-illustration of the strict-precision caveat (§3): macro 0.98 vs micro 0.00.
-The model answers "absent" for every field; under the strict corrupted
-definition (constrained wrong AND unconstrained right) nothing is "corrupted,"
-so every flag is a false positive and micro precision collapses to zero — even
-though flagging every field of a model that extracts nothing is exactly correct
-behavior. Neither number is wrong; both are reported; the operator reads them
-next to the low-confidence count and the absence tripwire, not alone.
+illustration of vacuous defaults: on clean text the all-absent model fires
+ZERO flags (agreement-on-absence everywhere), and with an empty flagged set
+and an empty corrupted set both P and R default to 1.00 — perfect-looking
+numbers purchased by refusing to answer anything. The operator reads them
+next to the low-confidence count and the absence tripwire, not alone. (On the
+pre-repair corrupted encoding this same model flagged everything instead —
+macro 0.98 / micro 0.00 — either extreme is the artifact announcing itself.)
 
-These numbers reproduced to the digit on a second run (temperature 0), which is
-the reproducibility claim made concrete.
+The SROIE numbers reproduced to the digit across the encoding repair (SROIE
+text was untouched; temperature 0), which is the reproducibility claim made
+concrete.
 
 ### 4.2 Multi-valued fields
 
 Adding the set-valued `party` field (83 docs × 4 fields = 332) keeps
-verification net-positive with the hardest field in the schema: 3b
-0.723 → 0.744 (42% saved), 1.5b 0.563 → 0.572 (45% saved). Party exact-set
-accuracy is 60/83 for 3b. We score exact-set; per-element partial credit would
+verification with the hardest field in the schema: 3b 0.723 → 0.723 (45%
+saved — repairs net to zero on clean text), 1.5b 0.551 → 0.566 (44% saved).
+Party exact-set accuracy is 60/83 for 3b, 52/83 for 1.5b. Grounding repair
+(§5a) adds its free gains on top: 3b → 0.741, 1.5b → 0.636. We score exact-set; per-element partial credit would
 flatter these numbers.
 
 ### 4.3 Where the residual error lives
@@ -236,8 +256,8 @@ unmoved.
 
 ### 4.4 Absence is a capability, not a formatting question
 
-On Kleister, 3b answers 54/75 legitimately-absent fields correctly; 1.5b
-hallucinates a value for 69/75 — identically on both paths, therefore
+On Kleister, 3b answers 49/75 legitimately-absent fields correctly; 1.5b
+hallucinates a value for 72/75 — identically on both paths, therefore
 invisible to disagreement. Fully-absent output is an artifact class of its own:
 `examples/analyze.py` prints an `[!] N/N answers absent` tripwire, and
 all-optional schemas should retain at least one required field, since the
@@ -282,7 +302,7 @@ decomposes into two families, and one of them is attackable with a second
 training-free signal.
 
 **Fabrication.** A weak extractor invents a plausible value for a field the
-document never states (measured: qwen2.5:1.5b produces a value for 69 of 75
+document never states (measured: qwen2.5:1.5b produces a value for 72 of 75
 legitimately-absent Kleister fields, identically on both paths). Disagreement
 cannot see this — but the *source* can: a value appearing nowhere in the
 document is unsupported however confidently the paths agree. We compute a
@@ -300,15 +320,19 @@ both signals — the honest boundary of the whole approach.
 |---|---|---|---|---|
 | SROIE 3b | 29 | 0 (0%) | — | 0 |
 | SROIE 1.5b | 54 | 5 (9%) | 1.00 | 0 |
-| Kleister 3b | 58 | 7 (12%) | 0.58 | 5 |
-| Kleister 1.5b | 109 | 38 (35%) | 0.84 | 7 |
-| Kleister+party 3b | 85 | 4 (5%) | 0.33 | 8 |
-| Kleister+party 1.5b | 142 | 35 (25%) | 0.80 | 9 |
+| Kleister 3b | 58 | 7 (12%) | 1.00 | 0 |
+| Kleister 1.5b | 109 | 30 (28%) | 0.97 | 1 |
+| Kleister+party 3b | 92 | 6 (7%) | 1.00 | 0 |
+| Kleister+party 1.5b | 144 | 31 (22%) | 0.97 | 1 |
 
 The signal is *selective*, which is the point: it fires where fabrication is
 the failure mode (optional fields + a weak model) and is inert where models copy
 values off a receipt (SROIE: zero catches, zero false alarms — it costs nothing
-to leave on).
+to leave on). Precision is 0.97–1.00 across all firing cells. An earlier draft
+measured 0.84 with 5–9 false alarms per cell; every one of those false alarms
+was a value split by the fake `\n` tokens of the corrupted Kleister encoding
+(§3, data statement) and vanished with the repair — the false-alarm rate of
+the signal was bounded by the noise floor of the input, not by the mechanism.
 
 **Repair, and why it is opt-in.** Detection alone does not help: under
 split-kept, an arbiter answering NONE disagrees with both fabricating paths, so
@@ -317,34 +341,44 @@ moves accuracy is *unsupported value on an optional field → absent*:
 
 | cell | accuracy | fixed / broken |
 |---|---|---|
-| Kleister 1.5b | 0.566 → **0.647** (+8.0) | 27 / 7 |
-| Kleister+party 1.5b | 0.572 → **0.630** (+5.7) | 26 / 7 |
-| Kleister 3b | 0.767 → 0.771 (+0.4) | 6 / 5 |
-| Kleister+party 3b | 0.744 → 0.735 (**−0.9**) | 3 / 6 |
+| Kleister 1.5b | 0.562 → **0.655** (+9.2) | 24 / 1 |
+| Kleister+party 1.5b | 0.566 → **0.636** (+6.9) | 24 / 1 |
+| Kleister 3b | 0.767 → **0.795** (+2.8) | 7 / 0 |
+| Kleister+party 3b | 0.723 → **0.741** (+1.8) | 6 / 0 |
 | SROIE (both) | unchanged (0.000) | 0 / 0 |
 
-The rule rescues a fabricating extractor and slightly harms a reliable one,
-where the few ungrounded values are normalization edge cases rather than
-inventions. So it ships **off by default**, gated by a statistic that needs no
-gold labels: the observed ungrounded rate. This is the same adaptive stance as
-the cost result — the system measures its own extractor and spends accordingly.
+On clean text the rule helps every cell it fires in and breaks at most one
+field. An earlier draft reported it *harming* the capable model (−0.9); that
+finding did not survive the encoding repair — the harm was the false alarms
+above, which were input noise. We keep the rule **off by default** anyway,
+because its gain is capability-dependent (+9.2 on a fabricating extractor vs
++1.8–2.8 on reliable ones, and a strict no-op on SROIE) and because one
+benchmark family is not a safety proof; the gate below is the gold-free
+statistic an operator can watch to decide. This is the same adaptive stance
+as the cost result — the system measures its own extractor and spends
+accordingly.
 
 **The gate, and whether it decides correctly.** The ungrounded rate is a
 deterministic function of (final values, source document), so it is recoverable
 offline for every stored run:
 
-| cell | ungrounded rate | gate | repair effect | decision |
-|---|---|---|---|---|
-| SROIE 3b | 0.0% | skip | 0.000 | correct |
-| SROIE 1.5b | 2.5% | skip | 0.000 | correct |
-| Kleister+party 3b | 3.6% | skip | **−0.9** | correct (avoids harm) |
-| Kleister 3b | 4.8% | skip | +0.4 (noise) | correct |
-| Kleister+party 1.5b | 13.3% | **enable** | **+5.7** | correct |
-| Kleister 1.5b | 17.7% | **enable** | **+8.0** | correct |
+| cell | ungrounded rate | repair effect | reading |
+|---|---|---|---|
+| SROIE 3b | 0.0% | 0.000 | nothing to repair |
+| Kleister+party 3b | 1.8% | +1.8 | small, safe |
+| SROIE 1.5b | 2.5% | 0.000 | nothing to repair |
+| Kleister 3b | 2.8% | +2.8 | small, safe |
+| Kleister+party 1.5b | 9.6% | **+6.9** | fabricating |
+| Kleister 1.5b | 12.4% | **+9.2** | fabricating |
 
-The gate makes the right enable/skip call on all six cells, including the one
-where the rule would have *hurt*. The separation (≤4.8% versus ≥13.3%) is a
-gap, not a boundary we placed inside a continuum of observations.
+On clean text the gate's role shifts from harm-avoidance (no cell is harmed
+any more) to **gain prediction**: among the cells where the repair *can* fire
+(schemas with optional fields — all four Kleister cells), gain rises
+monotonically with the observed ungrounded rate. SROIE's schema is
+all-required, so its rule is structurally a no-op there regardless of rate
+(its 2.5% ungrounded on 1.5b sits on required fields the rule never touches).
+An operator watching this label-free statistic knows both whether and roughly
+how much the repair will pay.
 
 **Live end-to-end confirmation.** The table above is an offline reconstruction
 over stored outputs, so we re-ran the winning cell through the full pipeline
@@ -352,21 +386,66 @@ with the rule enabled (`--ground-repair`, Kleister qwen2.5:1.5b, n=83):
 
 | | baseline | + grounding repair |
 |---|---|---|
-| constrained accuracy | 0.550 | 0.550 (extraction untouched) |
-| final accuracy | 0.566 | **0.647** (+8.0 pts) |
-| LLM calls | 221 | **221** (repair is free — no arbiter query) |
-| ungrounded rate (gate) | — | 44/249 = **17.7%** |
+| constrained accuracy | 0.546 | 0.546 (extraction untouched) |
+| final accuracy | 0.562 | **0.655** (+9.2 pts) |
+| LLM calls | 224 | **224** (repair is free — no arbiter query) |
+| ungrounded rate (gate) | — | 31/249 = **12.4%** |
 
-The live result matches the offline prediction to three decimals, extraction is
+The live result matches the offline prediction exactly, extraction is
 bit-identical (confirming the delta is the repair rule and nothing else), and
 the repair costs **zero additional model calls** — it replaces a value rather
-than querying for one. The gate read 17.7%, correctly above the fabricating
-band, with no gold labels involved.
+than querying for one. The gate read 12.4% with no gold labels involved.
 
-**Honest caveat.** That gate is suggested by four informative cells. It is a
-hypothesis with a clean mechanism, not a validated threshold, and we report it
-as such. In particular the ~4%/~15% separation is observed, not tuned, and a
-model sitting between those bands has not been tested.
+**Honest caveat.** Six cells from one benchmark family. The monotone
+rate→gain relationship is observed, not derived; the fabricating/reliable
+band edges are descriptive; and a model sitting between 3% and 9% has not
+been tested. We also note for the record that the pre-repair version of this
+section reported the repair harming a capable model — a conclusion that
+flipped when an input-encoding bug was fixed. Conclusions about *when a rule
+hurts* are evidently sensitive to input noise, which is an argument for
+gating on the observable statistic rather than on a model-capability prior.
+
+## 5b. Unified confidence as a selective predictor
+
+Every stage of the pipeline already emits an ordinal reliability cue: the
+resolution band (agreement > corroborated majority > uncorroborated
+split-kept) from signal 1 + the arbiter, and the support score in [0, 1] from
+signal 2. We fold them into one number per field:
+
+    confidence = band_weight × (0.5 + 0.5 · support)
+    band_weight: agreement 1.0, majority 0.7, split-kept 0.3
+
+The constants are **fixed, not fitted** — there is nothing to train and
+nothing to leak — and the bands deliberately overlap: a fully grounded
+majority (0.7) outranks a fully ungrounded agreement (0.5). A
+ground-repaired field keeps its low pre-repair support, so the repair rule
+cannot launder a detected fabrication into high confidence. We claim only
+the *ranking*, not calibrated probabilities.
+
+The claim is tested the standard selective-prediction way: accept fields in
+descending confidence and plot risk (error rate accepted so far) against
+coverage; AURC summarizes the curve (lower = errors ranked later). Baselines
+from the same stored runs, zero extra LLM calls: **random** (AURC = the
+overall error rate), **flag-only** (two bands: unflagged first), and
+**support-only** (grounding score alone). `examples/risk_coverage.py`
+computes all four from the per-field traces.
+
+| cell | random | flag-only | support-only | **combined** |
+|---|---|---|---|---|
+| SROIE 3b | 0.145 | 0.123 | 0.141 | **0.114** |
+| SROIE 1.5b | 0.270 | 0.203 | 0.245 | **0.191** |
+| Kleister 3b | 0.233 | 0.143 | 0.187 | **0.141** |
+| Kleister 1.5b | 0.438 | 0.299 | 0.262 | **0.221** |
+| Kleister+party 3b | 0.277 | 0.174 | 0.248 | **0.146** |
+| Kleister+party 1.5b | 0.434 | 0.290 | 0.320 | **0.243** |
+
+The combined score has the lowest AURC in **6/6 cells** — and, notably,
+neither component does: flag-only nearly ties it on capable models (where
+disagreement is the dominant error signal) and support-only beats flag-only
+on the fabricating model (where the dominant errors are correlated
+fabrications no flag can see). The two signals are complementary in exactly
+the way their blind-spot analysis predicts, and the fixed-weight combination
+inherits the better of the two everywhere without fitting anything.
 
 ## 6. Limitations
 
@@ -503,4 +582,9 @@ sample, at the granularity of the individual field — and that granularity is
 what makes selective repair affordable. The resulting system spends
 verification in proportion to how unreliable the extractor actually is, which
 is the behavior an operator wants and does not have to configure. Its blind
-spot is precise and stated: errors the two paths share.
+spot is precise and stated: errors the two paths share — and half of that
+blind spot (fabrication) falls to a second training-free signal, source
+grounding, whose free repair adds up to +9.2 points and whose gold-free gate
+statistic predicts its own usefulness. Folding both signals into one
+fixed-weight confidence yields the best error ranking in every measured cell
+(§5b) without training anything.

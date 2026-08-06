@@ -2,21 +2,22 @@
   "model": "tinyllama:latest",
   "n": 83,
   "threshold": 0.5,
-  "elapsed_sec": 964.0,
+  "elapsed_sec": 1053.1,
   "report": {
     "docs": 83,
     "fields_total": 249,
     "constrained_acc": 0.3012048192771082,
     "final_acc": 0.3012048192771082,
     "corruption_rate": 0.0,
-    "flag_precision": 0.9759036144578314,
+    "flag_precision": 1.0,
     "flag_recall": 1.0,
-    "llm_calls": 170,
+    "llm_calls": 166,
     "full_verify_calls": 415,
-    "low_confidence": 4,
+    "low_confidence": 0,
     "flag_tp": 0,
-    "flag_flagged": 4,
+    "flag_flagged": 0,
     "flag_corrupted": 0,
+    "ungrounded": 0,
     "notes": []
   },
   "finals": [
@@ -865,7 +866,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -878,7 +894,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -890,8 +921,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -903,8 +949,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -916,8 +977,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -930,7 +1006,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -943,7 +1034,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -955,8 +1061,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -968,8 +1089,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -982,7 +1118,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -994,8 +1145,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1007,8 +1173,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1020,8 +1201,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1034,7 +1230,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1047,7 +1258,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1059,8 +1285,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1072,8 +1313,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1085,8 +1341,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1099,7 +1370,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1111,8 +1397,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1124,8 +1425,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1138,7 +1454,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1151,7 +1482,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1163,8 +1509,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1176,8 +1537,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1189,8 +1565,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1203,7 +1594,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1216,7 +1622,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1228,8 +1649,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1241,8 +1677,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1255,7 +1706,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1267,8 +1733,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1280,8 +1761,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1293,8 +1789,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1307,7 +1818,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1319,8 +1845,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1332,8 +1873,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1346,7 +1902,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1359,7 +1930,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1371,8 +1957,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1384,8 +1985,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1398,7 +2014,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1410,8 +2041,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1423,8 +2069,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1436,8 +2097,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1450,7 +2126,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1460,13 +2151,25 @@
       },
       "unconstrained": {
         "effective_date": "",
-        "jurisdiction": "US state whose law governs the agreement, from the governance-law clause - \"New York\"",
-        "term": "duration of the agreement as stated, e.g. \"2 years\" - length only, not start/end dates"
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": [
-        "jurisdiction",
-        "term"
-      ]
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1478,8 +2181,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1491,8 +2209,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1505,7 +2238,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1517,8 +2265,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1530,8 +2293,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1544,7 +2322,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1557,7 +2350,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1569,8 +2377,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1582,8 +2405,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1595,8 +2433,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1609,7 +2462,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1622,7 +2490,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1634,8 +2517,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1647,8 +2545,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1661,7 +2574,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1671,13 +2599,25 @@
       },
       "unconstrained": {
         "effective_date": "",
-        "jurisdiction": "Delaware",
-        "term": "10th July 2016"
+        "jurisdiction": "",
+        "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": [
-        "jurisdiction",
-        "term"
-      ]
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1689,8 +2629,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1703,7 +2658,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1716,7 +2686,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1728,8 +2713,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1741,8 +2741,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1754,8 +2769,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1768,7 +2798,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1780,8 +2825,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1793,8 +2853,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1807,7 +2882,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1820,7 +2910,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1832,8 +2937,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1845,8 +2965,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1859,7 +2994,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1871,8 +3021,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1884,8 +3049,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1897,8 +3077,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1911,7 +3106,22 @@
         "jurisdiction": "",
         "term": ""
       },
-      "flagged": []
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1923,8 +3133,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
       },
-      "flagged": []
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     },
     {
       "constrained": {
@@ -1936,8 +3161,23 @@
         "effective_date": "",
         "jurisdiction": "",
         "term": ""
+      },
+      "flagged": [],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
       },
-      "flagged": []
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      }
     }
   ]
 }

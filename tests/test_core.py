@@ -185,6 +185,20 @@ def test_phrased_absence_is_recognized():
     assert normalize(req, "12.50") == "12.5"
 
 
+def test_absence_suffix_matches_words_not_characters():
+    """'North Carolina' ends in the LETTERS 'na' but is not absent (BUILDLOG 37).
+
+    The char-suffix version scored gold jurisdictions Carolina/Arizona/Indiana
+    as absence — a wrong answer against them then compared equal to gold.
+    """
+    j = FieldSpec("jurisdiction", "string", required=False)
+    for state in ("North Carolina", "Arizona", "Indiana", "Montana", "Ghana"):
+        assert normalize(j, state) != "", state
+    # genuine trailing-word absence still recognized
+    assert normalize(j, "jurisdiction n/a") == ""
+    assert normalize(j, "value is unknown") == ""
+
+
 def test_multi_valued_fields():
     from fieldguard.compare import normalize_set
     from fieldguard.metrics import _eq

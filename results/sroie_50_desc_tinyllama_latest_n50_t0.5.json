@@ -2,7 +2,7 @@
   "model": "tinyllama:latest",
   "n": 50,
   "threshold": 0.5,
-  "elapsed_sec": 573.9,
+  "elapsed_sec": 791.9,
   "report": {
     "docs": 50,
     "fields_total": 200,
@@ -17,6 +17,7 @@
     "flag_tp": 17,
     "flag_flagged": 200,
     "flag_corrupted": 17,
+    "ungrounded": 0,
     "notes": []
   },
   "finals": [
@@ -642,7 +643,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -662,7 +681,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -682,7 +719,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -702,7 +757,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -722,7 +795,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -742,7 +833,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -762,7 +871,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -782,7 +909,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -802,7 +947,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -822,7 +985,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -842,7 +1023,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -862,7 +1061,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -882,7 +1099,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -902,7 +1137,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -922,7 +1175,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -942,7 +1213,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -962,7 +1251,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -982,7 +1289,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1002,7 +1327,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1022,7 +1365,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1042,7 +1403,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1062,7 +1441,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1082,7 +1479,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1102,7 +1517,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1122,7 +1555,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1142,7 +1593,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1162,7 +1631,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1182,7 +1669,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1202,7 +1707,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1222,7 +1745,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1242,7 +1783,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1262,7 +1821,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1282,7 +1859,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1302,7 +1897,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1322,7 +1935,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1342,7 +1973,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1362,7 +2011,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1382,7 +2049,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1402,7 +2087,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1422,7 +2125,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1442,7 +2163,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1462,7 +2201,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1482,7 +2239,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1502,7 +2277,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1522,7 +2315,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1542,7 +2353,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1562,7 +2391,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1582,7 +2429,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1602,7 +2467,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     },
     {
       "constrained": {
@@ -1622,7 +2505,25 @@
         "company",
         "date",
         "total"
-      ]
+      ],
+      "resolution": {
+        "company": "split-kept",
+        "date": "split-kept",
+        "address": "split-kept",
+        "total": "split-kept"
+      },
+      "support": {
+        "company": 1.0,
+        "date": 1.0,
+        "address": 1.0,
+        "total": 1.0
+      },
+      "confidence": {
+        "company": 0.3,
+        "date": 0.3,
+        "address": 0.3,
+        "total": 0.3
+      }
     }
   ]
 }

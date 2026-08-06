@@ -23,8 +23,19 @@ compare.flag_fields()              → per-field disagreement score, threshold �
 verify.resolve()                   → targeted single-field re-query for flagged fields only
       │                              majority vote: constrained / unconstrained / arbiter
       ▼
-final record (+ metrics.report() when gold labels exist)
+ground.support()                   → signal 2: is the kept value in the source at all?
+      │                              gold-free ungrounded_rate gates the opt-in repair
+      ▼
+confidence()                       → per-field score = resolution band × support
+      │
+      ▼
+final record + per-field confidence (+ metrics.report() when gold labels exist)
 ```
+
+The same flow exists twice: `pipeline.run` (batch, corpus + Report) and
+`live.analyze` (single document, one streamed event per stage, served by
+`fieldguard/server.py` to `web/live.html`); a test pins them to identical
+outputs.
 
 ## Module contracts
 

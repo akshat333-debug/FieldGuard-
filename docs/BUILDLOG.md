@@ -538,6 +538,53 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   (0.647), so the grounding headline becomes **+8.0**, not +8.4. Gate decisions
   unchanged (still 6/6 correct). 15 citations updated across README/PAPER/BUILDLOG.
 
+## Iteration 37 — audit catches a scoring bug: absence matched character suffixes
+- While recounting gold absences for the post-repair tables, 78/249 came back
+  where 75 raw empties exist. Three gold jurisdictions — "North Carolina",
+  "Arizona", "Indiana" — normalized to EMPTY: iteration 34's phrased-absence
+  rule used `str.endswith`, and all three end in the LETTERS "na", an absence
+  token. Any wrong answer against those fields compared equal to gold.
+- Fixed: suffix matching is now over trailing WORDS ("north carolina" does not
+  end with the word "na"). Regression test pins Carolina/Arizona/Indiana/
+  Montana/Ghana as present and "jurisdiction n/a" as absent. 58 tests.
+- No third rerun needed, and this is *proved*, not assumed: on all 18 affected
+  (run, doc, field) cases both paths produced byte-identical raw strings —
+  agreement under either rule, no flag, no arbiter call — so stored finals are
+  exactly what a rerun would produce. All 9 result files re-scored offline;
+  the only number that moved was Kleister tinyllama 0.313 -> 0.301, which now
+  equals the gold-absence share EXACTLY (the 3 phantom "correct" fields were
+  tinyllama's absences scored against gold absences the bug had created).
+- Lesson: when an artifact number (0.313) drifts from its predicted value
+  (0.301), the drift is a bug report. We noticed and initially wrote it off as
+  data cleaning; the audit recount was what forced the explanation.
+
+## Iteration 36 — the "\n display issue" was an input-corruption bug; everything re-run
+- User asked why Kleister documents showed literal `\n`. Root cause was never
+  display: the Kleister TSV encodes newlines as two-character escapes and
+  `convert_kleister.py` fed them through verbatim — **5,816 literal `\n`
+  sequences per JSONL file**, gluing words together ("into\nas") and planting
+  fake tokens in every prompt and in the grounding tokenizer.
+- Converter now unescapes (`\n`, `\t`, `\r`); shipped datasets repaired in
+  place (documents only, gold untouched); all 9 published cells re-run on
+  clean text (~2.5 h of local model time).
+- What moved: Kleister 3b constrained 0.771->0.775; 1.5b 0.550->0.546 (noise);
+  grounding **false alarms went to zero** — precision 0.84 -> 0.97–1.00 —
+  because every prior false alarm was a value split by fake `\n` tokens.
+- What FLIPPED: grounding repair on capable models. Dirty text: −0.9 on
+  Kleister+party 3b (reported as "harms a reliable model"). Clean text:
+  **+2.8 / +1.8 on the 3b cells, 13 fixed 0 broken** — the harm was input
+  noise, not the mechanism. §5a rewritten; the old conclusion recorded as a
+  finding that did not survive the repair. Repair headline now
+  0.562 -> **0.655 (+9.2)** at identical calls, confirmed live end-to-end.
+- SROIE (text untouched) reproduced to the digit across the repair —
+  determinism doubling as a control group.
+- New measurement enabled by the re-run (traces now carry per-field
+  resolution/support/confidence): risk–coverage of the unified confidence.
+  **Combined AURC lowest in 6/6 cells** (e.g. Kleister 1.5b: random 0.438,
+  flag-only 0.299, support-only 0.262, combined 0.221), with the two signals
+  complementary exactly as the blind-spot analysis predicts.
+- Kleister threshold sweeps queued for re-run on clean text (figures pending).
+
 ## Iteration 35 — live app; and the 1.000 that was never a result
 - **Live path built.** `fieldguard/live.py` runs one document through the same
   primitives as `pipeline.run` but as a *generator*, yielding the real state of
