@@ -48,7 +48,7 @@ def study(stem: str, data_stem: str, schema_stem: str, label: str) -> None:
                              schema=schema)
 
     before = after = total = 0
-    fixed = broken = 0
+    fixed = broken = unreachable = 0
     for ex, final, gold in zip(examples, res["finals"], res["gold"]):
         for spec in schema.fields:
             total += 1
@@ -63,11 +63,20 @@ def study(stem: str, data_stem: str, schema_stem: str, label: str) -> None:
             ok_after = _eq(schema, spec.name, repaired, gold[spec.name])
             after += ok_after
             fixed += ok_after and not ok_before
-            broken += ok_before and not ok_after
+            if ok_before and not ok_after:
+                broken += 1
+                # Was the gold answer even derivable from the document we gave
+                # the model? If the gold value is itself ungrounded, the model
+                # produced it without evidence in its input, grounding judged
+                # the evidence correctly, and the "break" is a dataset
+                # truncation artifact rather than a failure of the rule.
+                unreachable += (support(spec, gold[spec.name], ex.document)
+                                < THRESHOLD)
 
     d = (after - before) / total
     print(f"{label:22} {before/total:.3f} -> {after/total:.3f} "
-          f"({d:+.3f})   fixed={fixed:3}  broken={broken:3}")
+          f"({d:+.3f})   fixed={fixed:3}  broken={broken:3}"
+          f"  (of which gold not in doc: {unreachable})")
 
 
 def main() -> None:
@@ -75,6 +84,10 @@ def main() -> None:
     print(f"{'cell':22} {'accuracy':>17}   effect")
     for cell in CELLS:
         study(*cell)
+    print("\n'gold not in doc' = the repair blanked a value that matched gold, "
+          "but that\ngold string is absent from the (truncated) document — so "
+          "the model had no\nevidence for it and the grounding judgement was "
+          "correct about the input.")
 
 
 if __name__ == "__main__":

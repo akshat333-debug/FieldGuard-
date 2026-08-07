@@ -23,7 +23,9 @@ disagree, after type-aware normalization, are flagged and re-verified with a
 single targeted query; unflagged fields cost nothing. On two real benchmarks
 (SROIE receipts, Kleister-NDA contracts) and three local models, this recovers
 the accuracy lost to constraint-forcing while cutting verification calls by
-44–61% on capable models, and a grounding-based repair adds up to +9.2 accuracy points at zero additional calls. The saving is not a tuned hyperparameter: it tracks
+44–61% on capable models; a second, orthogonal grounding signal adds up to
++9.2 accuracy points at zero additional calls. The saving is not a tuned
+hyperparameter: it tracks
 extractor quality automatically, degrading to full spend and 200/200
 low-confidence self-reporting when the underlying model is broken — except in
 one artifact case we characterize, where a model that refuses every field buys
@@ -348,7 +350,17 @@ moves accuracy is *unsupported value on an optional field → absent*:
 | SROIE (both) | unchanged (0.000) | 0 / 0 |
 
 On clean text the rule helps every cell it fires in and breaks at most one
-field. An earlier draft reported it *harming* the capable model (−0.9); that
+field — and that one break is the same (document, field) pair in both cells,
+where **the gold value does not appear in the document at all**. The
+converter's clause-window truncation dropped the execution date; the model
+answered `2012-09-04` with no evidence in its input and happened to match
+gold; grounding judged the evidence correctly and the repair blanked it. So
+across four firing cells the rule blanked **zero** values that the source
+actually supported. We surfaced this by running a single document through the
+live app and noticing the repair had cost a correct field; the
+`gold not in doc` column in `examples/ground_repair_study.py` reports it for
+every cell, and `tests/test_ground_repair_scope.py` pins the boundary
+(supported values untouched, required fields never blanked). An earlier draft reported it *harming* the capable model (−0.9); that
 finding did not survive the encoding repair — the harm was the false alarms
 above, which were input noise. We keep the rule **off by default** anyway,
 because its gain is capability-dependent (+9.2 on a fabricating extractor vs

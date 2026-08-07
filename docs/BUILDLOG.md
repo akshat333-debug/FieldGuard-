@@ -538,6 +538,32 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   (0.647), so the grounding headline becomes **+8.0**, not +8.4. Gate decisions
   unchanged (still 6/6 correct). 15 citations updated across README/PAPER/BUILDLOG.
 
+## Iteration 38 — running the live app found the repair's only failure, and it exonerates the rule
+- Ran the project end-to-end (58 tests, offline demo, analyze, risk-coverage,
+  then the live server against qwen2.5:1.5b on Kleister doc 2 with
+  `--ground-repair`). The verdict panel showed **net repaired −1**: the repair
+  had blanked `effective_date = 2012-09-04`, which MATCHED gold.
+- Investigated instead of shrugging. `2012` and `September` appear nowhere in
+  that document — the converter's clause-window truncation dropped the
+  execution date. The model produced the right answer with **no evidence in
+  its input**; grounding scored it 0.00 and was correct about what it was
+  given.
+- Generalized the check: `ground_repair_study.py` now reports, for every
+  break, whether the gold value is itself ungrounded. Result across the four
+  firing cells: **broken = 1, 1, 0, 0 — and every break is that same
+  (doc 2, effective_date) pair with gold absent from the source.** The rule
+  has blanked ZERO document-supported values. The strongest safety statement
+  the repair can make, and it came from looking at one bad-looking number.
+- `tests/test_ground_repair_scope.py` pins the boundary: supported values
+  untouched, unsupported optional values blanked, required fields never
+  blanked, and support (not correctness) is the only input to the rule.
+- One self-inflicted detour: the first version of that test hardcoded a field
+  name in its fake backend and failed against a differently-named schema —
+  a test bug, not a product bug, fixed by parameterizing. 58 -> 62 tests.
+- Lesson: a demo is only worth running if you are willing to investigate what
+  it shows. The −1 looked like a defect in the headline feature and turned
+  out to be its cleanest defence.
+
 ## Iteration 37 — audit catches a scoring bug: absence matched character suffixes
 - While recounting gold absences for the post-repair tables, 78/249 came back
   where 75 raw empties exist. Three gold jurisdictions — "North Carolina",

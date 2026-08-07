@@ -101,9 +101,15 @@ Measured on clean text (post encoding repair, see below), per cell:
 | SROIE (both qwen) | 0–5 | 1.00 | ±0.0 (no-op) |
 
 On clean text the repair helped **every** cell it fired in and broke at most
-one field — an earlier draft reported it harming the capable model (−0.9);
-that harm was an artifact of the corrupted Kleister encoding (the false alarms
-were values split by fake `\n` tokens), and it disappeared with the repair of
+one field. That single break is the same document in both cells, and there the
+gold value is absent from the (truncated) source: the model produced it with
+no evidence in its input and happened to match gold, so the grounding call was
+correct about what it was given. The rule blanked **zero** document-supported
+values.
+
+An earlier draft reported the repair harming the capable model (−0.9). That
+harm was an artifact of the corrupted Kleister encoding — the false alarms
+were values split by fake `\n` tokens — and it disappeared with the repair of
 the data. The rule stays opt-in (`--ground-repair`) with the gold-free
 `ungrounded_rate` as the expected-gain signal: 12.4% on the fabricating cell
 vs 0–2.8% on reliable ones (the party 1.5b cell reads 9.6% — the boundary is
