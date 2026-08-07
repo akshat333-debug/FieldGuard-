@@ -583,7 +583,13 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   **Combined AURC lowest in 6/6 cells** (e.g. Kleister 1.5b: random 0.438,
   flag-only 0.299, support-only 0.262, combined 0.221), with the two signals
   complementary exactly as the blind-spot analysis predicts.
-- Kleister threshold sweeps queued for re-run on clean text (figures pending).
+- Kleister threshold sweeps re-run on clean text (n=40, 0.30–0.90) and both
+  figures regenerated. The knob got *shallower*: 3b is now completely inert
+  across the whole range (0.742 accuracy, 1.000 recall, 103–104 calls at every
+  setting), 1.5b trades 5% of calls for 0.9 accuracy points. On dirty text the
+  band looked more populated than it is — another effect that was input noise
+  rather than mechanism. §6 limitation reworded. SROIE figure byte-identical
+  (its text never changed), which is the control.
 
 ## Iteration 35 — live app; and the 1.000 that was never a result
 - **Live path built.** `fieldguard/live.py` runs one document through the same

@@ -458,10 +458,14 @@ inherits the better of the two everywhere without fitting anything.
   misread value is genuinely present in the document it was misread from.
 - **The grounding gate is unvalidated.** Four informative cells suggest the
   ungrounded-rate threshold; that is a hypothesis, not a calibration.
-- **The threshold is a shallow knob** on these benchmarks. Severity is
-  bimodal (gross-or-none) on receipts; on contract strings the graded band is
-  populated but raising the threshold trades ~4% of calls for ~2.5 points of
-  flag recall with *flat* accuracy — the skipped flags were repair-neutral.
+- **The threshold is a shallow knob** on these benchmarks, and on clean text
+  it is shallower still. Severity is bimodal (gross-or-none) on receipts. On
+  contracts (n=40 sweep, thresholds 0.30→0.90) the capable model is *fully
+  inert* — accuracy 0.742, recall 1.000 and 103–104 calls at every setting —
+  while 1.5b buys 5% of calls (110→104) for 0.9 points of accuracy and 2.5
+  points of flag recall. Nobody should be tuning this; the default 0.5 is
+  where we leave it, and the adaptive behavior comes from the disagreement
+  rate rather than the cut-off.
 - **Cost model.** We count LLM calls, not tokens or wall-clock. The
   unconstrained path roughly doubles extraction cost before any savings; the
   reported savings are against a verify-everything baseline, which is the
