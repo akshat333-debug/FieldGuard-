@@ -25,8 +25,7 @@ single targeted query; unflagged fields cost nothing. On two real benchmarks
 the accuracy lost to constraint-forcing while cutting verification calls by
 44–61% on capable models; a second, orthogonal grounding signal adds up to
 +9.2 accuracy points at zero additional calls. The saving is not a tuned
-hyperparameter: it tracks
-extractor quality automatically, degrading to full spend and 200/200
+hyperparameter: it tracks extractor quality automatically, degrading to full spend and 200/200
 low-confidence self-reporting when the underlying model is broken — except in
 one artifact case we characterize, where a model that refuses every field buys
 agreement by answering nothing.
@@ -145,6 +144,16 @@ effective_date/jurisdiction/term, all optional, 75/249 gold fields legitimately
 absent; a fourth set-valued `party` field in the 4-field variant). Long
 contracts are truncated by keyword windows around the governing-law and term
 clauses to fit a 4k local context.
+
+Both are third-party benchmarks with published gold labels, and both are used
+in full rather than sampled: SROIE's 50 receipts are the first 50 in sorted
+filename order of the public-label portion, and Kleister-NDA is the complete
+**dev-0** split (test-A labels are withheld for the leaderboard, so dev-0 is
+the largest split an independent reader can re-score). `docs/DATA.md` gives
+provenance, licensing status and checksums;
+`python3 -m examples.verify_datasets` re-downloads the official releases,
+re-derives our files with the shipped converters and compares them
+byte-for-byte, so no claim here rests on trusting our copy of the data.
 
 **Models.** qwen2.5:3b (capable), qwen2.5:1.5b (mid), tinyllama-1.1B (broken),
 served locally via Ollama, temperature 0, max_tokens 512.

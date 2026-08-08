@@ -76,6 +76,24 @@ gold) so a discrepancy is caught by scanning across.
 python3 -m examples.build_dashboard   # regenerate from results/
 ```
 
+## Every number here is on a public benchmark
+
+Results are measured on **SROIE** (ICDAR 2019 Task 3, 50 receipts) and
+**Kleister-NDA** (Stanisławek et al. 2021, the full 83-document **dev-0**
+split — the largest split whose gold labels are public). No sampling, no
+cherry-picking; the one synthetic corpus in this repo is labelled a smoke test
+and appears in no results table.
+
+Verify rather than trust — this downloads the official releases, re-derives
+our files with the shipped converters, and compares byte-for-byte:
+
+```bash
+python3 -m examples.verify_datasets
+```
+
+Provenance, splits, licensing, checksums and a metric→dataset map:
+[docs/DATA.md](docs/DATA.md).
+
 ## Two signals
 
 | signal | catches | blind to |

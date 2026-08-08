@@ -48,6 +48,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--src", required=True, help="dir with in.tsv + expected.tsv")
     ap.add_argument("--out", default="datasets/kleister_nda.jsonl")
+    ap.add_argument("--no-party", action="store_true",
+                    help="emit the 3-field variant (drop the set-valued party field)")
     args = ap.parse_args()
 
     csv.field_size_limit(sys.maxsize)
@@ -68,8 +70,9 @@ def main() -> None:
             # gold "" means "the document does not state it"
             gold = {k: gold.get(k, "") for k in FIELDS}
             # party is multi-valued: every party= entry, as a list
-            gold["party"] = [kv.split("=", 1)[1].replace("_", " ")
-                             for kv in exp.split() if kv.startswith("party=")]
+            if not args.no_party:
+                gold["party"] = [kv.split("=", 1)[1].replace("_", " ")
+                                 for kv in exp.split() if kv.startswith("party=")]
             # the TSV encodes newlines/tabs as literal two-char escapes; feeding
             # them through verbatim glued words together ("into\nas") and put
             # 74 fake "\n" tokens per contract in front of every model
