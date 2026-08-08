@@ -538,6 +538,38 @@ Loop discipline: **build → test → fix → document → commit**. One entry p
   (0.647), so the grounding headline becomes **+8.0**, not +8.4. Gate decisions
   unchanged (still 6/6 correct). 15 citations updated across README/PAPER/BUILDLOG.
 
+## Iteration 39 — "are the metrics public-dataset backed?" — they were, but it wasn't checkable
+- Built `examples/verify_datasets.py`: downloads the official Kleister-NDA
+  dev-0 and SROIE releases, re-derives `datasets/*.jsonl` with the shipped
+  converters, compares byte-for-byte, and separately checks every gold record
+  straight against upstream `expected.tsv` / `key/*.json` so a converter bug
+  cannot mask a label mismatch.
+- **It failed on first run.** 81/83 Kleister documents differed from converter
+  output. Cause: iteration 36 repaired the datasets in place by unescaping
+  AFTER clause truncation, while the fixed converter unescapes BEFORE. The
+  fake `\n` characters had been consuming the 3000-char head budget, so the
+  shipped documents were missing ~5,100 characters of real contract text and
+  were not reproducible from source. Regenerated from upstream; all six
+  Kleister cells and both sweeps re-run (third full re-measurement).
+- Post-regeneration (more real context per document): Kleister 3b
+  0.767 -> **0.779**, party 3b 0.723 -> **0.732**, party 1.5b 0.566 -> **0.575**;
+  3b absent-field accuracy 49/75 -> 53/75. Every headline finding survived:
+  repair positive in 4/4 firing cells (+9.2 / +6.6 / +2.4 / +1.5), combined
+  AURC best in **6/6**, 3b-vs-1.5b CIs still disjoint.
+- The repair story got *cleaner*: now **exactly one broken field per Kleister
+  cell**, and in all four it is the same (doc 2, effective_date) pair whose
+  gold is absent from the truncated source. The rule's entire measured cost
+  across the corpus is one label our own truncation made unreachable.
+- Also: `docs/DATA.md` (split rationale — dev-0 is the largest public-label
+  split; origins; **applicaai/kleister-nda ships no LICENSE file**, stated
+  rather than glossed; checksums; metric→dataset map), `--no-party` so the
+  3-field variant is reproducible, `tests/test_datasets.py` guarding shape /
+  absence share / escape sequences offline. 62 -> 72 tests.
+- Lesson: "we used a public dataset" and "a reader can confirm we used it" are
+  different claims. Only the second one survives review, and writing the
+  checker is what found the defect — twice now, a verification tool has been
+  worth more than the thing it verified.
+
 ## Iteration 38 — running the live app found the repair's only failure, and it exonerates the rule
 - Ran the project end-to-end (58 tests, offline demo, analyze, risk-coverage,
   then the live server against qwen2.5:1.5b on Kleister doc 2 with

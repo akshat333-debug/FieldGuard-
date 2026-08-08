@@ -2,7 +2,7 @@
   "model": "tinyllama:latest",
   "n": 83,
   "threshold": 0.5,
-  "elapsed_sec": 1053.1,
+  "elapsed_sec": 957.6,
   "report": {
     "docs": 83,
     "fields_total": 249,

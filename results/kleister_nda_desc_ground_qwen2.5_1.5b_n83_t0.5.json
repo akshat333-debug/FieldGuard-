@@ -2,22 +2,22 @@
   "model": "qwen2.5:1.5b",
   "n": 83,
   "threshold": 0.5,
-  "elapsed_sec": 738.3,
+  "elapsed_sec": 752.6,
   "report": {
     "docs": 83,
     "fields_total": 249,
     "constrained_acc": 0.5461847389558232,
-    "final_acc": 0.6546184738955823,
-    "corruption_rate": 0.05622489959839357,
-    "flag_precision": 0.5140562248995983,
-    "flag_recall": 0.9759036144578314,
-    "llm_calls": 224,
+    "final_acc": 0.642570281124498,
+    "corruption_rate": 0.06827309236947791,
+    "flag_precision": 0.5441767068273092,
+    "flag_recall": 0.9518072289156626,
+    "llm_calls": 221,
     "full_verify_calls": 415,
-    "low_confidence": 41,
-    "flag_tp": 12,
-    "flag_flagged": 58,
-    "flag_corrupted": 14,
-    "ungrounded": 31,
+    "low_confidence": 31,
+    "flag_tp": 13,
+    "flag_flagged": 55,
+    "flag_corrupted": 17,
+    "ungrounded": 33,
     "notes": []
   },
   "finals": [
@@ -59,12 +59,12 @@
     {
       "effective_date": "2016-06-22",
       "jurisdiction": "New Jersey",
-      "term": "at will"
+      "term": "2 years"
     },
     {
       "effective_date": "March 21, 2008",
       "jurisdiction": "New York",
-      "term": "2 years"
+      "term": "not stated"
     },
     {
       "effective_date": "December 11, 2015",
@@ -134,7 +134,7 @@
     {
       "effective_date": "2018-04-01",
       "jurisdiction": "Virginia",
-      "term": "7 years"
+      "term": ""
     },
     {
       "effective_date": "10/11/04",
@@ -153,7 +153,7 @@
     },
     {
       "effective_date": "",
-      "jurisdiction": "New Jersey",
+      "jurisdiction": "New York",
       "term": "12 months"
     },
     {
@@ -193,7 +193,7 @@
     },
     {
       "effective_date": "",
-      "jurisdiction": "California",
+      "jurisdiction": "New York",
       "term": "2 years"
     },
     {
@@ -247,9 +247,9 @@
       "term": "2 years"
     },
     {
-      "effective_date": "2010-06-23",
+      "effective_date": "June 23, 2010",
       "jurisdiction": "Texas",
-      "term": "2 years"
+      "term": "two (2) years"
     },
     {
       "effective_date": "200_____",
@@ -294,16 +294,16 @@
     {
       "effective_date": "2007-03-04",
       "jurisdiction": "Delaware",
-      "term": "1 year"
+      "term": "2 years"
     },
     {
       "effective_date": "2007-04-30",
       "jurisdiction": "Massachusetts",
-      "term": "NONE"
+      "term": "2 years"
     },
     {
-      "effective_date": "October 25, 2011",
-      "jurisdiction": "",
+      "effective_date": "2011-10-25",
+      "jurisdiction": "California",
       "term": "2 years"
     },
     {
@@ -324,10 +324,10 @@
     {
       "effective_date": "2005-05-04",
       "jurisdiction": "Idaho",
-      "term": "2 years"
+      "term": "at will"
     },
     {
-      "effective_date": "2007-08-14",
+      "effective_date": "8/14/2007",
       "jurisdiction": "Washington",
       "term": "two years"
     },
@@ -359,7 +359,7 @@
     {
       "effective_date": "December 8, 2015",
       "jurisdiction": "Washington",
-      "term": "one year"
+      "term": "one (1) year"
     },
     {
       "effective_date": "2005-02-24",
@@ -384,7 +384,7 @@
     {
       "effective_date": "2007-04-09",
       "jurisdiction": "California",
-      "term": "12 months"
+      "term": "1 year"
     },
     {
       "effective_date": "October 2, 2017",
@@ -418,7 +418,7 @@
     },
     {
       "effective_date": "21-Jul-17",
-      "jurisdiction": "Washington",
+      "jurisdiction": "",
       "term": "5 years"
     },
     {
@@ -428,8 +428,8 @@
     },
     {
       "effective_date": "",
-      "jurisdiction": "US state whose law governs the agreement, from the governing-law clause \u2014 the state name only, e.g. 'New York'",
-      "term": "duration of the agreement as stated, e.g. '2 years' \u2014 the length only, not start/end dates"
+      "jurisdiction": "",
+      "term": "2 years"
     },
     {
       "effective_date": "7/21/2015",
@@ -981,16 +981,15 @@
       },
       "unconstrained": {
         "effective_date": "2015-03-01",
-        "jurisdiction": "New York",
-        "term": "2 years"
+        "jurisdiction": "Delaware",
+        "term": "N/A"
       },
       "flagged": [
-        "jurisdiction",
         "term"
       ],
       "resolution": {
         "effective_date": "agreement",
-        "jurisdiction": "split-kept",
+        "jurisdiction": "agreement",
         "term": "split-kept"
       },
       "support": {
@@ -1000,7 +999,7 @@
       },
       "confidence": {
         "effective_date": 1.0,
-        "jurisdiction": 0.3,
+        "jurisdiction": 1.0,
         "term": 0.225
       }
     },
@@ -1068,20 +1067,18 @@
       "constrained": {
         "effective_date": "2016-06-22",
         "jurisdiction": "New Jersey",
-        "term": "at will"
+        "term": "2 years"
       },
       "unconstrained": {
         "effective_date": "2016-06-22",
         "jurisdiction": "New Jersey",
         "term": "2 years"
       },
-      "flagged": [
-        "term"
-      ],
+      "flagged": [],
       "resolution": {
         "effective_date": "agreement",
         "jurisdiction": "agreement",
-        "term": "split-kept"
+        "term": "agreement"
       },
       "support": {
         "effective_date": 1.0,
@@ -1091,14 +1088,14 @@
       "confidence": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.3
+        "term": 1.0
       }
     },
     {
       "constrained": {
         "effective_date": "March 21, 2008",
         "jurisdiction": "New York",
-        "term": "2 years"
+        "term": "not stated"
       },
       "unconstrained": {
         "effective_date": "2008-03-21",
@@ -1111,17 +1108,17 @@
       "resolution": {
         "effective_date": "agreement",
         "jurisdiction": "agreement",
-        "term": "split-kept"
+        "term": "majority"
       },
       "support": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.5
+        "term": 1.0
       },
       "confidence": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.225
+        "term": 0.7
       }
     },
     {
@@ -1249,7 +1246,7 @@
       "unconstrained": {
         "effective_date": "2000-05-23",
         "jurisdiction": "Delaware",
-        "term": "Not specified in the document."
+        "term": "Not specified in the document, but implied to be indefinite as it does not mention a specific duration."
       },
       "flagged": [
         "term"
@@ -1257,7 +1254,7 @@
       "resolution": {
         "effective_date": "agreement",
         "jurisdiction": "agreement",
-        "term": "split-kept"
+        "term": "majority"
       },
       "support": {
         "effective_date": 1.0,
@@ -1267,7 +1264,7 @@
       "confidence": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.15
+        "term": 0.35
       }
     },
     {
@@ -1506,12 +1503,12 @@
       "constrained": {
         "effective_date": "2018-04-01",
         "jurisdiction": "Virginia",
-        "term": "7 years"
+        "term": "2 years"
       },
       "unconstrained": {
         "effective_date": "2018-04-01",
         "jurisdiction": "Virginia",
-        "term": "\"Scheduled Term\" - not specified in the document, but implied to be at least one year based on renewal clause"
+        "term": "\"Scheduled Term\" - not specified in full duration but implied to be at least one year, \"Renewal Term\" - each renewal term is for one year."
       },
       "flagged": [
         "term"
@@ -1519,17 +1516,17 @@
       "resolution": {
         "effective_date": "agreement",
         "jurisdiction": "agreement",
-        "term": "split-kept"
+        "term": "majority"
       },
       "support": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.5
+        "term": 0.0
       },
       "confidence": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.225
+        "term": 0.35
       }
     },
     {
@@ -1594,7 +1591,7 @@
     },
     {
       "constrained": {
-        "effective_date": "2019-08-31",
+        "effective_date": "2023-10-05",
         "jurisdiction": "Indiana",
         "term": "one year"
       },
@@ -1602,36 +1599,6 @@
         "effective_date": "2023-10-05",
         "jurisdiction": "Indiana",
         "term": "1 year"
-      },
-      "flagged": [
-        "effective_date"
-      ],
-      "resolution": {
-        "effective_date": "split-kept",
-        "jurisdiction": "agreement",
-        "term": "agreement"
-      },
-      "support": {
-        "effective_date": 0.0,
-        "jurisdiction": 1.0,
-        "term": 1.0
-      },
-      "confidence": {
-        "effective_date": 0.15,
-        "jurisdiction": 1.0,
-        "term": 1.0
-      }
-    },
-    {
-      "constrained": {
-        "effective_date": "2017-04-05",
-        "jurisdiction": "New Jersey",
-        "term": "12 months"
-      },
-      "unconstrained": {
-        "effective_date": "2017-04-05",
-        "jurisdiction": "New Jersey",
-        "term": "12 months"
       },
       "flagged": [],
       "resolution": {
@@ -1652,6 +1619,36 @@
     },
     {
       "constrained": {
+        "effective_date": "2017-04-05",
+        "jurisdiction": "New Jersey",
+        "term": "12 months"
+      },
+      "unconstrained": {
+        "effective_date": "2017-04-05",
+        "jurisdiction": "New York",
+        "term": "12 months"
+      },
+      "flagged": [
+        "jurisdiction"
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "majority",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 0.0,
+        "jurisdiction": 0.5,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 0.5,
+        "jurisdiction": 0.525,
+        "term": 1.0
+      }
+    },
+    {
+      "constrained": {
         "effective_date": "2005-05-17",
         "jurisdiction": "California",
         "term": "2 years"
@@ -1659,15 +1656,13 @@
       "unconstrained": {
         "effective_date": "2005-05-17",
         "jurisdiction": "California",
-        "term": "N/A"
+        "term": "2 years"
       },
-      "flagged": [
-        "term"
-      ],
+      "flagged": [],
       "resolution": {
         "effective_date": "agreement",
         "jurisdiction": "agreement",
-        "term": "split-kept"
+        "term": "agreement"
       },
       "support": {
         "effective_date": 1.0,
@@ -1677,7 +1672,7 @@
       "confidence": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.225
+        "term": 0.75
       }
     },
     {
@@ -1688,7 +1683,37 @@
       },
       "unconstrained": {
         "effective_date": "2018-03-30",
-        "jurisdiction": "Delaware",
+        "jurisdiction": "New York",
+        "term": "1 year"
+      },
+      "flagged": [
+        "jurisdiction"
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "split-kept",
+        "term": "agreement"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 1.0
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 0.3,
+        "term": 1.0
+      }
+    },
+    {
+      "constrained": {
+        "effective_date": "2013-05-01",
+        "jurisdiction": "Georgia",
+        "term": "one year"
+      },
+      "unconstrained": {
+        "effective_date": "2013-05-01",
+        "jurisdiction": "Georgia",
         "term": "1 year"
       },
       "flagged": [],
@@ -1706,36 +1731,6 @@
         "effective_date": 1.0,
         "jurisdiction": 1.0,
         "term": 1.0
-      }
-    },
-    {
-      "constrained": {
-        "effective_date": "2013-05-01",
-        "jurisdiction": "Georgia",
-        "term": "one year"
-      },
-      "unconstrained": {
-        "effective_date": "2013-05-01",
-        "jurisdiction": "Georgia",
-        "term": "\"at-will\""
-      },
-      "flagged": [
-        "term"
-      ],
-      "resolution": {
-        "effective_date": "agreement",
-        "jurisdiction": "agreement",
-        "term": "split-kept"
-      },
-      "support": {
-        "effective_date": 1.0,
-        "jurisdiction": 1.0,
-        "term": 1.0
-      },
-      "confidence": {
-        "effective_date": 1.0,
-        "jurisdiction": 1.0,
-        "term": 0.3
       }
     },
     {
@@ -1826,7 +1821,7 @@
     },
     {
       "constrained": {
-        "effective_date": "2023-10-05",
+        "effective_date": "2019-04-30",
         "jurisdiction": "Minnesota",
         "term": "2 years"
       },
@@ -1870,17 +1865,17 @@
       ],
       "resolution": {
         "effective_date": "agreement",
-        "jurisdiction": "split-kept",
+        "jurisdiction": "majority",
         "term": "agreement"
       },
       "support": {
         "effective_date": 0.0,
-        "jurisdiction": 1.0,
+        "jurisdiction": 0.5,
         "term": 1.0
       },
       "confidence": {
         "effective_date": 0.5,
-        "jurisdiction": 0.3,
+        "jurisdiction": 0.525,
         "term": 1.0
       }
     },
@@ -1947,15 +1942,16 @@
         "term": "1 year"
       },
       "unconstrained": {
-        "effective_date": "2023-10-05",
+        "effective_date": "2023-10-15",
         "jurisdiction": "Ohio",
         "term": "1 year following termination of employment for any reason"
       },
       "flagged": [
+        "effective_date",
         "term"
       ],
       "resolution": {
-        "effective_date": "agreement",
+        "effective_date": "split-kept",
         "jurisdiction": "agreement",
         "term": "split-kept"
       },
@@ -1965,7 +1961,7 @@
         "term": 1.0
       },
       "confidence": {
-        "effective_date": 0.5,
+        "effective_date": 0.15,
         "jurisdiction": 1.0,
         "term": 0.3
       }
@@ -1979,7 +1975,7 @@
       "unconstrained": {
         "effective_date": "[date]",
         "jurisdiction": "Massachusetts",
-        "term": "perpetual"
+        "term": "[length]"
       },
       "flagged": [
         "effective_date",
@@ -2041,7 +2037,7 @@
       "unconstrained": {
         "effective_date": "2000-02-10",
         "jurisdiction": "Minnesota",
-        "term": "Not specified in the provided text, but typically would be stated as \"for a period of [duration]\""
+        "term": "N/A"
       },
       "flagged": [
         "term"
@@ -2123,7 +2119,7 @@
     },
     {
       "constrained": {
-        "effective_date": "2018-06-07",
+        "effective_date": "2018-06-05",
         "jurisdiction": "Illinois",
         "term": "2 years"
       },
@@ -2133,10 +2129,11 @@
         "term": "N/A"
       },
       "flagged": [
+        "effective_date",
         "term"
       ],
       "resolution": {
-        "effective_date": "agreement",
+        "effective_date": "split-kept",
         "jurisdiction": "agreement",
         "term": "majority"
       },
@@ -2146,7 +2143,7 @@
         "term": 0.5
       },
       "confidence": {
-        "effective_date": 0.5,
+        "effective_date": 0.15,
         "jurisdiction": 1.0,
         "term": 0.525
       }
@@ -2160,15 +2157,13 @@
       "unconstrained": {
         "effective_date": "2003-05-14",
         "jurisdiction": "Minnesota",
-        "term": "Not specified in the document, but implied to be indefinite as it mentions \"until the same ceases to be Confidential Information\""
+        "term": "2 years"
       },
-      "flagged": [
-        "term"
-      ],
+      "flagged": [],
       "resolution": {
         "effective_date": "agreement",
         "jurisdiction": "agreement",
-        "term": "majority"
+        "term": "agreement"
       },
       "support": {
         "effective_date": 1.0,
@@ -2178,14 +2173,14 @@
       "confidence": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.7
+        "term": 1.0
       }
     },
     {
       "constrained": {
-        "effective_date": "2010-06-23",
+        "effective_date": "June 23, 2010",
         "jurisdiction": "Texas",
-        "term": "2 years"
+        "term": "two (2) years"
       },
       "unconstrained": {
         "effective_date": "2010-06-23",
@@ -2216,16 +2211,16 @@
         "term": "2 years"
       },
       "unconstrained": {
-        "effective_date": "2009-12-31",
+        "effective_date": "200_____ -",
         "jurisdiction": "New Jersey",
-        "term": "Not specified in the document, but implied to be for a reasonable period of time as per the governing-law clause."
+        "term": "Not specified in the document."
       },
       "flagged": [
         "effective_date",
         "term"
       ],
       "resolution": {
-        "effective_date": "split-kept",
+        "effective_date": "majority",
         "jurisdiction": "agreement",
         "term": "majority"
       },
@@ -2235,7 +2230,7 @@
         "term": 0.5
       },
       "confidence": {
-        "effective_date": 0.3,
+        "effective_date": 0.7,
         "jurisdiction": 1.0,
         "term": 0.525
       }
@@ -2448,40 +2443,12 @@
       "constrained": {
         "effective_date": "2007-03-04",
         "jurisdiction": "Delaware",
-        "term": "1 year"
+        "term": "2 years"
       },
       "unconstrained": {
         "effective_date": "2007-03-04",
         "jurisdiction": "Delaware",
         "term": "1 year"
-      },
-      "flagged": [],
-      "resolution": {
-        "effective_date": "agreement",
-        "jurisdiction": "agreement",
-        "term": "agreement"
-      },
-      "support": {
-        "effective_date": 1.0,
-        "jurisdiction": 1.0,
-        "term": 0.5
-      },
-      "confidence": {
-        "effective_date": 1.0,
-        "jurisdiction": 1.0,
-        "term": 0.75
-      }
-    },
-    {
-      "constrained": {
-        "effective_date": "2007-04-30",
-        "jurisdiction": "Massachusetts",
-        "term": "2 years"
-      },
-      "unconstrained": {
-        "effective_date": "2007-04-30",
-        "jurisdiction": "Massachusetts",
-        "term": "N/A"
       },
       "flagged": [
         "term"
@@ -2494,40 +2461,72 @@
       "support": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
+        "term": 0.5
+      },
+      "confidence": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
+        "term": 0.525
+      }
+    },
+    {
+      "constrained": {
+        "effective_date": "2007-04-30",
+        "jurisdiction": "Massachusetts",
+        "term": "2 years"
+      },
+      "unconstrained": {
+        "effective_date": "2007-04-30",
+        "jurisdiction": "Massachusetts",
+        "term": "Not specified in the document, but implied to be related to the duration of the asset purchase agreement."
+      },
+      "flagged": [
+        "term"
+      ],
+      "resolution": {
+        "effective_date": "agreement",
+        "jurisdiction": "agreement",
+        "term": "split-kept"
+      },
+      "support": {
+        "effective_date": 1.0,
+        "jurisdiction": 1.0,
         "term": 1.0
       },
       "confidence": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.7
+        "term": 0.3
       }
     },
     {
       "constrained": {
-        "effective_date": "October 25, 2011",
-        "jurisdiction": "New York",
+        "effective_date": "2011-10-25",
+        "jurisdiction": "California",
         "term": "2 years"
       },
       "unconstrained": {
         "effective_date": "2011-10-25",
-        "jurisdiction": "New York",
-        "term": "2 years"
+        "jurisdiction": "California",
+        "term": "N/A"
       },
-      "flagged": [],
+      "flagged": [
+        "term"
+      ],
       "resolution": {
         "effective_date": "agreement",
         "jurisdiction": "agreement",
-        "term": "agreement"
+        "term": "split-kept"
       },
       "support": {
         "effective_date": 1.0,
-        "jurisdiction": 0.0,
+        "jurisdiction": 1.0,
         "term": 0.5
       },
       "confidence": {
         "effective_date": 1.0,
-        "jurisdiction": 0.5,
-        "term": 0.75
+        "jurisdiction": 1.0,
+        "term": 0.225
       }
     },
     {
@@ -2622,35 +2621,33 @@
       "constrained": {
         "effective_date": "2005-05-04",
         "jurisdiction": "Idaho",
-        "term": "2 years"
+        "term": "at will"
       },
       "unconstrained": {
         "effective_date": "2005-05-04",
         "jurisdiction": "Idaho",
-        "term": "Not specified in the document."
+        "term": "\"employee at will\""
       },
-      "flagged": [
-        "term"
-      ],
+      "flagged": [],
       "resolution": {
         "effective_date": "agreement",
         "jurisdiction": "agreement",
-        "term": "split-kept"
+        "term": "agreement"
       },
       "support": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.5
+        "term": 1.0
       },
       "confidence": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.225
+        "term": 1.0
       }
     },
     {
       "constrained": {
-        "effective_date": "2007-08-14",
+        "effective_date": "8/14/2007",
         "jurisdiction": "Washington",
         "term": "two years"
       },
@@ -2685,7 +2682,7 @@
       "unconstrained": {
         "effective_date": "2016-07-15",
         "jurisdiction": "New York",
-        "term": "\"until termination of employment for any reason\""
+        "term": "\"commencing on the Effective Date and ending upon the termination of Employee\u2019s employment for any reason\""
       },
       "flagged": [
         "effective_date",
@@ -2694,7 +2691,7 @@
       "resolution": {
         "effective_date": "majority",
         "jurisdiction": "agreement",
-        "term": "split-kept"
+        "term": "majority"
       },
       "support": {
         "effective_date": 1.0,
@@ -2704,7 +2701,7 @@
       "confidence": {
         "effective_date": 0.7,
         "jurisdiction": 1.0,
-        "term": 0.225
+        "term": 0.525
       }
     },
     {
@@ -2724,7 +2721,7 @@
       "resolution": {
         "effective_date": "agreement",
         "jurisdiction": "agreement",
-        "term": "split-kept"
+        "term": "majority"
       },
       "support": {
         "effective_date": 1.0,
@@ -2734,7 +2731,7 @@
       "confidence": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.225
+        "term": 0.525
       }
     },
     {
@@ -2801,15 +2798,13 @@
       },
       "unconstrained": {
         "effective_date": "2012-07-05",
-        "jurisdiction": "New York",
+        "jurisdiction": "Delaware",
         "term": "2 years"
       },
-      "flagged": [
-        "jurisdiction"
-      ],
+      "flagged": [],
       "resolution": {
         "effective_date": "agreement",
-        "jurisdiction": "split-kept",
+        "jurisdiction": "agreement",
         "term": "agreement"
       },
       "support": {
@@ -2819,7 +2814,7 @@
       },
       "confidence": {
         "effective_date": 1.0,
-        "jurisdiction": 0.3,
+        "jurisdiction": 1.0,
         "term": 1.0
       }
     },
@@ -2827,7 +2822,7 @@
       "constrained": {
         "effective_date": "December 8, 2015",
         "jurisdiction": "Washington",
-        "term": "one year"
+        "term": "one (1) year"
       },
       "unconstrained": {
         "effective_date": "2015-12-08",
@@ -2859,15 +2854,13 @@
       },
       "unconstrained": {
         "effective_date": "2005-02-24",
-        "jurisdiction": "New York",
+        "jurisdiction": "Virginia",
         "term": "1 year"
       },
-      "flagged": [
-        "jurisdiction"
-      ],
+      "flagged": [],
       "resolution": {
         "effective_date": "agreement",
-        "jurisdiction": "split-kept",
+        "jurisdiction": "agreement",
         "term": "agreement"
       },
       "support": {
@@ -2877,7 +2870,7 @@
       },
       "confidence": {
         "effective_date": 1.0,
-        "jurisdiction": 0.3,
+        "jurisdiction": 1.0,
         "term": 1.0
       }
     },
@@ -2941,7 +2934,7 @@
     },
     {
       "constrained": {
-        "effective_date": "2010-09-30",
+        "effective_date": "2010-01-01",
         "jurisdiction": "New York",
         "term": "2 years"
       },
@@ -2973,20 +2966,18 @@
       "constrained": {
         "effective_date": "2007-04-09",
         "jurisdiction": "California",
-        "term": "12 months"
+        "term": "1 year"
       },
       "unconstrained": {
         "effective_date": "2007-04-09",
         "jurisdiction": "California",
         "term": "1 year"
       },
-      "flagged": [
-        "term"
-      ],
+      "flagged": [],
       "resolution": {
         "effective_date": "agreement",
         "jurisdiction": "agreement",
-        "term": "split-kept"
+        "term": "agreement"
       },
       "support": {
         "effective_date": 1.0,
@@ -2996,7 +2987,7 @@
       "confidence": {
         "effective_date": 1.0,
         "jurisdiction": 1.0,
-        "term": 0.3
+        "term": 1.0
       }
     },
     {
@@ -3174,7 +3165,7 @@
     {
       "constrained": {
         "effective_date": "21-Jul-17",
-        "jurisdiction": "Washington",
+        "jurisdiction": "New York",
         "term": "5 years"
       },
       "unconstrained": {
@@ -3182,20 +3173,22 @@
         "jurisdiction": "Washington",
         "term": "5 years"
       },
-      "flagged": [],
+      "flagged": [
+        "jurisdiction"
+      ],
       "resolution": {
         "effective_date": "agreement",
-        "jurisdiction": "agreement",
+        "jurisdiction": "split-kept",
         "term": "agreement"
       },
       "support": {
         "effective_date": 1.0,
-        "jurisdiction": 1.0,
+        "jurisdiction": 0.0,
         "term": 1.0
       },
       "confidence": {
         "effective_date": 1.0,
-        "jurisdiction": 1.0,
+        "jurisdiction": 0.15,
         "term": 1.0
       }
     },
@@ -3230,8 +3223,8 @@
     {
       "constrained": {
         "effective_date": "date the agreement becomes effective, usually stated in the opening paragraph",
-        "jurisdiction": "US state whose law governs the agreement, from the governing-law clause \u2014 the state name only, e.g. 'New York'",
-        "term": "duration of the agreement as stated, e.g. '2 years' \u2014 the length only, not start/end dates"
+        "jurisdiction": "New York",
+        "term": "2 years"
       },
       "unconstrained": {
         "effective_date": "2023-04-16",
@@ -3250,13 +3243,13 @@
       },
       "support": {
         "effective_date": 0.0,
-        "jurisdiction": 0.526,
-        "term": 0.562
+        "jurisdiction": 0.0,
+        "term": 1.0
       },
       "confidence": {
         "effective_date": 0.15,
-        "jurisdiction": 0.229,
-        "term": 0.234
+        "jurisdiction": 0.15,
+        "term": 0.3
       }
     },
     {

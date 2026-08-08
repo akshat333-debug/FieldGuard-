@@ -102,7 +102,7 @@ Provenance, splits, licensing, checksums and a metric→dataset map:
 | **source grounding** (`ground.py`) | *fabrication* — a value the document never states, however confidently both paths agree | values misread from a corrupted source (they are present in it) |
 
 Confirmed live end-to-end on Kleister qwen2.5:1.5b (n=83): final accuracy
-**0.562 → 0.655 (+9.2 pts)** at **224 → 224 LLM calls** — the repair replaces a
+**0.550 → 0.643 (+9.2 pts)** at **221 → 221 LLM calls** — the repair replaces a
 value rather than querying for one, so it is free. Extraction was bit-identical
 to the baseline run, isolating the delta to the rule.
 
@@ -112,26 +112,27 @@ Measured on clean text (post encoding repair, see below), per cell:
 
 | cell | errors caught | precision | repair effect (fixed/broken) |
 |---|---|---|---|
-| Kleister 1.5b | 30/109 (28%) | 0.97 | **+9.2 pts** (24/1) |
-| Kleister 3b | 7/58 (12%) | 1.00 | +2.8 pts (7/0) |
-| Kleister+party 1.5b | 31/144 (22%) | 0.97 | +6.9 pts (24/1) |
-| Kleister+party 3b | 6/92 (7%) | 1.00 | +1.8 pts (6/0) |
+| Kleister 1.5b | 32/112 (29%) | 0.97 | **+9.2 pts** (24/1) |
+| Kleister 3b | 7/55 (13%) | 0.88 | +2.4 pts (7/1) |
+| Kleister+party 1.5b | 33/141 (23%) | 0.97 | +6.6 pts (23/1) |
+| Kleister+party 3b | 6/89 (7%) | 0.86 | +1.5 pts (6/1) |
 | SROIE (both qwen) | 0–5 | 1.00 | ±0.0 (no-op) |
 
-On clean text the repair helped **every** cell it fired in and broke at most
-one field. That single break is the same document in both cells, and there the
-gold value is absent from the (truncated) source: the model produced it with
-no evidence in its input and happened to match gold, so the grounding call was
-correct about what it was given. The rule blanked **zero** document-supported
+The repair helped **every** cell it fired in, and broke **exactly one field in
+each** — the same document every time, where the gold value is absent from the
+(truncated) source: the model produced it with no evidence in its input and
+happened to match gold, so the grounding call was correct about what it was
+given. Across all four cells the rule blanked **zero** document-supported
 values.
 
 An earlier draft reported the repair harming the capable model (−0.9). That
 harm was an artifact of the corrupted Kleister encoding — the false alarms
 were values split by fake `\n` tokens — and it disappeared with the repair of
 the data. The rule stays opt-in (`--ground-repair`) with the gold-free
-`ungrounded_rate` as the expected-gain signal: 12.4% on the fabricating cell
-vs 0–2.8% on reliable ones (the party 1.5b cell reads 9.6% — the boundary is
-not sharp, and the band edges are observed, not tuned).
+`ungrounded_rate` as the expected-gain signal: 13.3% / 10.2% on the two
+fabricating cells vs 0–3.2% on the four reliable ones. The gap is clean here,
+but it is six cells from one benchmark family — observed, not tuned, and no
+model has been tested inside the gap.
 
 ## Unified confidence (selective prediction)
 
@@ -149,10 +150,10 @@ AURC, all six cells (lower = errors ranked later; random = the error rate):
 |---|---|---|---|---|
 | SROIE 3b | 0.145 | 0.123 | 0.141 | **0.114** |
 | SROIE 1.5b | 0.270 | 0.203 | 0.245 | **0.191** |
-| Kleister 3b | 0.233 | 0.143 | 0.187 | **0.141** |
-| Kleister 1.5b | 0.438 | 0.299 | 0.262 | **0.221** |
-| Kleister+party 3b | 0.277 | 0.174 | 0.248 | **0.146** |
-| Kleister+party 1.5b | 0.434 | 0.290 | 0.320 | **0.243** |
+| Kleister 3b | 0.221 | 0.143 | 0.172 | **0.129** |
+| Kleister 1.5b | 0.450 | 0.313 | 0.271 | **0.240** |
+| Kleister+party 3b | 0.268 | 0.191 | 0.240 | **0.160** |
+| Kleister+party 1.5b | 0.425 | 0.258 | 0.318 | **0.219** |
 
 The combined score wins **6/6** — and neither single signal does: flag-only
 nearly ties on capable models, support-only wins on the fabricating one; the
@@ -230,14 +231,14 @@ schema (75/249 gold fields are legitimately absent; the extractor must answer
 
 | | qwen2.5:3b | qwen2.5:1.5b | tinyllama-1.1B |
 |---|---|---|---|
-| constrained accuracy | 0.775 | 0.546 | 0.301* |
-| final accuracy | 0.767 | 0.562 | 0.301* |
-| + grounding repair (free) | **0.795** | **0.655** | — |
-| flag precision / recall | 0.657 / 1.0 | 0.514 / 0.976 | 1.0 / 1.0* |
-| absent fields answered absent | 49/75 | 3/75 | 75/75* |
-| LLM calls vs verify-everything | **-49%** | **-46%** | -60%* |
+| constrained accuracy | 0.783 | 0.546 | 0.301* |
+| final accuracy | 0.779 | 0.550 | 0.301* |
+| + grounding repair (free) | **0.803** | **0.643** | — |
+| flag precision / recall | 0.590 / 1.0 | 0.544 / 0.952 | 1.0 / 1.0* |
+| absent fields answered absent | 53/75 | 3/75 | 75/75* |
+| LLM calls vs verify-everything | **-47%** | **-47%** | -60%* |
 
-95% CIs (doc bootstrap): 3b [0.719, 0.815] vs 1.5b [0.502, 0.622] — disjoint;
+95% CIs (doc bootstrap): 3b [0.727, 0.827] vs 1.5b [0.490, 0.610] — disjoint;
 the model separation is established in this domain too. (All Kleister numbers
 are post encoding repair — the source TSV escapes newlines as literal `\n`
 and the first converter fed them through; see BUILDLOG 36.)
@@ -262,11 +263,11 @@ normalization, incl. corporate-suffix equivalence Incorporated≡Inc, L.L.C.≡L
 
 | | qwen2.5:3b | qwen2.5:1.5b |
 |---|---|---|
-| constrained → final accuracy | 0.723 → 0.723 | 0.551 → 0.566 |
-| + grounding repair (free) | **0.741** | **0.636** |
-| party exact-set correct | 60/83 | 52/83 |
-| LLM calls vs verify-everything | **-45%** | **-44%** |
-| 95% CI (final) | [0.678, 0.765] | [0.518, 0.611] |
+| constrained → final accuracy | 0.720 → 0.732 | 0.566 → 0.575 |
+| + grounding repair (free) | **0.747** | **0.642** |
+| party exact-set correct | 61/83 | 55/83 |
+| LLM calls vs verify-everything | **-46%** | **-45%** |
+| 95% CI (final) | [0.687, 0.774] | [0.527, 0.623] |
 
 Run: `python3 -m examples.experiment --data datasets/kleister_nda_party.jsonl
 --schema datasets/kleister_nda_party.schema.json --model <m> --n 83`.
@@ -281,7 +282,7 @@ instruction in the shared prompt made both paths lazily deny values that ARE
 in the document — instructions that correlate the paths break the
 disagreement signal (same failure family as the reverted judge arbiter);
 absence must be expressed structurally. (2) Absence detection is a
-capability: 3b answers 49/75 absent fields correctly, 1.5b hallucinates a
+capability: 3b answers 53/75 absent fields correctly, 1.5b hallucinates a
 value for 72/75 — identically on both paths, the documented correlated
 blind spot (which is exactly where grounding repair earns its +9.2).
 

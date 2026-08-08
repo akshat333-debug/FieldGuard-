@@ -194,8 +194,8 @@ neither as the "true" number.
 |---|---|---|---|
 | SROIE — calls saved | **61%** | **56%** | 0% |
 | SROIE — constrained → final | 0.820 → 0.855 | 0.715 → 0.730 | 0.005 → 0.005 |
-| Kleister — calls saved | **49%** | **46%** | 60%* |
-| Kleister — constrained → final | 0.775 → 0.767 | 0.546 → 0.562 | 0.301* |
+| Kleister — calls saved | **47%** | **47%** | 60%* |
+| Kleister — constrained → final | 0.783 → 0.779 | 0.546 → 0.550 | 0.301* |
 
 Verification spend tracks extractor quality monotonically on SROIE, with no
 knob to tune. On the broken model there, every field is flagged, **200/200**
@@ -211,8 +211,8 @@ purchased by refusing to answer is indistinguishable from agreement earned by
 extracting correctly — which is precisely why the tripwire exists.
 
 Accuracy separation between 3b and 1.5b is CI-disjoint on both benchmarks
-(SROIE [0.810, 0.900] vs [0.680, 0.780]; Kleister [0.719, 0.815] vs
-[0.502, 0.622]), so the ordering is established, not noise.
+(SROIE [0.810, 0.900] vs [0.680, 0.780]; Kleister [0.727, 0.827] vs
+[0.490, 0.610]), so the ordering is established, not noise.
 
 \* tinyllama answers "absent" for all 249 Kleister fields; 0.301 is exactly the
 gold-absence share, and both-paths-absent counts as agreement. This is an
@@ -228,8 +228,8 @@ we report both. Recall is stable; precision is not.
 | SROIE 3b | 0.78 / 0.95 | 0.47 / 0.73 |
 | SROIE 1.5b | 0.69 / 0.97 | 0.29 / 0.82 |
 | SROIE tinyllama | 0.09 / 1.00 | 0.09 / 1.00 |
-| Kleister 3b | 0.66 / 1.00 | 0.16 / 1.00 |
-| Kleister 1.5b | 0.51 / 0.98 | 0.21 / 0.86 |
+| Kleister 3b | 0.59 / 1.00 | 0.18 / 1.00 |
+| Kleister 1.5b | 0.54 / 0.95 | 0.24 / 0.76 |
 | Kleister tinyllama | 1.00 / 1.00* | (no flags fired) |
 
 Two lessons. (i) Micro reads *lower* than macro everywhere — the opposite of
@@ -250,10 +250,10 @@ concrete.
 ### 4.2 Multi-valued fields
 
 Adding the set-valued `party` field (83 docs × 4 fields = 332) keeps
-verification with the hardest field in the schema: 3b 0.723 → 0.723 (45%
-saved — repairs net to zero on clean text), 1.5b 0.551 → 0.566 (44% saved).
-Party exact-set accuracy is 60/83 for 3b, 52/83 for 1.5b. Grounding repair
-(§5a) adds its free gains on top: 3b → 0.741, 1.5b → 0.636. We score exact-set; per-element partial credit would
+verification net-positive with the hardest field in the schema: 3b
+0.720 → 0.732 (46% saved), 1.5b 0.566 → 0.575 (45% saved). Party exact-set
+accuracy is 61/83 for 3b, 55/83 for 1.5b. Grounding repair (§5a) adds its free
+gains on top: 3b → 0.747, 1.5b → 0.642. We score exact-set; per-element partial credit would
 flatter these numbers.
 
 ### 4.3 Where the residual error lives
@@ -267,7 +267,7 @@ unmoved.
 
 ### 4.4 Absence is a capability, not a formatting question
 
-On Kleister, 3b answers 49/75 legitimately-absent fields correctly; 1.5b
+On Kleister, 3b answers 53/75 legitimately-absent fields correctly; 1.5b
 hallucinates a value for 72/75 — identically on both paths, therefore
 invisible to disagreement. Fully-absent output is an artifact class of its own:
 `examples/analyze.py` prints an `[!] N/N answers absent` tripwire, and
@@ -331,19 +331,21 @@ both signals — the honest boundary of the whole approach.
 |---|---|---|---|---|
 | SROIE 3b | 29 | 0 (0%) | — | 0 |
 | SROIE 1.5b | 54 | 5 (9%) | 1.00 | 0 |
-| Kleister 3b | 58 | 7 (12%) | 1.00 | 0 |
-| Kleister 1.5b | 109 | 30 (28%) | 0.97 | 1 |
-| Kleister+party 3b | 92 | 6 (7%) | 1.00 | 0 |
-| Kleister+party 1.5b | 144 | 31 (22%) | 0.97 | 1 |
+| Kleister 3b | 55 | 7 (13%) | 0.88 | 1 |
+| Kleister 1.5b | 112 | 32 (29%) | 0.97 | 1 |
+| Kleister+party 3b | 89 | 6 (7%) | 0.86 | 1 |
+| Kleister+party 1.5b | 141 | 33 (23%) | 0.97 | 1 |
 
 The signal is *selective*, which is the point: it fires where fabrication is
 the failure mode (optional fields + a weak model) and is inert where models copy
 values off a receipt (SROIE: zero catches, zero false alarms — it costs nothing
-to leave on). Precision is 0.97–1.00 across all firing cells. An earlier draft
-measured 0.84 with 5–9 false alarms per cell; every one of those false alarms
-was a value split by the fake `\n` tokens of the corrupted Kleister encoding
-(§3, data statement) and vanished with the repair — the false-alarm rate of
-the signal was bounded by the noise floor of the input, not by the mechanism.
+to leave on). Precision is 0.86–1.00 across all firing cells, with **exactly
+one false alarm per Kleister cell** — and it is the same field every time (see
+the repair table below). An earlier draft measured 0.84 with 5–9 false alarms
+per cell; all but one of those were values split by the fake `\n` tokens of
+the corrupted Kleister encoding (§3, data statement) and vanished with the
+repair. The signal's false-alarm rate was bounded by the noise floor of its
+input, not by the mechanism.
 
 **Repair, and why it is opt-in.** Detection alone does not help: under
 split-kept, an arbiter answering NONE disagrees with both fabricating paths, so
@@ -352,20 +354,21 @@ moves accuracy is *unsupported value on an optional field → absent*:
 
 | cell | accuracy | fixed / broken |
 |---|---|---|
-| Kleister 1.5b | 0.562 → **0.655** (+9.2) | 24 / 1 |
-| Kleister+party 1.5b | 0.566 → **0.636** (+6.9) | 24 / 1 |
-| Kleister 3b | 0.767 → **0.795** (+2.8) | 7 / 0 |
-| Kleister+party 3b | 0.723 → **0.741** (+1.8) | 6 / 0 |
+| Kleister 1.5b | 0.550 → **0.643** (+9.2) | 24 / 1 |
+| Kleister+party 1.5b | 0.575 → **0.642** (+6.6) | 23 / 1 |
+| Kleister 3b | 0.779 → **0.803** (+2.4) | 7 / 1 |
+| Kleister+party 3b | 0.732 → **0.747** (+1.5) | 6 / 1 |
 | SROIE (both) | unchanged (0.000) | 0 / 0 |
 
-On clean text the rule helps every cell it fires in and breaks at most one
-field — and that one break is the same (document, field) pair in both cells,
-where **the gold value does not appear in the document at all**. The
+The rule helps every cell it fires in and breaks **exactly one field in each**
+— and it is the same (document, field) pair every time, where **the gold value
+does not appear in the document at all**. The
 converter's clause-window truncation dropped the execution date; the model
 answered `2012-09-04` with no evidence in its input and happened to match
 gold; grounding judged the evidence correctly and the repair blanked it. So
-across four firing cells the rule blanked **zero** values that the source
-actually supported. We surfaced this by running a single document through the
+across all four firing cells the rule blanked **zero** values that the source
+actually supported — its entire measured cost is one label our own truncation
+made unreachable. We surfaced this by running a single document through the
 live app and noticing the repair had cost a correct field; the
 `gold not in doc` column in `examples/ground_repair_study.py` reports it for
 every cell, and `tests/test_ground_repair_scope.py` pins the boundary
@@ -386,11 +389,11 @@ offline for every stored run:
 | cell | ungrounded rate | repair effect | reading |
 |---|---|---|---|
 | SROIE 3b | 0.0% | 0.000 | nothing to repair |
-| Kleister+party 3b | 1.8% | +1.8 | small, safe |
+| Kleister+party 3b | 2.1% | +1.5 | small, safe |
 | SROIE 1.5b | 2.5% | 0.000 | nothing to repair |
-| Kleister 3b | 2.8% | +2.8 | small, safe |
-| Kleister+party 1.5b | 9.6% | **+6.9** | fabricating |
-| Kleister 1.5b | 12.4% | **+9.2** | fabricating |
+| Kleister 3b | 3.2% | +2.4 | small, safe |
+| Kleister+party 1.5b | 10.2% | **+6.6** | fabricating |
+| Kleister 1.5b | 13.3% | **+9.2** | fabricating |
 
 On clean text the gate's role shifts from harm-avoidance (no cell is harmed
 any more) to **gain prediction**: among the cells where the repair *can* fire
@@ -408,18 +411,18 @@ with the rule enabled (`--ground-repair`, Kleister qwen2.5:1.5b, n=83):
 | | baseline | + grounding repair |
 |---|---|---|
 | constrained accuracy | 0.546 | 0.546 (extraction untouched) |
-| final accuracy | 0.562 | **0.655** (+9.2 pts) |
-| LLM calls | 224 | **224** (repair is free — no arbiter query) |
-| ungrounded rate (gate) | — | 31/249 = **12.4%** |
+| final accuracy | 0.550 | **0.643** (+9.2 pts) |
+| LLM calls | 221 | **221** (repair is free — no arbiter query) |
+| ungrounded rate (gate) | — | 33/249 = **13.3%** |
 
 The live result matches the offline prediction exactly, extraction is
 bit-identical (confirming the delta is the repair rule and nothing else), and
 the repair costs **zero additional model calls** — it replaces a value rather
-than querying for one. The gate read 12.4% with no gold labels involved.
+than querying for one. The gate read 13.3% with no gold labels involved.
 
 **Honest caveat.** Six cells from one benchmark family. The monotone
 rate→gain relationship is observed, not derived; the fabricating/reliable
-band edges are descriptive; and a model sitting between 3% and 9% has not
+band edges are descriptive; and a model sitting between 3.2% and 10.2% has not
 been tested. We also note for the record that the pre-repair version of this
 section reported the repair harming a capable model — a conclusion that
 flipped when an input-encoding bug was fixed. Conclusions about *when a rule
@@ -455,10 +458,10 @@ computes all four from the per-field traces.
 |---|---|---|---|---|
 | SROIE 3b | 0.145 | 0.123 | 0.141 | **0.114** |
 | SROIE 1.5b | 0.270 | 0.203 | 0.245 | **0.191** |
-| Kleister 3b | 0.233 | 0.143 | 0.187 | **0.141** |
-| Kleister 1.5b | 0.438 | 0.299 | 0.262 | **0.221** |
-| Kleister+party 3b | 0.277 | 0.174 | 0.248 | **0.146** |
-| Kleister+party 1.5b | 0.434 | 0.290 | 0.320 | **0.243** |
+| Kleister 3b | 0.221 | 0.143 | 0.172 | **0.129** |
+| Kleister 1.5b | 0.450 | 0.313 | 0.271 | **0.240** |
+| Kleister+party 3b | 0.268 | 0.191 | 0.240 | **0.160** |
+| Kleister+party 1.5b | 0.425 | 0.258 | 0.318 | **0.219** |
 
 The combined score has the lowest AURC in **6/6 cells** — and, notably,
 neither component does: flag-only nearly ties it on capable models (where
@@ -481,10 +484,10 @@ inherits the better of the two everywhere without fitting anything.
   ungrounded-rate threshold; that is a hypothesis, not a calibration.
 - **The threshold is a shallow knob** on these benchmarks, and on clean text
   it is shallower still. Severity is bimodal (gross-or-none) on receipts. On
-  contracts (n=40 sweep, thresholds 0.30→0.90) the capable model is *fully
-  inert* — accuracy 0.742, recall 1.000 and 103–104 calls at every setting —
-  while 1.5b buys 5% of calls (110→104) for 0.9 points of accuracy and 2.5
-  points of flag recall. Nobody should be tuning this; the default 0.5 is
+  contracts (n=40 sweep, thresholds 0.30→0.90) the capable model moves once,
+  0.750 → 0.767 between 0.30 and 0.50, then is flat at 104–107 calls, and 1.5b
+  buys 6% of calls (108→102) for at most 0.8 points of accuracy and 2.5 points
+  of flag recall. Nobody should be tuning this; the default 0.5 is
   where we leave it, and the adaptive behavior comes from the disagreement
   rate rather than the cut-off.
 - **Cost model.** We count LLM calls, not tokens or wall-clock. The

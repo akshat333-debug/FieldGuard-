@@ -1,37 +1,37 @@
 [
   {
     "threshold": 0.3,
-    "final_acc": 0.7416666666666669,
-    "flag_precision": 0.65,
+    "final_acc": 0.7500000000000002,
+    "flag_precision": 0.5875,
     "flag_recall": 1.0,
-    "llm_calls": 103
+    "llm_calls": 107
   },
   {
     "threshold": 0.5,
-    "final_acc": 0.7416666666666669,
-    "flag_precision": 0.625,
+    "final_acc": 0.7666666666666668,
+    "flag_precision": 0.6125,
     "flag_recall": 1.0,
-    "llm_calls": 104
+    "llm_calls": 106
   },
   {
     "threshold": 0.6,
-    "final_acc": 0.7416666666666669,
-    "flag_precision": 0.65,
+    "final_acc": 0.7666666666666668,
+    "flag_precision": 0.6125,
     "flag_recall": 1.0,
-    "llm_calls": 103
+    "llm_calls": 106
   },
   {
     "threshold": 0.75,
-    "final_acc": 0.7416666666666669,
-    "flag_precision": 0.65,
-    "flag_recall": 1.0,
-    "llm_calls": 103
+    "final_acc": 0.7666666666666668,
+    "flag_precision": 0.5875,
+    "flag_recall": 0.975,
+    "llm_calls": 105
   },
   {
     "threshold": 0.9,
-    "final_acc": 0.7416666666666669,
-    "flag_precision": 0.65,
-    "flag_recall": 1.0,
-    "llm_calls": 103
+    "final_acc": 0.7666666666666668,
+    "flag_precision": 0.6,
+    "flag_recall": 0.975,
+    "llm_calls": 104
   }
 ]

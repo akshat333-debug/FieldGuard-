@@ -1,37 +1,37 @@
 [
   {
     "threshold": 0.3,
-    "final_acc": 0.5666666666666668,
-    "flag_precision": 0.425,
+    "final_acc": 0.5583333333333333,
+    "flag_precision": 0.45,
     "flag_recall": 0.975,
-    "llm_calls": 110
+    "llm_calls": 108
   },
   {
     "threshold": 0.5,
-    "final_acc": 0.5666666666666668,
+    "final_acc": 0.5583333333333333,
     "flag_precision": 0.45,
     "flag_recall": 0.975,
-    "llm_calls": 109
+    "llm_calls": 108
   },
   {
     "threshold": 0.6,
-    "final_acc": 0.5583333333333335,
-    "flag_precision": 0.475,
-    "flag_recall": 0.95,
-    "llm_calls": 106
-  },
-  {
-    "threshold": 0.75,
-    "final_acc": 0.5583333333333335,
-    "flag_precision": 0.5,
+    "final_acc": 0.55,
+    "flag_precision": 0.45,
     "flag_recall": 0.95,
     "llm_calls": 105
   },
   {
+    "threshold": 0.75,
+    "final_acc": 0.5583333333333333,
+    "flag_precision": 0.5,
+    "flag_recall": 0.95,
+    "llm_calls": 103
+  },
+  {
     "threshold": 0.9,
-    "final_acc": 0.5583333333333335,
+    "final_acc": 0.5583333333333333,
     "flag_precision": 0.525,
     "flag_recall": 0.95,
-    "llm_calls": 104
+    "llm_calls": 102
   }
 ]
